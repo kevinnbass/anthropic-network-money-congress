@@ -1,9 +1,4 @@
 member,party,state,entity_group,amount_usd
-Ro Khanna,D,CA,Anthropic employees,27750.00
-Ro Khanna,D,CA,other network people,18200.00
-Ro Khanna,D,CA,Eric Schmidt,12400.00
-Ro Khanna,D,CA,Wendy Schmidt,12400.00
-Ro Khanna,D,CA,Schmidt organisations / Hillspire staff,9500.00
 Angie Craig,D,MN,Anthropic employees,53500.00
 Angie Craig,D,MN,Coefficient Giving / Open Philanthropy staff,14000.00
 Mike Rounds,R,SD,Anthropic employees,61600.00
@@ -12,6 +7,10 @@ Mike Rounds,R,SD,ANTHROPAC (Anthropic's PAC),1500.00
 Mark R. Warner,D,VA,Anthropic employees,52500.00
 Mark R. Warner,D,VA,ARI PAC,7500.00
 Mark R. Warner,D,VA,ANTHROPAC (Anthropic's PAC),2500.00
+Ro Khanna,D,CA,Anthropic employees,27750.00
+Ro Khanna,D,CA,Eric Schmidt,12400.00
+Ro Khanna,D,CA,Wendy Schmidt,12400.00
+Ro Khanna,D,CA,Schmidt organisations / Hillspire staff,9500.00
 Brian Schatz,D,HI,Anthropic employees,55500.00
 Brian Schatz,D,HI,Coefficient Giving / Open Philanthropy staff,1500.00
 Brian Schatz,D,HI,ARI PAC,1000.00
@@ -36,14 +35,13 @@ Jim Banks,R,IN,Anthropic employees,38500.00
 "Donald S. Beyer, Jr.",D,VA,Anthropic employees,35000.00
 "Donald S. Beyer, Jr.",D,VA,ARI PAC,1000.00
 Celeste Maloy,R,UT,Anthropic employees,35000.00
-Brian J. Mast,R,FL,Anthropic employees,26000.00
-Brian J. Mast,R,FL,other network people,3000.00
-Brian J. Mast,R,FL,ANTHROPAC (Anthropic's PAC),2500.00
-Brian J. Mast,R,FL,ARI PAC,2500.00
 Gregory W. Meeks,D,NY,Anthropic employees,28000.00
 Gregory W. Meeks,D,NY,ANTHROPAC (Anthropic's PAC),2500.00
 Gregory W. Meeks,D,NY,ARI PAC,2500.00
 Tom Cotton,R,AR,Anthropic employees,31500.00
+Brian J. Mast,R,FL,Anthropic employees,26000.00
+Brian J. Mast,R,FL,ANTHROPAC (Anthropic's PAC),2500.00
+Brian J. Mast,R,FL,ARI PAC,2500.00
 Sarah McBride,D,DE,Anthropic employees,28000.00
 Sarah McBride,D,DE,ARI PAC,2000.00
 John R. Moolenaar,R,MI,Anthropic employees,28000.00
@@ -80,15 +78,6 @@ Ruben Gallego,D,AZ,Schmidt organisations / Hillspire staff,2900.00
 Ruben Gallego,D,AZ,Anthropic employees,300.00
 Doris O. Matsui,D,CA,Anthropic employees,17000.00
 Doris O. Matsui,D,CA,ARI PAC,2500.00
-Adam Gray,D,CA,Wendy Schmidt,7000.00
-Adam Gray,D,CA,Eric Schmidt,3300.00
-Adam Gray,D,CA,James McClave,3300.00
-Adam Gray,D,CA,other network people,3300.00
-Adam Gray,D,CA,Anthropic employees,2500.00
-Sam T. Liccardo,D,CA,Anthropic employees,14000.00
-Sam T. Liccardo,D,CA,other network people,3300.00
-Sam T. Liccardo,D,CA,Schmidt organisations / Hillspire staff,1000.00
-Sam T. Liccardo,D,CA,ARI PAC,1000.00
 Martin Heinrich,D,NM,Eric Schmidt,6600.00
 Martin Heinrich,D,NM,Wendy Schmidt,6600.00
 Martin Heinrich,D,NM,James McClave,3300.00
@@ -106,18 +95,23 @@ Thomas R. Suozzi,D,NY,Emily Berger,3300.00
 Thomas R. Suozzi,D,NY,Anthropic employees,300.00
 Mike Rogers,R,AL,Anthropic employees,14000.00
 Mike Rogers,R,AL,ANTHROPAC (Anthropic's PAC),2500.00
+Adam Gray,D,CA,Wendy Schmidt,7000.00
+Adam Gray,D,CA,Eric Schmidt,3300.00
+Adam Gray,D,CA,James McClave,3300.00
+Adam Gray,D,CA,Anthropic employees,2500.00
 Derek Tran,D,CA,Wendy Schmidt,7000.00
 Derek Tran,D,CA,Eric Schmidt,3300.00
 Derek Tran,D,CA,James McClave,3300.00
 Derek Tran,D,CA,Anthropic employees,2500.00
+Sam T. Liccardo,D,CA,Anthropic employees,14000.00
+Sam T. Liccardo,D,CA,Schmidt organisations / Hillspire staff,1000.00
+Sam T. Liccardo,D,CA,ARI PAC,1000.00
 Josh Gottheimer,D,NJ,Anthropic employees,14000.00
 Josh Gottheimer,D,NJ,ARI PAC,1000.00
 Dave Min,D,CA,Wendy Schmidt,6600.00
 Dave Min,D,CA,Eric Schmidt,3300.00
 Dave Min,D,CA,James McClave,3300.00
 Dave Min,D,CA,Reed Hastings,1500.00
-Adam B. Schiff,D,CA,other network people,8000.00
-Adam B. Schiff,D,CA,Eric Schmidt,6600.00
 Maggie Goodlander,D,NH,Anthropic employees,7850.00
 Maggie Goodlander,D,NH,other network people,6500.00
 Jill N. Tokuda,D,HI,Anthropic employees,14000.00
@@ -155,9 +149,6 @@ April McClain Delaney,D,MD,Anthropic employees,10500.00
 April McClain Delaney,D,MD,ARI PAC,1000.00
 Jared F. Golden,D,ME,Wendy Schmidt,7000.00
 Jared F. Golden,D,ME,James McClave,3300.00
-Josh Harder,D,CA,Eric Schmidt,6600.00
-Josh Harder,D,CA,ARI PAC,2500.00
-Josh Harder,D,CA,other network people,1000.00
 Andy Harris,R,MD,Anthropic employees,10000.00
 Bruce Westerman,R,AR,ARI PAC,10000.00
 Pat Fallon,R,TX,Anthropic employees,10000.00
@@ -172,6 +163,8 @@ Susie Lee,D,NV,Anthropic employees,2500.00
 Susie Lee,D,NV,ARI PAC,1000.00
 LaMonica McIver,D,NJ,Schmidt organisations / Hillspire staff,6000.00
 LaMonica McIver,D,NJ,Wendy Schmidt,3500.00
+Josh Harder,D,CA,Eric Schmidt,6600.00
+Josh Harder,D,CA,ARI PAC,2500.00
 Laura Gillen,D,NY,Eric Schmidt,3300.00
 Laura Gillen,D,NY,James McClave,3300.00
 Laura Gillen,D,NY,Anthropic employees,2500.00
@@ -202,6 +195,7 @@ Laurel M. Lee,R,FL,Anthropic employees,7000.00
 Nick LaLota,R,NY,Anthropic employees,7000.00
 Troy Downing,R,MT,Eric Schmidt,7000.00
 Vince Fong,R,CA,Anthropic employees,7000.00
+Adam B. Schiff,D,CA,Eric Schmidt,6600.00
 Angela D. Alsobrooks,D,MD,Wendy Schmidt,3300.00
 Angela D. Alsobrooks,D,MD,James McClave,3300.00
 Hillary J. Scholten,D,MI,Wendy Schmidt,6600.00
@@ -219,9 +213,6 @@ Patty Murray,D,WA,ANTHROPAC (Anthropic's PAC),3500.00
 Patty Murray,D,WA,Anthropic employees,2500.00
 Sara Jacobs,D,CA,Wendy Schmidt,3300.00
 Sara Jacobs,D,CA,ARI PAC,2500.00
-Eugene Simon Vindman,D,VA,Anthropic employees,3000.00
-Eugene Simon Vindman,D,VA,Eric Schmidt,1505.00
-Eugene Simon Vindman,D,VA,other network people,1000.00
 Cory A. Booker,D,NJ,Anthropic employees,5000.00
 Cory A. Booker,D,NJ,Schmidt organisations / Hillspire staff,150.00
 Brian K. Fitzpatrick,R,PA,ARI PAC,5000.00
@@ -232,6 +223,8 @@ Mike Kennedy,R,UT,ARI PAC,2500.00
 Ted Cruz,R,TX,Coefficient Giving / Open Philanthropy staff,5000.00
 Guy Reschenthaler,R,PA,ARI PAC,4000.00
 Guy Reschenthaler,R,PA,Anthropic employees,750.00
+Eugene Simon Vindman,D,VA,Anthropic employees,3000.00
+Eugene Simon Vindman,D,VA,Eric Schmidt,1505.00
 Andrew R. Garbarino,R,NY,Anthropic employees,3500.00
 Andrew R. Garbarino,R,NY,ARI PAC,1000.00
 Sharice Davids,D,KS,Eric Schmidt,3300.00
@@ -250,7 +243,6 @@ Dina Titus,D,NV,Eric Schmidt,3300.00
 Edward J. Markey,D,MA,Wendy Schmidt,3300.00
 Emilia Strong Sykes,D,OH,Eric Schmidt,3300.00
 Lucy McBath,D,GA,Wendy Schmidt,3300.00
-Mark Kelly,D,AZ,other network people,3300.00
 Maxwell Frost,D,FL,Eric Schmidt,3300.00
 Mike Levin,D,CA,Eric Schmidt,3300.00
 Vicente Gonzalez,D,TX,Eric Schmidt,3300.00
@@ -288,7 +280,6 @@ Mariannette Miller-Meeks,R,IA,ARI PAC,2000.00
 "Robert P. Bresnahan, Jr.",R,PA,ARI PAC,2000.00
 Rudy Yakym III,R,IN,ANTHROPAC (Anthropic's PAC),1000.00
 Rudy Yakym III,R,IN,ARI PAC,1000.00
-Kirsten E. Gillibrand,D,NY,other network people,1600.00
 "Thomas H. Kean, Jr.",R,NJ,Anthropic employees,1500.00
 Adriano Espaillat,D,NY,ARI PAC,1000.00
 Bryan Steil,R,WI,ARI PAC,1000.00
