@@ -243,9 +243,9 @@ def fig09():
         svg.append(f'<rect x="1600" y="{y+4}" width="{max(1,wr):.1f}" height="30" fill="{IND}" rx="3"/>')
         svg.append(txt(1606 + max(1, wr), y + 25, money(rv) if rv else "none found", 13, fill=MUTED))
         ids += d["ids"] + rec[k]["ids"]
-    subtitle = ('Sources: FEC outside-spending reports naming a serving member, grouped by the committee that spent; and FEC contribution and transfer records into each committee: gifts by network people, staff and committees and, for the Public First committees, their other itemised contributors too. Each gift or transfer is counted once. Left and right are on different scales and are never divided.')
+    subtitle = ('Sources: FEC outside-spending reports naming a serving member, grouped by the committee that spent; and the receipts on record for each committee, from FEC filings and, where a group does not itemise its donors, from the giver\'s own statement or tax return. For the Public First committees the receipts include their other itemised donors and the transfers between them; a transfer counts once, from the recipient\'s report. Left and right are on different scales and are never divided.')
     footnote = ("<b>What the record does not show.</b> The left bars are all of the committee's spending on sitting members; the right bar is the money the record holds going in (for the Public First committees, all their itemised receipts and the transfers between them). Most of the left is not network money. A contribution does not direct spending, and outside spending is not coordination with any candidate. Party committees appear because a principal gave to them. Gifts to groups that do not disclose donors are not here, so both sides are floors.")
-    figure(stem, "Who spends on members, and how much network money those committees received", subtitle, "\n".join(svg), footnote, ids, height=hdr + 20 + len(top) * 42 + 480,
+    figure(stem, "Who spends on members, and what the record shows those committees received", subtitle, "\n".join(svg), footnote, ids, height=hdr + 20 + len(top) * 42 + 480,
            legend_html=legend([(DEM, "spent in support of the member"), (REP, "spent against the member"), (IND, "reported receipts into the committee")]))
 
 
@@ -693,6 +693,7 @@ def fig17():
     co = collections.Counter()
     for m in SITTING:
         n = int(float(m["bills_cosponsored_n"] or 0)); co[min(n, 6)] += 1
+    ids += [m["row_id"] for m in SITTING]  # X67d-1354: the cosponsor histogram counts every serving member
     svg.append(txt(40, 250, "How many AI bills each sitting member cosponsored", 22, weight="bold"))
     mx = max(co.values() or [1])
     for k in range(0, 7):
@@ -749,7 +750,7 @@ def fig17():
         svg.append(txt(56, y, f"{member_label(b)}: {n} fellow{'s' if n > 1 else ''}, {span}", 15)); y += 26
         ids += [i for p in ps for i in p["row_ids"]] + [m["row_id"]]
     subtitle = ("Sources: this project's companion study of AI bills (each bill's direction coded), Horizon Institute's own placement pages, and quarterly lobbying reports by network clients that name a bill the member sponsored.")
-    footnote = ("<b>What the record does not show.</b> A bill's direction is a code for the bill, not a score of the sponsor. A lobbying report naming a bill says the client lobbied on it, not which way or whether the sponsor's office was contacted. A fellow is paid by the programme; the fellow and the office choose each other. A report counts for a member only where it names, by number, a stand-alone bill the member sponsored, read in the Congress of the report's year; annual spending and authorisation bills cited for their provisions are not counted, and for a client with several lines of work the bill must be named on the line the network funds. Cosponsor counts cover AI bills in the companion study only.")
+    footnote = ("<b>What the record does not show.</b> A bill's direction is a code for the bill, not a score of the sponsor. A lobbying report naming a bill says the client lobbied on it, not which way or whether the sponsor's office was contacted. A fellow is paid by the programme; the fellow and the office choose each other. A report counts for a member when it names a verified stand-alone bill the member sponsored: the number and the title must agree in the Congress of the report's year, or the filing must identify a bill of the previous Congress. Annual spending and authorisation bills cited for their provisions are not counted. For a client with several lines of work, the report must name the bill on the line the network funds. Cosponsor counts cover AI bills in the companion study only.")
     figure(stem, "Members' bills, the lobbying that named them, and the fellows in their offices", subtitle, "\n".join(svg), footnote, ids, height=y + 420,
            legend_html=legend([(DEM, "Democratic sponsor"), (REP, "Republican sponsor"), (IND, "independent")]))
 
@@ -802,7 +803,7 @@ def fig18():
     for _, c in top:
         clients_all.update(c)
     cl = [c for c, _ in clients_all.most_common(8)]
-    svg = [txt(40, 40, f"Bills named on {MIN_FILINGS} or more network clients' lobbying reports, 2016–2026 (bars count the reports of the {len(cl)} clients in the legend)", 24, weight="bold")]  # X67a-1127
+    svg = [txt(40, 40, f"Bills named on at least {MIN_FILINGS} lobbying reports across all network clients, 2016–2026 (bars count the reports of the {len(cl)} clients in the legend)", 24, weight="bold")]  # X67a-1127
     cells = {(c, b): float(cnt.get(c, 0)) for b, cnt in top for c in cl}
     th = 36 * len(top) + 10
     svg.append(stacked_bars(cells, cl, [b for b, _ in top], 40, 60, 2000, th, PAL, label_w=300, fmt=lambda v: f"{int(v)} filings"))
@@ -1073,6 +1074,7 @@ def fig22():
                 elif org_key(a):
                     by_name.setdefault(org_key(a), k)
     TABLES = [("HM", HM, "payer"), ("SP", SP, "payer"), ("LC", LC, "payer"), ("VN", VN, "payer"), ("GR", GR, "payer"), ("SG", SG, "payer"), ("TV", TV, "sponsor"), ("MS", MS, "entity_named"), ("RD", RD, "org_now"), ("FG", FG, "recipient"), ("LB", LB, "client")]
+    counted_ids = []
     for tab, rows, col in TABLES:
         for r in rows:
             if not ev(r):
@@ -1085,6 +1087,7 @@ def fig22():
                     k = by_name.get(org_key(client_label(v).split(" (")[0]))
             if k:
                 ents[k]["rows"][tab] += 1
+                counted_ids.append(r["row_id"])  # X67d-1359: every row a cell counts is cited
     order = {"T1": 0, "T2": 1, "T3": 2, "T4": 3, "T5": 4}
     items = sorted(ents.values(), key=lambda e: (order[e["tier"]], -sum(e["rows"].values()), e["name"]))
     cand = [e for e in items if e["tier"] in ("T1", "T2", "T3", "T5") or sum(e["rows"].values()) > 0]
@@ -1118,9 +1121,10 @@ def fig22():
         svg.append(txt(x0 + 760 + len(tabs) * 95 + 30, y + 16, f"{sum(e['rows'].values()):,}", 14, weight="bold"))
         ids += e["ids"]
     rest = [e for e in items if e not in shown]
+    ids += [i for e in rest for i in e["ids"]] + counted_ids  # X67d-1359: the entities counted in the closing line, and the rows behind every cell
     by_tier = collections.Counter(e["tier"] for e in rest); with_rows = sum(1 for e in rest if sum(e["rows"].values()) > 0)
     svg.append(txt(x0, y0 + len(shown) * rh + 24, f"{len(rest)} further network entities (people and organisations; T5's large donors are private individuals and are counted, not named) are not shown (" + ", ".join(f"{v} {k}" for k, v in sorted(by_tier.items())) + f"); {with_rows} of them appear in the records and {len(rest) - with_rows} do not.", 15, fill=MUTED))
-    subtitle = ("Sources: the study's list of network organisations and people, counted against the confirmed rows of eleven tables: by the row's own network identifier where it has one, otherwise by the name as filed against the roster name or an alias the roster records (for a person, first name and surname; for an organisation, a closing Inc., Ltd., LLC or Corporation is ignored). Tiers follow the study's written roster criteria (documented money, control, roles and a congressional function).")
+    subtitle = ("Sources: the study's list of network organisations and people, counted against the confirmed rows of eleven tables: by the row's own network identifier where it has one, otherwise by the name as filed against the roster name or an alias the roster records (for a person, first name and surname; for an organisation, a leading The and a closing Inc., Ltd., LLC, Corporation, Corp. or PBC are ignored; a lobbying client's name is first merged as in figures 04 and 18). Tiers follow the study's written roster criteria (documented money, control, roles and a congressional function).")
     footnote = ("<b>What the record does not show.</b> A record count shows how much was found, not importance: Jaan Tallinn's count comes mostly from a published grant list; a person whose giving runs through a group that does not disclose donors has a low count. Names are matched as described above, so a spelling the roster does not record is undercounted, and two people who share a first name and surname can be counted together. A tier is a documented relationship under written criteria, not a finding about conduct.")
     figure(stem, "Who the network is, and where each appears", subtitle, "\n".join(svg), footnote, ids, height=y0 + len(shown) * rh + 520)
 
@@ -1134,6 +1138,7 @@ def fig23():
              "member_disclosures": "Financial disclosures", "federal_money": "Federal money"}
     cells = {}; tot = collections.Counter(); ids = []
     for name, rows in tabs:
+        ids += [r["row_id"] for r in rows]  # X67d-1360: the upper panel counts every row of the fourteen tables, so every row is cited
         c = collections.Counter(ROLE.get(r["row_id"], "unbound") for r in rows)
         for k, v in c.items():
             cells[(k, PLAIN[name])] = float(v); tot[k] += v
@@ -1141,7 +1146,7 @@ def fig23():
     svg = [txt(40, 40, "Every row of the study's fourteen source tables, by table and how it was classified (counts)", 24, weight="bold")]
     svg.append(stacked_bars(cells, roles, [PLAIN[n] for n, _ in tabs], 40, 60, 2000, 560, [DEM, GREY, REP, "#e3dfd5"], label_w=420, fmt=lambda v: f"{int(v):,}"))
     svg.append(txt(40, 660, "What the classes mean", 22, weight="bold"))
-    lines = [f"confirmed ({tot['evidence']:,} records): checked against the original filing or page; the connection and money figures use only these.",
+    lines = [f"confirmed ({tot['evidence']:,} records): rows a reviewer accepted as evidence after reading the source; the connection and money figures use only these. Independent audits re-read them against saved originals (the README gives the share).",
              f"held but not counted ({tot['context']:,}): a duplicate copy of a record already held, a restatement, a namesake, or a record that could not be tied to a person; kept for reference, never counted.",
              f"searched, nothing found ({tot['negative']:,}): rows classified as a search that found nothing; searches that could not be completed are shown separately below.",
              f"not yet classified ({tot['unbound']:,}): rows of the timeline and statements tables that carry no classification yet."]

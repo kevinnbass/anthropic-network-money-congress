@@ -118,7 +118,7 @@ def main() -> int:
         svg.append(txt(x + 30, base + 22, c, 15, anchor="middle", fill=MUTED))
 
     ry = py + 400
-    svg.append(txt(40, ry, "Sitting members receiving the most (their own committees, and committees a filing names as honouring them; all years)", 22, weight="bold"))
+    svg.append(txt(40, ry, "Sitting members receiving the most (gifts to committees the FEC record ties to one member; all years)", 22, weight="bold"))
     mb_by = {m["row_id"]: m for m in b.SITTING}
     top = by_member.most_common(16)
     svg.append(b.bar_chart([(b.member_label(mb_by[k]["member_bioguide"]), v, mb_by[k]) for k, v in top], 40, ry + 20, 2000, 520, label_w=520, colour=lambda m: b.party_colour(m["party"])))

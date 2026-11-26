@@ -77,10 +77,10 @@ def bar_chart(rows, x0, y0, w, h, label_w=520, colour=lambda r: DEM, fmt=money, 
     return "\n".join(out)
 
 
-def figure(stem: str, title: str, subtitle: str, body_svg: str, footnote: str, ids, width=2200, height=1600, legend_html=""):
+def figure(stem: str, title: str, subtitle: str, body_svg: str, footnote: str, ids, width=2200, height=1600, legend_html="", chrome=420):
     if COHORT_NOTE and COHORT_NOTE not in footnote:
         footnote = footnote.rstrip() + " " + COHORT_NOTE
-    doc = shell(title, KICKER, subtitle, legend_html + f'<svg width="{width-120}" height="{height-420}" viewBox="0 0 {width-120} {height-420}">{body_svg}</svg>',
+    doc = shell(title, KICKER, subtitle, legend_html + f'<svg width="{width-120}" height="{height-chrome}" viewBox="0 0 {width-120} {height-chrome}">{body_svg}</svg>',  # chrome: the page height the title, subtitle, legend and footnote take
                 footnote, width, height) + "\n" + hidden_rows(ids)
     html, png, jpg = render(stem, doc, width, height, OUT)
     print(f"rendered {html.name} ({len(set(ids))} row ids cited)")
@@ -222,7 +222,7 @@ def fig01():
                       "set": {m["row_id"] for m in ms}, "indirect": "(indirect)" in TYPE_LABEL[t]})
     omitted = [k["label"] for k in kinds if not k["n"]]
     kinds = sorted([k for k in kinds if k["n"]], key=lambda k: -k["n"])
-    ids = [i for k in kinds for i in sorted(k["set"])]
+    ids = [m["row_id"] for m in SITTING]  # X67d-1338: the members with no counted row are counted too (the 83 and the denominator)
     breadth = {m["row_id"]: sum(1 for k in kinds if m["row_id"] in k["set"]) for m in SITTING}
     dist = collections.Counter(breadth.values())
     n_any = sum(1 for v in breadth.values() if v)
@@ -638,11 +638,11 @@ def fig07():
     bw = W / max(1, len(keys))
     # the story in numbers
     def share(k, t):
-        return 100 * q[k].get(t, 0) // max(1, totals.get(k, 1))
+        return round(100 * q[k].get(t, 0) / max(1, totals.get(k, 1)))  # 2026-11-26: rounded, not cut off (54.9% printed as 54%)
     even = [k for k in ("2018", "2020", "2022", "2024") if k in q]; odd = [k for k in ("2017", "2019", "2021") if k in q]  # X33-010: the years the sentence names
     even_share = [share(k, "3a/3b") for k in even]; odd_share = [share(k, "1/2") for k in odd]  # 2026-09-29: after the X33a window rule, direct contributions lead the off years
     late = {k: q[k].get("1/2", 0) + q[k].get("10", 0) for k in ("2025", "2026") if k in q}
-    late_share = [100 * v // totals[k] for k, v in late.items()]
+    late_share = [round(100 * v / totals[k]) for k, v in late.items()]
     svg = [txt(40, 40, "Confirmed records per year, coloured by kind of connection, 2016–2026 (height = number of records dated in that year)", 24, weight="bold")]
     svg.append(txt(40, 72, f"Election years (red) are outside-spending years: super PAC ad buys and money into super PACs are {min(even_share)}–{max(even_share)}% of 2018, 2020, 2022 and 2024. Off years are led by campaign contributions (blue), {min(odd_share)}–{max(odd_share)}% of 2017, 2019 and 2021.", 16, fill=MUTED))
     svg.append(txt(40, 96, f"In 2025 and 2026 the mix changes: campaign-contribution records plus campaigns' payments to Anthropic and other AI companies make up {min(late_share)}–{max(late_share)}% of those years. 2026 is not over yet.", 16, fill=MUTED))
@@ -686,9 +686,9 @@ def fig07():
         svg.append(txt(40, sy + 32 + i * 24, f"{r['date'][:10]:<11}", 15, fill=MUTED, extra='font-family="monospace"'))
         svg.append(txt(170, sy + 32 + i * 24, (lambda e: e if len(e) <= 150 else e[:147].rstrip() + "…")(re.sub(r"\s*\(GSA Committee No\. \d+\)|;?\s*pack-\d+\b.*$|\bnatsec\b", lambda m: "national security" if m.group(0) == "natsec" else "", r['event'] or '').strip()), 15, fill=INK))
     subtitle = ("What this is: each bar counts the dated, confirmed rows of the study's tables for that year: filings and lines in them (a super PAC ad buy, a campaign contribution, a campaign's payment to an AI company, a lobbyist's own gift, a lobbying report, a grant, a federal award), staff and fellowship records, trips and events, and public statements. It shows when the paper trail exists, not how much money moved.")
-    footnote = ('<b>What the record does not show.</b> Counts follow filing calendars and how far each period was searched, and one super PAC can file thousands of separate lines in a year. Records dated only by year (annual holdings, jobs with only a start year) are not in the bars. Most key moments are dated events copied from the timeline of a companion study, not rows reviewed in this pack.')
-    figure(stem, "Election years spike with outside spending; 2025–26 shift to donations and AI-lab payments", subtitle, "\n".join(svg), footnote, ids, height=1440 + 24 * len(picked),
-           legend_html='<div class="legend">' + legend([(PAL[j], NAMES[t]) for j, t in enumerate(types)]) + "</div>")
+    footnote = ('<b>What the record does not show.</b> Counts follow filing calendars and how far each period was searched, and one super PAC can file thousands of separate lines in a year. Among campaign contributions the bars count every confirmed line a committee filed, including memo, redesignation, refund and conduit lines that no money figure adds. Records dated only by year (annual holdings, jobs with only a start year) are not in the bars. Most key moments are dated events copied from the timeline of a companion study, not rows reviewed in this pack.')
+    figure(stem, "Election years spike with outside spending; 2025–26 shift to donations and AI-lab payments", subtitle, "\n".join(svg), footnote, ids, height=1464 + 24 * len(picked),  # 2026-11-26: one more footnote line since the memo sentence of X67d (the page overflowed by 5 px and its image was not redrawn)
+           legend_html='<div class="legend">' + legend([(PAL[j], NAMES[t]) for j, t in enumerate(types)]) + "</div>", chrome=444)
 
 ALL = {"congress-01-connection-grid": fig01, "congress-02-public-first-family-by-race": fig02, "congress-03-principals-hard-money-by-party-and-cycle": fig03,
        "congress-04-lobbying-spend-and-hill-origins": fig04, "congress-05-revolving-door-both-directions": fig05, "congress-06-federal-money-to-the-network": fig06,

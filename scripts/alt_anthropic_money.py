@@ -71,12 +71,12 @@ def main() -> int:
     n_i = n_party["I"]; ind = f", {money(by_party['I'])} to {'one' if n_i == 1 else n_i} independent{'s' if n_i != 1 else ''}" if n_i else ""  # X63-172
     latest = datetime.date.fromisoformat(max(b.BY_ID[i]["date"] for i in ids)[:10]).strftime("%-d %B %Y")  # X63-171: the rows show the last transaction, not a coverage date
     subtitle = (f"What this is: campaign contributions to sitting members from people who list Anthropic as their employer, plus Anthropic's company PAC (ANTHROPAC), counted once each, "
-                f"to any of the member's committees (campaign, a campaign for another office, leadership PAC, joint fundraising committee). {money(all_tot)} in all from {len(all_donors)} employees and the PAC: "
+                f"to the committees the record ties to one member (campaign, a campaign for another office, leadership PAC, single-member joint fundraising committee). A gift that Anthropic's own registered lobbyist also reported as a lobbyist is counted with lobbyists' gifts, not here. {money(all_tot)} in all from {len(all_donors)} employees and the PAC: "
                 f"{money(d)} to {n_party['D']} Democrats ({100 * d / all_tot:.0f}%), {money(r_)} to {n_party['R']} Republicans{ind}.")
     footnote = ("<b>What the record does not show.</b> An employee's gift is their own money, not the company's; the employer is as the donor wrote it on the filing. "
                 "ANTHROPAC's money comes from its members and is given by the PAC. A contribution is not a vote. Pass-through and memo entries are counted once or not at all. "
-                "Employees are counted by filed surname and first name, so a title, a middle initial or a hyphen does not make a second person; a name filed from more than one city counts once. "
-                f"Anthropic's $40M to Public First Action is outside spending and is not here (see figure 02). The latest contribution here is dated {latest}; the 2026 cycle is still open.")
+                "Employees are counted by filed surname and first name, so a title, a middle initial or a hyphen does not make a second name, and a name filed from more than one city counts once; the count is of filed names, and two people who share a name would count as one. "
+                f"Anthropic's $40M in contributions to Public First Action went to that group, not to a member, and is not here (see figure 02). The latest contribution here is dated {latest}; the 2026 cycle is still open.")
     bf.figure("anthropic-money-per-member", f"Anthropic employees and its PAC gave {money(all_tot)} to {len(ms)} sitting members; {100 * d / all_tot:.0f}% went to Democrats",
               subtitle, "\n".join(svg), footnote, ids, height=y0 + len(top) * rh + 470,
               legend_html=legend([(EMP, "Anthropic employees"), (PAC, "ANTHROPAC (company PAC)"), (b.DEM, "Democrat (name colour)"), (b.REP, "Republican (name colour)")]))

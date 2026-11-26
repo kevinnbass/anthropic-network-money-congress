@@ -90,7 +90,7 @@ def main() -> int:
     n_i = n_party["I"]; ind = f", {money(by_party['I'])} to {'one' if n_i == 1 else n_i} independent{'s' if n_i != 1 else ''}" if n_i else ""  # X63-118
     latest = datetime.date.fromisoformat(max(b.BY_ID[i]["date"] for i in ids)[:10]).strftime("%-d %B %Y")  # X63-117: the rows show the last transaction, not a coverage date
     shares = ", ".join(f"{g.split(' (')[0]} {money(gt[g])}" for g, _ in sorted(GROUPS, key=lambda x: -gt[x[0]])[:4])
-    subtitle = (f"What this is: contributions to sitting members' own committees (campaign, a campaign for another office, leadership PAC, joint fundraising committee) from the network's principals, "
+    subtitle = (f"What this is: contributions to the committees the record ties to one sitting member (campaign, a campaign for another office, leadership PAC, single-member joint fundraising committee) from the network's principals, "
                 f"from people who list a network organisation as employer, and from ANTHROPAC and ARI PAC, each counted once: "
                 f"{money(d)} to {n_party['D']} Democrats ({100 * d / all_tot:.0f}%), {money(r_)} to {n_party['R']} Republicans{ind}.")
     footnote = ("<b>What the record does not show.</b> A person's gift is their own money, not their employer's; employers are as donors wrote them. "
