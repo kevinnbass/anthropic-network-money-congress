@@ -375,19 +375,29 @@ def fig12():
     for r in rec:
         key = (re.sub(r"[^A-Z0-9]", "", (r["payer"] or "").upper()), committee_key(r, "payee"), (r["date"] or "").strip(), round(amt(r["amount_usd"]), 2))
         uniq.setdefault(key, r)
+    # 2026-11-26 (lane C189, S6; batch S57): a receipt of one of these committees that the pack holds in the contributions table (a gift
+    # to a hybrid or super PAC collected there line by line) is a receipt too; figure 09 has counted such lines since 2026-09-23 and
+    # this figure left them out (FF PAC read $105.3M here and $106.3M there). One selector for both: the same rows figure 09 adds,
+    # line by line, each once, unless the same payer, committee, day and amount is already drawn from the outside-money table.
+    committees12 = {committee_key(r, "payee") for r in rec}
+    hm12 = [r for r in HM if ev(r) and r["money_type"] in ("hard_money", "transfer") and r["hop"] == "1" and committee_key(r, "payee") in committees12
+            and (re.sub(r"[^A-Z0-9]", "", (r["payer"] or "").upper()), committee_key(r, "payee"), (r["date"] or "").strip(), round(amt(r["amount_usd"]), 2)) not in uniq]
+    rows12 = list(uniq.values()) + hm12
     def payer_label(r):
         n = (r["payer"] or "").upper()
         if "ANTHROPIC" in n:
             return "Anthropic PBC"
         if "PUBLIC FIRST" in n:
             return "Public First family (internal transfers)"
+        if "MOSKOVITZ TRUST" in n:  # 2026-11-26: a contributions-table receipt names the trust in the payer cell itself; the footnote says such gifts are drawn under his name
+            return public_name("MOSKOVITZ, DUSTIN", "individual")
         if (r["payer_type"] or "").strip() and r["payer_type"] != "individual":  # X39-0406: a committee by its filed type (STRONGER TOGETHER PA), not by a name keyword
             return re.sub(r"\s+", " ", (r["payer"] or "").strip())[:56]
         return public_name(r["payer"], r.get("payer_type", ""))
     def payee_label(r):
         return re.sub(r"[.,]", "", (r["payee"] or "?").upper())[:40]
     flows = collections.defaultdict(float); ids = []
-    for r in uniq.values():
+    for r in rows12:
         flows[(payer_label(r), payee_label(r))] += amt(r["amount_usd"]); ids.append(r["row_id"])
     payers = collections.Counter(); payees = collections.Counter()
     for (a, b), v in flows.items():
@@ -423,7 +433,8 @@ def fig12():
         svg.append(txt(rx + 20, y + h / 2 + 5, f"{money(payees[k])}  {k}", 15))
     svg.append(txt(rx + 20, ry_end + 16, f"{money(other_r)}  all other committees", 14, fill=MUTED))
     ANTH_PFA = sum(amt(r["amount_usd"]) for r in SP if r["row_id"] in ("SP053", "SP054"))  # Anthropic's issuer-disclosed gifts to Public First Action
-    MOSK_TRUST = sum(amt(r["amount_usd"]) for r in SP if ev(r) and "MOSKOVITZ TRUST" in ((r["quote_300"] or "") + (r["note"] or "")).upper())  # receipts filed under the trust
+    MOSK_TRUST = (sum(amt(r["amount_usd"]) for r in SP if ev(r) and "MOSKOVITZ TRUST" in ((r["quote_300"] or "") + (r["note"] or "")).upper())  # receipts filed under the trust
+                  + sum(amt(r["amount_usd"]) for r in hm12 if "MOSKOVITZ TRUST" in (r["payer"] or "").upper()))
     subtitle = (f"Sources: FEC contribution records filed by the receiving committees; BEMC 4 Association's 2022 IRS filing listing grants to four political nonprofits; and Anthropic's own announcements of its {money(ANTH_PFA)} to Public First Action, which does not disclose donors. Other individual givers are grouped into one line.")
     footnote = (f"<b>What the record does not show.</b> A contribution is not an instruction: the committee spends as it chooses. Gifts to nonprofits that do not disclose donors do not appear, so Public First Action's funding beyond Anthropic's gift is a floor. FF PAC, SMP, LCV Victory Fund and MoveOn have many donors; a ribbon is what the record holds going in, not the committee's size. For the Public First committees the ribbons also carry their other itemised receipts and the transfers between them. Gifts filed under Dustin Moskovitz's trust ({money(MOSK_TRUST)}) are drawn under his name. Refunds are not netted.")
     figure(stem, "Where the principals' outside money went", subtitle, "\n".join(svg), footnote, ids, height=1700)
