@@ -1,0 +1,17 @@
+old_row,new_row,finding_id,basis
+EN2667,EN2942,X49-025,Distinct stable object types and identifiers: committee C00561852 versus person/candidate H4CA33119. Keep both; do not act on the erroneous supersedes link.
+HM012,HM806,X49-027,"Duplicate of HM806 is unproven. The amount/date/payer/payee tuple is insufficient. Keep both under this brief, retain the suspicion, and preserve HM807 (the separately held G2026 receipt). No election"
+MS659,MS7661,X49-029,"Statement identity includes speaker and passage, not hearing URL alone. Keep the witness appearance and the member statement separately."
+MS671,MS8143,X49-030,"Statement identity includes speaker and passage, not hearing URL alone. Keep the witness appearance and the member statement separately."
+MS708,MS7674,X49-031,"Statement identity includes speaker and passage, not hearing URL alone. Keep the witness appearance and the member statement separately."
+RD003,RD101,X49-033,Distinct dated facts and roles: founding announcement versus later officer/control filing. Same person/family does not prove the same person-role-date event. Keep both.
+RD054,RD683,X49-034,Complementary records: current ARI employment versus dated prior congressional service. The new row has empty current-role and current-org cells and cannot replace the full ARI-employment fact. Keep b
+RD160,RD992,X49-035,Distinct official filing and payroll records. The newer row contains neither the current firm nor the other prior offices; a matching tax-advisor identity is not a duplicate current-role/date fact. Ke
+RD285,RD679,X49-037,Distinct RAND board-membership fact and congressional-service fact. The directory does not establish the board seat; keep both and preserve the only issuer-backed network-role row.
+RD287,RD680,X49-038,Distinct RAND board-membership fact and congressional-service fact. The directory does not establish the board seat; keep both and preserve the only issuer-backed network-role row.
+RD288,RD681,X49-039,Distinct RAND board-membership fact and congressional-service fact. The directory does not establish the board seat; keep both and preserve the only issuer-backed network-role row.
+RD762,RD895,X49-041,Distinct trip-based office observation and quarterly payroll employment; dates and record keys differ. Shared person/office does not prove the same placement or payroll stint. Keep both under this pai
+EN333,EN2415,SUP-SC-001,"same person (Roy Blunt), two identity facts (X account; FEC candidate id); figure 22 groups the roster by tier and name and the join keys members by bioguide, so nothing is counted twice"
+MS659,MS7663,SUP-SC-002,"different speakers and passages at hearing CHRG-118shrg53503 (witness Dario Amodei; Sen. Blumenthal); statement identity is speaker plus passage, as X49-029 settled for MS659/MS7661"
+MS708,MS7675,SUP-SC-003,"different speakers and passages at the 2024-02-06 hearing (witness Jack Clark; Rep. Foushee), as X49-031 settled for MS708/MS7674"
+MS708,MS7677,SUP-SC-004,"different speakers and passages at the 2024-02-06 hearing (witness Jack Clark; Rep. Eshoo), as X49-031 settled for MS708/MS7674"

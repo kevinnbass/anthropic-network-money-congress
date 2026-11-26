@@ -1,0 +1,5 @@
+# made by scripts/setup_data.py and scripts/build_join.py
+research/super_pac_c4.csv
+research/member_join.csv
+__pycache__/
+.venv/

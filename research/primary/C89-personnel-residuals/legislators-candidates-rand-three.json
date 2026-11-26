@@ -1,0 +1,318 @@
+[
+  {
+    "bioguide": "T000237",
+    "name": {
+      "first": "William",
+      "middle": "Homer",
+      "last": "Thornberry"
+    },
+    "house_terms": [
+      {
+        "type": "rep",
+        "start": "1949-01-03",
+        "end": "1951-01-03",
+        "state": "TX",
+        "district": 10,
+        "party": "Democrat"
+      },
+      {
+        "type": "rep",
+        "start": "1951-01-03",
+        "end": "1953-01-03",
+        "state": "TX",
+        "district": 10,
+        "party": "Democrat"
+      },
+      {
+        "type": "rep",
+        "start": "1953-01-03",
+        "end": "1955-01-03",
+        "state": "TX",
+        "district": 10,
+        "party": "Democrat"
+      },
+      {
+        "type": "rep",
+        "start": "1955-01-05",
+        "end": "1957-01-03",
+        "state": "TX",
+        "district": 10,
+        "party": "Democrat"
+      },
+      {
+        "type": "rep",
+        "start": "1957-01-03",
+        "end": "1959-01-03",
+        "state": "TX",
+        "district": 10,
+        "party": "Democrat"
+      },
+      {
+        "type": "rep",
+        "start": "1959-01-07",
+        "end": "1961-01-03",
+        "state": "TX",
+        "district": 10,
+        "party": "Democrat"
+      },
+      {
+        "type": "rep",
+        "start": "1961-01-03",
+        "end": "1963-01-03",
+        "state": "TX",
+        "district": 10,
+        "party": "Democrat"
+      },
+      {
+        "type": "rep",
+        "start": "1963-01-09",
+        "end": "1965-01-03",
+        "state": "TX",
+        "district": 10,
+        "party": "Democrat"
+      }
+    ],
+    "source": "https://unitedstates.github.io/congress-legislators/legislators-historical.json or current"
+  },
+  {
+    "bioguide": "T000238",
+    "name": {
+      "first": "Mac",
+      "middle": "M.",
+      "last": "Thornberry",
+      "official_full": "Mac Thornberry"
+    },
+    "house_terms": [
+      {
+        "type": "rep",
+        "start": "1995-01-04",
+        "end": "1997-01-03",
+        "state": "TX",
+        "district": 13,
+        "party": "Republican"
+      },
+      {
+        "type": "rep",
+        "start": "1997-01-07",
+        "end": "1999-01-03",
+        "state": "TX",
+        "district": 13,
+        "party": "Republican"
+      },
+      {
+        "type": "rep",
+        "start": "1999-01-06",
+        "end": "2001-01-03",
+        "state": "TX",
+        "district": 13,
+        "party": "Republican"
+      },
+      {
+        "type": "rep",
+        "start": "2001-01-03",
+        "end": "2003-01-03",
+        "state": "TX",
+        "district": 13,
+        "party": "Republican"
+      },
+      {
+        "type": "rep",
+        "start": "2003-01-07",
+        "end": "2005-01-03",
+        "state": "TX",
+        "district": 13,
+        "party": "Republican",
+        "url": "http://www.house.gov/thornberry"
+      },
+      {
+        "type": "rep",
+        "start": "2005-01-04",
+        "end": "2007-01-03",
+        "state": "TX",
+        "district": 13,
+        "party": "Republican",
+        "url": "http://www.house.gov/thornberry"
+      },
+      {
+        "type": "rep",
+        "start": "2007-01-04",
+        "end": "2009-01-03",
+        "state": "TX",
+        "district": 13,
+        "party": "Republican",
+        "url": "http://www.house.gov/thornberry"
+      },
+      {
+        "type": "rep",
+        "start": "2009-01-06",
+        "end": "2011-01-03",
+        "state": "TX",
+        "district": 13,
+        "party": "Republican",
+        "url": "http://www.house.gov/thornberry"
+      },
+      {
+        "type": "rep",
+        "start": "2011-01-05",
+        "end": "2013-01-03",
+        "state": "TX",
+        "district": 13,
+        "party": "Republican",
+        "url": "http://www.house.gov/thornberry",
+        "address": "2209 Rayburn HOB; Washington DC 20515-4313",
+        "phone": "202-225-3706",
+        "fax": "202-225-3486",
+        "contact_form": "http://www.house.gov/writerep",
+        "office": "2209 Rayburn House Office Building"
+      },
+      {
+        "type": "rep",
+        "start": "2013-01-03",
+        "end": "2015-01-03",
+        "state": "TX",
+        "party": "Republican",
+        "district": 13,
+        "url": "http://thornberry.house.gov",
+        "address": "2329 Rayburn HOB; Washington DC 20515-4313",
+        "phone": "202-225-3706",
+        "fax": "202-225-3486",
+        "contact_form": "https://thornberry.house.gov/forms/writeyourrep/",
+        "office": "2329 Rayburn House Office Building"
+      },
+      {
+        "type": "rep",
+        "start": "2015-01-06",
+        "end": "2017-01-03",
+        "state": "TX",
+        "party": "Republican",
+        "district": 13,
+        "url": "http://thornberry.house.gov",
+        "address": "2208 Rayburn HOB; Washington DC 20515-4313",
+        "phone": "202-225-3706",
+        "fax": "202-225-3486",
+        "contact_form": "https://thornberry.house.gov/forms/writeyourrep/",
+        "office": "2208 Rayburn House Office Building"
+      },
+      {
+        "type": "rep",
+        "start": "2017-01-03",
+        "end": "2019-01-03",
+        "state": "TX",
+        "district": 13,
+        "party": "Republican",
+        "phone": "202-225-3706",
+        "url": "https://thornberry.house.gov",
+        "address": "2208 Rayburn House Office Building; Washington DC 20515-4313",
+        "office": "2208 Rayburn House Office Building",
+        "fax": "202-225-3486"
+      },
+      {
+        "type": "rep",
+        "start": "2019-01-03",
+        "end": "2021-01-03",
+        "state": "TX",
+        "district": 13,
+        "party": "Republican",
+        "phone": "202-225-3706",
+        "address": "2208 Rayburn House Office Building Washington DC 20515-4313",
+        "office": "2208 Rayburn House Office Building",
+        "url": "https://thornberry.house.gov"
+      }
+    ],
+    "source": "https://unitedstates.github.io/congress-legislators/legislators-historical.json or current"
+  },
+  {
+    "bioguide": "M001202",
+    "name": {
+      "first": "Stephanie",
+      "middle": "N.",
+      "last": "Murphy",
+      "official_full": "Stephanie N. Murphy"
+    },
+    "house_terms": [
+      {
+        "type": "rep",
+        "start": "2017-01-03",
+        "end": "2019-01-03",
+        "state": "FL",
+        "district": 7,
+        "party": "Democrat",
+        "phone": "202-225-4035",
+        "address": "1237 Longworth House Office Building; Washington DC 20515-0907",
+        "office": "1237 Longworth House Office Building",
+        "url": "https://stephaniemurphy.house.gov"
+      },
+      {
+        "type": "rep",
+        "start": "2019-01-03",
+        "end": "2021-01-03",
+        "state": "FL",
+        "district": 7,
+        "party": "Democrat",
+        "phone": "202-225-4035",
+        "address": "1710 Longworth House Office Building Washington DC 20515-0907",
+        "office": "1710 Longworth House Office Building",
+        "url": "https://murphy.house.gov"
+      },
+      {
+        "type": "rep",
+        "start": "2021-01-03",
+        "end": "2023-01-03",
+        "state": "FL",
+        "district": 7,
+        "party": "Democrat",
+        "url": "https://murphy.house.gov",
+        "address": "1710 Longworth House Office Building Washington DC 20515-0907",
+        "office": "1710 Longworth House Office Building",
+        "phone": "202-225-4035"
+      }
+    ],
+    "source": "https://unitedstates.github.io/congress-legislators/legislators-historical.json or current"
+  },
+  {
+    "bioguide": "G000061",
+    "name": {
+      "first": "Mike",
+      "last": "Garcia",
+      "official_full": "Mike Garcia"
+    },
+    "house_terms": [
+      {
+        "type": "rep",
+        "start": "2020-05-19",
+        "end": "2021-01-03",
+        "state": "CA",
+        "district": 25,
+        "party": "Republican",
+        "address": "1130 Longworth House Office Building Washington DC 20515-0525",
+        "office": "1130 Longworth House Office Building",
+        "phone": "202-225-1956"
+      },
+      {
+        "type": "rep",
+        "start": "2021-01-03",
+        "end": "2023-01-03",
+        "state": "CA",
+        "district": 25,
+        "party": "Republican",
+        "address": "1535 Longworth House Office Building Washington DC 20515-0525",
+        "office": "1535 Longworth House Office Building",
+        "phone": "202-225-1956",
+        "url": "https://mikegarcia.house.gov"
+      },
+      {
+        "type": "rep",
+        "start": "2023-01-03",
+        "end": "2025-01-03",
+        "state": "CA",
+        "district": 27,
+        "party": "Republican",
+        "url": "https://mikegarcia.house.gov",
+        "address": "144 Cannon House Office Building Washington DC 20515-0527",
+        "office": "144 Cannon House Office Building",
+        "phone": "202-225-1956"
+      }
+    ],
+    "source": "https://unitedstates.github.io/congress-legislators/legislators-historical.json or current"
+  }
+]

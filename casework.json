@@ -1,0 +1,236 @@
+{
+  "banned_motive_words": [
+    "intended",
+    "scheme",
+    "secretly",
+    "coordinated",
+    "captured"
+  ],
+  "figure_globs": [
+    "figures/*.html"
+  ],
+  "freshness_days": {
+    "filings": 90,
+    "press": 30,
+    "registries": 90,
+    "x": 30
+  },
+  "kind": "investigative",
+  "lane_columns": [
+    "task",
+    "date",
+    "source_type",
+    "url",
+    "quote_300",
+    "checked_utc",
+    "note"
+  ],
+  "lane_outputs": {
+    "glob": "research/grok-out/*.csv",
+    "required_column": "checked_utc",
+    "required_header_comment": "#"
+  },
+  "lane_prefix": "C",
+  "name": "congress",
+  "root": ".",
+  "rules": "Rules: fetch and write only; no network or system changes; primary sources first, press second; quote verbatim with URL and UTC time; every row gets checked_utc; bounded none-found lines per task; do not use the author's posts; do not re-collect held facts; no motive asserted; name only public people in public roles; distinguish contribution from vote and independent expenditure from coordination; confirm homonyms; unattributed c4 donors stay unattributed; use server-side filtered and fully paginated FEC pulls; after three failed fetch attempts record the gap; header comment with fetch time and caps.",
+  "source_classes": [
+    "IRS e-files",
+    "SEC",
+    "FEC",
+    "LDA",
+    "state registries",
+    "court dockets",
+    "issuer statements",
+    "self-statements",
+    "press",
+    "archives"
+  ],
+  "tables": {
+    "EN": {
+      "file": "research/entities.csv",
+      "id_widths": [
+        2,
+        3,
+        4
+      ],
+      "required": false,
+      "required_columns": [
+        "row_id"
+      ]
+    },
+    "FG": {
+      "file": "research/federal_money.csv",
+      "id_widths": [
+        2,
+        3,
+        4
+      ],
+      "required": false,
+      "required_columns": [
+        "row_id"
+      ]
+    },
+    "GR": {
+      "file": "research/grants.csv",
+      "id_widths": [
+        2,
+        3,
+        4
+      ],
+      "required": false,
+      "required_columns": [
+        "row_id"
+      ]
+    },
+    "HM": {
+      "file": "research/hard_money.csv",
+      "id_widths": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "required": false,
+      "required_columns": [
+        "row_id"
+      ]
+    },
+    "LB": {
+      "file": "research/lobbying.csv",
+      "id_widths": [
+        2,
+        3,
+        4
+      ],
+      "required": false,
+      "required_columns": [
+        "row_id"
+      ]
+    },
+    "LC": {
+      "file": "research/lobbyist_contributions.csv",
+      "id_widths": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "required": false,
+      "required_columns": [
+        "row_id"
+      ]
+    },
+    "MB": {
+      "file": "research/member_join.csv",
+      "id_widths": [
+        2,
+        3,
+        4
+      ],
+      "required": false,
+      "required_columns": [
+        "row_id"
+      ]
+    },
+    "MS": {
+      "file": "research/member_statements.csv",
+      "id_widths": [
+        2,
+        3,
+        4
+      ],
+      "required": false,
+      "required_columns": [
+        "row_id"
+      ]
+    },
+    "PD": {
+      "file": "research/member_disclosures.csv",
+      "id_widths": [
+        2,
+        3,
+        4
+      ],
+      "required": false,
+      "required_columns": [
+        "row_id"
+      ]
+    },
+    "RD": {
+      "file": "research/revolving_door.csv",
+      "id_widths": [
+        2,
+        3,
+        4
+      ],
+      "required": false,
+      "required_columns": [
+        "row_id"
+      ]
+    },
+    "SG": {
+      "file": "research/state_government.csv",
+      "id_widths": [
+        2,
+        3,
+        4
+      ],
+      "required": false,
+      "required_columns": [
+        "row_id"
+      ]
+    },
+    "SP": {
+      "file": "research/super_pac_c4.csv",
+      "id_widths": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "required": false,
+      "required_columns": [
+        "row_id"
+      ]
+    },
+    "TL": {
+      "file": "research/timeline.csv",
+      "id_widths": [
+        2,
+        3,
+        4
+      ],
+      "required": false,
+      "required_columns": [
+        "row_id"
+      ]
+    },
+    "TV": {
+      "file": "research/travel.csv",
+      "id_widths": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "required": false,
+      "required_columns": [
+        "row_id"
+      ]
+    },
+    "VN": {
+      "file": "research/vendors.csv",
+      "id_widths": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "required": false,
+      "required_columns": [
+        "row_id"
+      ]
+    }
+  }
+}

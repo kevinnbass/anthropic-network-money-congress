@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<billStatus>
+  <version>3.0.0</version>
+  <bill>
+    <number>6996</number>
+    <updateDate>2026-09-03T17:02:32Z</updateDate>
+    <updateDateIncludingText>2026-09-03T17:02:32Z</updateDateIncludingText>
+    <originChamber>House</originChamber>
+    <originChamberCode>H</originChamberCode>
+    <type>HR</type>
+    <introducedDate>2026-01-09</introducedDate>
+    <congress>119</congress>
+    <legislationUrl>https://www.congress.gov/bill/119th-congress/house-bill/6996</legislationUrl>
+    <constitutionalAuthorityStatementText><![CDATA[<pre>[Congressional Record Volume 172, Number 7 (Friday, January 9, 2026)][House]From the Congressional Record Online through the Government Publishing Office [<a href="https://www.gpo.gov">www.gpo.gov</a>]By Mr. FINE:H.R. 6996.Congress has the power to enact this legislation pursuantto the following:Commerce Clause, Article I, Section 8, Clause 3Necessary and Proper Clause, Article I, Section 8, Clause18.[Page H616]</pre>]]></constitutionalAuthorityStatementText>
+    <committees>
+      <item>
+        <systemCode>hsfa00</systemCode>
+        <name>Foreign Affairs Committee</name>
+        <chamber>House</chamber>
+        <type>Standing</type>
+        <activities>
+          <item>
+            <name>Markup By</name>
+            <date>2026-04-22T20:22:00Z</date>
+          </item>
+          <item>
+            <name>Referred To</name>
+            <date>2026-01-09T14:00:50Z</date>
+          </item>
+        </activities>
+      </item>
+    </committees>
+    <actions>
+      <item>
+        <actionDate>2026-04-22</actionDate>
+        <committees>
+          <item>
+            <systemCode>hsfa00</systemCode>
+            <name>Foreign Affairs Committee</name>
+          </item>
+        </committees>
+        <sourceSystem>
+          <code>1</code>
+          <name>House committee actions</name>
+        </sourceSystem>
+        <text>Ordered to be Reported in the Nature of a Substitute by the Yeas and Nays: 37 - 7.</text>
+        <type>Committee</type>
+      </item>
+      <item>
+        <actionDate>2026-04-22</actionDate>
+        <committees>
+          <item>
+            <systemCode>hsfa00</systemCode>
+            <name>Foreign Affairs Committee</name>
+          </item>
+        </committees>
+        <sourceSystem>
+          <code>1</code>
+          <name>House committee actions</name>
+        </sourceSystem>
+        <text>Committee Consideration and Mark-up Session Held</text>
+        <type>Committee</type>
+      </item>
+      <item>
+        <actionDate>2026-01-09</actionDate>
+        <text>Referred to the House Committee on Foreign Affairs.</text>
+        <type>IntroReferral</type>
+        <actionCode>H11100</actionCode>
+        <sourceSystem>
+          <code>2</code>
+          <name>House floor actions</name>
+        </sourceSystem>
+        <committees>
+          <item>
+            <systemCode>hsfa00</systemCode>
+            <name>Foreign Affairs Committee</name>
+          </item>
+        </committees>
+      </item>
+      <item>
+        <actionDate>2026-01-09</actionDate>
+        <text>Introduced in House</text>
+        <type>IntroReferral</type>
+        <actionCode>Intro-H</actionCode>
+        <sourceSystem>
+          <code>9</code>
+          <name>Library of Congress</name>
+        </sourceSystem>
+      </item>
+      <item>
+        <actionDate>2026-01-09</actionDate>
+        <text>Introduced in House</text>
+        <type>IntroReferral</type>
+        <actionCode>1000</actionCode>
+        <sourceSystem>
+          <code>9</code>
+          <name>Library of Congress</name>
+        </sourceSystem>
+      </item>
+    </actions>
+    <sponsors>
+      <item>
+        <bioguideId>F000484</bioguideId>
+        <fullName>Rep. Fine, Randy [R-FL-6]</fullName>
+        <firstName>Randy</firstName>
+        <lastName>Fine</lastName>
+        <party>R</party>
+        <state>FL</state>
+        <district>6</district>
+        <isByRequest>N</isByRequest>
+      </item>
+    </sponsors>
+    <cosponsors>
+      <item>
+        <bioguideId>H001058</bioguideId>
+        <fullName>Rep. Huizenga, Bill [R-MI-4]</fullName>
+        <firstName>Bill</firstName>
+        <lastName>Huizenga</lastName>
+        <party>R</party>
+        <state>MI</state>
+        <district>4</district>
+        <sponsorshipDate>2026-04-20</sponsorshipDate>
+        <isOriginalCosponsor>False</isOriginalCosponsor>
+      </item>
+    </cosponsors>
+    <cboCostEstimates>
+      <item>
+        <pubDate>2026-05-21T12:08:00Z</pubDate>
+        <title>H.R. 6996, Full AI Stack Export Promotion Act</title>
+        <url>https://www.cbo.gov/publication/62405</url>
+        <description>As ordered reported by the House Committee on Foreign Affairs on April 22, 2026</description>
+      </item>
+    </cboCostEstimates>
+    <policyArea>
+      <name>Foreign Trade and International Finance</name>
+    </policyArea>
+    <subjects>
+      <legislativeSubjects>
+        <item>
+          <name>Advanced technology and technological innovations</name>
+          <updateDate>2026-05-18T15:27:01Z</updateDate>
+        </item>
+        <item>
+          <name>Competitiveness, trade promotion, trade deficits</name>
+          <updateDate>2026-05-18T15:27:27Z</updateDate>
+        </item>
+        <item>
+          <name>Computers and information technology</name>
+          <updateDate>2026-05-18T15:27:06Z</updateDate>
+        </item>
+        <item>
+          <name>Congressional oversight</name>
+          <updateDate>2026-05-18T15:27:15Z</updateDate>
+        </item>
+        <item>
+          <name>Government studies and investigations</name>
+          <updateDate>2026-05-18T15:27:22Z</updateDate>
+        </item>
+        <item>
+          <name>Technology transfer and commercialization</name>
+          <updateDate>2026-05-18T15:27:10Z</updateDate>
+        </item>
+      </legislativeSubjects>
+      <policyArea>
+        <name>Foreign Trade and International Finance</name>
+        <updateDate>2026-03-19T19:41:05Z</updateDate>
+      </policyArea>
+    </subjects>
+    <summaries>
+      <summary>
+        <versionCode>00</versionCode>
+        <actionDate>2026-01-09</actionDate>
+        <actionDesc>Introduced in House</actionDesc>
+        <updateDate>2026-09-03T16:52:32Z</updateDate>
+        <text><![CDATA[<p><strong>Full AI Stack Export Promotion Act</strong></p><p>This bill requires specified departments to promote the export of the U.S. full artificial intelligence (AI) stack. <em>Full AI stack</em> refers&nbsp;to the compute and data infrastructure that enables AI research and development, including high-performance computing resources, data centers, trained algorithms deployed on such infrastructure, cloud services and infrastructure, and technical standards with which these facets operate.</p><p>Specifically, the Department of Commerce must establish and carry out a program to identify and receive proposals from industry consortia for exporting the U.S. full AI stack to allies and partners. (Commerce implemented this program following a July 2025&nbsp;<a href="https://www.federalregister.gov/documents/2025/07/28/2025-14218/promoting-the-export-of-the-american-ai-technology-stack">executive order</a>.)</p><p>Additionally, Commerce must</p><ul><li>work with foreign purchasers of the U.S. full AI stack to institute security measures to prevent illicit or unauthorized foreign adversary (e.g., China) access to the U.S. full AI stack;</li><li>develop practices and standards to demonstrate to potential purchasers the benefits of adopting the U.S. full AI stack; and</li><li>complete, on a biannual basis for five years, an estimate of the success of exporting the U.S. full AI stack.</li></ul><p>The bill directs the Department of State to</p><ul><li>increase efforts to eliminate foreign barriers to exporting the U.S. full AI stack;</li><li>establish a diplomatic strategy outlining how the United States will address certain issues, such as communicating to foreign countries the importance and benefits of using the U.S. full AI stack to deploy AI; and</li><li>study the benefits and impact of the global deployment of AI.</li></ul><p>The bill also requires certain reports to Congress.</p>]]></text>
+      </summary>
+    </summaries>
+    <title>Full AI Stack Export Promotion Act</title>
+    <titles>
+      <item>
+        <titleType>Display Title</titleType>
+        <titleTypeCode>45</titleTypeCode>
+        <title>Full AI Stack Export Promotion Act</title>
+        <updateDate>2026-07-17T23:39:15Z</updateDate>
+      </item>
+      <item>
+        <titleType>Short Title(s) as Introduced</titleType>
+        <titleTypeCode>101</titleTypeCode>
+        <title>Full AI Stack Export Promotion Act</title>
+        <updateDate>2026-03-18T03:23:23Z</updateDate>
+        <billTextVersionName>Introduced in House</billTextVersionName>
+        <billTextVersionCode>IH</billTextVersionCode>
+      </item>
+      <item>
+        <titleType>Official Title as Introduced</titleType>
+        <titleTypeCode>6</titleTypeCode>
+        <title>To facilitate the export of United States artificial intelligence systems, computing hardware, and standards globally.</title>
+        <updateDate>2026-03-18T03:18:23Z</updateDate>
+        <billTextVersionName>Introduced in House</billTextVersionName>
+        <billTextVersionCode>IH</billTextVersionCode>
+      </item>
+    </titles>
+    <textVersions>
+      <item>
+        <type>Introduced in House</type>
+        <date>2026-01-09T05:00:00Z</date>
+        <formats>
+          <item>
+            <url>https://www.govinfo.gov/content/pkg/BILLS-119hr6996ih/xml/BILLS-119hr6996ih.xml</url>
+          </item>
+        </formats>
+      </item>
+    </textVersions>
+    <latestAction>
+      <actionDate>2026-04-22</actionDate>
+      <text>Ordered to be Reported in the Nature of a Substitute by the Yeas and Nays: 37 - 7.</text>
+    </latestAction>
+  </bill>
+  <dublinCore xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <dc:format>text/xml</dc:format>
+    <dc:language>EN</dc:language>
+    <dc:rights>Pursuant to Title 17 Section 105 of the United States Code, this file is not subject to copyright protection and is in the public domain.</dc:rights>
+    <dc:contributor>Congressional Research Service, Library of Congress</dc:contributor>
+    <dc:description>This file contains bill summaries and statuses for federal legislation. A bill summary describes the most significant provisions of a piece of legislation and details the effects the legislative text may have on current law and federal programs. Bill summaries are authored by the Congressional Research Service (CRS) of the Library of Congress. As stated in Public Law 91-510 (2 USC 166 (d)(6)), one of the duties of CRS is "to prepare summaries and digests of bills and resolutions of a public general nature introduced in the Senate or House of Representatives". For more information, refer to the User Guide that accompanies this file.</dc:description>
+  </dublinCore>
+</billStatus>
