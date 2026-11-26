@@ -1,0 +1,232 @@
+[
+ {
+  "id": "start",
+  "act": "Anthropic&#8217;s network and Congress",
+  "head": "<em>450</em> of 533",
+  "deck": "More than four in five members of Congress have a documented tie to Anthropic&#8217;s network: the company, the funders behind it, the groups they fund, and their PACs and lobbyists. This is the public record of those ties, and of how fast they were made.",
+  "note": "Each dot is one of the 533 members serving on Nov. 26, 2026. A tie is a public record (a contribution, a lobbying report, a hearing, a job). It is not an allegation, and a contribution is not a vote.",
+  "bridge": "Start with the company itself.",
+  "how": "",
+  "source": ""
+ },
+ {
+  "id": "arrival",
+  "act": "I &#183; The arrival",
+  "head": "At the end of 2024, <em>10</em> members had received money from Anthropic&#8217;s people. Twenty-one months later: <em>196</em>.",
+  "deck": "Each dot is a member of Congress. A lit dot has received at least one contribution from a person who lists Anthropic as employer, or from the company&#8217;s PAC.",
+  "note": "A person&#8217;s contribution is their own money, not their employer&#8217;s. Employer is as the giver reported it to the FEC.",
+  "bridge": "How fast did the money itself come?",
+  "how": "",
+  "source": "Source: FEC contribution records in this project&#8217;s tables; activity through Sept. 30, 2026."
+ },
+ {
+  "id": "wave",
+  "act": "I &#183; The arrival",
+  "head": "<em>92%</em> of everything Anthropic&#8217;s employees gave these members is dated 2026.",
+  "deck": "$25K in the first quarter of 2025. $3.2M in the third quarter of 2026. In all, $5.6M in 1,027 contributions.",
+  "note": "The record stops at Sept. 30, 2026. Anything given after that date is not counted here.",
+  "bridge": "Who wrote those checks?",
+  "how": "",
+  "source": "Source: FEC contribution records; contributions to the campaign, leadership PAC or single-member joint fundraising committee of a serving member."
+ },
+ {
+  "id": "ten",
+  "act": "I &#183; The arrival",
+  "head": "Ten people gave <em>58%</em> of it.",
+  "deck": "89 names list Anthropic as their employer on these contributions. Half of them gave $20,500 or less. The two largest gave $553K and $545K, spread across 70 and 65 members.",
+  "note": "Givers are private individuals and are not named here. The count is of names as filed: two people who share a name would count as one.",
+  "bridge": "Where did it land?",
+  "how": "Each circle is one giver; its area is what that person gave to serving members.",
+  "source": ""
+ },
+ {
+  "id": "landed",
+  "act": "I &#183; The arrival",
+  "head": "It went to both parties. <em>Six of the eight</em> largest totals went to Republicans.",
+  "deck": "55% of the dollars went to Democrats. A larger dot received more. Jon Ossoff received the most, $218K.",
+  "note": "One independent received $5K. Totals are by member: campaign, leadership PAC and single-member joint fundraising committees together.",
+  "bridge": "Then the company opened a PAC.",
+  "how": "",
+  "source": "Source: FEC contribution records; all years on record."
+ },
+ {
+  "id": "pac",
+  "act": "I &#183; The arrival",
+  "head": "Its PAC made its first gift on June 29, 2026. By September 30 it had given to <em>81</em> members.",
+  "deck": "57 of them in September alone. Each dot is one contribution by ANTHROPAC: 87 in all, $200K.",
+  "note": "",
+  "bridge": "The PAC is the small part. The large money moved another way.",
+  "how": "",
+  "source": "Source: FEC records of ANTHROPAC (Anthropic PBC&#8217;s political action committee); first gift on record in this project&#8217;s tables."
+ },
+ {
+  "id": "forty",
+  "act": "II &#183; The bigger money",
+  "head": "Anthropic gave <em>$40M</em> to one political group. A super PAC that group funds spent <em>$15.0M</em> backing one House candidate.",
+  "deck": "Alexander Bores, a Democratic candidate in NY-12, does not serve in Congress. Two super PACs the group funds spent $25.3M on 15 candidates; $3.7M of it backed four members now serving.",
+  "note": "Public First Action does not disclose its donors; the $40M is as Anthropic announced it. A contribution does not direct spending, and the filings state the super PACs acted alone.",
+  "bridge": "The company&#8217;s funders gave more.",
+  "how": "Each band is money on record moving from one group to the next; its thickness is the amount.",
+  "source": "Source: FEC outside-spending reports and contribution records of the Public First committees; Anthropic&#8217;s announcements. Not drawn: $1.0M Public First Action passed to a third committee, and one $105K ad naming a member without saying for or against."
+ },
+ {
+  "id": "funders",
+  "act": "II &#183; The bigger money",
+  "head": "The network&#8217;s funders gave far more than the company. Dustin Moskovitz alone: <em>$130M</em>.",
+  "deck": "$100M of it went to one committee, FF PAC, in the 2020, 2022 and 2024 election cycles. Each band is one giver&#8217;s money on record to outside political groups since 2016.",
+  "note": "A band is what the record holds going in, not a committee&#8217;s size: FF PAC raises from many donors. A contribution is not an instruction, and the record shows who gave and who received, not why. Reed Hastings sits on Anthropic&#8217;s board and Dario Amodei is its chief executive; the others fund Anthropic or the AI-safety field.",
+  "bridge": "What did those committees spend on the members now serving?",
+  "how": "",
+  "source": "Source: FEC contribution records filed by the receiving committees; BEMC 4 Association&#8217;s 2022 IRS filing; Anthropic&#8217;s announcements. Not drawn: transfers between the Public First committees, and $4.3M from other individuals, who are not named."
+ },
+ {
+  "id": "halfbillion",
+  "act": "II &#183; The bigger money",
+  "head": "Committees that took the network&#8217;s money spent <em>$541M</em> for or against members now serving: <em>$420M</em> of it against Republicans.",
+  "deck": "They named 213 members. Most of the money was not the network&#8217;s: House Majority PAC spent $213M on these members, and the record holds $5.3M of network money going into it.",
+  "note": "This is the committees&#8217; own spending, in every election cycle on record (2000 to 2026; 97% of it in the 2020 cycle or later). An independent expenditure is not coordination, and a member opposed received nothing. Network money is what the record holds going into a committee: a floor, not tied to any expenditure.",
+  "bridge": "One kind of money reaches more members than any of this, and the network did not give it.",
+  "how": "Each lit dot is a member a committee spent on: green for, amber against. A larger dot, more money.",
+  "source": "Source: FEC outside-spending reports naming a serving member, for the 26 committees with network money on record (these five did 93% of the spending); receipts on record since 2016."
+ },
+ {
+  "id": "lobbyists",
+  "act": "II &#183; The bigger money",
+  "head": "The widest tie is one the network did not make: lobbyists at its lobbying firms gave <em>323</em> members <em>$1.4M</em> of their own money.",
+  "deck": "153 Democrats, 169 Republicans and one independent: more members than received a gift from the network&#8217;s own people (235). The total has grown in each election cycle; for 2026, the reports read so far stop at June 30.",
+  "note": "The lobbyist gave, not the client, and most of these lobbyists also serve clients outside the network. Counted: gifts dated while the lobbyist&#8217;s firm was registered for a network client. Stricter count (the lobbyist is also named on that client&#8217;s filings): $1.2M, 994 gifts, 299 members.",
+  "bridge": "Lobbyists are paid to ask. Here is what Anthropic spent.",
+  "how": "Each lit dot is a member who received at least one gift from such a lobbyist.",
+  "source": "Source: lobbyists&#8217; semi-annual contribution reports to Congress, through June 30, 2026; FEC records tie each receiving committee to one member."
+ },
+ {
+  "id": "twentyfold",
+  "act": "III &#183; The asks",
+  "head": "Anthropic&#8217;s reported lobbying grew <em>twentyfold</em> in three years.",
+  "deck": "$280K in 2023. $5.6M in the first nine months of 2026, more than the nine other network groups that lobby reported between them ($3.0M).",
+  "note": "Amounts are as the filers reported them, rounded. For 2023 the figure is what Anthropic&#8217;s outside firms reported; from 2024 it is the company&#8217;s own report, which already includes what it paid them, so the two are never added.",
+  "bridge": "Is that a lot?",
+  "how": "",
+  "source": "Source: quarterly federal lobbying reports (form LD-2) filed for Anthropic and the network&#8217;s other clients, through Sept. 30, 2026."
+ },
+ {
+  "id": "halfpercent",
+  "act": "III &#183; The asks",
+  "head": "Beside everyone who lobbies on AI, the whole network is <em>half a percent</em>.",
+  "deck": "In 2025, the clients whose lobbying reports name artificial intelligence reported $1,211M between them; the network&#8217;s share was $5.6M. Over 2024&#8211;25, Anthropic ($3.9M) reported less than OpenAI ($4.8M) and far less than Meta ($50.7M).",
+  "note": "Each amount is a report&#8217;s total for all of its issues, so these are upper bounds on AI lobbying, not estimates of it. On reports whose every issue is AI, the network&#8217;s 2025 share is 2.9%. This comparison ends in 2025.",
+  "bridge": "Small, then. But what did it ask about?",
+  "how": "Each square is $1M reported in 2025 on a lobbying report that names AI: 1,211 squares in all.",
+  "source": "Source: every federal lobbying report (LD-2), 2019&#8211;2025, whose issue text names artificial intelligence or an AI bill by its AI title; Senate lobbying records."
+ },
+ {
+  "id": "whatbills",
+  "act": "III &#183; The asks",
+  "head": "The three bills Anthropic&#8217;s own reports name most are all about <em>chips</em>. <em>All six</em> of their sponsors received money from Anthropic&#8217;s people.",
+  "deck": "Each bill is quoted here in its own official title, with the sponsors of its House and Senate versions. Together the six received $328,500 from Anthropic&#8217;s employees and PAC.",
+  "note": "A report that names a bill says the client lobbied on it, not whether it was for the bill or against it. The gifts are individuals&#8217; own or the PAC&#8217;s, and no gift is tied to a bill. For three of the six the first gift came before the quarter of Anthropic&#8217;s first report naming their bill, for two within it, for one after it.",
+  "bridge": "Now count every bill its reports name.",
+  "how": "Each dot is one quarterly lobbying report, by Anthropic or a firm it hired, that names the bill. The sum beside a sponsor is what Anthropic&#8217;s employees and PAC gave that member, all years on record.",
+  "source": "Source: the 68 quarterly lobbying reports filed for Anthropic, 2023 to Sept. 30, 2026 (18 name a bill; annual defence and spending bills are not ranked; House and Senate versions count as one bill where a report pairs them); official titles as introduced, from the bill status files of the Government Publishing Office; FEC contribution records."
+ },
+ {
+  "id": "bills",
+  "act": "III &#183; The asks",
+  "head": "Anthropic&#8217;s own lobbying reports name the bills of 23 members. <em>19 of them</em> received money from Anthropic&#8217;s people.",
+  "deck": "In the whole chamber it is 196 of 533. Among the 91 other sponsors of AI bills, whose bills no network report names, it is 47; with the other network groups&#8217; reports counted, 27 of 38.",
+  "note": "A report that names a bill says the client lobbied on it: not which way, and not whether the sponsor&#8217;s office was contacted. No money is attributed to the lobbying; each gift is an individual&#8217;s own or the PAC&#8217;s. For 10 of the 19 the first gift came before the quarter of Anthropic&#8217;s first report naming a bill of theirs, for 4 within it, for 5 after it. The 23 are not a cross-section of Congress: 13 are senators, and 60 of the 100 senators received such money (12 of these 13 did).",
+  "bridge": "All of this is recent. The groundwork is older.",
+  "how": "",
+  "source": "Source: quarterly lobbying reports of Anthropic and the network&#8217;s other clients matched to verified sponsors (annual defence and spending bills not counted); AI bills from this project&#8217;s companion study; FEC contribution records through Sept. 30, 2026."
+ },
+ {
+  "id": "grants",
+  "act": "IV &#183; The groundwork",
+  "head": "The grants came first: <em>$931M</em> since 2015, more than half of it before 2025.",
+  "deck": "When 2024 ended, ten members had received money from Anthropic&#8217;s people, and the funders behind the network had already granted $528M for work on AI, technology, biosecurity and catastrophic risk. Coefficient Giving, the funder formerly called Open Philanthropy, paid 72% of the total.",
+  "note": "A grant to an organisation is not money to a member: no grant on record reaches a member&#8217;s office. Grant lists lag and tax filings arrive a year late, so 2025 and 2026 are floors. Amounts are as filed or published; grants approved for future years are left out.",
+  "bridge": "Follow the largest grantee.",
+  "how": "",
+  "source": "Source: IRS Form 990 grant schedules and the funders&#8217; own published grant lists (Coefficient Giving, Survival and Flourishing Fund, Future of Life Institute)."
+ },
+ {
+  "id": "witnesses",
+  "act": "IV &#183; The groundwork",
+  "head": "The largest grantee was awarded <em>$55.0M</em> in January 2019. By June it had a witness before Congress.",
+  "deck": "Georgetown&#8217;s Center for Security and Emerging Technology (CSET) has been granted $108M in all and has testified 13 times, level with CNAS for the most of any organisation in the network. Grantees account for 49 of the network&#8217;s 58 appearances since 2015.",
+  "note": "A committee invites its witnesses, and testifying is not lobbying; no grant is tied to an appearance. Of the ten largest grantees only two have testified. For RAND, CNAS and Carnegie only testimony on work the network funds is counted, and every organisation only from the date the network first funded that line of work (17 earlier appearances are left out). Institute for Progress&#8217;s grants are general support, outside the $931M.",
+  "bridge": "Follow its founding director.",
+  "how": "Each dot is one appearance before a committee; the amount is the organisation&#8217;s network grants on record.",
+  "source": "Source: witness lists from congress.gov, House committee pages and Senate hearing transcripts (published months late); grants as on the previous slide."
+ },
+ {
+  "id": "career",
+  "act": "IV &#183; The groundwork",
+  "head": "Before CSET&#8217;s founding director became RAND&#8217;s president, RAND had <em>$31K</em> in network grants. After: <em>$84.5M</em>.",
+  "deck": "Jason Matheny testified before Congress as CSET&#8217;s founding director in 2020, became RAND&#8217;s president on July 5, 2022 and has testified at least three times in that role. RAND&#8217;s next network grant came nine months after that day; the two organisations he has led now hold $192M, a fifth of the $931M.",
+  "note": "No document ties any grant to a person, and a date order is not a cause: 75% of all the network&#8217;s grants on record are also dated 2023 or later. RAND is counted only on the lines of work the network funds. RAND&#8217;s own announcement says he came from White House posts; the record holds no dates for those, or for his leaving CSET.",
+  "bridge": "Witnesses visit. Who works inside?",
+  "how": "Each dot is one of the appearances counted on the last slide; the columns are network grants by year.",
+  "source": "Source: Congressional Record, Nov. 14, 2018; RAND&#8217;s announcement of its president; committee witness lists; grants as on the earlier slides."
+ },
+ {
+  "id": "fellows",
+  "act": "IV &#183; The groundwork",
+  "head": "Another grantee has placed <em>25</em> fellows inside Congress, with both parties and with its committees.",
+  "deck": "The Horizon Institute for Public Service holds $11.9M in network grants on record. Nine of the ten serving members who hosted its fellows have also received money from Anthropic&#8217;s employees or PAC, against 196 of 533 in the whole chamber; in six of the nine the fellow came in an earlier year than the first such gift.",
+  "note": "A fellow and a host office choose each other; the programme pays the stipend and the office directs the work. No gift is tied to a placement, and a gift is the giver&#8217;s own money: the nine received $608K in all. Among senators alone, 60 of 100 have received such money, and eight of the nine who hosted. Horizon also has funders outside the network. Fellows are counted, not named.",
+  "bridge": "People cross the other way, too.",
+  "how": "Each dot is one of the 29 placements on the programme&#8217;s roster since 2022. Dots that touch share a host.",
+  "source": "Source: Horizon Institute placement pages and alumni lists; IRS Form 990 grant schedules; FEC contribution records through Sept. 30, 2026."
+ },
+ {
+  "id": "door",
+  "act": "IV &#183; The groundwork",
+  "head": "And <em>64</em> people who worked in Congress have gone to work for the network or the lobbying firms it hires.",
+  "deck": "Thirteen went to Anthropic and nine to Americans for Responsible Innovation, a grantee. Coming the other way were 28, of whom 26 were Horizon fellows.",
+  "note": "Taking a job is not evidence about the work done in it. People at lobbying firms are counted because the firm works for a network client. A fellow counts in the office that hosted them; each person counts once per direction, and those with only one side of the move on record are left out.",
+  "bridge": "Grants, witnesses, fellows, jobs. Has Congress noticed?",
+  "how": "Each dot is one person. The gold line is the door: Congress on one side, the network on the other.",
+  "source": "Source: House and Senate payroll reports, fellowship pages, lobbyists&#8217; disclosed former posts and organisations&#8217; staff pages."
+ },
+ {
+  "id": "echo",
+  "act": "V &#183; The sum",
+  "head": "Congress has noticed: <em>100</em> of the 157 statements on record that name the network are dated 2026.",
+  "deck": "64 members made them: 44 Democrats, 18 Republicans and 2 independents. Some praise, some warn, some criticise; 138 of the 157 name Anthropic or its chief executive.",
+  "note": "A statement counts once whether it praises, criticises or warns: the count measures mentions, not a relationship. It is one per document, speaker and organisation named, so four passages that name two are counted twice. Transcripts were searched by name and posts on X were collected for some accounts only, and 2026 is over-represented: 52 of its 100 statements are posts on X.",
+  "bridge": "Who is tied the most ways?",
+  "how": "Each dot is one public statement by a serving member, in the month it was made.",
+  "source": "Source: hearing transcripts, the Congressional Record, committee reports, members&#8217; press releases and posts on X, coded by what each statement does; statements through Sept. 30, 2026. The audited figure also counts four statements by members no longer serving (161 in all)."
+ },
+ {
+  "id": "deep",
+  "act": "V &#183; The sum",
+  "head": "<em>Seventeen</em> members are tied six ways or more.",
+  "deck": "Eleven Democrats and six Republicans, nine of them senators. Martin Heinrich and Ted Lieu have seven kinds of record on file; no one has more.",
+  "note": "Breadth is not weight: every kind counts the same here, whatever its size. A blank means no counted record was found, not that none exists. None of the seventeen has a record of the two rarest kinds (state-level money or holdings and household income).",
+  "bridge": "And the other 433?",
+  "how": "",
+  "source": "Source: every confirmed record in this project&#8217;s tables linked to a serving member; a member counts under a kind if at least one record links them."
+ },
+ {
+  "id": "thin",
+  "act": "V &#183; The sum",
+  "head": "For most, the tie is thin: one or two kinds of record. For <em>118</em>, the only ties are ones someone else made.",
+  "deck": "240 of the 450 members with a tie have one or two kinds. For 118, the record holds only gifts from lobbyists at firms the network hires, or spending by super PACs that took network money: the lobbyist or the committee acted, not the network&#8217;s principals.",
+  "note": "Thin means few kinds, not small sums: the largest total for a member with a single kind is $42.1M, all of it super PAC spending against that member. Most of the money those committees spent did not come from the network, and outside spending is not coordination with the candidate.",
+  "bridge": "So what does the whole record show?",
+  "how": "Each dot is one member, in the column for the number of kinds of record on file. A ring: every tie on file is indirect.",
+  "source": "Source: the record&#8217;s member table; 11 kinds of record, of which two are indirect (lobbyists&#8217; own gifts, super PAC spending)."
+ },
+ {
+  "id": "limits",
+  "act": "V &#183; The sum",
+  "head": "A record of ties, not a record of influence. It runs to both parties: <em>221</em> Democrats, <em>226</em> Republicans.",
+  "deck": "Nine of the eleven kinds of record reach members of both parties. Nothing in the record shows why a tie was made, or that any tie changed a vote.",
+  "note": "A contribution is not a vote, outside spending is not coordination, and a lobbying report does not say which way the client lobbied. The record is 44,284 records a reviewer accepted after reading the source, of 133,936 rows collected (84,001 held but not counted; 5,181 searches that found nothing). Activity stops at Sept. 30, 2026; independent audits of the latest update were still running on Nov. 26, 2026. The 29 source figures, the tables and the method are in <a href=\"https://github.com/kevinnbass/anthropic-network-money-congress\">the repository</a>.",
+  "bridge": "",
+  "how": "",
+  "source": "Source: every confirmed record in this project&#8217;s tables linked to a member serving on Nov. 26, 2026; counts of members, not dollars."
+ }
+]

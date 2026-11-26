@@ -1,4 +1,4 @@
-# congress derived timeline_all.csv written by scripts/build_join.py 2026-11-26T14:46:56Z (PLAN.md §4): every dated row from every table, 2016-2026, one line per row; not a promoted table (TL holds the curated events); rebuilt in place
+# congress derived timeline_all.csv written by scripts/build_join.py 2026-11-26T15:34:10Z (PLAN.md §4): every dated row from every table, 2016-2026, one line per row; not a promoted table (TL holds the curated events); rebuilt in place
 row_id,table,conn_type,date,actor,counterparty,member_bioguide,money_type,hop,amount_usd,role,note_120
 HM19564,hard_money,1/2,2016,Luke Muehlhauser,,,,,,negative,query=https://api.open.fec.gov/v1/schedules/schedule_a/?contributor_name=Muehlhauser%2C+Luke&two_year_transaction_period
 HM19570,hard_money,1/2,2016,Luke Muehlhauser,,,,,,context,person=Luke Muehlhauser; en=EN209; source=api.open.fec.gov/v1/schedules/schedule_a/; exact_query=https://api.open.fec.go
@@ -88382,7 +88382,7 @@ MS1994,member_statements,11,2026-04-29,Pramila Jayapal,Anthropic,J000298,,,,evid
 MS1995,member_statements,11,2026-04-29,James A. Himes,,H001047,,,,context,speaker=Mr. HIMES; member_bioguide=H001047|James A. Himes|House-CT; entity=Amodei; entity_as_printed=Amodei; venue=congr
 MS2077,member_statements,11,2026-04-29,Vince Fong,,F000480,,,,context,speaker=Mr. Fong; member_bioguide=F000480|Vince Fong|House-CA; entity=Amodei; entity_as_printed=Amodei; venue=congressio
 MS2078,member_statements,11,2026-04-29,James P. McGovern,,M000312,,,,context,speaker=Mr. McGOVERN; member_bioguide=M000312|James P. McGovern|House-MA; entity=Amodei; entity_as_printed=Amodei; venue
-MS782,member_statements,11,2026-04-29,Jim Jordan,Anthropic,J000289,,,,evidence,term='Anthropic'; collection=CREC; packageId=CREC-2026-04-29; granuleId=CREC-2026-04-29-pt1-PgH3160; title='FALLEN SERVI
+MS782,member_statements,11,2026-04-29,Jim Jordan,Anthropic,J000289,,,,context,term='Anthropic'; collection=CREC; packageId=CREC-2026-04-29; granuleId=CREC-2026-04-29-pt1-PgH3160; title='FALLEN SERVI
 MS842,member_statements,11,2026-04-29,,Anthropic,,,,,context,verbatim window naming 'Anthropic' in CREC CREC-2026-04-29-pt1-PgH3160; BIND Anthropic PBC (AI technology / blacklist co
 MS902,member_statements,11,2026-04-29,,Anthropic,,,,,context,stance=critical_characterization_in_quoted_text; term='Anthropic'; BIND Anthropic PBC (AI technology / blacklist conditi
 SP12121,super_pac_c4,3a/3b,2026-04-29,DREAM NYC,"BORES, ALEXANDER",,independent_expenditure,2,55033.99,evidence,sub_id=4062520261522796123; amount_usd=55033.99; expenditure_date=2026-04-29; dissemination_date=2026-05-01; support_opp

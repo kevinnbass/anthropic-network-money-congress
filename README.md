@@ -4,9 +4,11 @@ This repository holds a record of documented connections between Anthropic's net
 
 **A connection is a documented record, not an allegation of influence.** A contribution is not a vote, and an independent expenditure is not coordination. No motive is asserted anywhere.
 
+**Read it as a story:** [450 of 533](https://kevinnbass.github.io/anthropic-network-money-congress/), the record told in 23 slides, laid out for a desk and for a phone. It is a draft: every number on it is computed from the tables here, and its own independent audit was started on November 26, 2026 and is not finished.
+
 ![450 of Congress's 533 members have a documented connection to Anthropic's network](figures/congress-01-connection-grid.jpg)
 
-## Status: updated November 26, 2026; three audits and the final check still running
+## Status: updated November 26, 2026; three audits finished and not yet applied, the final check to follow
 
 On November 26, 2026 the record was extended with the filings made through the third quarter of 2026 (activity through September 30). This release holds 2,018 more source-table rows than the one published here before it, and members are now counted as the 533 serving on November 26, 2026 instead of the Congress as first seated. Every figure was redrawn. For serving members, against the version published here before:
 
@@ -23,12 +25,13 @@ Independent audits (X64 to X69 in the project's numbering) checked the new rows,
 
 - **Counted twice.** 91 records were held from two filings of one transaction (a 24- or 48-hour notice and the regular report, a filing and its amendment, the giver's report and the recipient's). Each is counted once now. As they came out during the day, outside spending for serving members went from $544M, the figure this page showed at midday, to $541M.
 - **Not statements.** 73 rows in the statements table by people who are not members of Congress were read against their documents and were not a statement by the named speaker (witness and signatory lists, citations, reprints, second copies). They are no longer counted. 38 more had a wrong speaker, date, venue or excerpt and are corrected.
+- **Wrong speaker.** One statement row gave one member a sentence that another member speaks on the same page of the Congressional Record, where her own row already counted it. It is no longer counted: figure 16 holds 161 statements, 100 of them dated 2026.
 - **Missing member.** Four counted PAC contributions did not name the member they went to. They do now, which is why PAC contributions reach 175 members.
 - **Captions and lists.** Captions that left out a condition the code applies were completed, and so were lists of cited rows that left out rows a figure counts.
 
 **Not finished. Until these are done this update is not called verified:**
 
-- Three audits started on November 26 are still running. One traces every memo, conduit, redesignation and refund line of the contributions table that is held as evidence (3,852 lines; no dollar figure adds them, but figures 07 and 23 count them as records) to the transaction it restates. Two read against a document the other evidence rows that no auditor had read: 596 rows of the network list, most of them the committees that tie money to members; 225 timeline rows; and 181 outside-spending lines of 2008 to 2012.
+- Three audits started on November 26 have finished, and their findings are not yet applied (582 errors and qualifications between them; most propose that a line be held for reference and not counted as a record, and none has yet been weighed). One traces every memo, conduit, redesignation and refund line of the contributions table that is held as evidence (3,852 lines; no dollar figure adds them, but figures 07 and 23 count them as records) to the transaction it restates. Two read against a document the other evidence rows that no auditor had read: 596 rows of the network list, most of them the committees that tie money to members; 225 timeline rows; and 181 outside-spending lines of 2008 to 2012.
 - Five pairs of counted rows that share a member, a day and a dollar amount are not settled as one transaction or two ($27,399 of outside spending, $5,400 of contributions, $3,500 of lobbyists' gifts). Both rows of each pair are counted.
 - A final check of everything applied follows the audits.
 
@@ -43,6 +46,7 @@ Corrections that come out of those checks are pushed here as they are applied. [
 | [`research/`](research) | The record: 15 tables and the helper tables the figures read. [`research/README.md`](research/README.md) explains the files, the columns and what was changed for this public copy. |
 | [`case.json`](case.json) | Which rows count: each row's role (evidence, context or negative). The same roles are in `research/row_roles.csv`. |
 | [`scripts/`](scripts), [`lib/`](lib) | The scripts that build the member table and draw the figures, and the small drawing library they use. |
+| [`docs/`](docs) | The story series: one page of 23 slides (`index.html`, with its fonts) and the words of each slide (`slides.json`). GitHub Pages serves it at the address above. A draft until its audit is finished. |
 | [`figures-alt/`](figures-alt) | Three alternate views, drawn by the same code from the same rows. See "Alternate views" below for their status. |
 | [`SCRUB-LOG.csv`](SCRUB-LOG.csv) | A count of the cells changed for this public copy: API keys and local file paths, nothing else. |
 | `network-money-per-member.*`, [`data/`](data) | The chart of direct money per member and the rows it draws. See "Direct money per member" below. |
@@ -124,18 +128,18 @@ The scripts are the project's own. Four things were changed so they run here: th
 
 Rows were collected from public sources (FEC, Senate and House lobbying and disclosure filings, IRS returns, USAspending, state registries, congressional records, organisations' own pages) by AI research agents, each row with its source's URL and an excerpt as fetched; the author keeps saved copies of the sources. Rows entered the tables through a row-by-row review of each batch by a separate agent. Independent audits then checked evidence rows against saved originals, in both directions: what was kept and what was removed. The measure below says how many. A correction never overwrites: the earlier row is archived and the change noted on the row.
 
-The project measures itself against a written standard with a script. On 2026-11-26 at 14:07 UTC it printed:
+The project measures itself against a written standard with a script. On 2026-11-26 at 15:35 UTC it printed:
 
 ```
-== congress  bound rows 133,466  evidence rows 44,285
-G1 FAIL  drawn evidence document-checked 43,106/44,285 (97.3%); all evidence 97.3%
-G2 FAIL  errors disposed 32,293/32,467; errors+qualifications disposed 60,211/60,535 (99.5%)
+== congress  bound rows 133,466  evidence rows 44,284
+G1 FAIL  drawn evidence document-checked 43,105/44,284 (97.3%); all evidence 97.3%
+G2 FAIL  errors disposed 32,293/32,594; errors+qualifications disposed 60,211/60,793 (99.0%)
 G3 PASS  corrected rows archived 15,780/15,780 (ledger rows 15,826)
-G4 FAIL  audits 100: complete 48, well-formed closing line 98; incomplete and not carried to README/dispositions 0; malformed ['X70-memo-and-conduit-lines-20261126', 'X71b-unread-timeline-and-money-rows-20261126']
+G4 FAIL  audits 101: complete 48, well-formed closing line 101; incomplete and not carried to README/dispositions 2 ['X71a-unread-roster-rows-20261126', 'X71b-unread-timeline-and-money-rows-20261126']
 G5 PASS  clean figures 29/29
 ```
 
-G1 says how many of the evidence rows the 29 figures draw or count have a document check on file. Since figure 23 lists every row it counts, that is every evidence row in the record, so the two percentages on its line are now the same. Before the three running audits started, it read 43,237 of 44,285: 1,048 evidence rows that no auditor had compared with a document, the rows named under Status. Three audits were running when the lines above were printed, and the script reads their unfinished folders: every finding G2 counts as not yet settled is theirs (324), the two reports G4 calls malformed are theirs and not yet written, and a row they have so far marked wrong counts as unchecked in G1 until the finding is settled. G4 counts 50 of the 100 audits as closed incomplete, each with its remainder written down; the two it calls malformed are two of the running ones. The open items are stated figure by figure in [`FIGURES.md`](FIGURES.md). Earlier on 2026-11-26, before the update, figure 01 was redrawn as a chamber and figure 18's issue panel was changed to draw every code on three or more reports; an auditor that made neither change re-derived both from the tables and corrected two sentences in figure 01's footnote. The saved source documents and the audit files are not in this repository; rows carry the URL of their source where one was recorded.
+G1 says how many of the evidence rows the 29 figures draw or count have a document check on file. Since figure 23 lists every row it counts, that is every evidence row in the record, so the two percentages on its line are the same. Three audits that read the rows no auditor had compared with a document (the rows named under Status) finished on November 26. Their findings are not yet applied: the 582 findings G2 counts as not settled are theirs, the two reports G4 names are theirs, and the rows they read are not yet credited in G1. The story series under `docs/` has its own audit, started the same day and not finished.
 
 ## Names
 
