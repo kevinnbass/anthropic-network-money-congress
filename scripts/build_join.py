@@ -88,12 +88,25 @@ def main() -> int:
         tables[name] = load(R / f"{name}.csv")[1]
 
     roster = list(csv.DictReader(open(ROSTER, encoding="utf-8")))
+    # 2026-11-26 (PLAN amendment S43; Kevin: "members serving today"): the sitting cohort is the members serving on the as_of_date of
+    # research/roster_serving.csv (one line per voting seat, built from the chambers' own lists by lane C185 and checked by audit X65b).
+    # A member of the companion roster (the Congress as first seated) who no longer serves stays in the join as former_or_other; a
+    # member seated since is added from the serving roster. A vacant seat has no line here; figures state the vacancies.
+    serving: dict[str, dict] = {}
+    _rp = R / "roster_serving.csv"
+    if _rp.exists():
+        serving = {x["member_bioguide"]: x for x in csv.DictReader(l for l in open(_rp, encoding="utf-8", newline="") if not l.startswith("#"))
+                   if BIO.match(x.get("member_bioguide") or "")}
     members: dict[str, dict] = {}
     for r in roster:
         b = r["member_id"].strip()
         members[b] = {"key": b, "member_bioguide": b, "member_name": r["member_name"], "party": r["party"],
                       "chamber": r["chamber"], "state": r["state"], "district": r["district"],
-                      "cohort": "sitting", "fec_candidate_id": r["fec_candidate_ids"]}
+                      "cohort": "sitting" if (not serving or b in serving) else "former_or_other", "fec_candidate_id": r["fec_candidate_ids"]}
+    for b, x in serving.items():
+        if b not in members:
+            members[b] = {"key": b, "member_bioguide": b, "member_name": x["member_name"], "party": x["party"], "chamber": x["chamber"],
+                          "state": x["state"], "district": x["district"], "cohort": "sitting", "fec_candidate_id": x["fec_candidate_ids"].split(";")[0].split("|")[0].split(",")[0].strip()}
     # former members seen anywhere
     seen_names: dict[str, tuple[str, str, str]] = {}
     for name, rows in tables.items():
@@ -328,6 +341,16 @@ def main() -> int:
     def norm_bill(s: str) -> str:
         return re.sub(r"[\s.]", "", s.upper())
     lb_norm: dict[str, list[str]] = collections.defaultdict(list)
+    # 2026-11-26 (PLAN §1.3 amendment and §1.1a; re-check X66b-5): a report of a multi-line institution links to a bill only where
+    # research/lb_bill_scope.csv says the report names that bill on its network-funded line. The table lists those clients by id
+    # and, per report and bill, the section that names the bill; a bill of such a client with no line there links nothing.
+    scope_clients: set[str] = set(); scope_ok: set[tuple[str, str]] = set()
+    _sp = R / "lb_bill_scope.csv"
+    if _sp.exists():
+        for x in csv.DictReader(l for l in open(_sp, encoding="utf-8", newline="") if not l.startswith("#")):
+            scope_clients.add((x.get("client_id") or "").strip())
+            if x.get("in_funded_line") == "yes":
+                scope_ok.add((x["row_id"], x["bill_key"]))
     # 2026-09-23 (Codex X3 #2): one LDA filing counts once; bill-name restatement rows that reuse a filing's UUID collapse onto the lowest row id
     seen_uuid: dict[str, str] = {}
     for r in sorted(tables["lobbying"], key=lambda r: (len(r["row_id"]), r["row_id"])):
@@ -342,7 +365,29 @@ def main() -> int:
         cg = str((int(y) - 1789) // 2 + 1) if y.isdigit() else ""  # the 1st Congress convened in 1789
         for bn in re.findall(r"\b(?:H\.?\s?R\.?|S\.?|H\.?\s?J\.?\s?Res\.?|H\.?\s?Res\.?|S\.?\s?Res\.?)\s?\d+", r.get("bills_named") or "", re.I):
             if cg:
+                if (r.get("client_id") or "").strip() in scope_clients and (r["row_id"], f"{cg}:{norm_bill(bn)}") not in scope_ok:
+                    continue
                 lb_norm[f"{cg}:{norm_bill(bn)}"].append(r["row_id"])
+    # 4a sponsor key (2026-11-26, PLAN amendment S38; audits X64d and X65a): a lobbying report links to a member through a stand-alone
+    # bill the report names and the member sponsored, whether or not the companion AI-bill set above holds the bill.
+    # research/bill_sponsor_keys.csv lists every bill the evidence reports name, with its sponsor, its kind and whether it is counted:
+    # broad vehicles (annual authorisations, appropriations, budget, reconciliation) and numbers whose title does not match the filing
+    # are listed there with counted=no. A filing that prints a number without a Congress and names a bill of the previous Congress is
+    # keyed by cited_as_congress (the Congress of the report's year) and counted only for the rows in cited_by.
+    lb_by_sponsor: dict[str, set[str]] = collections.defaultdict(set)
+    not_counted: set[str] = set()  # "<congress>:<bill>" keys the table lists with counted=no; they link from neither source
+    _kp = R / "bill_sponsor_keys.csv"
+    if _kp.exists():
+        for x in csv.DictReader(l for l in open(_kp, encoding="utf-8", newline="") if not l.startswith("#")):
+            if x.get("counted") != "yes":
+                not_counted.add(f"{x['congress']}:{norm_bill(x['bill'])}")
+                continue
+            if not BIO.match(x.get("sponsor_bioguide") or ""):
+                continue
+            hits = set(lb_norm.get(f"{x.get('cited_as_congress') or x['congress']}:{norm_bill(x['bill'])}", ()))
+            if (x.get("cited_by") or "").strip():
+                hits &= set(x["cited_by"].split())
+            lb_by_sponsor[x["sponsor_bioguide"]].update(hits)
     # 02 join: Horizon fellow in office
     horizon: dict[str, list[str]] = collections.defaultdict(list)
     for x in csv.DictReader(open(HORIZON, encoding="utf-8")):
@@ -418,7 +463,8 @@ def main() -> int:
         row["bills_restrict_n"] = cls.get("RESTRICT", 0); row["bills_promote_n"] = cls.get("PROMOTE", 0)
         row["bills_other_n"] = len(bills) - cls.get("RESTRICT", 0) - cls.get("PROMOTE", 0)
         row["bills_cosponsored_n"] = len(cos.get(b, ()))
-        lb_ids = sorted({rid for bn in bills for rid in lb_norm.get(f"{congress_of_bill.get(bn, '')}:{norm_bill(bn)}", [])})
+        lb_ids = sorted({rid for bn in bills if f"{congress_of_bill.get(bn, '')}:{norm_bill(bn)}" not in not_counted
+                         for rid in lb_norm.get(f"{congress_of_bill.get(bn, '')}:{norm_bill(bn)}", [])} | lb_by_sponsor.get(b, set()))
         row["lda_filings_naming_sponsored_bills_n"] = len(lb_ids); row["lda_filings_naming_sponsored_bills_ids"] = " ".join(lb_ids)
         # type 4a per member = LDA filings that name a bill this member sponsored (no amount is attributed to a member)
         row["t4a_n"] = len(lb_ids); row["t4a_ids"] = " ".join(lb_ids); anyc = anyc or bool(lb_ids)
@@ -436,8 +482,12 @@ def main() -> int:
     # the engine registers MB at research/member_join.csv (casework.json); PLAN.md §4 names research/members_network.csv.
     # both are written from the same rows by this script and scripts/audit.py asserts they are byte-identical.
     for fname in ("member_join.csv", "members_network.csv"):
+        # 2026-11-26 (X66-1931): the header states the cohort the rows carry: the dated serving roster when it is present
+        _dates = sorted({x.get("as_of_date", "") for x in serving.values()})
+        cohort_line = (f"one row per member serving on {_dates[-1]} by research/roster_serving.csv ({len(serving)} members; cohort=sitting)" if serving
+                       else "one row per member of the 535 cohort")
         with open(R / fname, "w", encoding="utf-8", newline="") as fh:
-            fh.write(f"# congress MB table (member_join.csv = engine path; members_network.csv = PLAN.md §4 name; identical); derived join written by scripts/build_join.py {NOW}; one row per member of the 535 cohort plus former members and candidates that appear in the tables; one column group per connection type: t<k>_n (evidence rows), t<k>_usd (sum within that type only), t<k>_ids, t<k>_ctx_ids (context/negative rows, never counted); no column sums across types; rebuilt in place on every run, never hand-edited\n")
+            fh.write(f"# congress MB table (member_join.csv = engine path; members_network.csv = PLAN.md §4 name; identical); derived join written by scripts/build_join.py {NOW}; {cohort_line} plus former members and candidates that appear in the tables; one column group per connection type: t<k>_n (evidence rows), t<k>_usd (sum within that type only), t<k>_ids, t<k>_ctx_ids (context/negative rows, never counted); no column sums across types; rebuilt in place on every run, never hand-edited\n")
             w = csv.DictWriter(fh, fieldnames=fields, lineterminator="\n"); w.writeheader(); w.writerows(out_rows)
     print(f"MB rows={len(out_rows)} sitting={sum(1 for m in order if m['cohort']=='sitting')} former={sum(1 for m in order if m['cohort']=='former_or_other')} candidates={sum(1 for m in order if m['cohort']=='candidate')} any_connection={sum(1 for r in out_rows if r['any_connection']=='yes')}")
     for t in TYPES:

@@ -1,10 +1,31 @@
 # Anthropic's network and Congress: the record, 29 figures, and the code that draws them
 
-This repository holds a record of documented connections between Anthropic's network (Anthropic, its funders and the funders of the AI-safety field, the organisations they fund that work with Congress, and their officers, PACs and lobbyists) and the members of the 119th Congress: 132,991 rows in 15 tables (14 source tables, each row with its source, and a member table built from them). It also holds the 29 figures drawn from that record and the scripts that draw them, so anyone can rebuild every figure from the tables here.
+This repository holds a record of documented connections between Anthropic's network (Anthropic, its funders and the funders of the AI-safety field, the organisations they fund that work with Congress, and their officers, PACs and lobbyists) and the members of the 119th Congress: 135,014 rows in 15 tables (14 source tables, each row with its source, and a member table built from them). Members are counted as the 533 serving on November 26, 2026; two seats were vacant (`research/roster_serving.csv`). It also holds the 29 figures drawn from that record and the scripts that draw them, so anyone can rebuild every figure from the tables here.
 
 **A connection is a documented record, not an allegation of influence.** A contribution is not a vote, and an independent expenditure is not coordination. No motive is asserted anywhere.
 
-![435 of Congress's 535 members have a documented connection to Anthropic's network](figures/congress-01-connection-grid.jpg)
+![450 of Congress's 533 members have a documented connection to Anthropic's network](figures/congress-01-connection-grid.jpg)
+
+## Status: updated November 26, 2026, final checks still running
+
+The record was extended on November 26, 2026 with the filings made through the third quarter of 2026 (activity through September 30): 2,036 new rows, and a new rule for who is counted, the members serving on that date instead of the Congress as first seated. Every figure was redrawn. For serving members, against the version published here before:
+
+| Kind of connection | Before (535 first seated) | Now (533 serving) |
+|---|---|---|
+| Individuals' contributions | 202 members, $5.2M | 235 members, $8.7M |
+| PAC contributions | 118 members, $328K | 173 members, $517K |
+| Outside spending by committees with a network receipt | 201 members, $525M | 213 members, $544M |
+| Lobbyists' own contributions | 293 members, $1.2M | 323 members, $1.4M |
+| Lobbying reports naming a bill the member sponsored | 8 members | 38 members |
+| Any counted connection | 435 of 535 | 450 of 533 |
+
+Independent audits (X64 to X67 in the project's numbering) checked the new rows and then re-derived every number on the redrawn figures from the tables; the numbers agreed, and the errors they found are applied (among them 49 records that had been counted from two filings of the same transaction, now counted once). **Three things are not finished, and until they are this update is not called verified:**
+
+- 193 rows that figure 07 counts in its yearly bars have never been compared with a saved original by an auditor (142 statements by people who are not members of Congress, 51 memo, refund and redesignation lines). An audit of them is running.
+- 59 pairs of counted rows share a member, a day and a dollar amount, and the tables alone do not show whether each pair is one transaction or two (44 pairs of outside-spending lines, $3.1M on one side; 14 pairs of contributions, $36,800; one pair of lobbyists' gifts, $3,500). Both rows of each pair are counted until the filings settle them. The same audit is reading those filings.
+- What was changed after the last audit (50 rows set aside as copies, captions, this file) is being re-derived by a further audit, and a final check follows it.
+
+Corrections that come out of those checks will be pushed here as they are applied. [`FIGURES.md`](FIGURES.md) gives each figure's reading and limits as they stand today.
 
 ## What is here
 
@@ -25,7 +46,7 @@ Titles are as printed on each figure. [`FIGURES.md`](FIGURES.md) gives the full 
 
 | # | Title | Files |
 |---|---|---|
-| 01 | 435 of Congress's 535 members have a documented connection to Anthropic's network | [jpg](figures/congress-01-connection-grid.jpg) · [png](figures/congress-01-connection-grid.png) · [html](figures/congress-01-connection-grid.html) |
+| 01 | 450 of Congress's 533 members have a documented connection to Anthropic's network | [jpg](figures/congress-01-connection-grid.jpg) · [png](figures/congress-01-connection-grid.png) · [html](figures/congress-01-connection-grid.html) |
 | 02 | Public First family money in and out, by race | [jpg](figures/congress-02-public-first-family-by-race.jpg) · [png](figures/congress-02-public-first-family-by-race.png) · [html](figures/congress-02-public-first-family-by-race.html) |
 | 03 | Principals' hard money to sitting members | [jpg](figures/congress-03-principals-hard-money-by-party-and-cycle.jpg) · [png](figures/congress-03-principals-hard-money-by-party-and-cycle.png) · [html](figures/congress-03-principals-hard-money-by-party-and-cycle.html) |
 | 04 | Lobbying spend and the lobbyists' Hill origins | [jpg](figures/congress-04-lobbying-spend-and-hill-origins.jpg) · [png](figures/congress-04-lobbying-spend-and-hill-origins.png) · [html](figures/congress-04-lobbying-spend-and-hill-origins.html) |
@@ -33,7 +54,7 @@ Titles are as printed on each figure. [`FIGURES.md`](FIGURES.md) gives the full 
 | 06 | Federal money to the network | [jpg](figures/congress-06-federal-money-to-the-network.jpg) · [png](figures/congress-06-federal-money-to-the-network.png) · [html](figures/congress-06-federal-money-to-the-network.html) |
 | 07 | Election years spike with outside spending; 2025–26 shift to donations and AI-lab payments | [jpg](figures/congress-07-time-axis.jpg) · [png](figures/congress-07-time-axis.png) · [html](figures/congress-07-time-axis.html) |
 | 08 | Which members the most kinds of connection touch | [jpg](figures/congress-08-member-type-heatmap.jpg) · [png](figures/congress-08-member-type-heatmap.png) · [html](figures/congress-08-member-type-heatmap.html) |
-| 09 | Who spends on members, and how much of that money came from the network | [jpg](figures/congress-09-ie-committees-and-network-receipts.jpg) · [png](figures/congress-09-ie-committees-and-network-receipts.png) · [html](figures/congress-09-ie-committees-and-network-receipts.html) |
+| 09 | Who spends on members, and how much network money those committees received | [jpg](figures/congress-09-ie-committees-and-network-receipts.jpg) · [png](figures/congress-09-ie-committees-and-network-receipts.png) · [html](figures/congress-09-ie-committees-and-network-receipts.html) |
 | 10 | Lobbyists' own money, by firm, cycle and recipient | [jpg](figures/congress-10-lobbyists-own-contributions.jpg) · [png](figures/congress-10-lobbyists-own-contributions.png) · [html](figures/congress-10-lobbyists-own-contributions.html) |
 | 11 | The network's PACs and where they give | [jpg](figures/congress-11-corporate-pacs.jpg) · [png](figures/congress-11-corporate-pacs.png) · [html](figures/congress-11-corporate-pacs.html) |
 | 12 | Where the principals' outside money went | [jpg](figures/congress-12-outside-money-flows.jpg) · [png](figures/congress-12-outside-money-flows.png) · [html](figures/congress-12-outside-money-flows.html) |
@@ -88,7 +109,7 @@ What to expect:
 - **The `.html` pages come out byte for byte the same as the ones here**, except that figure 01 prints the date it was built. This was tested on a fresh copy of these files.
 - **The `.png` and `.jpg` files depend on your browser and fonts.** The ones here were made with Playwright 1.62.0 and its Chromium on Linux, Python 3.14 and Pillow 12.3, with Arial served by Liberation Sans. With another font the pixels differ and a long label may wrap; the script stops if a page overflows.
 - `build_join.py` writes `research/members_network.csv` and `research/timeline_all.csv` again. They come out the same as the ones here except for the build time they record.
-- `audit.py` should end with `problems=0`. On this copy it printed `tables=15 row_ids=132991 duplicates=0 MB_rows=1073 MB_cells=15022 figures=29 pngs=29 figure_citations=48605 problems=0` (2026-11-26).
+- `audit.py` should end with `problems=0`. On a fresh copy of these files it printed `tables=15 row_ids=135014 duplicates=0 MB_rows=1078 MB_cells=15092 figures=29 pngs=29 figure_citations=87984 problems=0` (2026-11-26, after the third-quarter update), and the three figure scripts wrote all 29 `.html` pages byte for byte as they are here.
 
 The scripts are the project's own. Four things were changed so they run here: the path to the drawing library (which now calls the Python that runs it); the paths to five input files that live in the author's other projects (copied into `research/inputs/`); one read of the saved lobbying filings in figure 29's script (replaced by the small table `research/lda_filing_expenses.csv`, made from those filings); and `audit.py` no longer requires a second copy of the member table under another name.
 
@@ -96,18 +117,18 @@ The scripts are the project's own. Four things were changed so they run here: th
 
 Rows were collected from public sources (FEC, Senate and House lobbying and disclosure filings, IRS returns, USAspending, state registries, congressional records, organisations' own pages) by AI research agents, each row with its source's URL and an excerpt as fetched; the author keeps saved copies of the sources. Rows entered the tables through a row-by-row review of each batch by a separate agent. Independent audits then checked every evidence row a figure draws against a saved original, in both directions: what was kept and what was removed. A correction never overwrites: the earlier row is archived and the change noted on the row.
 
-The project measures itself against a written standard with a script. On 2026-11-26 it printed:
+The project measures itself against a written standard with a script. On 2026-11-26, after the third-quarter update, it printed:
 
 ```
-== congress  bound rows 131,448  evidence rows 43,500
-G1 PASS  drawn evidence document-checked 31,462/31,462 (100.0%); all evidence 97.2%
-G2 PASS  errors disposed 31,419/31,419; errors+qualifications disposed 59,188/59,188 (100.0%)
-G3 PASS  corrected rows archived 15,387/15,387 (ledger rows 15,433)
-G4 PASS  audits 84: complete 41, well-formed closing line 84; incomplete and not carried to README/dispositions 0
+== congress  bound rows 133,466  evidence rows 44,401
+G1 FAIL  drawn evidence document-checked 37,930/38,123 (99.5%); all evidence 97.3%
+G2 PASS  errors disposed 32,046/32,046; errors+qualifications disposed 59,938/59,938 (100.0%)
+G3 PASS  corrected rows archived 15,711/15,711 (ledger rows 15,757)
+G4 PASS  audits 95: complete 46, well-formed closing line 95; incomplete and not carried to README/dispositions 0
 G5 PASS  clean figures 29/29
 ```
 
-G1 says every evidence row the 29 figures draw has a document check on file; it does not cover evidence rows no figure draws (97.2% of all evidence rows are checked). G4 counts 43 of the 84 audits as closed incomplete, each with its remainder written down. The open items are stated figure by figure in [`FIGURES.md`](FIGURES.md). Two figures changed on 2026-11-26: figure 01 was redrawn (same counts, one new sentence) and figure 18's issue panel now draws every code on three or more reports, where it had drawn twelve with a tie broken at random. An auditor that made neither change then re-derived both from the tables. It confirmed their counts and corrected two sentences in figure 01's footnote: super PAC totals are those committees' counted spending for or against sitting members, and the kinds not drawn are those with no counted record. The saved source documents (about 160 GB) and the audit files are not in this repository; every row carries the URL of its source.
+G1 says how many of the evidence rows the 29 figures draw or count have a document check on file. It fails on the 193 rows named under Status: an audit found that figure 07 counted about 37,000 rows it did not list, so the measure could not see them before; they are listed now and 193 turned out never to have been read against a document. It does not cover evidence rows no figure draws (97.3% of all evidence rows are checked). G4 counts 49 of the 95 audits as closed incomplete, each with its remainder written down. The open items are stated figure by figure in [`FIGURES.md`](FIGURES.md). Earlier on 2026-11-26, before the update, figure 01 was redrawn as a chamber and figure 18's issue panel was changed to draw every code on three or more reports; an auditor that made neither change re-derived both from the tables and corrected two sentences in figure 01's footnote. The saved source documents (about 160 GB) and the audit files are not in this repository; every row carries the URL of its source.
 
 ## Names
 
@@ -115,15 +136,15 @@ The figures name people only in public roles. The tables carry the record as its
 
 ## Alternate views
 
-`figures-alt/` holds three more charts drawn from the same evidence rows by the same code. They are not among the 29 figures. On 2026-11-26 an independent auditor re-derived all three from the tables, and they are as corrected after it: one counted receipt the Anthropic chart had missed is in, its employee count is 58 where it said 59, the lobbyist chart's 2026 Republican share is 58% where it said 57%, five firms' start years are corrected, and its 'before the firm's first client' series is gone because no counted gift could fall there.
+`figures-alt/` holds three more charts drawn from the same evidence rows by the same code. They are not among the 29 figures. An independent auditor re-derived all three from the tables on 2026-11-26, before the third-quarter update, and its corrections are in the code. They were then redrawn on the updated record the same day, and their new numbers have not been re-derived by an auditor yet: the network chart reads $7.8M to 265 sitting members in 2024–26, the Anthropic chart $5.8M to 195 sitting members from 88 employees and the PAC, and the lobbyist chart $1.4M, with $879K in 2026 so far.
 
 - `network-money-per-member`: the 40 sitting members receiving the most direct money in 2024–26, by giver.
-- `anthropic-money-per-member`: the same for Anthropic employees and its PAC. It counts one employee per filed surname and first name; three of its 58 names were filed from more than one state and count once each.
+- `anthropic-money-per-member`: the same for Anthropic employees and its PAC. It counts one employee per filed surname and first name.
 - `congress-10-lobbyists-own-contributions-alt`: figure 10's money by firm, cycle and party. It draws only gifts dated while the lobbyist's firm was registered for a network client.
 
 ## Direct money per member
 
-`network-money-per-member.png` and `.html` at the top level show the 40 sitting members receiving the most direct money from the network in 2024–26, by giver: $4.1M to 214 sitting members on the record as it stands. `data/contributions.csv` has one line per contribution the chart draws and `data/member_totals_by_entity.csv` its bar segments; `python3 scripts/alt_network_money.py --data data` writes all of them again. The same chart is in `figures-alt/`.
+`network-money-per-member.png` and `.html` at the top level show the 40 sitting members receiving the most direct money from the network in 2024–26, by giver: $7.8M to 265 sitting members on the record as it stands after the third-quarter update of 2026-11-26. `data/contributions.csv` has one line per contribution the chart draws and `data/member_totals_by_entity.csv` its bar segments; `python3 scripts/alt_network_money.py --data data` writes all of them again. The same chart is in `figures-alt/`.
 
 This chart was the repository's first release, on 2026-09-25. It read $2.2M to 185 sitting members when first published and $2.1M ($2,141,813) to 183 after a revision the same day. The record has been corrected and extended since; figure 01's entry in [`FIGURES.md`](FIGURES.md) states the current counting rule, which includes gifts to a member's single-member joint fundraising committee and leadership PAC. The first release is in this repository's history.
 

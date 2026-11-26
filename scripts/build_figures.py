@@ -78,6 +78,8 @@ def bar_chart(rows, x0, y0, w, h, label_w=520, colour=lambda r: DEM, fmt=money, 
 
 
 def figure(stem: str, title: str, subtitle: str, body_svg: str, footnote: str, ids, width=2200, height=1600, legend_html=""):
+    if COHORT_NOTE and COHORT_NOTE not in footnote:
+        footnote = footnote.rstrip() + " " + COHORT_NOTE
     doc = shell(title, KICKER, subtitle, legend_html + f'<svg width="{width-120}" height="{height-420}" viewBox="0 0 {width-120} {height-420}">{body_svg}</svg>',
                 footnote, width, height) + "\n" + hidden_rows(ids)
     html, png, jpg = render(stem, doc, width, height, OUT)
@@ -89,6 +91,14 @@ MB = load("members_network")
 HM = load("hard_money"); SP = load("super_pac_c4"); LB = load("lobbying"); RD = load("revolving_door"); FG = load("federal_money")
 EN = load("entities"); TL = load("timeline")
 SITTING = [m for m in MB if m["cohort"] == "sitting"]
+# 2026-11-26 (PLAN amendment, slice S43; Kevin: "members serving today"): the cohort is the members serving on the date of
+# research/roster_serving.csv; every figure states that date, and figure 01 draws the vacant seats
+_RS = ROOT / "research/roster_serving.csv"
+_ROSTER = list(csv.DictReader(l for l in open(_RS, encoding="utf-8", newline="") if not l.startswith("#"))) if _RS.exists() else []
+VACANT = [r["seat"] for r in _ROSTER if r["member_bioguide"] == "VACANT"]
+AS_OF = max((r["as_of_date"] for r in _ROSTER), default="")
+AS_OF_TEXT = (lambda d: f"{d:%b}. {d.day}, {d.year}")(datetime.date.fromisoformat(AS_OF)) if AS_OF else ""
+COHORT_NOTE = (f"Members are the {len(SITTING)} serving on {AS_OF_TEXT} ({len(VACANT)} seats vacant); \"sitting\" means serving on that date." if _ROSTER else "")
 # 2026-09-29 (Kevin: "do both for lobbyist gifts"): measure B of type 4b, per LD-203 item (research/lb_4b_measures.csv)
 MEAS4B = {r["row_id"]: r["measure"] for r in csv.DictReader(l for l in open(ROOT / "research/lb_4b_measures.csv", encoding="utf-8") if not l.startswith("#"))} if (ROOT / "research/lb_4b_measures.csv").exists() else {}
 MBP = {m["member_bioguide"]: (m["party"] or "?").upper()[:1] for m in MB if m["member_bioguide"].strip()}  # party fallback by bioguide (Codex X1 #3)
@@ -115,7 +125,7 @@ def fig01_table():
     cols = TYPES
     x0, y0 = 40, 40
     cw = 130; rh = 44
-    svg = [txt(x0, y0, "Sitting members with at least one confirmed record, by kind of connection and party (535 seats)", 24, weight="bold")]
+    svg = [txt(x0, y0, f"Sitting members with at least one confirmed record, by kind of connection and party ({len(SITTING)} members)", 24, weight="bold")]
     hdr_y = y0 + 50
     svg.append(txt(x0, hdr_y, "connection", 18, weight="bold", fill=MUTED))
     XS = {"members": 820, "D": 960, "R": 1100, "I": 1240, "rows": 1420, "amount": 1700}
@@ -136,7 +146,7 @@ def fig01_table():
         svg.append(txt(x0 + XS["I"], y, str(by_p.get("I", 0) + by_p.get("ID", 0)), 19, anchor="end", fill=IND))
         svg.append(txt(x0 + XS["rows"], y, f"{rows:,}", 19, anchor="end"))
         svg.append(txt(x0 + XS["amount"], y, money(usd) if usd else "—", 19, anchor="end", fill=MUTED))
-        bw = 300 * len(ms) / 535
+        bw = 300 * len(ms) / len(SITTING)
         svg.append(f'<rect x="{x0+1740}" y="{y-20}" width="{bw:.1f}" height="26" fill="{PAL[i % len(PAL)]}" rx="3"/>')
     # party totals of all 535 sitting members, unlabelled, under the D / R / I columns (the baseline for each row)
     ty = hdr_y + 40 + len(cols) * rh
@@ -222,27 +232,36 @@ def fig01():
     by_p = collections.defaultdict(list)
     for m in SITTING:
         by_p[_party(m)].append(m)
-    order = (sorted(by_p["D"], key=lambda m: -breadth[m["row_id"]]) + sorted(by_p["I"], key=lambda m: -breadth[m["row_id"]]) + sorted(by_p["R"], key=lambda m: breadth[m["row_id"]])
-             + [m for p, ms in by_p.items() if p not in "DIR" for m in ms])
+    order = (sorted(by_p["D"], key=lambda m: -breadth[m["row_id"]]) + sorted(by_p["I"], key=lambda m: -breadth[m["row_id"]]) + [None] * len(VACANT)
+             + sorted(by_p["R"], key=lambda m: breadth[m["row_id"]]) + [m for p, ms in by_p.items() if p not in "DIR" for m in ms])
     cx, cy, r0, r1 = 640, 720, 215, 620
     svg = []
-    for (x, y), m in zip(_seats(len(SITTING), 12, r0, r1, cx, cy), order):
+    for (x, y), m in zip(_seats(len(order), 12, r0, r1, cx, cy), order):
+        if m is None:  # a vacant seat
+            svg.append(f'<circle cx="{x:.1f}" cy="{y:.1f}" r="7" fill="none" stroke="{MUTED}" stroke-width="2" stroke-dasharray="3 3"/>')
+            continue
         v = breadth[m["row_id"]]
         svg.append(f'<circle cx="{x:.1f}" cy="{y:.1f}" r="11.5" fill="{RAMP01[min(v, len(RAMP01)) - 1]}"/>' if v else f'<circle cx="{x:.1f}" cy="{y:.1f}" r="10" fill="none" stroke="{NONE01}" stroke-width="2.5"/>')
     svg.append(txt(cx, cy - 62, str(n_any), 150, anchor="middle", weight="bold", extra='letter-spacing="-5"'))
     svg.append(txt(cx, cy - 14, f"of {len(SITTING)} members", 32, anchor="middle", fill=MUTED))
     svg.append(txt(cx - r1 - 12, cy + 46, f"{base.get('D', 0)} Democrats", 22, weight="bold", fill=DEM))
     svg.append(txt(cx + r1 + 12, cy + 46, f"{base.get('R', 0)} Republicans", 22, anchor="end", weight="bold", fill=REP))
-    if base.get("I"):
-        svg.append(txt(cx, cy + 46, f"{base['I']} independents between them", 18, anchor="middle", fill=MUTED))
+    if base.get("I") or VACANT:
+        _mid = [f"{base['I']} independents"] * bool(base.get("I")) + [f"{len(VACANT)} vacant seats (dashed)"] * bool(VACANT)
+        svg.append(txt(cx, cy + 46, " and ".join(_mid) + " between them", 18, anchor="middle", fill=MUTED))
     # the scale, with the number of members at each step
     ly, x = cy + 118, cx - r1 - 12
-    svg.append(txt(x, ly - 34, "Each dot is one member, shaded by how many kinds of connection are on record", 21, weight="bold"))
-    for v in range(0, max(dist) + 1):
+    svg.append(txt(x, ly - 34, "Each dot is one serving member, shaded by how many kinds of connection are on record", 21, weight="bold"))
+    # 2026-11-26: the ramp has len(RAMP01) shades; members with that many kinds or more share the darkest one, and the scale says so
+    top_v = min(max(dist), len(RAMP01))
+    step = min(178, (2 * r1 + 24 - 150) // max(top_v, 1))
+    for v in range(0, top_v + 1):
+        n_v = dist.get(v, 0) if v < top_v else sum(n for k, n in dist.items() if k >= top_v)
+        more = v == top_v and max(dist) > top_v
         svg.append(f'<circle cx="{x + 13:.1f}" cy="{ly + 14}" r="13" fill="{RAMP01[min(v, len(RAMP01)) - 1]}"/>' if v else f'<circle cx="{x + 13:.1f}" cy="{ly + 14}" r="11.5" fill="none" stroke="{NONE01}" stroke-width="2.5"/>')
-        svg.append(txt(x + 36, ly + 10, str(dist.get(v, 0)), 22, weight="bold"))
-        svg.append(txt(x + 36, ly + 32, "none" if v == 0 else f"{v} kind" + ("s" if v != 1 else ""), 16, fill=MUTED))
-        x += 178
+        svg.append(txt(x + 36, ly + 10, str(n_v), 22, weight="bold"))
+        svg.append(txt(x + 36, ly + 32, "none" if v == 0 else (f"{v} or more kinds" if more else f"{v} kind" + ("s" if v != 1 else "")), 16, fill=MUTED))
+        x += step
     # the kinds, ranked by the members they reach
     xk = 1345
     wk = 735
@@ -256,7 +275,7 @@ def fig01():
         svg.append(txt(xk + 512, y + 26, " · ".join(f"{k['by'].get(p, 0)} {p}" for p in "DRI" if k["by"].get(p, 0)), 16, fill=MUTED))
         if k["usd"]:
             svg.append(txt(xk + wk, y + 26, money(k["usd"]), 18, anchor="end", fill=MUTED))
-    svg.append(txt(xk, 96 + len(kinds) * 74 + 6, "Bars are a share of all the seats. Paler bars are indirect: a committee or a lobbyist acted.", 16, fill=MUTED))
+    svg.append(txt(xk, 96 + len(kinds) * 74 + 6, f"Bars are a share of the {len(SITTING)} serving members. Paler bars are indirect: a committee or a lobbyist acted.", 16, fill=MUTED))
     short = lambda k: SHORT01.get(k["t"], k["label"].lower())  # noqa: E731
     top = [short(k) for k in kinds[:3]]
     indirect = [short(k) for k in kinds if k["indirect"]]
@@ -391,7 +410,7 @@ def fig03():
         parts = " · ".join(f"{p} {money(by_pp[(k, p)])}" for p in ("D", "R", "I") if by_pp.get((k, p)))
         svg.append(txt(x + 10, y + bh * 0.72, f"{money(by_payer[k])}   ({parts})", 15, fill=MUTED))
     subtitle = ("Sources: FEC contribution records where the giver is one of the network's named principals and the recipient is a sitting member's campaign, leadership PAC or joint fundraising committee. Pass-through entries are never added twice.")
-    footnote = ("<b>What the record does not show.</b> A contribution is not a vote. A person's giving is their own, not their employer's. Party and super PAC giving are shown in other figures. Givers are matched by name and confirmed by employer or city; namesakes that could not be confirmed are left out. A gift to a joint fundraising committee counts once there; the committee's later allocations to its members are not added again. The 2026 cycle is still open, so 2026 is a floor.")
+    footnote = ("<b>What the record does not show.</b> A contribution is not a vote. A person's giving is their own, not their employer's. Party and super PAC giving are shown in other figures. Givers are matched by name and confirmed by employer or city; namesakes that could not be confirmed are left out. A gift to a joint fundraising committee counts once there; the committee's later allocations to its members are not added again. A gift that Anthropic's own registered lobbyist also reported on a lobbyist's contribution report is counted with lobbyists' gifts (figure 10), not here. The 2026 cycle is still open, so 2026 is a floor.")
     figure(stem, "Principals' hard money to sitting members", subtitle, "\n".join(svg), footnote, ids, height=1580,
            legend_html='<div class="legend">' + legend([(DEM, "to Democrats"), (REP, "to Republicans"), (IND, "to independents")]) + "</div>")
 
@@ -460,7 +479,7 @@ def fig04():
     svg.append(txt(40, y2, "Lobbying reports, 2016–2026, that disclose a lobbyist's former government job, by client (each report counted once)", 24, weight="bold"))
     svg.append(bar_chart([(c, v, None) for c, v in by_client.most_common(12) if c.strip() and c != "?"], 40, y2 + 20, 1900, 520, label_w=700, colour=lambda r: DEM, fmt=lambda v: f"{int(v)} filings"))
     ids += [r["row_id"] for r in cov]
-    subtitle = ("Sources: quarterly Senate lobbying reports filed for network clients, 2016–2026. Spend is the amount printed on each report; the lower panel counts only reports that actually name a lobbyist's prior government role. Variant client spellings are merged (Anthropic's own reports and those its outside lobbying firms file for it are one line); in a quarter with the client's own in-house report only that report counts, because it already includes the firms' fees.")
+    subtitle = ("Sources: federal lobbying registrations and quarterly reports (forms LD-1 and LD-2) filed for network clients, 2016–2026. Spend is the amount printed on each quarterly report; the lower panel counts registrations and reports that name a lobbyist's prior government role. Variant client spellings are merged. Where a client's own in-house report prints an expense amount for a quarter, the figure uses that amount and leaves out what its outside firms reported as income from it for the same quarter.")
     footnote = ("<b>What the record does not show.</b> Reported amounts are rounded by the filer. A client's own in-house report already includes what it paid outside firms, so the two are not added; Tower 19's fees count as Aquia Group's subcontract for Anthropic, whose own report covers them (Tower 19's registration names Anthropic as the principal; audit X54). Reports before 2016 (RAND's and FAS's among them) are left out. A former government job is a job history, not evidence it was used. Amended reports appear once.")
     figure(stem, "Lobbying spend and the lobbyists' Hill origins", subtitle, "\n".join(svg), footnote, ids, height=1650)
 
@@ -595,6 +614,7 @@ def fig07():
     rows = load("timeline_all")
     q = collections.defaultdict(collections.Counter)
     latest = ""
+    bar_ids = []
     for r in rows:
         if r["role"] != "evidence":
             continue
@@ -602,6 +622,7 @@ def fig07():
         if len(d) < 7 or d[:4] < "2016":
             continue
         q[d[:4]][r["conn_type"]] += 1
+        bar_ids.append((r["row_id"], r["conn_type"]))  # X67c-0418: the rows behind the yearly bars are cited, not only the key moments
         latest = max(latest, d[:10])
     keys = sorted(q)
     types = ["1/2", "3a/3b", "4a", "4b", "5", "6", "7", "8", "9", "10", "11", "12"]
@@ -609,6 +630,7 @@ def fig07():
              "7": "federal awards and bills", "8": "financial disclosures", "9": "travel and events", "10": "campaigns paying AI labs", "11": "public statements", "12": "state money"}
     SHORT = {"1/2": "contributions", "3a/3b": "outside spending", "4a": "lobbying reports", "4b": "lobbyists' gifts", "5": "staff", "6": "grants", "7": "federal", "8": "disclosures", "9": "travel", "10": "AI-lab payments", "11": "statements", "12": "state money"}
     totals = {k: sum(v for t, v in q[k].items() if t in types) for k in keys}  # X34-0597: print what the bars draw
+    bar_ids = [i for i, ct in bar_ids if ct in types]
     mx = max(list(totals.values()) + [1])
     step = 1000 if mx <= 6000 else 2000
     top = ((mx // step) + 1) * step
@@ -623,7 +645,7 @@ def fig07():
     late_share = [100 * v // totals[k] for k, v in late.items()]
     svg = [txt(40, 40, "Confirmed records per year, coloured by kind of connection, 2016–2026 (height = number of records dated in that year)", 24, weight="bold")]
     svg.append(txt(40, 72, f"Election years (red) are outside-spending years: super PAC ad buys and money into super PACs are {min(even_share)}–{max(even_share)}% of 2018, 2020, 2022 and 2024. Off years are led by campaign contributions (blue), {min(odd_share)}–{max(odd_share)}% of 2017, 2019 and 2021.", 16, fill=MUTED))
-    svg.append(txt(40, 96, f"In 2025 and 2026 the mix changes: individuals' contributions plus campaigns paying Anthropic and other AI labs make up {min(late_share)}–{max(late_share)}% of those years. 2026 is not over yet.", 16, fill=MUTED))
+    svg.append(txt(40, 96, f"In 2025 and 2026 the mix changes: campaign-contribution records plus campaigns' payments to Anthropic and other AI companies make up {min(late_share)}–{max(late_share)}% of those years. 2026 is not over yet.", 16, fill=MUTED))
     for g in range(0, top + 1, step):
         y = yb - H * g / top
         svg.append(f'<line x1="{x0}" y1="{y:.1f}" x2="{x0 + W}" y2="{y:.1f}" stroke="#d9d4c8" stroke-width="1"/>')
@@ -649,7 +671,7 @@ def fig07():
     # spine: milestones spread across the years, boilerplate rows skipped, at most two per year
     spine = [r for r in TL if (r["category"] or "") in ("gov-pipeline", "legislation", "policy-fight") and r["date"][:4] >= "2016"
              and not re.search(r"congress\.gov|count=|pagination|api member", (r["event"] or ""), re.I)]
-    ids = [r["row_id"] for r in spine]
+    ids = [r["row_id"] for r in spine] + bar_ids
     picked = []; per_year = collections.Counter(); seen_ev = []
     for r in sorted(spine, key=lambda r: (r["date"], 0 if r["category"] == "gov-pipeline" else 1)):
         y = r["date"][:4]
@@ -663,8 +685,8 @@ def fig07():
     for i, r in enumerate(picked):
         svg.append(txt(40, sy + 32 + i * 24, f"{r['date'][:10]:<11}", 15, fill=MUTED, extra='font-family="monospace"'))
         svg.append(txt(170, sy + 32 + i * 24, (lambda e: e if len(e) <= 150 else e[:147].rstrip() + "…")(re.sub(r"\s*\(GSA Committee No\. \d+\)|;?\s*pack-\d+\b.*$|\bnatsec\b", lambda m: "national security" if m.group(0) == "natsec" else "", r['event'] or '').strip()), 15, fill=INK))
-    subtitle = ("What this is: each record is one filed document or one line in it: a super PAC ad buy, a campaign contribution, a campaign's payment to an AI company, a lobbyist's own gift, a grant, a federal award, a public statement. It shows when the paper trail exists, not how much money moved.")
-    footnote = ('<b>What the record does not show.</b> Counts follow filing calendars and how deeply each period was searched: 2024–2026 were searched more thoroughly than 2016–2019, and one super PAC can file thousands of small ad-buy lines in a year. Records dated only by year (annual holdings, jobs with only a start year) are not in the bars. Most key moments are dated events copied from the timeline of a companion study, not rows reviewed in this pack.')
+    subtitle = ("What this is: each bar counts the dated, confirmed rows of the study's tables for that year: filings and lines in them (a super PAC ad buy, a campaign contribution, a campaign's payment to an AI company, a lobbyist's own gift, a lobbying report, a grant, a federal award), staff and fellowship records, trips and events, and public statements. It shows when the paper trail exists, not how much money moved.")
+    footnote = ('<b>What the record does not show.</b> Counts follow filing calendars and how far each period was searched, and one super PAC can file thousands of separate lines in a year. Records dated only by year (annual holdings, jobs with only a start year) are not in the bars. Most key moments are dated events copied from the timeline of a companion study, not rows reviewed in this pack.')
     figure(stem, "Election years spike with outside spending; 2025–26 shift to donations and AI-lab payments", subtitle, "\n".join(svg), footnote, ids, height=1440 + 24 * len(picked),
            legend_html='<div class="legend">' + legend([(PAL[j], NAMES[t]) for j, t in enumerate(types)]) + "</div>")
 
