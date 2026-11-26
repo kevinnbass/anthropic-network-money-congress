@@ -8,7 +8,7 @@ This repository holds a record of documented connections between Anthropic's net
 
 ![450 of Congress's 533 members have a documented connection to Anthropic's network](figures/congress-01-connection-grid.jpg)
 
-## Status: updated November 26, 2026; every audit finding to date applied or ruled on, three checks running, the final check to follow
+## Status: updated November 26, 2026; every audit of the record applied or ruled on, the latest audit of the story series being worked in, the final check to follow
 
 On November 26, 2026 the record was extended with the filings made through the third quarter of 2026 (activity through September 30). This release holds 2,018 more source-table rows than the one published here before it, and members are now counted as the 533 serving on November 26, 2026 instead of the Congress as first seated. Every figure was redrawn. For serving members, against the version published here before:
 
@@ -17,7 +17,7 @@ On November 26, 2026 the record was extended with the filings made through the t
 | Individuals' contributions | 202 members, $5.2M | 235 members, $8.7M |
 | PAC contributions | 118 members, $328K | 178 members, $554K |
 | Outside spending by committees with a network receipt | 201 members, $525M | 213 members, $541M |
-| Lobbyists' own contributions | 293 members, $1.2M | 323 members, $1.4M |
+| Lobbyists' own contributions | 293 members, $1.2M | 326 members, $1.5M |
 | Lobbying reports naming a bill the member sponsored | 8 members | 38 members |
 | Any counted connection | 435 of 535 | 450 of 533 |
 
@@ -29,15 +29,15 @@ Independent audits (X64 to X69 in the project's numbering) checked the new rows,
 - **Missing member.** Eighteen counted PAC contributions did not name the member they went to (four found by an audit, fourteen settled from the receiving committees' own registrations). They do now, which is why PAC contributions reach 178 members.
 - **Not a move.** Two commissioners were counted as moving from the network into a congressional body; Anthropic's own announcement shows both already served when it named them to an advisory council. Figure 05 counts 26 people in that direction, all fellows.
 - **Restated lines.** 1,227 rows that restate a transaction counted elsewhere, or record no event (conduit and memo copies of a counted gift, refunds, 140 repeated outside-spending lines of 2010, method notes filed as timeline entries), are held for reference and no longer counted as records. No member's count or dollar total moved, and figures 07, 22 and 23 count fewer records.
-- **Wrongly held.** The same rule was then tested in the other direction, on 2,725 memo and conduit lines already held for reference. Two belonged back in the record: gifts of July 2026 passed through ActBlue to two candidates ($7,000 and $3,500), for which no receipt on the candidates' own reports is held. They are counted records again; neither candidate serves in Congress, so no member's count moved. The record holds 43,065 counted rows.
+- **Wrongly held.** The same rule was then tested in the other direction, on 2,725 memo and conduit lines already held for reference. Two belonged back in the record: gifts of July 2026 passed through ActBlue to two candidates ($7,000 and $3,500), for which no receipt on the candidates' own reports is held. They are counted records again; neither candidate serves in Congress, so no member's count moved.
+- **Held lobbyists' gifts.** 849 lobbyists' gifts were held out of the count although each named a serving member, a person as giver and a date in the counting window. An audit read every one against its filed return. 813 were rightly held (second copies of an item, items on a return that a later amendment replaced, items the amendment withdrew). 33 belonged in the count: for 23 the earlier version of the return had been counted in place of the current one, and for 10 the counted copy did not name the member. Each gift is still counted once. Lobbyists' own contributions now reach 326 members with $1.5M (were 323 and $1.4M); three members gain a first record of this kind and none a first record of any kind. Three gifts to one joint committee ($15,000) stay held until a filing shows which member it serves. The record holds 43,063 counted rows.
 - **Two figures, one rule.** Figures 09 and 12 gave one committee's receipts from the network as $106.3M and $105.3M: figure 12 left out receipts of the same committees that the record holds in its contributions table. Both now use one rule. Figure 12 gains six receipts ($1,041,000), among them $1,000,000 from Reed Hastings to FF PAC, and reads $106M for FF PAC.
 - **Captions and lists.** Captions that left out a condition the code applies were completed, and so were lists of cited rows that left out rows a figure counts.
 
 **Not finished. Until these are done this update is not called verified:**
 
-- Of those 2,725 held lines, fourteen still need a document before their place is settled; they stay held until it is read. The audit compared 31 sampled lines with their raw filings and found no difference; 46 more could not be opened because the raw filings are very large. A follow-on check is reading both.
-- Lobbyists' own contributions: 849 rows are held out of the count although they carry a serving member, a person as giver and a date in the counting window. By the project's screen 694 are second copies of a counted item on the same filing, 128 repeat a counted gift on another filing, and 27 ($60,200) match no counted row. An audit of the whole class started on November 26. If rows return, the count of 323 members and $1.4M rises; it cannot fall.
-- The story series' third version (15 slides) is being audited and read by two more outside readers.
+- The story page still shows lobbyists' gifts as they stood before the last correction (323 members, $1.4M). Its third version (15 slides) has now been audited (5,797 of 5,815 findings right; 4 errors, 14 qualifications) and read by two more outside readers; a fourth version that works those in, and carries the corrected counts, is being built.
+- Of the 2,725 held memo and conduit lines, the fourteen that needed a document were read and stay held; 76 of 77 sampled lines now agree with their raw filings, and one cannot be read because the FEC's own copy of that filing is cut off.
 - The testimony figure (26) is short: fifteen committee appearances by witnesses in a network organisation's role are on record and not yet counted. They are added in the next update.
 - Five pairs of counted rows that share a member, a day and a dollar amount are not settled as one transaction or two (the filed pages were read again and carry no shared reference) ($27,399 of outside spending, $5,400 of contributions, $3,500 of lobbyists' gifts). Both rows of each pair are counted.
 - A final check of everything applied follows the audits.
@@ -127,7 +127,7 @@ What to expect:
 - **The `.html` pages come out byte for byte the same as the ones here**, except that figure 01 prints the date it was built. This was tested on a fresh copy of these files.
 - **The `.png` and `.jpg` files depend on your browser and fonts.** The ones here were rendered with Playwright and its Chromium on Linux. With another browser or font the pixels differ and a long label may wrap; the script stops if a page overflows.
 - `build_join.py` writes `research/members_network.csv` and `research/timeline_all.csv` again. They come out the same as the ones here except for the build time they record.
-- `audit.py` should end with `problems=0`. On a fresh copy of these files it printed `tables=15 row_ids=135014 duplicates=0 MB_rows=1078 MB_cells=15092 figures=29 pngs=29 figure_citations=229600 problems=0` (2026-11-26, after the third-quarter update and its audits), and the three figure scripts wrote all 29 `.html` pages byte for byte as they are here.
+- `audit.py` should end with `problems=0`. On a fresh copy of these files it printed `tables=15 row_ids=135014 duplicates=0 MB_rows=1078 MB_cells=15092 figures=29 pngs=29 figure_citations=229610 problems=0` (2026-11-26, after the third-quarter update and its audits), and the three figure scripts wrote all 29 `.html` pages byte for byte as they are here.
 
 The scripts are the project's own. Four things were changed so they run here: the path to the drawing library (which now calls the Python that runs it); the paths to five input files that live in the author's other projects (copied into `research/inputs/`); one read of the saved lobbying filings in figure 29's script (replaced by the small table `research/lda_filing_expenses.csv`, made from those filings); and `audit.py` no longer requires a second copy of the member table under another name.
 
@@ -135,18 +135,18 @@ The scripts are the project's own. Four things were changed so they run here: th
 
 Rows were collected from public sources (FEC, Senate and House lobbying and disclosure filings, IRS returns, USAspending, state registries, congressional records, organisations' own pages) by AI research agents, each row with its source's URL and an excerpt as fetched; the author keeps saved copies of the sources. Rows entered the tables through a row-by-row review of each batch by a separate agent. Independent audits then checked evidence rows against saved originals, in both directions: what was kept and what was removed. The measure below says how many. A correction never overwrites: the earlier row is archived and the change noted on the row.
 
-The project measures itself against a written standard with a script. On 2026-11-26 at 17:57 UTC it printed:
+The project measures itself against a written standard with a script. On 2026-11-26 at 18:29 UTC it printed:
 
 ```
-== congress  bound rows 133,466  evidence rows 43,065
-G1 FAIL  drawn evidence document-checked 43,023/43,065 (99.9%); all evidence 99.9%
-G2 PASS  errors disposed 32,642/32,642; errors+qualifications disposed 61,020/61,020 (100.0%)
-G3 PASS  corrected rows archived 15,965/15,965 (ledger rows 16,009)
-G4 PASS  audits 104: complete 48, well-formed closing line 104; incomplete and not carried to README/dispositions 0
+== congress  bound rows 133,466  evidence rows 43,063
+G1 FAIL  drawn evidence document-checked 43,021/43,063 (99.9%); all evidence 99.9%
+G2 FAIL  errors disposed 32,675/32,679; errors+qualifications disposed 61,056/61,074 (100.0%)
+G3 PASS  corrected rows archived 15,975/15,975 (ledger rows 16,019)
+G4 FAIL  audits 106: complete 48, well-formed closing line 106; incomplete and not carried to README/dispositions 1 ['X76-story-series-round4-20261126']
 G5 PASS  clean figures 29/29
 ```
 
-G1 says how many of the evidence rows the 29 figures draw or count have a document check on file. Since figure 23 lists every row it counts, that is every evidence row in the record. The 42 rows without one are 23 rows of the network list and 19 contribution lines whose audit finding is a qualification still open. G2 says every error and qualification any audit has raised has a written ruling. G4 counts the audits that had finished when the script ran; the checks named under Status as running started after it and will show as unfinished until they report. The final check of everything applied has not run yet, so this update is not called verified.
+G1 says how many of the evidence rows the 29 figures draw or count have a document check on file. Since figure 23 lists every row it counts, that is every evidence row in the record. The 42 rows without one are 23 rows of the network list and 19 contribution lines whose audit finding is a qualification still open. G2 says how many of the errors and qualifications any audit has raised have a written ruling. The four errors and fourteen qualifications without one, and the audit G4 names, are those of the latest audit of the story series; they are being worked into its next version and will be ruled on with it. The final check of everything applied has not run yet, so this update is not called verified.
 
 ## Names
 
