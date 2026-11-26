@@ -58,14 +58,18 @@ def cycle_of(date: str) -> str:
     return str(y + (y % 2))
 
 
-def is_org(name: str) -> bool:
+def is_org(name: str, payer_type: str = "") -> bool:
     n = (name or "").upper()
+    if (payer_type or "").strip() == "individual":
+        # 2026-11-26: for a payer the table types as an individual, only a whole word counts (PAC, INC), so a person whose name merely holds those
+        # letters (Pacheco, Vincent) can never be drawn as an organisation under their own name. No row was affected on the day.
+        return bool(set(re.findall(r"[A-Z]+", n.replace(".", ""))) & set(ORG_WORDS)) and "," not in n or n.endswith((" INC", " INC.", " LLC", " PBC"))
     return any(w in n.split() or w in n for w in ORG_WORDS) and "," not in n or n.endswith((" INC", " INC.", " LLC", " PBC"))
 
 
-def public_name(name: str) -> str:
+def public_name(name: str, payer_type: str = "") -> str:
     """Organisations and PLAN §1.1 principals by name; other individuals folded."""
-    if is_org(name):
+    if is_org(name, payer_type):
         return re.sub(r"\s+", " ", name.strip())[:56]
     key = norm_name(name)
     if key in PRINCIPALS:
@@ -379,7 +383,7 @@ def fig12():
             return "Public First family (internal transfers)"
         if (r["payer_type"] or "").strip() and r["payer_type"] != "individual":  # X39-0406: a committee by its filed type (STRONGER TOGETHER PA), not by a name keyword
             return re.sub(r"\s+", " ", (r["payer"] or "").strip())[:56]
-        return public_name(r["payer"])
+        return public_name(r["payer"], r.get("payer_type", ""))
     def payee_label(r):
         return re.sub(r"[.,]", "", (r["payee"] or "?").upper())[:40]
     flows = collections.defaultdict(float); ids = []
@@ -790,12 +794,15 @@ def fig18():
     th = 36 * len(top) + 10
     svg.append(stacked_bars(cells, cl, [b for b, _ in top], 40, 60, 2000, th, PAL, label_w=300, fmt=lambda v: f"{int(v)} filings"))
     yi = 60 + th + 40
-    svg.append(txt(40, yi, "Issue areas for the clients in the top panel (the issue codes the lobbying firms selected)", 22, weight="bold"))
+    svg.append(txt(40, yi, f"Issue areas for the clients in the top panel (the issue codes the lobbying firms selected on {MIN_FILINGS} or more reports)", 22, weight="bold"))
     ic = collections.defaultdict(float)
     for r in ld2:
-        for code in set(re.findall(r"\b([A-Z]{3})\s*:", r["issues"] or "")):
+        for code in sorted(set(re.findall(r"\b([A-Z]{3})\s*:", r["issues"] or ""))):
             ic[(client_label(r["client"]), code)] += 1
-    codes = [c for c, n in collections.Counter({c: sum(v for (cc, c2), v in ic.items() if c2 == c and cc in cl) for (_, c) in ic}).most_common(12) if n]  # X33-085
+    # 2026-11-26: the panel drew the twelve most frequent codes and five codes tied for the twelfth place, so which one was drawn changed from run to
+    # run (set order). It now draws every code on MIN_FILINGS or more reports, ties included, as the bills panel does, most frequent first, then by code.
+    code_n = {c: sum(v for (cc, c2), v in ic.items() if c2 == c and cc in cl) for (_, c) in ic}  # X33-085
+    codes = [c for c, n in sorted(code_n.items(), key=lambda kv: (-kv[1], kv[0])) if n >= MIN_FILINGS]
     ih = 36 * len(codes) + 10
     svg.append(stacked_bars(ic, cl, codes, 40, yi + 20, 2000, ih, PAL, label_w=300, fmt=lambda v: f"{int(v)} filings"))
     y = yi + 20 + ih + 40
@@ -902,7 +909,7 @@ def fig20():
             return "Future of Life Institute"
         if "ENCODE" in n:  # X33-023: one client under two spellings
             return "Encode AI Corporation"
-        return public_name(r["payer"]).replace("other individuals (not named)", "other network individuals (employees; not named)")
+        return public_name(r["payer"], r.get("payer_type", "")).replace("other individuals (not named)", "other network individuals (employees; not named)")
     def office(r):
         o = (r["office"] or "").strip()
         o = {"Member of Assembly": "State Assembly", "State Senate": "State Senate", "State Senator": "State Senate"}.get(o, o)
@@ -973,7 +980,7 @@ def fig21():
             return "Schmidt funds"
         if "MCCALEB" in n:
             return "Jed McCaleb"
-        return public_name(r["payer"])
+        return public_name(r["payer"], r.get("payer_type", ""))
     # 2026-09-27 (Kevin): grants split by cause; the top panel and the grantee ranking are the network's AI, technology,
     # biosecurity and catastrophic-risk work, and the second panel is the same funders' grants to every other cause
     ai_rows = [r for r in rows if cause_of(r) == "ai_tech_biosecurity_gcr"]

@@ -8,11 +8,9 @@ federal_money,url,local path,2
 grants,note,local path,17
 grants,quote_300,local path,1
 grants,url,local path,7
-hard_money,note,api key value,2
 hard_money,note,local path,15
 hard_money,quote_300,api key value,1
 hard_money,quote_300,local path,1
-hard_money,url,api key value,15
 hard_money,url,local path,26
 lobbying,url,local path,1
 member_disclosures,note,local path,4

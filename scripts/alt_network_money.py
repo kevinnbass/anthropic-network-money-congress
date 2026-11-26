@@ -3,7 +3,7 @@
 network, 2024 and 2026 cycles, each bar split by the giving entity. Rows are exactly the counted type-1 and type-2
 rows of research/members_network.csv (t1_ids, t2_ids), so memo, conduit and namesake lines are already out; the
 law firm's PAC (in type 2 only because the firm lobbies for a network client) is left out. Rendered to figures-alt/.
-usage: python3 scripts/alt_network_money.py"""
+usage: python3 scripts/alt_network_money.py [--data DIR]   (--data also writes contributions.csv and member_totals_by_entity.csv into DIR)"""
 from __future__ import annotations
 
 import collections
@@ -27,7 +27,7 @@ NAMED = {"Eric Schmidt", "Wendy Schmidt", "James McClave", "Emily Berger", "Reed
 def main() -> int:
     principals = {bf.norm_name(r["name"]): r["name"] for r in b.EN if r["tier"] in ("T1", "T2", "T3") and r["entity_type"] == "person" and b.ev(r)}
     sit = {m["member_bioguide"]: m for m in b.SITTING}
-    val = collections.defaultdict(float); ids = []
+    val = collections.defaultdict(float); ids = []; lines = []
 
     def group(r, t: str) -> str | None:
         if t == "2":
@@ -56,6 +56,11 @@ def main() -> int:
                 g = group(r, t)
                 if g:
                     val[(m["member_bioguide"], g)] += b.amt(r["amount_usd"]); ids.append(rid)
+                    sub = re.search(r"\bsub_id=(\d+)", (r["note"] or "") + " " + (r["url"] or ""))
+                    lines.append({"member": m["member_name"], "party": (m["party"] or "")[:1], "chamber": m["chamber"], "state": m["state"], "district": m["district"],
+                                  "bioguide_id": m["member_bioguide"], "entity_group": g, "giver": r["payer"], "recipient_committee": r["payee"], "recipient_committee_id": r["payee_id"],
+                                  "amount_usd": f"{b.amt(r['amount_usd']):.2f}", "date": r["date"], "cycle": r["cycle"] or b.cycle_of(r["date"]),
+                                  "kind": "PAC contribution" if t == "2" else "individual contribution", "fec_sub_id": sub.group(1) if sub else "", "source_url": r["url"], "record_id": rid})
     tot = collections.defaultdict(float); gt = collections.defaultdict(float)
     for (mb, g), v in val.items():
         tot[mb] += v; gt[g] += v
@@ -91,6 +96,18 @@ def main() -> int:
     bf.figure("network-money-per-member", f"The network gave {money(all_tot)} to {len(ms)} sitting members in 2024–26, most of it from Anthropic staff",
               subtitle, "\n".join(svg), footnote, ids, height=y0 + len(top) * rh + 540,
               legend_html=legend([(c, g) for g, c in GROUPS if gt[g] > 0]))
+    if "--data" in sys.argv:  # the chart's own rows and bar segments, one file each
+        import csv
+        out = Path(sys.argv[sys.argv.index("--data") + 1]); out.mkdir(parents=True, exist_ok=True)
+        with open(out / "contributions.csv", "w", encoding="utf-8", newline="") as fh:
+            w = csv.DictWriter(fh, fieldnames=list(lines[0]), lineterminator="\n"); w.writeheader()
+            w.writerows(sorted(lines, key=lambda x: (x["member"], x["date"], x["record_id"])))
+        with open(out / "member_totals_by_entity.csv", "w", encoding="utf-8", newline="") as fh:
+            w = csv.writer(fh, lineterminator="\n"); w.writerow(["member", "party", "chamber", "state", "district", "bioguide_id", "entity_group", "total_usd"])
+            for (mb, g), v in sorted(val.items(), key=lambda kv: (sit[kv[0][0]]["member_name"], kv[0][1])):
+                mm = sit[mb]
+                w.writerow([mm["member_name"], (mm["party"] or "")[:1], mm["chamber"], mm["state"], mm["district"], mb, g, f"{v:.2f}"])
+        print(f"wrote {len(lines)} contributions and {len(val)} member totals into {out}")
     return 0
 
 

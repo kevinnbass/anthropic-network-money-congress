@@ -35,7 +35,7 @@ def main() -> int:
             continue
         (pac if is_pac else emp)[r["member_bioguide"]] += b.amt(r["amount_usd"])
         if is_emp:
-            donors[r["member_bioguide"]].add(re.sub(r"[^A-Z]", "", r["payer"].upper()))
+            donors[r["member_bioguide"]].add(bf.norm_name(r["payer"]))  # 2026-11-26: one person per surname and first name ('LOFGREN, PETER MR.' is 'LOFGREN, PETER'); spellings were counted as people
         ids.append(r["row_id"])
     ms = set(emp) | set(pac)
     tot = {m: emp[m] + pac[m] for m in ms}

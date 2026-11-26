@@ -17,7 +17,7 @@ This repository holds a record of documented connections between Anthropic's net
 | [`scripts/`](scripts), [`lib/`](lib) | The scripts that build the member table and draw the figures, and the small drawing library they use. |
 | [`figures-alt/`](figures-alt) | Three alternate views, drawn by the same code from the same rows. See "Alternate views" below for their status. |
 | [`SCRUB-LOG.csv`](SCRUB-LOG.csv) | A count of the cells changed for this public copy: API keys and local file paths, nothing else. |
-| `network-money-per-member.*`, [`data/`](data) | The first release of 2026-09-25, kept as published. See "The first release" below. |
+| `network-money-per-member.*`, [`data/`](data) | The chart of direct money per member and the rows it draws. See "Direct money per member" below. |
 
 ## The figures
 
@@ -75,9 +75,9 @@ playwright install chromium
 
 python3 scripts/setup_data.py                       # unpacks the one table stored gzipped
 python3 scripts/build_join.py                       # optional: rebuilds the member table from the 14 source tables
-PYTHONHASHSEED=0 python3 scripts/build_figures.py   # figures 01-07, written into figures/
-PYTHONHASHSEED=0 python3 scripts/build_figures2.py  # figures 08-25
-PYTHONHASHSEED=0 python3 scripts/build_figures3.py  # figures 26-29
+python3 scripts/build_figures.py                    # figures 01-07, written into figures/
+python3 scripts/build_figures2.py                   # figures 08-25
+python3 scripts/build_figures3.py                   # figures 26-29
 python3 scripts/audit.py                            # every row id a figure cites exists; every member total re-sums
 ```
 
@@ -86,7 +86,6 @@ To draw one figure, give its name: `python3 scripts/build_figures2.py congress-1
 What to expect:
 
 - **The `.html` pages come out byte for byte the same as the ones here**, except that figure 01 prints the date it was built. This was tested on a fresh copy of these files.
-- **`PYTHONHASHSEED=0` matters for figure 18 only.** Its lower panel breaks one tie between two issue codes by Python's set order, which changes from run to run without the setting.
 - **The `.png` and `.jpg` files depend on your browser and fonts.** The ones here were made with Playwright 1.62.0 and its Chromium on Linux, Python 3.14 and Pillow 12.3, with Arial served by Liberation Sans. With another font the pixels differ and a long label may wrap; the script stops if a page overflows.
 - `build_join.py` writes `research/members_network.csv` and `research/timeline_all.csv` again. They come out the same as the ones here except for the build time they record.
 - `audit.py` should end with `problems=0`. On this copy it printed `tables=15 row_ids=132991 duplicates=0 MB_rows=1073 MB_cells=15022 figures=29 pngs=29 figure_citations=48605 problems=0` (2026-11-26).
@@ -103,12 +102,12 @@ The project measures itself against a written standard with a script. On 2026-11
 == congress  bound rows 131,448  evidence rows 43,500
 G1 PASS  drawn evidence document-checked 31,462/31,462 (100.0%); all evidence 97.2%
 G2 PASS  errors disposed 31,404/31,404; errors+qualifications disposed 59,161/59,161 (100.0%)
-G3 PASS  corrected rows archived 15,372/15,372 (ledger rows 15,416)
+G3 PASS  corrected rows archived 15,387/15,387 (ledger rows 15,433)
 G4 PASS  audits 83: complete 40, well-formed closing line 83; incomplete and not carried to README/dispositions 0
 G5 PASS  clean figures 29/29
 ```
 
-G1 says every evidence row the 29 figures draw has a document check on file; it does not cover evidence rows no figure draws (97.2% of all evidence rows are checked). G4 counts 43 of the 83 audits as closed incomplete, each with its remainder written down. The open items are stated figure by figure in [`FIGURES.md`](FIGURES.md). The saved source documents (about 160 GB) and the audit files are not in this repository; every row carries the URL of its source.
+G1 says every evidence row the 29 figures draw has a document check on file; it does not cover evidence rows no figure draws (97.2% of all evidence rows are checked). G4 counts 43 of the 83 audits as closed incomplete, each with its remainder written down. The open items are stated figure by figure in [`FIGURES.md`](FIGURES.md). Two figures changed on 2026-11-26 and have not yet been read by an auditor who did not make the change: figure 01 was redrawn (same counts, one new sentence) and figure 18's issue panel now draws every code on three or more reports, where it had drawn twelve with a tie broken at random. The saved source documents (about 160 GB) and the audit files are not in this repository; every row carries the URL of its source.
 
 ## Names
 
@@ -119,12 +118,14 @@ The figures name people only in public roles. The tables carry the record as its
 `figures-alt/` holds three more charts drawn from the same evidence rows by the same code. **They have not been audited element by element, as the 29 figures have.** Read their numbers as the scripts' own.
 
 - `network-money-per-member`: the 40 sitting members receiving the most direct money in 2024–26, by giver.
-- `anthropic-money-per-member`: the same for Anthropic employees and its PAC. Its count of 63 employees counts each filed spelling of a name; folding spellings by surname and first name gives 59.
+- `anthropic-money-per-member`: the same for Anthropic employees and its PAC. It counts one employee per surname and first name.
 - `congress-10-lobbyists-own-contributions-alt`: figure 10's money by cycle and party.
 
-## The first release
+## Direct money per member
 
-`network-money-per-member.png` and `.html` at the top level, with `data/contributions.csv` and `data/member_totals_by_entity.csv`, are the first release of 2026-09-25, kept as published. That figure reads $2,141,813 to 183 sitting members in 2024–26. The record has been corrected and extended since. Run on the record as it stands, the same script gives $4.1M to 214 sitting members (`figures-alt/network-money-per-member`); figure 01's entry in [`FIGURES.md`](FIGURES.md) states the current counting rule, which now includes gifts to a member's single-member joint fundraising committee and leadership PAC.
+`network-money-per-member.png` and `.html` at the top level show the 40 sitting members receiving the most direct money from the network in 2024–26, by giver: $4.1M to 214 sitting members on the record as it stands. `data/contributions.csv` has one line per contribution the chart draws and `data/member_totals_by_entity.csv` its bar segments; `python3 scripts/alt_network_money.py --data data` writes all of them again. The same chart is in `figures-alt/`.
+
+This chart was the repository's first release, on 2026-09-25, when it read $2,141,813 to 183 sitting members. The record has been corrected and extended since; figure 01's entry in [`FIGURES.md`](FIGURES.md) states the current counting rule, which includes gifts to a member's single-member joint fundraising committee and leadership PAC. The first release is in this repository's history.
 
 ## Caveats
 

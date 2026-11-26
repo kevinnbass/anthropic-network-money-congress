@@ -47,6 +47,11 @@ def main() -> int:
             if not rid.startswith(prefix):
                 problems.append(f"{name}: row_id {rid} does not carry prefix {prefix}")
             rows_by_id[rid] = r
+    # 2026-11-26: no cell holds the value of an api_key (17 hard-money cells did, from saved request URLs; corrected the same day)
+    for rid, r in rows_by_id.items():
+        for col, v in r.items():
+            if v and "api_key=" in v and re.search(r"api_key=(?!DEMO_KEY\b|REDACTED\b|omitted\b)[A-Za-z0-9_]{12,}", v):
+                problems.append(f"{rid}.{col} holds an api_key value")
     mb = load(R / "members_network.csv")
     if (R / "member_join.csv").exists() and (R / "member_join.csv").read_bytes() != (R / "members_network.csv").read_bytes():
         problems.append("member_join.csv (engine MB path) and members_network.csv (PLAN §4 name) differ")
