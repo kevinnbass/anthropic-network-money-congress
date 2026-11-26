@@ -50,9 +50,7 @@ The `note` column records how a row was collected, reviewed and corrected, in th
 
 `../SCRUB-LOG.csv` counts every changed cell by table, column and kind of change. Nothing else differs from the working record.
 
-- **People are named only in public roles.** A person stays named when the project's roster names them, or they are a member of Congress, a candidate or an official, a registered lobbyist, an officer on a tax return, or a witness or speaker. Anyone else (an individual contributor, a staff member or fellow, an individual a committee paid) carries a label such as `individual contributor ABCDEFGH, not named`. The eight letters are the same wherever that filed name appears, so rows can still be grouped; a second spelling of the same surname and first name carries `(filed spelling B)`. The label follows the filed name, not a checked identity. The source URL and the FEC transaction id stay on the row, so the public record behind it can be looked up.
-- **Street addresses, zip codes and phone numbers** in quoted contributor records and registrations are removed for everyone, organisations included.
-- **Keys, email addresses and local file paths** are removed; a path inside the project folder is left as a relative path.
-- **Lists of unrelated people who share a principal's name**, kept in the roster table's identity checks, are withheld.
+- **Keys.** The value of an `api_key` in a saved request URL is removed.
+- **Local file paths.** A path on the author's machine is replaced by the file's name; a path inside the project folder is left as a relative path.
 
-These rules were applied by pattern, not by a person reading every cell, and free-text cells quote public filings at length; if a private person's name remains somewhere, open an issue with the `row_id`.
+Everything else is as the sources print it: names, employers, addresses and amounts are those of the public filings and pages each row cites.

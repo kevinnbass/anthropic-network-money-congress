@@ -1,137 +1,37 @@
 table,column,change,cells
-entities,key,name in running text,1
-entities,name,contributor not named,6
-entities,note,email address,3
 entities,note,local path,12
-entities,note,name after a field label,7
-entities,note,name in running text,17
-entities,note,street address or phone number,13
-entities,quote_300,email address,1
-entities,quote_300,identity-check list,21
-entities,quote_300,name after a field label,7
-entities,quote_300,name in running text,7
-entities,quote_300,street address or phone number,189
-entities,quote_300,street address or zip,1
 entities,url,api key value,7
 entities,url,local path,2
-entities,url,name in running text,1
 federal_money,note,local path,8
-federal_money,note,street address or phone number,17
-federal_money,quote_300,email address,1
-federal_money,quote_300,street address or phone number,2
 federal_money,url,api key value,1
 federal_money,url,local path,2
-grants,note,email address,1
 grants,note,local path,17
-grants,note,name in running text,3
-grants,note,street address or phone number,1
-grants,note,street address or zip,1
-grants,payee,individual payee not named,15
-grants,purpose,email address,1
-grants,quote_300,email address,6
 grants,quote_300,local path,1
-grants,quote_300,name in running text,3
-grants,quote_300,street address or phone number,372
 grants,url,local path,7
 hard_money,note,api key value,2
 hard_money,note,local path,15
-hard_money,note,name after a field label,9399
-hard_money,note,name in running text,597
-hard_money,note,street address or phone number,33
-hard_money,payee,individual payee not named,221
-hard_money,payer,contributor not named,9914
 hard_money,quote_300,api key value,1
-hard_money,quote_300,contributor field in a quoted record,27
 hard_money,quote_300,local path,1
-hard_money,quote_300,name after a field label,9460
-hard_money,quote_300,name in running text,60
-hard_money,quote_300,street address or phone number,10578
-hard_money,quote_300,street address or zip,10572
 hard_money,url,api key value,15
 hard_money,url,local path,26
-hard_money,url,name in running text,203
-inputs/horizon_offices_bills,fellow,staff or fellow not named,120
-inputs/horizon_offices_bills,source_url,name in running text,27
-lobbying,note,street address or phone number,9
-lobbying,quote_300,street address or phone number,168
 lobbying,url,local path,1
-lobbyist_contributions,note,name after a field label,142
-lobbyist_contributions,note,name in running text,1
-lobbyist_contributions,quote_300,contributor field in a quoted record,50
-lobbyist_contributions,quote_300,name after a field label,165
-lobbyist_contributions,quote_300,street address or phone number,139
 member_disclosures,note,local path,4
-member_disclosures,note,street address or phone number,3
-member_disclosures,quote_300,street address or phone number,3
 member_disclosures,url,local path,1
 member_statements,note,local path,347
-member_statements,note,name in running text,5
-member_statements,note,street address or phone number,42
-member_statements,quote_300,name in running text,5
-member_statements,quote_300,street address or phone number,30
 member_statements,url,local path,27
-members_network,horizon_fellows,name in running text,11
 revolving_door,note,local path,7
-revolving_door,note,name in running text,252
-revolving_door,note,street address or phone number,3
-revolving_door,person,staff or fellow not named,444
 revolving_door,quote_300,local path,1
-revolving_door,quote_300,name in a payroll or report excerpt,85
-revolving_door,quote_300,name in running text,272
-revolving_door,quote_300,street address or phone number,21
 revolving_door,url,api key value,1
 revolving_door,url,local path,8
-revolving_door,url,name in running text,22
-state_government,note,email address,5
 state_government,note,local path,1
-state_government,note,name after a field label,172
-state_government,note,name in running text,152
-state_government,note,street address or phone number,17
-state_government,payee,individual payee not named,2
-state_government,payer,contributor not named,165
-state_government,quote_300,email address,34
-state_government,quote_300,name in running text,172
-state_government,quote_300,street address or phone number,32
 state_government,url,local path,2
-super_pac_c4,note,name after a field label,12855
-super_pac_c4,note,name in running text,57
-super_pac_c4,note,street address or phone number,1
-super_pac_c4,payer,contributor not named,192
 super_pac_c4,quote_300,api key value,1
-super_pac_c4,quote_300,name after a field label,246
-super_pac_c4,quote_300,name in running text,10
-super_pac_c4,quote_300,street address or phone number,185
-super_pac_c4,quote_300,street address or zip,185
 super_pac_c4,url,local path,27
-super_pac_c4,url,name in running text,8
-timeline,event,name in running text,1
-timeline,event,street address or phone number,6
 timeline,note,local path,131
-timeline,note,name in running text,1
-timeline,note,street address or phone number,5
 timeline,source_url,local path,1
-timeline_all,actor,name follows its source row,10690
-timeline_all,counterparty,name follows its source row,1108
 timeline_all,note_120,local path,474
-timeline_all,note_120,name after a field label,8104
-timeline_all,note_120,name in running text,771
 travel,note,local path,2
-travel,note,name in running text,253
-travel,note,street address or phone number,19
-travel,quote_300,name in a payroll or report excerpt,10
-travel,quote_300,name in running text,162
-travel,quote_300,street address or phone number,1
-travel,traveler,staff not named,261
 travel,url,local path,1
-vendors,note,name after a field label,726
-vendors,note,name in running text,32
-vendors,note,street address or phone number,2
-vendors,payee,individual payee not named,609
 vendors,quote_300,api key value,1
-vendors,quote_300,email address,2
-vendors,quote_300,name after a field label,446
-vendors,quote_300,name in running text,30
-vendors,quote_300,street address or phone number,5037
-vendors,quote_300,street address or zip,5037
 vendors,url,api key value,1
 vendors,url,local path,4

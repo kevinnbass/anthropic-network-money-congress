@@ -16,7 +16,7 @@ This repository holds a record of documented connections between Anthropic's net
 | [`case.json`](case.json) | Which rows count: each row's role (evidence, context or negative). The same roles are in `research/row_roles.csv`. |
 | [`scripts/`](scripts), [`lib/`](lib) | The scripts that build the member table and draw the figures, and the small drawing library they use. |
 | [`figures-alt/`](figures-alt) | Three alternate views, drawn by the same code from the same rows. See "Alternate views" below for their status. |
-| [`SCRUB-LOG.csv`](SCRUB-LOG.csv) | A count of every cell changed for this public copy. |
+| [`SCRUB-LOG.csv`](SCRUB-LOG.csv) | A count of the cells changed for this public copy: API keys and local file paths, nothing else. |
 | `network-money-per-member.*`, [`data/`](data) | The first release of 2026-09-25, kept as published. See "The first release" below. |
 
 ## The figures
@@ -60,7 +60,7 @@ Rules that bind every figure:
 - One connection type per figure or per column. Types are never added together.
 - Second-hop money (independent expenditures by committees the network gave to, and lobbyists' own contributions) is labelled as second hop. The network did not direct it.
 - Only rows reviewed and bound as evidence are drawn on the money and connection figures. Repeated lines, restated filings and searches that found nothing are kept in the record and never counted.
-- People are named only in public roles.
+- The figures name people only in public roles.
 
 ## Rebuild the figures
 
@@ -91,7 +91,7 @@ What to expect:
 - `build_join.py` writes `research/members_network.csv` and `research/timeline_all.csv` again. They come out the same as the ones here except for the build time they record.
 - `audit.py` should end with `problems=0`. On this copy it printed `tables=15 row_ids=132991 duplicates=0 MB_rows=1073 MB_cells=15022 figures=29 pngs=29 figure_citations=48605 problems=0` (2026-11-26).
 
-The scripts are the project's own. Five things were changed so they run here: the path to the drawing library (which now calls the Python that runs it); the paths to five input files that live in the author's other projects (copied into `research/inputs/`); one read of the saved lobbying filings in figure 29's script (replaced by the small table `research/lda_filing_expenses.csv`, made from those filings); `audit.py` no longer requires a second copy of the member table under another name; and one comment that named a person.
+The scripts are the project's own. Four things were changed so they run here: the path to the drawing library (which now calls the Python that runs it); the paths to five input files that live in the author's other projects (copied into `research/inputs/`); one read of the saved lobbying filings in figure 29's script (replaced by the small table `research/lda_filing_expenses.csv`, made from those filings); and `audit.py` no longer requires a second copy of the member table under another name.
 
 ## How the record was checked
 
@@ -112,7 +112,7 @@ G1 says every evidence row the 29 figures draw has a document check on file; it 
 
 ## Names
 
-People are named only in public roles. Individual contributors, staff members and fellows who are not public figures carry a label instead of a name, such as `individual contributor ABCDEFGH, not named`; the label is the same wherever that filed name appears, and the source URL and FEC transaction id stay on the row. Street addresses and phone numbers are removed for everyone. [`research/README.md`](research/README.md) gives the rules, and `SCRUB-LOG.csv` the counts. The figures rebuild to the same pages from the labelled tables as from the named ones.
+The figures name people only in public roles. The tables carry the record as its public sources print it: contributors, lobbyists, staff, officers and witnesses appear as the FEC, lobbying, payroll, tax and congressional records name them, and each row carries the URL of its source. Two things were taken out of this copy: API keys in saved request URLs, and file paths on the author's machine. `SCRUB-LOG.csv` counts them.
 
 ## Alternate views
 

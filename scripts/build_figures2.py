@@ -1141,7 +1141,7 @@ import build_figures as _bf  # noqa: E402
 
 
 def person_stem(name: str) -> str:
-    """One person per first-name stem and surname (Codex X1b #7): a short first name and its long form with a middle name are one key."""
+    """One person per first-name stem and surname (Codex X1b #7): Max Katz and Maximilian Peter Katz are one key."""
     toks = [t for t in re.split(r"[\s,.]+", (name or "").lower()) if t and len(t) > 1 and t not in ("jr", "sr", "ii", "iii")]
     return (toks[0][:3] + " " + toks[-1]) if len(toks) >= 2 else " ".join(toks)
 
