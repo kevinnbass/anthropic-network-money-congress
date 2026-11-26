@@ -4,7 +4,7 @@ This repository holds a record of documented connections between Anthropic's net
 
 **A connection is a documented record, not an allegation of influence.** A contribution is not a vote, and an independent expenditure is not coordination. No motive is asserted anywhere.
 
-![Which of the twelve kinds of connection reach which members](figures/congress-01-connection-grid.jpg)
+![435 of Congress's 535 members have a documented connection to Anthropic's network](figures/congress-01-connection-grid.jpg)
 
 ## What is here
 
@@ -25,7 +25,7 @@ Titles are as printed on each figure. [`FIGURES.md`](FIGURES.md) gives the full 
 
 | # | Title | Files |
 |---|---|---|
-| 01 | Which of the twelve kinds of connection reach which members | [jpg](figures/congress-01-connection-grid.jpg) · [png](figures/congress-01-connection-grid.png) · [html](figures/congress-01-connection-grid.html) |
+| 01 | 435 of Congress's 535 members have a documented connection to Anthropic's network | [jpg](figures/congress-01-connection-grid.jpg) · [png](figures/congress-01-connection-grid.png) · [html](figures/congress-01-connection-grid.html) |
 | 02 | Public First family money in and out, by race | [jpg](figures/congress-02-public-first-family-by-race.jpg) · [png](figures/congress-02-public-first-family-by-race.png) · [html](figures/congress-02-public-first-family-by-race.html) |
 | 03 | Principals' hard money to sitting members | [jpg](figures/congress-03-principals-hard-money-by-party-and-cycle.jpg) · [png](figures/congress-03-principals-hard-money-by-party-and-cycle.png) · [html](figures/congress-03-principals-hard-money-by-party-and-cycle.html) |
 | 04 | Lobbying spend and the lobbyists' Hill origins | [jpg](figures/congress-04-lobbying-spend-and-hill-origins.jpg) · [png](figures/congress-04-lobbying-spend-and-hill-origins.png) · [html](figures/congress-04-lobbying-spend-and-hill-origins.html) |

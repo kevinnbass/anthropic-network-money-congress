@@ -108,8 +108,9 @@ def once_per_filing(rows):
     return out
 
 
-def fig01():
-    stem = "congress-01-connection-grid"
+def fig01_table():
+    """Figure 01 as first drawn, a table (kept so it can be drawn again: scripts/alt_fig01.py t). Not registered."""
+    stem = "congress-01-connection-table-v1"
     # per type: members with >=1 evidence row, split by party
     cols = TYPES
     x0, y0 = 40, 40
@@ -165,6 +166,114 @@ def fig01():
     subtitle = ('Sources: FEC, lobbying, grant, spending and travel filings and public statements, each record checked against the original document. A member counts under a connection if at least one confirmed record links them; duplicates and searches that found nothing are left out. Dollar amounts are added up only within one kind of connection, never across.')
     footnote = (f"<b>What the record does not show.</b> A contribution is not a vote, and outside spending is not coordination with the candidate. Super PAC spending and lobbyists' own gifts are indirect: the committee or the lobbyist acted, not the network's principals. Super PAC totals are everything those committees spent, and most of that money did not come from the network. Staff moves, holdings, travel and statements carry no dollar amount. Some FEC records could not be retrieved and are not counted. Built {NOW}.")
     figure(stem, "Which of the twelve kinds of connection reach which members", subtitle, "\n".join(svg), footnote, ids, height=1630)
+
+
+# ---------- figure 01, the chamber (2026-11-26, Kevin: "we should use version a"; the table drawing is kept as fig01_table) ----------
+RAMP01 = ["#eec06c", "#e3a03c", "#cf7d22", "#ad5a16", "#84400f", "#56270a"]  # one hue, light to dark: 1 to 6 kinds
+NONE01, TRACK01 = "#c9cbc3", "#e8e3d8"
+SHORT01 = {"1": "direct contributions", "2": "PAC contributions", "3b": "super PAC spending", "4a": "lobbying on members' bills", "4b": "lobbyists' own gifts",
+           "5": "staff and fellows", "8": "holdings", "9": "travel and events", "10": "AI-lab purchases", "11": "public statements", "12": "state money"}
+
+
+def _party(m) -> str:
+    p = (m["party"] or "?").upper()
+    return "I" if p in ("I", "ID") else p[:1]
+
+
+def _seats(n: int, rows: int, r0: float, r1: float, cx: float, cy: float) -> list:
+    """n seat positions on concentric half-rings, ordered left to right (then inner to outer)."""
+    import math
+    radii = [r0 + (r1 - r0) * i / (rows - 1) for i in range(rows)]
+    counts = [int(n * r / sum(radii)) for r in radii]
+    i = rows - 1
+    while sum(counts) < n:  # the remainder goes to the outer rings
+        counts[i] += 1
+        i = i - 1 if i else rows - 1
+    pts = [(math.pi * (1 - (k + 0.5) / c), r) for r, c in zip(radii, counts) for k in range(c)]
+    pts.sort(key=lambda p: (-p[0], p[1]))
+    return [(cx + r * math.cos(a), cy - r * math.sin(a)) for a, r in pts]
+
+
+def _bar_end(x, y, w, h, fill, op=1.0, r=4) -> str:
+    """A bar square at the left and rounded at its right end."""
+    if w <= 0:
+        return ""
+    r = min(r, w, h / 2)
+    return f'<path d="M{x:.1f},{y:.1f} h{w - r:.1f} a{r},{r} 0 0 1 {r},{r} v{h - 2 * r:.1f} a{r},{r} 0 0 1 -{r},{r} h-{w - r:.1f} z" fill="{fill}" opacity="{op}"/>'
+
+
+def fig01():
+    stem = "congress-01-connection-grid"
+    # per kind: sitting members with at least one evidence row, split by party; a kind that reaches no member is not drawn
+    kinds = []
+    for t in TYPES:
+        ms = [m for m in SITTING if int(m[f"t{t}_n"]) > 0]
+        kinds.append({"t": t, "label": TYPE_LABEL[t], "n": len(ms), "by": collections.Counter(_party(m) for m in ms), "usd": sum(float(m[f"t{t}_usd"] or 0) for m in ms),
+                      "set": {m["row_id"] for m in ms}, "indirect": "(indirect)" in TYPE_LABEL[t]})
+    omitted = [k["label"] for k in kinds if not k["n"]]
+    kinds = sorted([k for k in kinds if k["n"]], key=lambda k: -k["n"])
+    ids = [i for k in kinds for i in sorted(k["set"])]
+    breadth = {m["row_id"]: sum(1 for k in kinds if m["row_id"] in k["set"]) for m in SITTING}
+    dist = collections.Counter(breadth.values())
+    n_any = sum(1 for v in breadth.values() if v)
+    only_indirect = sum(1 for m in SITTING if breadth[m["row_id"]] and not any(m["row_id"] in k["set"] for k in kinds if not k["indirect"]))
+    base = collections.Counter(_party(m) for m in SITTING)
+    # seat order: Democrats from the left edge (most kinds outermost), independents, Republicans to the right edge
+    by_p = collections.defaultdict(list)
+    for m in SITTING:
+        by_p[_party(m)].append(m)
+    order = (sorted(by_p["D"], key=lambda m: -breadth[m["row_id"]]) + sorted(by_p["I"], key=lambda m: -breadth[m["row_id"]]) + sorted(by_p["R"], key=lambda m: breadth[m["row_id"]])
+             + [m for p, ms in by_p.items() if p not in "DIR" for m in ms])
+    cx, cy, r0, r1 = 640, 720, 215, 620
+    svg = []
+    for (x, y), m in zip(_seats(len(SITTING), 12, r0, r1, cx, cy), order):
+        v = breadth[m["row_id"]]
+        svg.append(f'<circle cx="{x:.1f}" cy="{y:.1f}" r="11.5" fill="{RAMP01[min(v, len(RAMP01)) - 1]}"/>' if v else f'<circle cx="{x:.1f}" cy="{y:.1f}" r="10" fill="none" stroke="{NONE01}" stroke-width="2.5"/>')
+    svg.append(txt(cx, cy - 62, str(n_any), 150, anchor="middle", weight="bold", extra='letter-spacing="-5"'))
+    svg.append(txt(cx, cy - 14, f"of {len(SITTING)} members", 32, anchor="middle", fill=MUTED))
+    svg.append(txt(cx - r1 - 12, cy + 46, f"{base.get('D', 0)} Democrats", 22, weight="bold", fill=DEM))
+    svg.append(txt(cx + r1 + 12, cy + 46, f"{base.get('R', 0)} Republicans", 22, anchor="end", weight="bold", fill=REP))
+    if base.get("I"):
+        svg.append(txt(cx, cy + 46, f"{base['I']} independents between them", 18, anchor="middle", fill=MUTED))
+    # the scale, with the number of members at each step
+    ly, x = cy + 118, cx - r1 - 12
+    svg.append(txt(x, ly - 34, "Each dot is one member, shaded by how many kinds of connection are on record", 21, weight="bold"))
+    for v in range(0, max(dist) + 1):
+        svg.append(f'<circle cx="{x + 13:.1f}" cy="{ly + 14}" r="13" fill="{RAMP01[min(v, len(RAMP01)) - 1]}"/>' if v else f'<circle cx="{x + 13:.1f}" cy="{ly + 14}" r="11.5" fill="none" stroke="{NONE01}" stroke-width="2.5"/>')
+        svg.append(txt(x + 36, ly + 10, str(dist.get(v, 0)), 22, weight="bold"))
+        svg.append(txt(x + 36, ly + 32, "none" if v == 0 else f"{v} kind" + ("s" if v != 1 else ""), 16, fill=MUTED))
+        x += 178
+    # the kinds, ranked by the members they reach
+    xk = 1345
+    wk = 735
+    svg.append(txt(xk, 44, "Members reached by each kind of connection", 24, weight="bold"))
+    for i, k in enumerate(kinds):
+        y = 96 + i * 74
+        svg.append(txt(xk, y, k["label"], 19))
+        svg.append(f'<rect x="{xk}" y="{y + 12}" width="430" height="14" fill="{TRACK01}"/>')
+        svg.append(_bar_end(xk, y + 12, 430 * k["n"] / len(SITTING), 14, INK, 0.42 if k["indirect"] else 1.0))
+        svg.append(txt(xk + 446, y + 27, str(k["n"]), 24, weight="bold"))
+        svg.append(txt(xk + 512, y + 26, " · ".join(f"{k['by'].get(p, 0)} {p}" for p in "DRI" if k["by"].get(p, 0)), 16, fill=MUTED))
+        if k["usd"]:
+            svg.append(txt(xk + wk, y + 26, money(k["usd"]), 18, anchor="end", fill=MUTED))
+    svg.append(txt(xk, 96 + len(kinds) * 74 + 6, "Bars are a share of all the seats. Paler bars are indirect: a committee or a lobbyist acted.", 16, fill=MUTED))
+    short = lambda k: SHORT01.get(k["t"], k["label"].lower())  # noqa: E731
+    top = [short(k) for k in kinds[:3]]
+    indirect = [short(k) for k in kinds if k["indirect"]]
+    subtitle = (f"The widest kinds are {', '.join(top[:-1])} and {top[-1]}. " + (f"{(lambda x: x[0].upper() + x[1:])(' and '.join(indirect))} are indirect, and for {only_indirect} of the {n_any} members they are the only kinds on record. " if indirect else "")
+                + f"{dist.get(0, 0)} members have none. Sources: FEC, lobbying, grant, spending and travel filings and public statements, each record checked against the original document. "
+                "A member counts under a kind of connection if at least one confirmed record links them; duplicates and searches that found nothing are left out. "
+                "Dollar amounts are added up only within one kind of connection, never across.")
+    # type 4b's stricter measure (2026-09-29) and the kinds that reach no member, in the footnote
+    _lc = {r["row_id"]: r for r in load("lobbyist_contributions")}
+    _b = [(m, i) for m in SITTING for i in m["t4b_ids"].split() if MEAS4B.get(i) == "named"]
+    footnote = ("<b>What the record does not show.</b> A contribution is not a vote, and outside spending is not coordination with the candidate. Super PAC spending and lobbyists' own gifts are indirect: "
+                "the committee or the lobbyist acted, not the network's principals. Super PAC totals are everything those committees spent, and most of that money did not come from the network. "
+                "Staff moves, holdings, travel and statements carry no dollar amount. Some FEC records could not be retrieved and are not counted. "
+                f"Lobbyists' own contributions, stricter count (the lobbyist is also named on the network client's own lobbying filings): {len({m['row_id'] for m, _ in _b})} members, {len(_b):,} records, "
+                f"{money(sum(amt(_lc[i]['amount_usd']) for _, i in _b if i in _lc))}. "
+                + (f"Kinds of connection that reach no sitting member directly are not drawn ({'; '.join(x[0].lower() + x[1:] for x in omitted)}). " if omitted else "") + f"Built {NOW}.")
+    figure(stem, f"{n_any} of Congress's {len(SITTING)} members have a documented connection to Anthropic's network", subtitle, "\n".join(svg), footnote, ids, height=1370)
 
 
 def fig02():
