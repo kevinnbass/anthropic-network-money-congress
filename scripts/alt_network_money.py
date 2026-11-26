@@ -7,6 +7,7 @@ usage: python3 scripts/alt_network_money.py [--data DIR]   (--data also writes c
 from __future__ import annotations
 
 import collections
+import datetime
 import re
 import sys
 from pathlib import Path
@@ -86,13 +87,15 @@ def main() -> int:
                 x += w
         svg.append(b.txt(x + 10, y + rh * 0.68, money(tot[mb]), 16, weight="bold"))
     d, r_ = by_party.get("D", 0.0), by_party.get("R", 0.0)
+    n_i = n_party["I"]; ind = f", {money(by_party['I'])} to {'one' if n_i == 1 else n_i} independent{'s' if n_i != 1 else ''}" if n_i else ""  # X63-118
+    latest = datetime.date.fromisoformat(max(b.BY_ID[i]["date"] for i in ids)[:10]).strftime("%-d %B %Y")  # X63-117: the rows show the last transaction, not a coverage date
     shares = ", ".join(f"{g.split(' (')[0]} {money(gt[g])}" for g, _ in sorted(GROUPS, key=lambda x: -gt[x[0]])[:4])
-    subtitle = (f"What this is: contributions to sitting members' own committees (campaign, a campaign for another office, leadership PAC) from the network's principals, "
+    subtitle = (f"What this is: contributions to sitting members' own committees (campaign, a campaign for another office, leadership PAC, joint fundraising committee) from the network's principals, "
                 f"from people who list a network organisation as employer, and from ANTHROPAC and ARI PAC, each counted once: "
-                f"{money(d)} to {n_party['D']} Democrats ({100 * d / all_tot:.0f}%), {money(r_)} to {n_party['R']} Republicans.")
+                f"{money(d)} to {n_party['D']} Democrats ({100 * d / all_tot:.0f}%), {money(r_)} to {n_party['R']} Republicans{ind}.")
     footnote = ("<b>What the record does not show.</b> A person's gift is their own money, not their employer's; employers are as donors wrote them. "
                 "Principals are matched by name and confirmed by employer and city; namesakes are left out. Super PAC money, lobbyists' own gifts and the law firm's PAC are not here "
-                "(see figures 09, 10, 11 and 12). A contribution is not a vote. Records through September 2026; 2026 is still open.")
+                f"(see figures 09, 10, 11 and 12). A contribution is not a vote. The latest contribution here is dated {latest}; the 2026 cycle is still open.")
     bf.figure("network-money-per-member", f"The network gave {money(all_tot)} to {len(ms)} sitting members in 2024–26, most of it from Anthropic staff",
               subtitle, "\n".join(svg), footnote, ids, height=y0 + len(top) * rh + 540,
               legend_html=legend([(c, g) for g, c in GROUPS if gt[g] > 0]))

@@ -164,7 +164,7 @@ def fig01_table():
         svg.append(txt(x + 60, gy + 300, f"{k} kind{'s' if k != 1 else ''}", 16, anchor="middle", fill=MUTED))
         svg.append(txt(x + 60, gy + 262 - h, str(touched.get(k, 0)), 17, anchor="middle"))
     subtitle = ('Sources: FEC, lobbying, grant, spending and travel filings and public statements, each record checked against the original document. A member counts under a connection if at least one confirmed record links them; duplicates and searches that found nothing are left out. Dollar amounts are added up only within one kind of connection, never across.')
-    footnote = (f"<b>What the record does not show.</b> A contribution is not a vote, and outside spending is not coordination with the candidate. Super PAC spending and lobbyists' own gifts are indirect: the committee or the lobbyist acted, not the network's principals. Super PAC totals are everything those committees spent, and most of that money did not come from the network. Staff moves, holdings, travel and statements carry no dollar amount. Some FEC records could not be retrieved and are not counted. Built {NOW}.")
+    footnote = (f"<b>What the record does not show.</b> A contribution is not a vote, and outside spending is not coordination with the candidate. Super PAC spending and lobbyists' own gifts are indirect: the committee or the lobbyist acted, not the network's principals. Super PAC totals are those committees' counted spending for or against sitting members, and most of that money did not come from the network. Staff moves, holdings, travel and statements carry no dollar amount. Some FEC records could not be retrieved and are not counted. Built {NOW}.")
     figure(stem, "Which of the twelve kinds of connection reach which members", subtitle, "\n".join(svg), footnote, ids, height=1630)
 
 
@@ -268,11 +268,11 @@ def fig01():
     _lc = {r["row_id"]: r for r in load("lobbyist_contributions")}
     _b = [(m, i) for m in SITTING for i in m["t4b_ids"].split() if MEAS4B.get(i) == "named"]
     footnote = ("<b>What the record does not show.</b> A contribution is not a vote, and outside spending is not coordination with the candidate. Super PAC spending and lobbyists' own gifts are indirect: "
-                "the committee or the lobbyist acted, not the network's principals. Super PAC totals are everything those committees spent, and most of that money did not come from the network. "
+                "the committee or the lobbyist acted, not the network's principals. Super PAC totals are those committees' counted spending for or against sitting members, and most of that money did not come from the network. "
                 "Staff moves, holdings, travel and statements carry no dollar amount. Some FEC records could not be retrieved and are not counted. "
                 f"Lobbyists' own contributions, stricter count (the lobbyist is also named on the network client's own lobbying filings): {len({m['row_id'] for m, _ in _b})} members, {len(_b):,} records, "
                 f"{money(sum(amt(_lc[i]['amount_usd']) for _, i in _b if i in _lc))}. "
-                + (f"Kinds of connection that reach no sitting member directly are not drawn ({'; '.join(x[0].lower() + x[1:] for x in omitted)}). " if omitted else "") + f"Built {NOW}.")
+                + (f"Kinds with no counted record for a sitting member are not drawn ({'; '.join(x[0].lower() + x[1:] for x in omitted)}). " if omitted else "") + f"Built {NOW}.")
     figure(stem, f"{n_any} of Congress's {len(SITTING)} members have a documented connection to Anthropic's network", subtitle, "\n".join(svg), footnote, ids, height=1370)
 
 

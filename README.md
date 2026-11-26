@@ -101,13 +101,13 @@ The project measures itself against a written standard with a script. On 2026-11
 ```
 == congress  bound rows 131,448  evidence rows 43,500
 G1 PASS  drawn evidence document-checked 31,462/31,462 (100.0%); all evidence 97.2%
-G2 PASS  errors disposed 31,404/31,404; errors+qualifications disposed 59,161/59,161 (100.0%)
+G2 PASS  errors disposed 31,419/31,419; errors+qualifications disposed 59,188/59,188 (100.0%)
 G3 PASS  corrected rows archived 15,387/15,387 (ledger rows 15,433)
-G4 PASS  audits 83: complete 40, well-formed closing line 83; incomplete and not carried to README/dispositions 0
+G4 PASS  audits 84: complete 41, well-formed closing line 84; incomplete and not carried to README/dispositions 0
 G5 PASS  clean figures 29/29
 ```
 
-G1 says every evidence row the 29 figures draw has a document check on file; it does not cover evidence rows no figure draws (97.2% of all evidence rows are checked). G4 counts 43 of the 83 audits as closed incomplete, each with its remainder written down. The open items are stated figure by figure in [`FIGURES.md`](FIGURES.md). Two figures changed on 2026-11-26 and have not yet been read by an auditor who did not make the change: figure 01 was redrawn (same counts, one new sentence) and figure 18's issue panel now draws every code on three or more reports, where it had drawn twelve with a tie broken at random. The saved source documents (about 160 GB) and the audit files are not in this repository; every row carries the URL of its source.
+G1 says every evidence row the 29 figures draw has a document check on file; it does not cover evidence rows no figure draws (97.2% of all evidence rows are checked). G4 counts 43 of the 84 audits as closed incomplete, each with its remainder written down. The open items are stated figure by figure in [`FIGURES.md`](FIGURES.md). Two figures changed on 2026-11-26: figure 01 was redrawn (same counts, one new sentence) and figure 18's issue panel now draws every code on three or more reports, where it had drawn twelve with a tie broken at random. An auditor that made neither change then re-derived both from the tables. It confirmed their counts and corrected two sentences in figure 01's footnote: super PAC totals are those committees' counted spending for or against sitting members, and the kinds not drawn are those with no counted record. The saved source documents (about 160 GB) and the audit files are not in this repository; every row carries the URL of its source.
 
 ## Names
 
@@ -115,17 +115,17 @@ The figures name people only in public roles. The tables carry the record as its
 
 ## Alternate views
 
-`figures-alt/` holds three more charts drawn from the same evidence rows by the same code. **They have not been audited element by element, as the 29 figures have.** Read their numbers as the scripts' own.
+`figures-alt/` holds three more charts drawn from the same evidence rows by the same code. They are not among the 29 figures. On 2026-11-26 an independent auditor re-derived all three from the tables, and they are as corrected after it: one counted receipt the Anthropic chart had missed is in, its employee count is 58 where it said 59, the lobbyist chart's 2026 Republican share is 58% where it said 57%, five firms' start years are corrected, and its 'before the firm's first client' series is gone because no counted gift could fall there.
 
 - `network-money-per-member`: the 40 sitting members receiving the most direct money in 2024–26, by giver.
-- `anthropic-money-per-member`: the same for Anthropic employees and its PAC. It counts one employee per surname and first name.
-- `congress-10-lobbyists-own-contributions-alt`: figure 10's money by cycle and party.
+- `anthropic-money-per-member`: the same for Anthropic employees and its PAC. It counts one employee per filed surname and first name; three of its 58 names were filed from more than one state and count once each.
+- `congress-10-lobbyists-own-contributions-alt`: figure 10's money by firm, cycle and party. It draws only gifts dated while the lobbyist's firm was registered for a network client.
 
 ## Direct money per member
 
 `network-money-per-member.png` and `.html` at the top level show the 40 sitting members receiving the most direct money from the network in 2024–26, by giver: $4.1M to 214 sitting members on the record as it stands. `data/contributions.csv` has one line per contribution the chart draws and `data/member_totals_by_entity.csv` its bar segments; `python3 scripts/alt_network_money.py --data data` writes all of them again. The same chart is in `figures-alt/`.
 
-This chart was the repository's first release, on 2026-09-25, when it read $2,141,813 to 183 sitting members. The record has been corrected and extended since; figure 01's entry in [`FIGURES.md`](FIGURES.md) states the current counting rule, which includes gifts to a member's single-member joint fundraising committee and leadership PAC. The first release is in this repository's history.
+This chart was the repository's first release, on 2026-09-25. It read $2.2M to 185 sitting members when first published and $2.1M ($2,141,813) to 183 after a revision the same day. The record has been corrected and extended since; figure 01's entry in [`FIGURES.md`](FIGURES.md) states the current counting rule, which includes gifts to a member's single-member joint fundraising committee and leadership PAC. The first release is in this repository's history.
 
 ## Caveats
 
