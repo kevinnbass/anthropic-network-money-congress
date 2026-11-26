@@ -1,4 +1,4 @@
-# congress derived timeline_all.csv written by scripts/build_join.py 2026-11-26T17:04:08Z (PLAN.md §4): every dated row from every table, 2016-2026, one line per row; not a promoted table (TL holds the curated events); rebuilt in place
+# congress derived timeline_all.csv written by scripts/build_join.py 2026-11-26T18:04:11Z (PLAN.md §4): every dated row from every table, 2016-2026, one line per row; not a promoted table (TL holds the curated events); rebuilt in place
 row_id,table,conn_type,date,actor,counterparty,member_bioguide,money_type,hop,amount_usd,role,note_120
 HM19564,hard_money,1/2,2016,Luke Muehlhauser,,,,,,negative,query=https://api.open.fec.gov/v1/schedules/schedule_a/?contributor_name=Muehlhauser%2C+Luke&two_year_transaction_period
 HM19570,hard_money,1/2,2016,Luke Muehlhauser,,,,,,context,person=Luke Muehlhauser; en=EN209; source=api.open.fec.gov/v1/schedules/schedule_a/; exact_query=https://api.open.fec.go
@@ -98844,7 +98844,7 @@ HM19046,hard_money,1/2,2026-07-09,"ZIEGLER, DANIEL",ABDUL FOR U.S. SENATE,,hard_
 HM19047,hard_money,1/2,2026-07-09,"ZIEGLER, DANIEL",ABDUL FOR U.S. SENATE,,hard_money,1,3500.00,context,"sub_id=4082520261584782915; amount=3500.0; date=2026-07-09; contributor_name=ZIEGLER, DANIEL; contributor_employer=ANTHR"
 HM19048,hard_money,1/2,2026-07-09,"BRICKEN, TRENTON",NRSC,S001198,hard_money,1,44300.00,context,"sub_id=4082520261584841651; amount=44300.0; date=2026-07-09; contributor_name=BRICKEN, TRENTON; contributor_employer=ANT"
 HM19049,hard_money,1/2,2026-07-09,"CALLAHAN, ANDREW",LANDSMAN VICTORY FUND,,conduit_earmark,1,10000.00,context,"sub_id=4082720261586020417; amount=10000.0; date=2026-07-09; contributor_name=CALLAHAN, ANDREW; contributor_employer=ANT"
-HM19050,hard_money,1/2,2026-07-09,"LEIKE, JAN",ABDUL FOR U.S. SENATE,,conduit_earmark,1,7000.00,context,"sub_id=4082720261589643312; amount=7000.0; date=2026-07-09; contributor_name=LEIKE, JAN; contributor_employer=ANTHROPIC;"
+HM19050,hard_money,1/2,2026-07-09,"LEIKE, JAN",ABDUL FOR U.S. SENATE,,conduit_earmark,1,7000.00,evidence,"sub_id=4082720261589643312; amount=7000.0; date=2026-07-09; contributor_name=LEIKE, JAN; contributor_employer=ANTHROPIC;"
 HM19051,hard_money,1/2,2026-07-09,"ZIEGLER, DANIEL",ABDUL FOR U.S. SENATE,,conduit_earmark,1,7000.00,context,"sub_id=4082720261594213865; amount=7000.0; date=2026-07-09; contributor_name=ZIEGLER, DANIEL; contributor_employer=ANTHR"
 HM19052,hard_money,1/2,2026-07-09,"MAXWELL, TIMOTHY",DSCC,,hard_money,1,22150.00,context,"sub_id=4090120261595448131; amount=22150.0; date=2026-07-09; contributor_name=MAXWELL, TIMOTHY; contributor_employer=ANT"
 HM20552,hard_money,1/2,2026-07-09,"CALLAHAN, ANDREW",LANDSMAN VICTORY FUND,L000601,hard_money,1,10000.00,evidence,source_file=research/primary/bulk-20261126/indiv26.zip; sha256=d3feba66371c31286a519e7aa72a1ad80324db8f9d47b0184e3060c5c
@@ -98893,7 +98893,7 @@ VN2270,vendors,10,2026-07-10,AB PAC,OPENAI,,vendor,1,21.2,evidence,FEC Schedule 
 VN2271,vendors,10,2026-07-10,SWING LEFT,OPENAI,,vendor,1,10.6,evidence,FEC Schedule B payer=C00632133 (committee_type=W) payee=OPENAI amount=10.6 purpose=COMPUTER SOFTWARE - NON-CONTRIBUTION 
 VN2272,vendors,10,2026-07-10,SWING LEFT,OPENAI,,vendor,1,10.6,evidence,FEC Schedule B payer=C00632133 (committee_type=W) payee=OPENAI amount=10.6 purpose=COMPUTER SOFTWARE date=2026-07-10. se
 HM19057,hard_money,1/2,2026-07-11,"BOWMAN, SAMUEL",LANDSMAN VICTORY FUND,,conduit_earmark,1,10000.00,context,"sub_id=4082720261585821303; amount=10000.0; date=2026-07-11; contributor_name=BOWMAN, SAMUEL; contributor_employer=ANTHR"
-HM19058,hard_money,1/2,2026-07-11,"LOFGREN, PETER",REBECCA BENNETT FOR CONGRESS,,conduit_earmark,1,3500.00,context,"sub_id=4082720261589799868; amount=3500.0; date=2026-07-11; contributor_name=LOFGREN, PETER; contributor_employer=ANTHRO"
+HM19058,hard_money,1/2,2026-07-11,"LOFGREN, PETER",REBECCA BENNETT FOR CONGRESS,,conduit_earmark,1,3500.00,evidence,"sub_id=4082720261589799868; amount=3500.0; date=2026-07-11; contributor_name=LOFGREN, PETER; contributor_employer=ANTHRO"
 HM2922,hard_money,1/2,2026-07-11,"BOWMAN, SAMUEL",ACTBLUE,,hard_money,1,10000.00,context,Task E party / leadership PAC / JFC / hybrid-or-conduit receipt. kind=hybrid PAC (recipient_committee_type=V); conduit. 
 HM2923,hard_money,1/2,2026-07-11,"LOFGREN, PETER",ACTBLUE,,hard_money,1,3500.00,context,Task E party / leadership PAC / JFC / hybrid-or-conduit receipt. kind=hybrid PAC (recipient_committee_type=V); conduit. 
 SP31911,super_pac_c4,3a/3b,2026-07-11,Public First Action Inc,,,,2,,context,Task D Google creative-stats placement; advertiser=Public First Action Inc; geo_targeting_included=TX-1 (2026 redistrict
