@@ -3,20 +3,20 @@
   "id": "member-lookup",
   "act": "Your member",
   "head": "Look up your member",
-  "deck": "Public records involving Anthropic’s network. Members serving on Nov. 26, 2026. Records through Sep. 30, 2026.",
-  "note": "Campaign gifts go to linked committees and tell you nothing about votes. Lobbying reports can name bills without stating a position or showing contact with a sponsor.",
-  "bridge": "How common is this record?",
+  "deck": "Public records involving Anthropic, its people and PAC, its funders, the groups they fund and their lobbyists. Members serving on Nov. 26, 2026. Records through Sep. 30, 2026.",
+  "note": "Campaign gifts go to linked committees. Their filings tell you nothing about votes. Lobbying reports can name bills without stating a position or showing contact with a sponsor.",
+  "bridge": "Compare this member with Congress",
   "how": "",
   "source": ""
  },
  {
   "id": "member-spread",
   "act": "Your member",
-  "head": "Just one or two kinds for most members on file.",
+  "head": "Most members with a record have one or two kinds",
   "deck": "236 of the 452 members with a counted record have one or two kinds. Martin Heinrich and Ted Lieu share the most kinds on file, with 7.",
   "note": "Each kind counts once, regardless of the number of records or dollars. A critical statement or spending against a member can count.",
   "bridge": "What if the only record is spending against them?",
-  "how": "All 533 serving members, including those with no counted records.",
+  "how": "All 533 serving members, including those with no counted record.<span class=\"member-bin-summary\" aria-live=\"polite\"></span>",
   "source": ""
  },
  {
@@ -24,9 +24,9 @@
   "act": "Your member",
   "head": "Spending against a member can put them on the list.",
   "deck": "For Thom Tillis, opposition spending is the only kind of record in this collection.",
-  "note": "These committees received network money. The spending totals start at each committee’s first network receipt on file and include money from all donors. The filings here trace no donor’s gift to an expenditure.",
-  "bridge": "Each member counts once. Read the main story.",
+  "note": "<button type=\"button\" class=\"member-donor\" data-m=\"8dc5af4ad4\" data-tip=\"Network receipts|Gifts before the election\">Network donors Wendy Schmidt, Reed Hastings, Eric Schmidt and Dustin Moskovitz gave $3.6M to Senate Majority PAC before the 2020 election.</button> The filings here trace no donor’s gift to an expenditure.",
+  "bridge": "",
   "how": "",
-  "source": "FEC independent expenditure filings · Figure 25"
+  "source": "FEC receipts and independent expenditures · Figures 09 and 25"
  }
 ]

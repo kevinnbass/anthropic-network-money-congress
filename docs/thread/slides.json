@@ -2,71 +2,51 @@
  {
   "id": "thread-reach",
   "act": "The thread",
-  "head": "Records involving Anthropic’s network cover <em>452 of 533</em> members of Congress.",
-  "deck": "One seat per member serving on Nov. 26, 2026. The network includes Anthropic, its funders, funded groups, and their PACs and lobbyists.",
-  "note": "Outside activity includes spending against a member. The records can’t establish an effect on a vote.",
-  "bridge": "Start with campaign gifts from Anthropic’s employees and its PAC.",
+  "head": "<span data-m=\"79fd18f85d\" tabindex=\"0\"><em>452</em> of 533</span>",
+  "deck": "<span data-m=\"5c6216180d\" tabindex=\"0\">Sitting members of Congress named in public records tied to Anthropic’s network, for and against. 119 appear only through outside spending or lobbyists’ own gifts.<br><br>One dot per member on Nov. 26, 2026.<br><br>The network includes Anthropic, its staff, PAC, directors and funders, other AI-safety funders, groups they back, and their lobbyists.</span>",
+  "note": "The effect on votes remains an open question.",
+  "bridge": "Start with campaign gifts from Anthropic employees and the company PAC.",
   "how": "",
-  "source": "FEC, lobbying and other public records · Congress pack"
+  "source": "Public records · Congress pack"
  },
  {
   "id": "thread-gifts",
   "act": "The thread",
-  "head": "Gifts from Anthropic employees and its PAC reached <em>199</em> sitting members, up from <em>10</em>.",
-  "deck": "Lit seats mark gifts to linked committees. Both chambers use the Nov. 26, 2026 roster.",
-  "note": "The gifts are employees’ own money or the PAC’s money. Employers are as filed. A gift can’t tell us how someone voted.",
-  "bridge": "Anthropic also announced money for a political nonprofit.",
+  "head": "<span data-m=\"c8562b585a\" tabindex=\"0\"><em>10 → 199</em></span>",
+  "deck": "Sitting members whose campaigns or linked committees got gifts from Anthropic employees or its PAC. Both chambers use the Nov. 26, 2026 roster.",
+  "note": "The money came from employees personally or from the PAC. Employers are as reported on the filings.",
+  "bridge": "Anthropic itself announced money for a political nonprofit.",
   "how": "",
-  "source": "FEC contribution filings · linked committees"
+  "source": "FEC contribution filings"
  },
  {
   "id": "thread-announcement",
   "act": "The thread",
-  "head": "Anthropic announced <em>$40.0M</em> for Public First Action in 2026.",
+  "head": "<span data-m=\"ac23f71a5a\" tabindex=\"0\">Anthropic announced <em>$40.0M</em> for Public First Action.</span>",
   "deck": "Public First Action is a political nonprofit.",
-  "note": "The filings collected here leave the nonprofit’s donors undisclosed and trace no contribution to a specific expenditure.",
-  "bridge": "Campaign money is one record. Which bills did lobbying reports filed for Anthropic name?",
+  "note": "The filings collected here leave Public First Action’s donors and the funding source of specific expenditures undisclosed.",
+  "bridge": "The spending records name candidates. The lobbying reports name bills.",
   "how": "",
-  "source": "Anthropic’s own announcements · Public First Action"
+  "source": "Anthropic’s public statements"
  },
  {
   "id": "thread-chips",
   "act": "The thread",
-  "head": "<em>Chip proposals</em> led the stand-alone bills named in reports filed for Anthropic.",
-  "deck": "18 of 68 reports named a bill. Jan. 2023–Sept. 2026.",
-  "note": "Paired House and Senate versions count together. A bill mention leaves Anthropic’s position open.",
-  "bridge": "How much of the wider federal lobbying field did the network account for?",
+  "head": "<span data-m=\"45062c20c3\" tabindex=\"0\"><em>Chip proposals</em> led in Anthropic’s lobbying reports.</span>",
+  "deck": "<span data-m=\"45062c20c3\" tabindex=\"0\">18 of 68 reports named a bill. The ranking counts stand-alone bills in reports filed for Anthropic, Jan. 2023–Sept. 2026.</span>",
+  "note": "A report can name several proposals. A mention leaves Anthropic’s position open.",
+  "bridge": "What puts two very different members in the same tally?",
   "how": "",
-  "source": "Federal lobbying reports and Congress.gov bill records"
- },
- {
-  "id": "thread-baseline",
-  "act": "The thread",
-  "head": "Anthropic’s network reported <em>0.5%</em> of 2025 federal lobbying dollars on filings naming AI.",
-  "deck": "Each client’s total covers all issues on those reports.",
-  "note": "These figures put an upper bound on AI lobbying. Client matching and expense coverage are provisional.",
-  "bridge": "Another comparison runs in the opposite direction, from political offices and committees to the labs.",
-  "how": "",
-  "source": "Senate quarterly lobbying disclosures · Figure 29"
- },
- {
-  "id": "thread-purchases",
-  "act": "The thread",
-  "head": "These spending records show <em>2.3 times</em> as much paid to OpenAI as to Anthropic.",
-  "deck": "Political committees and House offices paid the labs.",
-  "note": "These are purchases. The search covered a subset of committees, and card descriptions may bundle charges.",
-  "bridge": "What happens when different records count toward the same total?",
-  "how": "",
-  "source": "FEC and House disbursements · Figure 19"
+  "source": "Federal lobbying reports · Congress.gov"
  },
  {
   "id": "thread-count",
   "act": "The thread",
-  "head": "<em>Ted Lieu</em> and <em>Thom Tillis</em> counted equally.",
-  "deck": "Each occupies one seat in the tally of members named in records involving Anthropic’s network.",
-  "note": "The records don’t say what any of this did to a vote.",
+  "head": "<span data-m=\"e2870c7336\" tabindex=\"0\">Each counted as <em>one member</em>.</span>",
+  "deck": "<span data-m=\"3e90e6bc5e\" tabindex=\"0\">Records tied to Anthropic’s network name 452 of 533 sitting members of Congress, including these two.</span>",
+  "note": "The effect on votes remains an open question.",
   "bridge": "",
   "how": "",
-  "source": "Congress pack member records · FEC reports"
+  "source": "Member records · FEC filings"
  }
 ]
