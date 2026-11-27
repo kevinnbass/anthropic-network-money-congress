@@ -388,7 +388,10 @@ def fig12():
         if "ANTHROPIC" in n:
             return "Anthropic PBC"
         if "PUBLIC FIRST" in n:
-            return "Public First family (internal transfers)"
+            # 2026-11-27 (gap sweep GS4; README drafting lane RM1): Public First Action's gifts to committees outside its family (Abundant Future,
+            # Latino Victory Fund, Commonwealth Together PAC) are not transfers within the family; only gifts among its four committees are
+            return ("Public First family (internal transfers)" if committee_key(r, "payee") in ("C00930503", "C30003586", "C00928374", "C00928390")
+                    else "Public First Action (to other committees)")
         if "MOSKOVITZ TRUST" in n:  # 2026-11-26: a contributions-table receipt names the trust in the payer cell itself; the footnote says such gifts are drawn under his name
             return public_name("MOSKOVITZ, DUSTIN", "individual")
         if (r["payer_type"] or "").strip() and r["payer_type"] != "individual":  # X39-0406: a committee by its filed type (STRONGER TOGETHER PA), not by a name keyword

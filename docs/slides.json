@@ -3,10 +3,10 @@
   "id": "start",
   "act": "Anthropic&#8217;s network and Congress",
   "head": "<em>452</em> of 533",
-  "deck": "members of Congress have a tie on the public record to Anthropic&#8217;s network: 333 through something the network or the member did, 119 only through what third parties did. The network is the company, the funders behind it, the groups they fund, and their PACs and lobbyists.",
-  "note": "The network, by one chain: Coefficient Giving (then Open Philanthropy) named Dustin Moskovitz and Cari Tuna as its main funders; it awarded Georgetown&#8217;s CSET $55.0M in 2019; 19 committee appearances by CSET&#8217;s witnesses are on record here. Third parties are lobbyists at the network&#8217;s lobbying firms, who gave their own money, and super PACs that received network money and made their own expenditures. A tie can cut either way: a statement may be criticism, and a super PAC may have spent against the member. It is not an allegation, and a contribution is not a vote.",
+  "deck": "<span style=\"display:grid;grid-template-columns:1fr 1fr;gap:clamp(12px,2vw,24px);font-size:clamp(30px,3.5vw,49px);line-height:1\"><span style=\"display:block;min-width:0\"><span aria-hidden=\"true\" style=\"display:inline-block;width:.48em;height:.48em;border-radius:50%;vertical-align:.18em;margin-right:.24em;background:#DCE3F0\"></span><strong style=\"color:#F1EFEA;font:inherit\">333</strong><span style=\"display:block;font:400 clamp(12px,1vw,15px)/1.4 'Inter',system-ui,-apple-system,'Segoe UI',sans-serif;color:#F1EFEA;margin-top:4px\">A record of what the network or the member did<span style=\"display:block;color:#A7B0C0;margin-top:6px\">Ted Lieu received $80K from Anthropic’s employees and its PAC.</span></span></span><span style=\"display:block;min-width:0\"><span aria-hidden=\"true\" style=\"display:inline-block;width:.48em;height:.48em;border-radius:50%;vertical-align:.18em;margin-right:.24em;border:2px solid #DCE3F0\"></span><strong style=\"color:#F1EFEA;font:inherit\">119</strong><span style=\"display:block;font:400 clamp(12px,1vw,15px)/1.4 'Inter',system-ui,-apple-system,'Segoe UI',sans-serif;color:#F1EFEA;margin-top:4px\">Only records of what third parties did<span style=\"display:block;color:#A7B0C0;margin-top:6px\">Super PACs reported spending $39.6M against Thom Tillis.</span></span></span></span><span style=\"display:block;margin-top:14px;font:400 clamp(16px,1.45vw,22px)/1.35 'Noto Serif Display','Iowan Old Style',Georgia,serif\">The chamber shows ties to Anthropic’s network in the public record.</span>",
+  "note": "<span style=\"color:#A7B0C0\">A tie is a public record. It can include the member’s criticism or outside spending against the member.</span>",
   "bridge": "Start with the company: its employees&#8217; own gifts, and its PAC&#8217;s.",
-  "how": "Each dot is one of the 533 members serving on Nov. 26, 2026. A tie is a public record that links the member and the network: a contribution, a lobbying report on the member&#8217;s bill, a fellow in the office, a statement.",
+  "how": "Each dot is one member serving on Nov. 26, 2026.",
   "source": ""
  },
  {
@@ -23,80 +23,60 @@
   "id": "forty",
   "act": "II &#183; The bigger money",
   "head": "Anthropic announced <em>$40.0M</em> for Public First Action. There the trail stops: no filing in this record lists the group’s donors.",
-  "deck": "FEC receipts show Public First Action gave to 6 committees. The largest candidate total was $15.0M for Alexander Bores, outside Congress, while the committees reported $2.2M against sitting member Seth Moulton.",
-  "note": "This record traces no contribution to a specific expenditure. A contribution does not direct spending.",
-  "bridge": "The network’s funders gave more, and for longer.",
+  "deck": "Separate FEC filings show receipts from Public First Action at 6 committees. The largest spending total for one candidate was $15.0M for Alexander Bores, outside Congress.",
+  "note": "In the 2020, 2022 and 2024 election cycles, Dustin Moskovitz gave $100M to Future Forward (FF PAC).",
+  "bridge": "Another kind of giving reaches more members: lobbyists’ own gifts.",
   "how": "",
   "source": "Sources include Anthropic’s announcements and FEC receipt and outside-spending filings."
  },
  {
-  "id": "committees",
-  "act": "II &#183; The bigger money",
-  "head": "The network&#8217;s funders gave more: <em>$170M</em> to outside political groups since 2016, <em>$100M</em> of it from Dustin Moskovitz to Future Forward.",
-  "deck": "The spending panel covers committees with a network receipt on file and spending that names a serving member.",
-  "note": "This record traces no gift to a specific expenditure.",
-  "bridge": "One kind of money reaches more members than any of this, and the network did not give it.",
-  "how": "",
-  "source": "Sources include FEC contribution and outside-spending reports, BEMC 4 Association’s IRS filing and Anthropic’s announcements."
- },
- {
   "id": "lobbyists",
-  "act": "II &#183; The bigger money",
+  "act": "III &#183; The lobbying",
   "head": "Lobbyists’ own gifts reach the most members: <em>$1.8M</em> went to campaigns or committees linked to <em>356</em> serving members.",
   "deck": "",
   "note": "The gift is the lobbyist’s own money. The record does not say why it was made. Named lobbyists only: $1.3M in 1,022 gifts.",
-  "bridge": "That is the lobbyists&#8217; own money. Anthropic&#8217;s lobbying is on another record.",
+  "bridge": "Anthropic’s own lobbying is on a different record. What did the company report?",
   "how": "Counted: a gift whose giver was a registered lobbyist at a firm that had a network client in that period. Each lit seat has a campaign or committee linked to a gift.",
-  "source": "Lobbyists’ semi-annual contribution reports to Congress, Feb. 19, 2021 to June 30, 2026. Filed recipient names, and committee records where the filing gives them, identify the member for each counted gift."
- },
- {
-  "id": "twentyfold",
-  "act": "III &#183; The lobbying",
-  "head": "Anthropic reported <em>$5.6M</em> in lobbying expenses from January through September 2026.",
-  "deck": "The company began filing its own expenses in 2024. Outside firms filed the earliest reports in this record.",
-  "note": "Amounts are as filed, rounded. In quarters with a company report, the totals use its expenses alone.",
-  "bridge": "Which bills did its reports name?",
-  "how": "",
-  "source": "Source: quarterly federal lobbying reports (LD-2) filed by or for Anthropic through Sept. 30, 2026."
+  "source": "Lobbyists’ semi-annual contribution reports to Congress. Gifts dated Feb. 19, 2021 to June 30, 2026. Filed recipient names, and committee records where the filing gives them, identify the member for each counted gift."
  },
  {
   "id": "whatbills",
   "act": "III &#183; The lobbying",
-  "head": "The three bill families most often named in lobbying reports filed for Anthropic are about <em>chips</em>.",
-  "deck": "All six sponsors received gifts from Anthropic&#8217;s employees or its PAC. How often did a sponsor in the reports receive a gift?",
-  "note": "A report naming a bill leaves open whether the sponsor&#8217;s office was contacted. No filing in this record ties a gift to a bill.",
+  "head": "In the first nine months of 2026, Anthropic reported <em>$5.6M</em> in lobbying expenses, more than $3.1M in all of 2025.",
+  "deck": "Which bills did the lobbying reports name?",
+  "note": "",
   "bridge": "The gifts and the lobbying are recent. Who was Congress hearing from before them?",
   "how": "",
-  "source": "Sources: quarterly lobbying reports through Sept. 30, 2026, verified sponsors of stand-alone bills and federal contribution filings."
+  "source": "Sources include quarterly lobbying reports through Sept. 30, 2026, official bill records and federal contribution filings."
  },
  {
   "id": "grants",
   "act": "IV &#183; The decade before",
-  "head": "By the end of 2024, seven of the network&#8217;s funders had awarded <em>$528M</em> in grants, and Congress had heard from seven of their grantees.",
-  "deck": "By then, ten of the members now serving had received money from Anthropic&#8217;s employees or its PAC. The grants supported work on AI, technology, biosecurity and catastrophic risk; none of the grants shown names a member of Congress as its recipient.",
-  "note": "A grant to an organisation is not money to a member, and an award is not a payment on its date. Testifying is not lobbying.",
+  "head": "Congress heard from Georgetown’s CSET in <em>2019</em>.",
+  "deck": "",
+  "note": "",
   "bridge": "Witnesses visit. Who works inside?",
   "how": "",
-  "source": "Source: IRS Form 990 grant schedules and the funders&#8217; own published grant lists; witness lists from congress.gov, House committee pages and Senate hearing transcripts."
+  "source": "Sources · Congressional witness lists and transcripts, the funder’s published grant list and IRS Form 990 grant schedules."
  },
  {
   "id": "fellows",
   "act": "IV &#183; The decade before",
-  "head": "Horizon, a network grantee, has funded <em>25</em> fellows inside Congress.",
-  "deck": "The Horizon Institute for Public Service has $11.9M in network grants on record. Horizon says the host manages a fellow&#8217;s work.",
-  "note": "Horizon also has funders outside the network. A job or a seat is not evidence about the work done in it.",
-  "bridge": "Grants, hearings, fellows, jobs, money. What does that leave on file for each member?",
-  "how": "Each dot is one person.",
-  "source": "Source: Horizon Institute placement pages and alumni lists, and its &#8220;Host a Fellow&#8221; page as saved in 2026; House and Senate payroll reports, lobbyists&#8217; disclosed former posts and organisations&#8217; staff pages; IRS Form 990 grant schedules; for the sheet, FEC contribution records through Sept. 30, 2026."
+  "head": "Horizon placed <em>25</em> fellows in Congress.",
+  "deck": "Horizon says each host manages its fellow’s work.",
+  "note": "The Horizon Institute for Public Service is the listed recipient of $11.9M in network grants. It also has other funders.",
+  "bridge": "What is on file for each member?",
+  "how": "",
+  "source": "Sources · Horizon’s roster and host guidance, and grant records. The sheet also uses alumni pages, congressional records, filings and staff pages."
  },
  {
   "id": "limits",
   "act": "V &#183; The sum",
   "head": "A record of ties, not a record of influence.",
-  "deck": "240 of the 452 members with a tie have one or two kinds of record. The opening slide&#8217;s two members again, with what is on file for each: seven kinds of record for Ted Lieu, one for Thom Tillis.",
+  "deck": "240 of the 452 members with a tie have one or two kinds of record. The record reaches Democrats and Republicans at similar rates, with third-party-only records making up a larger share of counted Republicans.",
   "note": "",
   "bridge": "",
-  "how": "Each dot is one of the 533 members serving on Nov. 26, 2026, by party; records through Sept. 30, 2026.",
+  "how": "Members serving on Nov. 26, 2026, by party. Records through Sept. 30, 2026.",
   "source": ""
  }
 ]
