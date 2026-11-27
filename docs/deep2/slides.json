@@ -2,8 +2,8 @@
  {
   "id": "deep2-against",
   "act": "Deeper &#183; II &#183; The outside money",
-  "head": "The committees spending against Bird and Tillis <em data-m=\"a4bc50923d\">took money through different routes</em>.",
-  "deck": "Public First Action paid the committee that opposed Bird. In an earlier election, people on today’s network roster gave to the committee that opposed Tillis.",
+  "head": "<span data-m=\"61ba3ab2ef\">A nonprofit paid a committee that opposed Bird</span>, and <em data-m=\"cbcfadfa44\">personal donors</em> gave to one that opposed Tillis.",
+  "deck": "The cases span the 2026 and 2020 elections. The personal donors are on today’s network roster.",
   "note": "The filings give no reason for the spending.",
   "bridge": "How did committees that took network money spend from all their donors?",
   "how": "",
@@ -15,18 +15,8 @@
   "head": "Across <span data-m=\"5508b1c3f4\">24 committees</span>, <em data-m=\"0a68352a69\">76%</em> of spending from all donors on sitting members went against Republicans.",
   "deck": "<span data-m=\"5508b1c3f4\">These committees took network money and spent for or against members serving on Nov. 26, 2026.</span>",
   "note": "The filings identify the committee that spent the money. They cannot trace an expenditure to a donor.",
-  "bridge": "Future Forward was among the committees that spent. How much did Dustin Moskovitz give it?",
-  "how": "",
-  "source": "Source · Federal Election Commission outside-spending filings"
- },
- {
-  "id": "deep2-donor",
-  "act": "Deeper &#183; II &#183; The outside money",
-  "head": "Dustin Moskovitz gave <em data-m=\"0cc3438d69\">about $100M</em> to Future Forward’s super PAC.",
-  "deck": "Future Forward appears in the <a href=\"#deep2-spending\">committee spending comparison</a>. Here the money is Moskovitz’s own gifts, including gifts through his trust.",
-  "note": "The bars show gifts to outside groups on file, before refunds. See <a href=\"https://www.anthropic.com/news/anthropic-raises-124-million-to-build-more-reliable-general-ai-systems\">Anthropic’s investment announcement</a>.",
   "bridge": "",
   "how": "",
-  "source": "Source · Federal Election Commission contribution records"
+  "source": "Source · Federal Election Commission outside-spending filings"
  }
 ]

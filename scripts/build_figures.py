@@ -21,7 +21,7 @@ INK, MUTED = "#191b1a", "#666960"
 DEM, REP, IND, GREY = "#2f5fa8", "#b8322a", "#6a8f3a", "#b9bbb3"
 PAL = ["#2f5fa8", "#b8322a", "#6a8f3a", "#c98a1c", "#7a4fa3", "#1f8a8a", "#a3573a", "#4b6b8a", "#8a8a2a", "#c25b8a", "#3a7a5a", "#8a4b2a"]
 TYPES = ["1", "2", "3a", "3b", "4a", "4b", "5", "6", "7", "8", "9", "10", "11", "12"]
-TYPE_LABEL = {"1": "Direct contributions from network people", "2": "Contributions from network PACs (and one lobbying firm's PAC)", "3a": "Network money into super PACs and nonprofits", "3b": "Super PAC spending for or against (indirect)",
+TYPE_LABEL = {"1": "Direct contributions from network people", "2": "Contributions from network PACs (and one lobbying firm's PAC)", "3a": "Network money into outside-spending groups and nonprofits", "3b": "Outside spending for or against (indirect)",
               "4a": "Lobbying reports naming the member's bill", "4b": "Lobbyists' own contributions (indirect)", "5": "Staff and fellows moving to or from the Hill", "6": "Network grants to think tanks and advocacy groups",
               "7": "Federal money to the network", "8": "Holdings and household income", "9": "Travel and events", "10": "Campaigns buying from AI labs", "11": "Public statements naming the network", "12": "State-level money"}
 
@@ -174,14 +174,14 @@ def fig01_table():
         svg.append(txt(x + 60, gy + 300, f"{k} kind{'s' if k != 1 else ''}", 16, anchor="middle", fill=MUTED))
         svg.append(txt(x + 60, gy + 262 - h, str(touched.get(k, 0)), 17, anchor="middle"))
     subtitle = ('Sources: FEC, lobbying, grant, spending and travel filings and public statements, each record checked against the original document. A member counts under a connection if at least one confirmed record links them; duplicates and searches that found nothing are left out. Dollar amounts are added up only within one kind of connection, never across.')
-    footnote = (f"<b>What the record does not show.</b> A contribution is not a vote, and outside spending is not coordination with the candidate. Super PAC spending and lobbyists' own gifts are indirect: the committee or the lobbyist acted, not the network's principals. Super PAC totals are those committees' counted spending for or against sitting members, and most of that money did not come from the network. Staff moves, holdings, travel and statements carry no dollar amount. Some FEC records could not be retrieved and are not counted. Built {NOW}.")
+    footnote = (f"<b>What the record does not show.</b> A contribution is not a vote, and outside spending is not coordination with the candidate. Outside spending and lobbyists' own gifts are indirect: the committee or the lobbyist acted, not the network's principals. Outside-spending totals are those committees' counted spending for or against sitting members, and most of that money did not come from the network. Staff moves, holdings, travel and statements carry no dollar amount. Some FEC records could not be retrieved and are not counted. Built {NOW}.")
     figure(stem, "Which of the twelve kinds of connection reach which members", subtitle, "\n".join(svg), footnote, ids, height=1630)
 
 
 # ---------- figure 01, the chamber (2026-11-26, Kevin: "we should use version a"; the table drawing is kept as fig01_table) ----------
 RAMP01 = ["#eec06c", "#e3a03c", "#cf7d22", "#ad5a16", "#84400f", "#56270a"]  # one hue, light to dark: 1 to 6 kinds
 NONE01, TRACK01 = "#c9cbc3", "#e8e3d8"
-SHORT01 = {"1": "direct contributions", "2": "PAC contributions", "3b": "super PAC spending", "4a": "lobbying on members' bills", "4b": "lobbyists' own gifts",
+SHORT01 = {"1": "direct contributions", "2": "PAC contributions", "3b": "outside spending", "4a": "lobbying on members' bills", "4b": "lobbyists' own gifts",
            "5": "staff and fellows", "8": "holdings", "9": "travel and events", "10": "AI-lab purchases", "11": "public statements", "12": "state money"}
 
 
@@ -286,8 +286,8 @@ def fig01():
     # type 4b's stricter measure (2026-09-29) and the kinds that reach no member, in the footnote
     _lc = {r["row_id"]: r for r in load("lobbyist_contributions")}
     _b = [(m, i) for m in SITTING for i in m["t4b_ids"].split() if MEAS4B.get(i) == "named"]
-    footnote = ("<b>What the record does not show.</b> A contribution is not a vote, and outside spending is not coordination with the candidate. Super PAC spending and lobbyists' own gifts are indirect: "
-                "the committee or the lobbyist acted, not the network's principals. Super PAC totals are those committees' counted spending for or against sitting members, and most of that money did not come from the network. "
+    footnote = ("<b>What the record does not show.</b> A contribution is not a vote, and outside spending is not coordination with the candidate. Outside spending and lobbyists' own gifts are indirect: "
+                "the committee or the lobbyist acted, not the network's principals. Outside-spending totals are those committees' counted spending for or against sitting members, and most of that money did not come from the network. "
                 "Staff moves, holdings, travel and statements carry no dollar amount. Some FEC records could not be retrieved and are not counted. "
                 f"Lobbyists' own contributions, stricter count (the lobbyist is also named on the network client's own lobbying filings): {len({m['row_id'] for m, _ in _b})} members, {len(_b):,} records, "
                 f"{money(sum(amt(_lc[i]['amount_usd']) for _, i in _b if i in _lc))}. "
@@ -410,7 +410,7 @@ def fig03():
         parts = " · ".join(f"{p} {money(by_pp[(k, p)])}" for p in ("D", "R", "I") if by_pp.get((k, p)))
         svg.append(txt(x + 10, y + bh * 0.72, f"{money(by_payer[k])}   ({parts})", 15, fill=MUTED))
     subtitle = ("Sources: FEC contribution records where the giver is one of the network's named principals and the recipient is a sitting member's campaign, leadership PAC or joint fundraising committee. Pass-through entries are never added twice.")
-    footnote = ("<b>What the record does not show.</b> A contribution is not a vote. A person's giving is their own, not their employer's. Party and super PAC giving are shown in other figures. Givers are matched by name and confirmed by employer or city; namesakes that could not be confirmed are left out. A gift to a joint fundraising committee counts once there; the committee's later allocations to its members are not added again. A gift that Anthropic's own registered lobbyist also reported on a lobbyist's contribution report is counted with lobbyists' gifts (figure 10), not here. The 2026 cycle is still open, so 2026 is a floor.")
+    footnote = ("<b>What the record does not show.</b> A contribution is not a vote. A person's giving is their own, not their employer's. Gifts to parties and outside-spending groups are shown in other figures. Givers are matched by name and confirmed by employer or city; namesakes that could not be confirmed are left out. A gift to a joint fundraising committee counts once there; the committee's later allocations to its members are not added again. A gift that Anthropic's own registered lobbyist also reported on a lobbyist's contribution report is counted with lobbyists' gifts (figure 10), not here. The 2026 cycle is still open, so 2026 is a floor.")
     figure(stem, "Principals' hard money to sitting members", subtitle, "\n".join(svg), footnote, ids, height=1580,
            legend_html='<div class="legend">' + legend([(DEM, "to Democrats"), (REP, "to Republicans"), (IND, "to independents")]) + "</div>")
 
@@ -634,7 +634,7 @@ def fig07():
         latest = max(latest, d[:10])
     keys = sorted(q)
     types = ["1/2", "3a/3b", "4a", "4b", "5", "6", "7", "8", "9", "10", "11", "12"]
-    NAMES = {"1/2": "campaign contributions", "3a/3b": "outside spending (super PACs)", "4a": "lobbying reports", "4b": "lobbyists' own gifts", "5": "staff and fellows", "6": "grants",
+    NAMES = {"1/2": "campaign contributions", "3a/3b": "outside-money records", "4a": "lobbying reports", "4b": "lobbyists' own gifts", "5": "staff and fellows", "6": "grants",
              "7": "federal awards and bills", "8": "financial disclosures", "9": "travel and events", "10": "vendor payments (campaigns paying AI labs; network committees paying vendors)", "11": "public statements", "12": "state money"}
     SHORT = {"1/2": "contributions", "3a/3b": "outside spending", "4a": "lobbying reports", "4b": "lobbyists' gifts", "5": "staff", "6": "grants", "7": "federal", "8": "disclosures", "9": "travel", "10": "vendor payments", "11": "statements", "12": "state money"}
     totals = {k: sum(v for t, v in q[k].items() if t in types) for k in keys}  # X34-0597: print what the bars draw
@@ -652,7 +652,7 @@ def fig07():
     late = {k: q[k].get("1/2", 0) + lab10.get(k, 0) for k in ("2025", "2026") if k in q}
     late_share = [round(100 * v / totals[k]) for k, v in late.items()]
     svg = [txt(40, 40, "Confirmed records per year, coloured by kind of connection, 2016–2026 (height = number of records dated in that year)", 24, weight="bold")]
-    svg.append(txt(40, 72, f"Election years (red) are outside-spending years: super PAC ad buys and money into super PACs are {min(even_share)}–{max(even_share)}% of 2018, 2020, 2022 and 2024. Off years are led by campaign contributions (blue), {min(odd_share)}–{max(odd_share)}% of 2017, 2019 and 2021.", 16, fill=MUTED))
+    svg.append(txt(40, 72, f"Election years (red) are outside-spending years: outside-money records are {min(even_share)}–{max(even_share)}% of 2018, 2020, 2022 and 2024. Off years are led by campaign contributions (blue), {min(odd_share)}–{max(odd_share)}% of 2017, 2019 and 2021.", 16, fill=MUTED))
     svg.append(txt(40, 96, f"In 2025 and 2026 the mix changes: campaign-contribution records plus payments to Anthropic and OpenAI make up {min(late_share)}–{max(late_share)}% of those years. 2026 is not over yet.", 16, fill=MUTED))
     for g in range(0, top + 1, step):
         y = yb - H * g / top
@@ -693,8 +693,8 @@ def fig07():
     for i, r in enumerate(picked):
         svg.append(txt(40, sy + 32 + i * 24, f"{r['date'][:10]:<11}", 15, fill=MUTED, extra='font-family="monospace"'))
         svg.append(txt(170, sy + 32 + i * 24, (lambda e: e if len(e) <= 150 else e[:147].rstrip() + "…")(re.sub(r"\s*\(GSA Committee No\. \d+\)|;?\s*pack-\d+\b.*$|\bnatsec\b", lambda m: "national security" if m.group(0) == "natsec" else "", r['event'] or '').strip()), 15, fill=INK))
-    subtitle = ("What this is: each bar counts the dated, confirmed rows of the study's tables for that year: filings and lines in them (a super PAC ad buy, a campaign contribution, a campaign's payment to an AI company or a network committee's payment to a vendor, a lobbyist's own gift, a lobbying report, a grant, a federal award), staff and fellowship records, trips and events, and public statements. It shows when the paper trail exists, not how much money moved.")
-    footnote = ('<b>What the record does not show.</b> Counts follow filing calendars and how far each period was searched, and one super PAC can file thousands of separate lines in a year. Among campaign contributions the bars count every confirmed line a committee filed, including memo, redesignation, refund and conduit lines that no money figure adds. Records dated only by year (annual holdings, jobs with only a start year) are not in the bars. Most key moments are dated events copied from the timeline of a companion study, not rows reviewed in this pack.')
+    subtitle = ("What this is: each bar counts the dated, confirmed rows of the study's tables for that year: filings and lines in them (an outside ad buy, a campaign contribution, a campaign's payment to an AI company or a network committee's payment to a vendor, a lobbyist's own gift, a lobbying report, a grant, a federal award), staff and fellowship records, trips and events, and public statements. It shows when the paper trail exists, not how much money moved.")
+    footnote = ('<b>What the record does not show.</b> Counts follow filing calendars and how far each period was searched, and one committee can file thousands of separate lines in a year. Among campaign contributions the bars count every confirmed line a committee filed, including memo, redesignation, refund and conduit lines that no money figure adds. Records dated only by year (annual holdings, jobs with only a start year) are not in the bars. Most key moments are dated events copied from the timeline of a companion study, not rows reviewed in this pack.')
     figure(stem, "Election years spike with outside spending; 2025–26 shift to donations and payments to AI labs", subtitle, "\n".join(svg), footnote, ids, height=1464 + 24 * len(picked),  # 2026-11-26: one more footnote line since the memo sentence of X67d (the page overflowed by 5 px and its image was not redrawn)
            legend_html='<div class="legend">' + legend([(PAL[j], NAMES[t]) for j, t in enumerate(types)]) + "</div>", chrome=444)
 

@@ -122,7 +122,7 @@ def fig08():
     stem = "congress-08-member-type-heatmap"
     cols = ["1", "2", "10", "12", "9", "11", "5", "7", "6", "4a", "4b", "3b"]
     hop2 = {"4b", "3b"}
-    short = {"1": "direct\ngifts", "2": "network\nPACs", "10": "bought AI\nsoftware", "12": "state\nmoney", "9": "travel,\nevents", "11": "public\nstatements", "5": "staff,\nfellows", "7": "federal\nmoney", "6": "grants", "4a": "lobbying on\ntheir bills", "4b": "lobbyists'\ngifts", "3b": "super PAC\nspending"}
+    short = {"1": "direct\ngifts", "2": "network\nPACs", "10": "bought AI\nsoftware", "12": "state\nmoney", "9": "travel,\nevents", "11": "public\nstatements", "5": "staff,\nfellows", "7": "federal\nmoney", "6": "grants", "4a": "lobbying on\ntheir bills", "4b": "lobbyists'\ngifts", "3b": "outside\nspending"}
     def score(m):
         h1 = sum(1 for t in cols if t not in hop2 and int(m[f"t{t}_n"]) > 0)
         allt = sum(1 for t in cols if int(m[f"t{t}_n"]) > 0)
@@ -132,7 +132,7 @@ def fig08():
     ids = [m["row_id"] for m in members]
     x0, y0, cw, rh = 40, 120, 112, 21
     svg = [txt(x0, 40, "The 60 sitting members with the most kinds of connection to the network (direct connections counted first; ties broken by all kinds, then records)", 24, weight="bold"),
-           txt(x0, 70, "Each cell is the number of confirmed records of that kind for the member. Grey columns are money the network did not give directly: a lobbyist's own gift, or a super PAC's spending.", 17, fill=MUTED)]
+           txt(x0, 70, "Each cell is the number of confirmed records of that kind for the member. Grey columns are money the network did not give directly: a lobbyist's own gift, or outside spending.", 17, fill=MUTED)]
     for j, t in enumerate(cols):
         x = x0 + 520 + j * cw
         for k, line in enumerate(short[t].split("\n")):
@@ -155,7 +155,7 @@ def fig08():
                 svg.append(txt(x + cw / 2, y + 15, f"{n:,}", 13, anchor="middle", fill=INK if a < 0.7 else "#ffffff"))
         h1, allt, rows = score(m)
         svg.append(txt(x0 + 520 + len(cols) * cw + 20, y + 15, f"{h1} / {allt}", 14, fill=MUTED))
-    subtitle = ('Sources: every confirmed record in this study linked to a sitting member. Money into super PACs and financial-disclosure links are left out: the first goes to committees rather than members, and the second touches only two members (household income from the Carnegie Endowment, a network grantee).')
+    subtitle = ('Sources: every confirmed record in this study linked to a sitting member. Money into outside-spending groups and nonprofits and financial-disclosure links are left out: the first goes to committees rather than members, and the second touches only two members (household income from the Carnegie Endowment, a network grantee).')
     footnote = ('<b>What the record does not show.</b> Breadth is not weight: every kind counts the same here, whatever its size. A contribution is not a vote; outside spending is not coordination. Travel is mostly Aspen Institute conferences; a network-funded group is named as a sponsor of the 2025 conference, and network organisations supplied speakers at the others. Statements can be critical as well as friendly. A blank cell means no counted record was found, not that none exists; for members seated after the Congress began, some kinds were not searched or only partly searched.')
     figure(stem, "Which members the most kinds of connection touch", subtitle, "\n".join(svg), footnote, ids, height=y0 + len(members) * rh + 560)
 
@@ -225,7 +225,7 @@ def fig09():
                 rec[k]["usd"] += amt(r["amount_usd"]); rec[k]["ids"].append(r["row_id"])
     top = sorted(per.items(), key=lambda kv: -(kv[1]["support"] + kv[1]["oppose"]))[:22]
     ids = []
-    svg = [txt(40, 40, f"Super PAC and party spending naming sitting members, by committee (the {len(top)} largest of {len(per)}), beside the receipts on record for that committee", 23, weight="bold")]  # X40-0888: cut-off stated
+    svg = [txt(40, 40, f"Outside spending naming sitting members, by committee (the {len(top)} largest of {len(per)}), beside the receipts on record for that committee", 23, weight="bold")]  # X40-0888: cut-off stated
     hdr = 84
     svg.append(txt(560, hdr, "spent for / against sitting members", 15, fill=MUTED, weight="bold")); svg.append(txt(1560, hdr, "members named", 15, fill=MUTED, weight="bold", anchor="end"))
     svg.append(txt(1600, hdr, "reported receipts into the committee (own scale)", 15, fill=MUTED, weight="bold"))
@@ -376,7 +376,7 @@ def fig12():
         key = (re.sub(r"[^A-Z0-9]", "", (r["payer"] or "").upper()), committee_key(r, "payee"), (r["date"] or "").strip(), round(amt(r["amount_usd"]), 2))
         uniq.setdefault(key, r)
     # 2026-11-26 (lane C189, S6; batch S57): a receipt of one of these committees that the pack holds in the contributions table (a gift
-    # to a hybrid or super PAC collected there line by line) is a receipt too; figure 09 has counted such lines since 2026-09-23 and
+    # to a hybrid PAC collected there line by line) is a receipt too; figure 09 has counted such lines since 2026-09-23 and
     # this figure left them out (FF PAC read $105.3M here and $106.3M there). One selector for both: the same rows figure 09 adds,
     # line by line, each once, unless the same payer, committee, day and amount is already drawn from the outside-money table.
     committees12 = {committee_key(r, "payee") for r in rec}
@@ -407,7 +407,7 @@ def fig12():
         payers[a] += v; payees[b] += v
     L = [k for k, _ in payers.most_common(11)]; Rr = [k for k, _ in payees.most_common(16)]
     other_l = sum(v for k, v in payers.items() if k not in L); other_r = sum(v for k, v in payees.items() if k not in Rr)
-    svg = [txt(40, 40, "Money into the network's super PACs and political nonprofits, 2016–2026", 23, weight="bold"),  # X39-0407/1018: two lines
+    svg = [txt(40, 40, "Money into outside-spending groups and political nonprofits, 2016–2026", 23, weight="bold"),  # X39-0407/1018: two lines
            txt(40, 70, "By giver and recipient (each contribution counted once; other itemised donors included)", 19, fill=MUTED)]
     lx, rx, top, bottom = 560, 1500, 120, 1210
     def pos(keys, totals, extra):
@@ -449,7 +449,7 @@ def fig13():
     # 2026-09-23 (Codex X3 #8): same-key hard-money lines were classified line by line (A7), so no key collapse here
     rows = [r for r in HM if ev(r) and r["money_type"] == "hard_money" and r["hop"] == "1" and r["payer_type"] == "individual"]
     VEH = {"candidate_committee": "candidate committee", "presidential_committee": "presidential committee", "party_committee": "party committee", "jfc": "joint fundraising committee", "leadership_pac": "leadership PAC",
-           "hybrid_pac": "hybrid PAC / super PAC", "super_pac": "hybrid PAC / super PAC", "nonconnected_pac": "nonconnected PAC", "corporate_pac": "connected or registrant PAC", "": "not stated on the row"}  # 2026-09-23 (Codex X4b #3): classes follow the FEC committee master file
+           "hybrid_pac": "Hybrid PACs and other recipients", "super_pac": "Hybrid PACs and other recipients", "nonconnected_pac": "nonconnected PAC", "corporate_pac": "connected or registrant PAC", "": "not stated on the row"}  # 2026-09-23 (Codex X4b #3): classes follow the FEC committee master file
     cells = collections.defaultdict(float); ids = []
     for r in rows:
         c = r["cycle"] or cycle_of(r["date"])
@@ -465,7 +465,7 @@ def fig13():
     svg.append(bar_chart([(member_label(m["member_bioguide"]), float(m["t1_usd"] or 0), m) for m in top if float(m["t1_usd"] or 0) > 0], 40, 490, 2000, 900, label_w=520, colour=lambda m: party_colour(m["party"])))
     ids += [m["row_id"] for m in top]
     subtitle = ("Sources: FEC contribution records where the giver is a network principal or lists Anthropic, Coefficient Giving (formerly Open Philanthropy), Schmidt or Hillspire as employer. The lower panel adds up each member's own committees.")
-    footnote = ("<b>What the record does not show.</b> A contribution is not a vote. An employee's giving is their own, not the employer's; the employer is as the giver wrote it. Gifts made through ActBlue or WinRed are counted once, from the recipient's report; where that report is not yet filed or does not itemise the gift, it is not counted. Gifts a committee reports twice are counted once. A gift that an organisation's own registered lobbyist also reported on a lobbyist's contribution report is counted with lobbyists' gifts (figure 10), not here. Gifts to super PACs also appear in the outside-money figures; here they only show the split by kind of committee. 2026 is still open, so every bar is a floor.")
+    footnote = ("<b>What the record does not show.</b> A contribution is not a vote. An employee's giving is their own, not the employer's; the employer is as the giver wrote it. Gifts made through ActBlue or WinRed are counted once, from the recipient's report; where that report is not yet filed or does not itemise the gift, it is not counted. Gifts a committee reports twice are counted once. A gift that an organisation's own registered lobbyist also reported on a lobbyist's contribution report is counted with lobbyists' gifts (figure 10), not here. Gifts to outside-spending groups also appear in the outside-money figures; here they only show the split by kind of committee. 2026 is still open, so every bar is a floor.")
     figure(stem, "Where network individuals' contributions land", subtitle, "\n".join(svg), footnote, ids, height=1850,
            legend_html=legend([(CPAL[i], c) for i, c in enumerate(cycles)]))
 
@@ -483,8 +483,8 @@ def fig14():
         return out
     panels.append(("Direct contributions from network people (all recipients)", [r for r in HM if ev(r) and r["money_type"] == "hard_money" and r["hop"] == "1" and r["payer_type"] == "individual"], DEM))
     panels.append(("Network PAC contributions (each counted once)", unique_ab([r for r in HM if ev(r) and r["money_type"] == "corporate_pac"]), PAL[3]))
-    panels.append(("Reported receipts and transfers into super PACs and political nonprofits", sp_unique([r for r in SP if ev(r) and r["money_type"] in ("outside_receipt", "transfer")]), IND))
-    panels.append(("Spending by every super PAC in the study, all races (indirect)", [r for r in SP if ev(r) and r["money_type"] in ("independent_expenditure", "electioneering_communication")], GREY))
+    panels.append(("Reported receipts and transfers into outside-spending groups and political nonprofits", sp_unique([r for r in SP if ev(r) and r["money_type"] in ("outside_receipt", "transfer")]), IND))
+    panels.append(("Outside spending across all races in the study (indirect)", [r for r in SP if ev(r) and r["money_type"] in ("independent_expenditure", "electioneering_communication")], GREY))
     panels.append(("Lobbyists' own contributions (indirect)", [r for r in LC if ev(r) and r["money_type"] == "hard_money"], GREY))
     paid = [r for r in GR if ev(r) and amt(r["amount_usd"]) > 0 and "990_group=approved_future" not in (r["note"] or "")]  # 2026-09-23 (Codex X5b #5)
     _unp = {r["row_id"] for r in load("grant_payment_unproven")}  # X53 (2026-10-11): as in figure 21, a payment that may restate a drawn award is not added
@@ -528,7 +528,7 @@ def fig14():
             if v:
                 svg.append(txt(x0 + 40 + j * bw + (bw - 14) / 2, y0 + ph - 56 - h, money(v) + (f" ({money(cellsB.get(cy, 0))} named)" if is4b else ""), 12, anchor="middle"))
     subtitle = ("Sources: confirmed records with a dollar amount from FEC contribution and spending records, lobbyists' contribution reports, grant filings, campaign payments to Anthropic and state filings, grouped by two-year election cycle. Each panel has its own scale and the scope its title states. Panels marked indirect are second-hop money.")
-    footnote = ('<b>What the record does not show.</b> Panels are separate and never added. The super PAC panel is all spending by the committees in the study, not only network money. Grants go to research and policy groups, and state money goes to state races. Totals follow search depth: 2024–2026 were searched most thoroughly and 2026 is still open, so every bar is a floor. A contribution is not a vote; outside spending is not coordination.')
+    footnote = ('<b>What the record does not show.</b> Panels are separate and never added. The outside-spending panel covers all races in the study and includes money from all donors. Grants go to research and policy groups, and state money goes to state races. Totals follow search depth: 2024–2026 were searched most thoroughly and 2026 is still open, so every bar is a floor. A contribution is not a vote; outside spending is not coordination.')
     figure(stem, "Money by election cycle, one kind at a time", subtitle, "\n".join(svg), footnote, ids, height=90 + -(-len(panels) // 2) * (ph + 40) + 420)
 
 
@@ -1120,7 +1120,7 @@ def fig22():
            txt(x0, 70, "T1 funders of Anthropic or the AI-safety field, and vehicles they control · T2 their grantmaking arms · T3 Anthropic, its leaders, lobbyists and political vehicles", 16, fill=MUTED),
            txt(x0, 92, "T4 network-funded groups that work with Congress · T5 large donors (T6 network grantees with no congressional role are not shown)", 16, fill=MUTED)]  # 2026-11-26: one line ran past the right edge
     for j, t in enumerate(tabs):
-        svg.append(txt(x0 + 760 + j * 95, y0 - 10, {"HM": "donations", "SP": "super PACs", "LC": "lobbyists", "VN": "AI vendor", "GR": "grants", "SG": "state", "TV": "travel", "MS": "statements", "RD": "jobs", "FG": "federal", "LB": "lobbying"}.get(t, t), 13, anchor="middle", fill=MUTED, weight="bold"))
+        svg.append(txt(x0 + 760 + j * 95, y0 - 10, {"HM": "donations", "SP": "outside money", "LC": "lobbyists", "VN": "AI vendor", "GR": "grants", "SG": "state", "TV": "travel", "MS": "statements", "RD": "jobs", "FG": "federal", "LB": "lobbying"}.get(t, t), 13, anchor="middle", fill=MUTED, weight="bold"))
     svg.append(txt(x0 + 760 + len(tabs) * 95 + 30, y0 - 10, "total", 14, fill=MUTED, weight="bold"))
     ids = []
     for i, e in enumerate(shown):
@@ -1148,7 +1148,7 @@ def fig22():
 def fig23():
     stem = "congress-23-record-composition"
     tabs = [("hard_money", HM), ("super_pac_c4", SP), ("lobbyist_contributions", LC), ("vendors", VN), ("member_statements", MS), ("entities", EN), ("lobbying", LB), ("grants", GR), ("state_government", SG), ("travel", TV), ("revolving_door", RD), ("timeline", TL), ("member_disclosures", PD), ("federal_money", FG)]
-    PLAIN = {"hard_money": "Campaign contributions", "super_pac_c4": "Super PACs and nonprofits", "lobbyist_contributions": "Lobbyists' own gifts", "vendors": "Payments to AI labs", "member_statements": "Members' statements",
+    PLAIN = {"hard_money": "Campaign contributions", "super_pac_c4": "Outside-money records", "lobbyist_contributions": "Lobbyists' own gifts", "vendors": "Payments to AI labs", "member_statements": "Members' statements",
              "entities": "Network list", "lobbying": "Lobbying reports", "grants": "Grants", "state_government": "State money", "travel": "Travel and events", "revolving_door": "Job moves", "timeline": "Timeline events",
              "member_disclosures": "Financial disclosures", "federal_money": "Federal money"}
     cells = {}; tot = collections.Counter(); ids = []
@@ -1185,13 +1185,15 @@ def fig23():
             n = re.sub(r"lane=research/grok-out/\S+", "", r.get("note") or "")
             if r["row_id"] in closed:
                 continue  # a later re-pull row carries closes=<table>#<row_id>
+            if (r.get("source_type") or "").lower() not in ("", "none_found", "fetch_gap") and (r.get("quote_300") or "").strip():
+                continue  # 2026-11-27 (lane V02-14): a row quoting its own filing was retrieved; a failed second route in its note is not a gap
             if (r.get("source_type") or "").lower() == "fetch_gap" or (pos_re.search(n) and not neg_re.search(n)):
                 gaps[name] += 1
                 ids.append(r["row_id"])  # the lower panel draws these gap rows; the upper panel counts every row
     svg.append(txt(40, 820, "Searches that could not be completed (the website blocked the request, limited it or timed out) and were never successfully repeated", 22, weight="bold"))
     svg.append(bar_chart([(PLAIN[k], v, None) for k, v in gaps.most_common(10)], 40, 840, 2000, 360, label_w=420, colour=lambda r: REP, fmt=lambda v: f"{int(v):,} search{'es' if int(v) != 1 else ''}"))
     subtitle = ('Sources: every row of the study\'s fourteen source tables, by how the reviewers classified it after checking it against the original; the member table derived from them is not counted here. The connection and money figures use confirmed records only; figures 07, 22 and this one describe the record itself.')
-    footnote = ('<b>What the record does not show.</b> Counts measure how much was collected, not the size of any connection: one super PAC can file tens of thousands of lines, while one career is one record. An empty search rules out only what was searched. One machine-reading pass over scanned Senate forms was discarded and redone.')
+    footnote = ('<b>What the record does not show.</b> Counts measure how much was collected, not the size of any connection: one committee can file tens of thousands of lines, while one career is one record. An empty search rules out only what was searched. One machine-reading pass over scanned Senate forms was discarded and redone.')
     figure(stem, "What the record is made of", subtitle, "\n".join(svg), footnote, ids, height=1650, legend_html=legend([(DEM, "confirmed"), (GREY, "held but not counted"), (REP, "searched, nothing found"), ("#e3dfd5", "not yet classified")]))
 
 
@@ -1266,7 +1268,7 @@ def fig25():
         tot[("support", p)] += float(m["t3b_support_usd"] or 0); tot[("oppose", p)] += float(m["t3b_oppose_usd"] or 0)
         if float(m["t3b_support_usd"] or 0) > 0: n[("support", p)] += 1
         if float(m["t3b_oppose_usd"] or 0) > 0: n[("oppose", p)] += 1
-    svg = [txt(40, 40, "Super PAC spending for and against sitting members, by committees that received network money (the committee's total spending on that member)", 24, weight="bold")]
+    svg = [txt(40, 40, "Outside spending for and against sitting members, by groups that received network money (each group's total spending on that member)", 24, weight="bold")]
     svg.append(txt(40, 80, "  ".join(f"{'for' if s == 'support' else 'against'} {'Democrats' if p == 'D' else 'Republicans' if p == 'R' else 'independents'}: {money(tot[(s, p)])} across {n[(s, p)]} members" for s in ("support", "oppose") for p in ("D", "R", "I") if tot[(s, p)]), 16, fill=MUTED))
     svg.append(txt(40, 130, f"Most spent in support (the {len(sup)} largest of {sum(1 for m in SITTING if float(m['t3b_support_usd'] or 0) > 0)} members)", 22, weight="bold"))  # X40-2619
     svg.append(bar_chart([(member_label(m["member_bioguide"]), float(m["t3b_support_usd"]), m) for m in sup], 40, 150, 1000, 700, label_w=440, colour=lambda m: party_colour(m["party"])))

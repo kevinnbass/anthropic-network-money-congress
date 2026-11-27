@@ -2,7 +2,7 @@
  {
   "id": "deep3-sponsors",
   "act": "Deeper &#183; III &#183; How the lobbying works",
-  "head": "Gifts from Anthropic employees or its PAC were <em>more common</em> among sponsors of bills named in filings for Anthropic.",
+  "head": "Gifts from Anthropic employees or its PAC were <em>more common</em> among serving sponsors of stand-alone bills named in lobbying reports filed for Anthropic.",
   "deck": "",
   "note": "The filings leave open whether the gifts and bill mentions were related.",
   "bridge": "Which bills showed up most often in filings for Anthropic?",
@@ -13,7 +13,7 @@
   "id": "deep3-bills",
   "act": "Deeper &#183; III &#183; How the lobbying works",
   "head": "<em>Chip proposals</em> led the stand-alone bills named in reports filed for Anthropic.",
-  "deck": "Mast’s AI OVERWATCH Act appeared most often. The sheet also compares network clients’ dollars with the federal AI filing census.",
+  "deck": "The AI OVERWATCH Act appeared most often.",
   "note": "The reports name bills and leave Anthropic’s position on them open.",
   "bridge": "",
   "how": "",

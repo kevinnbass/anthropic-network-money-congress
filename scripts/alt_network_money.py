@@ -94,7 +94,7 @@ def main() -> int:
                 f"from people who list a network organisation as employer, and from ANTHROPAC and ARI PAC, each counted once: "
                 f"{money(d)} to {n_party['D']} Democrats ({100 * d / all_tot:.0f}%), {money(r_)} to {n_party['R']} Republicans{ind}.")
     footnote = ("<b>What the record does not show.</b> A person's gift is their own money, not their employer's; employers are as donors wrote them. "
-                "Principals are matched by name and confirmed by employer and city; namesakes are left out. Super PAC money, lobbyists' own gifts and the law firm's PAC are not here "
+                "Principals are matched by name and confirmed by employer and city; namesakes are left out. Outside money, lobbyists' own gifts and the law firm's PAC are not here "
                 f"(see figures 09, 10, 11 and 12). A contribution is not a vote. The latest contribution here is dated {latest}; the 2026 cycle is still open.")
     bf.figure("network-money-per-member", f"The network gave {money(all_tot)} to {len(ms)} sitting members in 2024–26, most of it from Anthropic staff",
               subtitle, "\n".join(svg), footnote, ids, height=y0 + len(top) * rh + 540,
