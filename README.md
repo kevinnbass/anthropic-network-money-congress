@@ -36,7 +36,7 @@ Independent audits (X64 to X69 in the project's numbering) checked the new rows,
 
 **Not finished. Until these are done this update is not called verified:**
 
-- The story page was rebuilt on November 27 as eight slides on the record as it now stands (452 members with a tie, 356 reached by lobbyists' gifts), after two more readers and the audit of its ten-slide version (no errors; four wording points, all taken up). The eight-slide version is being read and audited now; it stays marked a draft until that audit is disposed.
+- The story page (eight slides, November 27) was read by two more readers and audited: 5,431 of 5,565 findings right, 130 errors and four wording points. 125 of the errors had one cause: the page's employee counts used a test for the employer that was case-sensitive and left out 38 employee gifts added that morning. One shared test now serves the page and the two money charts; the page reads 197 members with money from Anthropic's employees or its PAC (was 196) and $5.9M from employees (was $5.6M). The record's own counts did not move. A sixth version, in six slides, is being built on the readers' and the audit's points; the page stays marked a draft until the audit of the published version is disposed.
 - A sweep for gaps is running. Applied so far: 168 rows that restated another row are held as context, so each gift is counted once (148 lines a payment platform such as ActBlue filed for a gift the campaign also reported; 18 lobbyists' gifts repeated in an amended report; two PAC disbursements held twice), and one lobbyist's $500 gift held three times now counts once, as the lobbyist's. 492 rows the record lacked entered through the review gates: 310 lobbyists' own gifts at firms registered for network clients; Public First Action's gifts to three more committees and their spending (one of them spent $2.2M against Seth Moulton); 40 gifts by Anthropic's employees, among them 38 that the members' own filings show; 42 refunds of counted gifts, held as context (totals stay as filed, before refunds); three committee witness appearances; and two earlier network gifts to committees. Twenty held gifts gained the member their committee's FEC record names. None of these rows has had its independent audit yet. Still being searched: gifts filed with a misspelt employer, gifts to joint fundraising committees the record lacks, and AnthroPAC's gifts as each side reports them.
 - Of the 2,725 held memo and conduit lines, the fourteen that needed a document were read and stay held; 76 of 77 sampled lines now agree with their raw filings, and one cannot be read because the FEC's own copy of that filing is cut off.
 - The testimony figure (26) now counts fifteen more committee appearances (73, was 58), each read against its saved hearing record; no independent audit has yet read them.
@@ -137,18 +137,18 @@ The scripts are the project's own. Four things were changed so they run here: th
 
 Rows were collected from public sources (FEC, Senate and House lobbying and disclosure filings, IRS returns, USAspending, state registries, congressional records, organisations' own pages) by AI research agents, each row with its source's URL and an excerpt as fetched; the author keeps saved copies of the sources. Rows entered the tables through a row-by-row review of each batch by a separate agent. Independent audits then checked evidence rows against saved originals, in both directions: what was kept and what was removed. The measure below says how many. A correction never overwrites: the earlier row is archived and the change noted on the row.
 
-The project measures itself against a written standard with a script. On 2026-11-27 at 13:15 UTC it printed:
+The project measures itself against a written standard with a script. On 2026-11-27 at 13:46 UTC it printed:
 
 ```
 == congress  bound rows 133,962  evidence rows 43,346
 G1 FAIL  drawn evidence document-checked 42,850/43,346 (98.9%); all evidence 98.9%
-G2 PASS  errors disposed 32,680/32,680; errors+qualifications disposed 61,088/61,088 (100.0%)
+G2 FAIL  errors disposed 32,680/32,810; errors+qualifications disposed 61,088/61,222 (99.8%)
 G3 PASS  corrected rows archived 16,003/16,003 (ledger rows 16,047)
-G4 PASS  audits 108: complete 48, well-formed closing line 108; incomplete and not carried to README/dispositions 0
+G4 FAIL  audits 109: complete 48, well-formed closing line 109; incomplete and not carried to README/dispositions 1 ['X79-story-series-round7-20261127']
 G5 PASS  clean figures 29/29
 ```
 
-G1 says how many of the evidence rows the 29 figures draw or count have a document check on file. Since figure 23 lists every row it counts, that is every evidence row in the record. The 496 rows without one are the 449 evidence rows the gap sweep added on November 27 through the review gates (their review lanes re-read every one against its filing), 23 rows of the network list, 19 contribution lines whose audit finding is a qualification still open, and five witness rows added to figure 26 on November 27; the final check reads them. The final check of everything applied has not run yet, so this update is not called verified.
+G1 says how many of the evidence rows the 29 figures draw or count have a document check on file. Since figure 23 lists every row it counts, that is every evidence row in the record. The 496 rows without one are the 449 evidence rows the gap sweep added on November 27 through the review gates (their review lanes re-read every one against its filing), 23 rows of the network list, 19 contribution lines whose audit finding is a qualification still open, and five witness rows added to figure 26 on November 27; the final check reads them. G2 and G4 fail only on the story page's latest audit (above), whose findings are being applied and disposed. The final check of everything applied has not run yet, so this update is not called verified.
 
 ## Names
 

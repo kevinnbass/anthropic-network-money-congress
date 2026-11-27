@@ -15,6 +15,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import build_figures as bf  # noqa: E402
 import build_figures2 as b  # noqa: E402
+import employer_rule as E  # noqa: E402
 from casework.figures.common import legend, money  # noqa: E402
 
 bf.OUT = bf.ROOT / "figures-alt"
@@ -38,9 +39,8 @@ def main() -> int:
         if name in NAMED:
             return name
         note = r["note"] or ""
-        e = re.search(r"(?:employer as filed|contributor_employer)=\s*([^;]*)", note)
-        emp = (e.group(1) if e else "").upper()
-        if "ANTHROPIC" in emp or re.search(r"Employer string ANTHROPIC", note):
+        emp = E.employer(note).upper()  # 2026-11-27 (audit X79-5606): the shared rule, scripts/employer_rule.py
+        if E.anthropic_employee(r):
             return "Anthropic employees"
         if re.search("COEFFICIENT|OPEN PHIL|GOOD VENTURES", emp):
             return "Coefficient Giving / Open Philanthropy staff"

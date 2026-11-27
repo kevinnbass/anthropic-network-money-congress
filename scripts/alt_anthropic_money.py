@@ -17,6 +17,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import build_figures as bf  # noqa: E402
 import build_figures2 as b  # noqa: E402
+import employer_rule as E  # noqa: E402
 from casework.figures.common import legend, money  # noqa: E402
 
 bf.OUT = bf.ROOT / "figures-alt"
@@ -30,9 +31,7 @@ def main() -> int:
         if not b.ev(r) or r["member_bioguide"] not in sit or r["money_type"] not in ("hard_money", "corporate_pac"):
             continue
         note = r["note"] or ""
-        e = re.search(r"(?:employer as filed|contributor_employer)=\s*([^;]*)", note)
-        q = re.search(r'"contributor_employer":\s*"([^"]*)"', r.get("quote_300") or "")  # X63-269: a variant pull keeps the filed employer in the quoted record and in 'Employer string ...'
-        is_emp = r["payer_type"] == "individual" and bool((e and "ANTHROPIC" in e.group(1).upper()) or re.search(r"Employer string ANTHROPIC", note) or (q and "ANTHROPIC" in q.group(1).upper()))
+        is_emp = r["payer_type"] == "individual" and E.anthropic_employee(r)  # 2026-11-27 (audit X79-5606): the shared rule, scripts/employer_rule.py (X63-269's quoted-record test is in it)
         is_pac = "ANTHROPIC PBC POLITI" in (r["payer"] or "").upper()
         if not (is_emp or is_pac) or (r["cycle"] or b.cycle_of(r["date"])) not in ("2024", "2026"):
             continue
