@@ -1,0 +1,4 @@
+Inter: Copyright (c) The Inter Project Authors (https://github.com/rsms/inter).
+Noto Serif Display: Copyright (c) The Noto Project Authors (https://github.com/notofonts/latin-greek-cyrillic).
+Both are licensed under the SIL Open Font License, Version 1.1 (https://openfontlicense.org).
+The .woff2 files here are subsets of those fonts (Latin text, digits and punctuation only).

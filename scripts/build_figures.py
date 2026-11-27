@@ -615,6 +615,12 @@ def fig07():
     q = collections.defaultdict(collections.Counter)
     latest = ""
     bar_ids = []
+    # 2026-11-27 (format builder F1-decade's finding, measured by the supervising session): kind 10 is the vendors table, whose scope is campaigns
+    # or offices paying network firms and AI labs AND network committees paying their own vendors (payroll, accounting, compliance); 520 of
+    # its 3,127 dated evidence rows pay no AI lab. The bars keep the whole kind under its own name; the sentence about 2025-26 counts only the
+    # payments to Anthropic and OpenAI.
+    LAB = re.compile(r"ANTHROPIC|CLAUDE|OPENAI|CHATGPT|OPEN AI", re.I)
+    lab10 = collections.Counter()
     for r in rows:
         if r["role"] != "evidence":
             continue
@@ -622,13 +628,15 @@ def fig07():
         if len(d) < 7 or d[:4] < "2016":
             continue
         q[d[:4]][r["conn_type"]] += 1
+        if r["conn_type"] == "10" and LAB.search(r["counterparty"] or ""):
+            lab10[d[:4]] += 1
         bar_ids.append((r["row_id"], r["conn_type"]))  # X67c-0418: the rows behind the yearly bars are cited, not only the key moments
         latest = max(latest, d[:10])
     keys = sorted(q)
     types = ["1/2", "3a/3b", "4a", "4b", "5", "6", "7", "8", "9", "10", "11", "12"]
     NAMES = {"1/2": "campaign contributions", "3a/3b": "outside spending (super PACs)", "4a": "lobbying reports", "4b": "lobbyists' own gifts", "5": "staff and fellows", "6": "grants",
-             "7": "federal awards and bills", "8": "financial disclosures", "9": "travel and events", "10": "campaigns paying AI labs", "11": "public statements", "12": "state money"}
-    SHORT = {"1/2": "contributions", "3a/3b": "outside spending", "4a": "lobbying reports", "4b": "lobbyists' gifts", "5": "staff", "6": "grants", "7": "federal", "8": "disclosures", "9": "travel", "10": "AI-lab payments", "11": "statements", "12": "state money"}
+             "7": "federal awards and bills", "8": "financial disclosures", "9": "travel and events", "10": "vendor payments (campaigns paying AI labs; network committees paying vendors)", "11": "public statements", "12": "state money"}
+    SHORT = {"1/2": "contributions", "3a/3b": "outside spending", "4a": "lobbying reports", "4b": "lobbyists' gifts", "5": "staff", "6": "grants", "7": "federal", "8": "disclosures", "9": "travel", "10": "vendor payments", "11": "statements", "12": "state money"}
     totals = {k: sum(v for t, v in q[k].items() if t in types) for k in keys}  # X34-0597: print what the bars draw
     bar_ids = [i for i, ct in bar_ids if ct in types]
     mx = max(list(totals.values()) + [1])
@@ -641,11 +649,11 @@ def fig07():
         return round(100 * q[k].get(t, 0) / max(1, totals.get(k, 1)))  # 2026-11-26: rounded, not cut off (54.9% printed as 54%)
     even = [k for k in ("2018", "2020", "2022", "2024") if k in q]; odd = [k for k in ("2017", "2019", "2021") if k in q]  # X33-010: the years the sentence names
     even_share = [share(k, "3a/3b") for k in even]; odd_share = [share(k, "1/2") for k in odd]  # 2026-09-29: after the X33a window rule, direct contributions lead the off years
-    late = {k: q[k].get("1/2", 0) + q[k].get("10", 0) for k in ("2025", "2026") if k in q}
+    late = {k: q[k].get("1/2", 0) + lab10.get(k, 0) for k in ("2025", "2026") if k in q}
     late_share = [round(100 * v / totals[k]) for k, v in late.items()]
     svg = [txt(40, 40, "Confirmed records per year, coloured by kind of connection, 2016–2026 (height = number of records dated in that year)", 24, weight="bold")]
     svg.append(txt(40, 72, f"Election years (red) are outside-spending years: super PAC ad buys and money into super PACs are {min(even_share)}–{max(even_share)}% of 2018, 2020, 2022 and 2024. Off years are led by campaign contributions (blue), {min(odd_share)}–{max(odd_share)}% of 2017, 2019 and 2021.", 16, fill=MUTED))
-    svg.append(txt(40, 96, f"In 2025 and 2026 the mix changes: campaign-contribution records plus campaigns' payments to Anthropic and other AI companies make up {min(late_share)}–{max(late_share)}% of those years. 2026 is not over yet.", 16, fill=MUTED))
+    svg.append(txt(40, 96, f"In 2025 and 2026 the mix changes: campaign-contribution records plus payments to Anthropic and OpenAI make up {min(late_share)}–{max(late_share)}% of those years. 2026 is not over yet.", 16, fill=MUTED))
     for g in range(0, top + 1, step):
         y = yb - H * g / top
         svg.append(f'<line x1="{x0}" y1="{y:.1f}" x2="{x0 + W}" y2="{y:.1f}" stroke="#d9d4c8" stroke-width="1"/>')
@@ -685,9 +693,9 @@ def fig07():
     for i, r in enumerate(picked):
         svg.append(txt(40, sy + 32 + i * 24, f"{r['date'][:10]:<11}", 15, fill=MUTED, extra='font-family="monospace"'))
         svg.append(txt(170, sy + 32 + i * 24, (lambda e: e if len(e) <= 150 else e[:147].rstrip() + "…")(re.sub(r"\s*\(GSA Committee No\. \d+\)|;?\s*pack-\d+\b.*$|\bnatsec\b", lambda m: "national security" if m.group(0) == "natsec" else "", r['event'] or '').strip()), 15, fill=INK))
-    subtitle = ("What this is: each bar counts the dated, confirmed rows of the study's tables for that year: filings and lines in them (a super PAC ad buy, a campaign contribution, a campaign's payment to an AI company, a lobbyist's own gift, a lobbying report, a grant, a federal award), staff and fellowship records, trips and events, and public statements. It shows when the paper trail exists, not how much money moved.")
+    subtitle = ("What this is: each bar counts the dated, confirmed rows of the study's tables for that year: filings and lines in them (a super PAC ad buy, a campaign contribution, a campaign's payment to an AI company or a network committee's payment to a vendor, a lobbyist's own gift, a lobbying report, a grant, a federal award), staff and fellowship records, trips and events, and public statements. It shows when the paper trail exists, not how much money moved.")
     footnote = ('<b>What the record does not show.</b> Counts follow filing calendars and how far each period was searched, and one super PAC can file thousands of separate lines in a year. Among campaign contributions the bars count every confirmed line a committee filed, including memo, redesignation, refund and conduit lines that no money figure adds. Records dated only by year (annual holdings, jobs with only a start year) are not in the bars. Most key moments are dated events copied from the timeline of a companion study, not rows reviewed in this pack.')
-    figure(stem, "Election years spike with outside spending; 2025–26 shift to donations and AI-lab payments", subtitle, "\n".join(svg), footnote, ids, height=1464 + 24 * len(picked),  # 2026-11-26: one more footnote line since the memo sentence of X67d (the page overflowed by 5 px and its image was not redrawn)
+    figure(stem, "Election years spike with outside spending; 2025–26 shift to donations and payments to AI labs", subtitle, "\n".join(svg), footnote, ids, height=1464 + 24 * len(picked),  # 2026-11-26: one more footnote line since the memo sentence of X67d (the page overflowed by 5 px and its image was not redrawn)
            legend_html='<div class="legend">' + legend([(PAL[j], NAMES[t]) for j, t in enumerate(types)]) + "</div>", chrome=444)
 
 ALL = {"congress-01-connection-grid": fig01, "congress-02-public-first-family-by-race": fig02, "congress-03-principals-hard-money-by-party-and-cycle": fig03,

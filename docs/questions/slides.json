@@ -1,0 +1,82 @@
+[
+ {
+  "id": "questions-reach",
+  "act": "Eight questions",
+  "head": "How many members show up in the record?",
+  "deck": "Records involving Anthropic’s network name <b>452 of 533</b> serving members.",
+  "note": "The network includes Anthropic, its funders, funded groups, and their PACs and lobbyists. A lobbyist’s personal gift or outside spending against a member can put a dot on the chart.",
+  "bridge": "Did Anthropic’s employees and PAC give to members’ committees?",
+  "how": "",
+  "source": "Serving-member join · Figure 01"
+ },
+ {
+  "id": "questions-gifts",
+  "act": "Eight questions",
+  "head": "Did Anthropic’s employees and PAC give to members’ committees?",
+  "deck": "Yes, and their gifts reached committees linked to <b>199 serving members</b> by Sept. 30, 2026, up from 10 at the end of 2024.",
+  "note": "Employee gifts are personal money. PAC gifts come from Anthropic’s political action committee. Employment is as reported to the FEC, and amounts are before refunds.",
+  "bridge": "Who did outside groups spend against?",
+  "how": "",
+  "source": "FEC contributions to campaigns, leadership PACs and single-member joint fundraising committees"
+ },
+ {
+  "id": "questions-spending",
+  "act": "Eight questions",
+  "head": "Who did outside groups spend against?",
+  "deck": "<b>74%</b> of the outside spending shown went against Republicans, using money from all donors.",
+  "note": "The filings identify the committee that spent the money. They cannot trace an expenditure to a donor or establish coordination with a candidate.",
+  "bridge": "How big was the network in federal AI lobbying?",
+  "how": "2016–2026 spending · members serving on Nov. 26, 2026<br>Each committee’s count starts at its first itemised network receipt on file.",
+  "source": "Source · Federal Election Commission outside-spending filings"
+ },
+ {
+  "id": "questions-scale",
+  "act": "Eight questions",
+  "head": "How big was the network in federal AI lobbying?",
+  "deck": "On 2025 filings naming AI, network clients reported <b>0.5%</b> of the total, while frontier labs reported 6%.",
+  "note": "Each amount covers all issues on a filing and gives an upper bound on AI lobbying. Outside-firm fees included in a client’s own reports count once.",
+  "bridge": "Which bills came up most in reports filed for Anthropic?",
+  "how": "",
+  "source": "Senate quarterly lobbying disclosures"
+ },
+ {
+  "id": "questions-bills",
+  "act": "Eight questions",
+  "head": "Which bills came up most in reports filed for Anthropic?",
+  "deck": "Chip proposals led among individual bills named in the reports.",
+  "note": "The counts cover bill mentions only. A mention leaves the company’s position open.",
+  "bridge": "Did sponsors of the named bills get campaign gifts?",
+  "how": "",
+  "source": "Federal lobbying reports and Congress.gov bill records"
+ },
+ {
+  "id": "questions-sponsors",
+  "act": "Eight questions",
+  "head": "Did sponsors of the named bills get campaign gifts?",
+  "deck": "Serving sponsors of stand-alone bills in reports filed for Anthropic had campaign gifts on file more often than serving members overall.",
+  "note": "The records give no link between a gift and a bill.",
+  "bridge": "Did House offices and political committees pay Anthropic?",
+  "how": "",
+  "source": "Senate quarterly lobbying reports, Congress.gov bill records and FEC contribution filings"
+ },
+ {
+  "id": "questions-purchases",
+  "act": "Eight questions",
+  "head": "Did House offices and political committees pay Anthropic?",
+  "deck": "Yes, and they paid OpenAI <b>2.3 times</b> as much in the spending records collected here.",
+  "note": "These payments were purchases, including Claude and ChatGPT. Committee coverage is partial, and card descriptions may bundle charges.",
+  "bridge": "Does every tie mean the same thing?",
+  "how": "",
+  "source": "FEC committee spending reports and House disbursements · Figure 19"
+ },
+ {
+  "id": "questions-limits",
+  "act": "Eight questions",
+  "head": "Does every tie mean the same thing?",
+  "deck": "Ted Lieu and Thom Tillis each add one seat to the count, for different kinds of records.",
+  "note": "Together, the records show gifts, spending, lobbying and purchases. The record does not say what any tie did to a vote.",
+  "bridge": "",
+  "how": "",
+  "source": "Serving-member join · Figure 01"
+ }
+]

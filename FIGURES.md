@@ -62,9 +62,9 @@ Each entry below is the project's own verdict for the figure, word for word as i
 
 **What cuts against it.** An award to an organisation is not a payment to a person. Obligations differ from outlays. CAISI is a government body, so appropriations to it are provisions, not network money, and are listed without a dollar total. Name-match hits the reviewer could not bind (a biotech firm, a consulting LLC) are held as bounded negatives and not drawn.
 
-## 07. Election years spike with outside spending; 2025–26 shift to donations and AI-lab payments
+## 07. Election years spike with outside spending; 2025–26 shift to donations and payments to AI labs
 
-![Election years spike with outside spending; 2025–26 shift to donations and AI-lab payments](figures/congress-07-time-axis.jpg)
+![Election years spike with outside spending; 2025–26 shift to donations and payments to AI labs](figures/congress-07-time-axis.jpg)
 
 [`congress-07-time-axis.jpg`](figures/congress-07-time-axis.jpg) · [`.png`](figures/congress-07-time-axis.png) · [`.html`](figures/congress-07-time-axis.html)
 

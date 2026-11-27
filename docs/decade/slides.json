@@ -1,0 +1,72 @@
+[
+ {
+  "id": "decade-offyear",
+  "act": "The decade",
+  "head": "Campaign gifts led the <em>2017</em> record after a year led by super PAC filings.",
+  "deck": "Super PAC receipts and spending were 57% of dated records in 2016. Campaign gifts were 58% in 2017.",
+  "note": "Super PAC spending pools dollars from all donors. The search went deeper in recent years, and one filing can contain many lines. Counts describe the collection.",
+  "bridge": "How much of the next election year’s record came from super PACs?",
+  "how": "",
+  "source": "FEC and Senate filings, House disbursements and dated pack records"
+ },
+ {
+  "id": "decade-outside",
+  "act": "The decade",
+  "head": "Super PAC receipts and spending made up <em>84%</em> of the 2018 record.",
+  "deck": "The band includes money going into super PACs and spending they reported. The dollar lane shows their spending from all donors.",
+  "note": "Outside spending does not establish coordination with a candidate. The search went deeper in recent years, and one filing can contain many lines. Counts describe the collection.",
+  "bridge": "What did the super PACs report spending in the next frame?",
+  "how": "",
+  "source": "FEC and Senate filings, House disbursements and dated pack records"
+ },
+ {
+  "id": "decade-spending",
+  "act": "The decade",
+  "head": "Super PACs in this study reported <em>$764M</em> in outside spending in 2020–21.",
+  "deck": "That spending pools money from all donors and covers all races in the study.",
+  "note": "The filings do not trace an individual receipt to a specific expenditure. The search went deeper in recent years, and one filing can contain many lines. Counts describe the collection.",
+  "bridge": "When do lobbying fees for Anthropic appear?",
+  "how": "",
+  "source": "FEC and Senate filings, House disbursements and dated pack records"
+ },
+ {
+  "id": "decade-lobbying",
+  "act": "The decade",
+  "head": "Outside firms reported <em>$280K</em> in lobbying fees for Anthropic in 2023.",
+  "deck": "These are the first fees for Anthropic in the lobbying reports collected here.",
+  "note": "An LD-2 reports fees or expenses. The amount covers every issue listed on it. The search went deeper in recent years, and one filing can contain many lines. Counts describe the collection.",
+  "bridge": "How far had employees’ own campaign gifts reached a year later?",
+  "how": "",
+  "source": "FEC and Senate filings, House disbursements and dated pack records"
+ },
+ {
+  "id": "decade-reach",
+  "act": "The decade",
+  "head": "By the end of 2024, Anthropic employees had given to committees tied to <em>10</em> of today’s members.",
+  "deck": "These are personal gifts, counted against the Nov. 26, 2026 roster.",
+  "note": "A campaign contribution does not tell us how a member voted. The search went deeper in recent years, and one filing can contain many lines. Counts describe the collection.",
+  "bridge": "Which kind of record took up more of the next year’s filings?",
+  "how": "",
+  "source": "FEC and Senate filings, House disbursements and dated pack records"
+ },
+ {
+  "id": "decade-purchases",
+  "act": "The decade",
+  "head": "Payments to two AI labs made up <em>23%</em> of the 2025 record.",
+  "deck": "In the purchase filings collected here, political committees and House offices paid more to OpenAI than to Anthropic.",
+  "note": "Purchases are payments to a lab. The vendor search covered a subset of committees. The search went deeper in recent years, and one filing can contain many lines. Counts describe the collection.",
+  "bridge": "What did Anthropic employees give once the company’s PAC began giving?",
+  "how": "",
+  "source": "FEC and Senate filings, House disbursements and dated pack records"
+ },
+ {
+  "id": "decade-pac",
+  "act": "The decade",
+  "head": "Anthropic employees gave <em>25 times</em> as much as the company’s PAC in 2026.",
+  "deck": "Both amounts cover committees linked to today’s members through Sept. 30, 2026. The PAC’s first gift on that roster is dated Jun. 29, 2026.",
+  "note": "The cycle is open. A gift does not tell us how a member voted. Lobbying dollars are company expenses as filed. The search went deeper in recent years, and one filing can contain many lines. Counts describe the collection.",
+  "bridge": "",
+  "how": "",
+  "source": "FEC and Senate filings, House disbursements and dated pack records"
+ }
+]
