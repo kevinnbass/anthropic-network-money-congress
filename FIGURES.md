@@ -4,6 +4,8 @@ Each entry below is the project's own verdict for the figure, word for word as i
 
 ## 01. 452 of Congress's 533 members have a documented connection to Anthropic's network
 
+![452 of Congress's 533 members have a documented connection to Anthropic's network](figures/congress-01-connection-grid.jpg)
+
 [`congress-01-connection-grid.jpg`](figures/congress-01-connection-grid.jpg) · [`.png`](figures/congress-01-connection-grid.png) · [`.html`](figures/congress-01-connection-grid.html)
 
 **What it shows.** Of the 533 members serving on Nov. 26, 2026, 452 have a counted connection and 81 have no counted row, including 3 who sponsored an AI bill. For 119 members the record contains only the two second-hop kinds. The widest kinds are lobbyists' own contributions (356 members, $1.8M), individual hard money including single-member joint fundraising committees and leadership PACs (237, $9.1M), PAC contributions (184, $580K), and independent spending on or after the date of a committee's first itemised network receipt (183, $455M). The Arnold & Porter partners' PAC, a lobbying firm's PAC counted only for the dates the firm was registered for Open Philanthropy Action Fund, accounts for $25,000 of that across 15 members and is the only counted PAC source for 8 of them. Public statements reach 64, travel and events 40, lobbying reports naming members' bills 38, personnel 37, AI-lab purchases 21, state money 3, and financial disclosures 2. The graphic shows 2 vacant seats.
@@ -11,6 +13,8 @@ Each entry below is the project's own verdict for the figure, word for word as i
 **What cuts against it.** Outside spending is the committees' own second-hop activity. The stricter lobbyist count covers 303 members and 1,023 records totalling $1.3M. Each dollar amount stays within its connection type. Bounded FEC retrieval failures and limited searches for newly seated members constrain coverage.
 
 ## 02. Public First family money in and out, by race
+
+![Public First family money in and out, by race](figures/congress-02-public-first-family-by-race.jpg)
 
 [`congress-02-public-first-family-by-race.jpg`](figures/congress-02-public-first-family-by-race.jpg) · [`.png`](figures/congress-02-public-first-family-by-race.png) · [`.html`](figures/congress-02-public-first-family-by-race.html)
 
@@ -20,6 +24,8 @@ Each entry below is the project's own verdict for the figure, word for word as i
 
 ## 03. Principals' hard money to sitting members
 
+![Principals' hard money to sitting members](figures/congress-03-principals-hard-money-by-party-and-cycle.jpg)
+
 [`congress-03-principals-hard-money-by-party-and-cycle.jpg`](figures/congress-03-principals-hard-money-by-party-and-cycle.jpg) · [`.png`](figures/congress-03-principals-hard-money-by-party-and-cycle.png) · [`.html`](figures/congress-03-principals-hard-money-by-party-and-cycle.html)
 
 **What it shows.** The largest hard-money givers among the named principals to members serving on Nov. 26, 2026 were Eric Schmidt ($1.1M), Reed Hastings ($970K), Wendy Schmidt ($396K), James McClave ($221K). The three largest cycle totals were 2022 $759K, 2024 $796K, 2026 $857K, with 2026 activity counted through September 30. $2.8M across the cycles went to Democratic recipients. The figure uses the roster party for 12 receipts whose row leaves it blank. The table also holds $488K in direct receipts keyed to former or other members outside the serving cohort.
@@ -27,6 +33,8 @@ Each entry below is the project's own verdict for the figure, word for word as i
 **What cuts against it.** A contribution is not a vote. Giving is the person's, not the employer's. Memo entries and conduit lines are not summed. The 2026 cycle is still open.
 
 ## 04. Lobbying spend and the lobbyists' Hill origins
+
+![Lobbying spend and the lobbyists' Hill origins](figures/congress-04-lobbying-spend-and-hill-origins.jpg)
 
 [`congress-04-lobbying-spend-and-hill-origins.jpg`](figures/congress-04-lobbying-spend-and-hill-origins.jpg) · [`.png`](figures/congress-04-lobbying-spend-and-hill-origins.png) · [`.html`](figures/congress-04-lobbying-spend-and-hill-origins.html)
 
@@ -36,6 +44,8 @@ Each entry below is the project's own verdict for the figure, word for word as i
 
 ## 05. The revolving door, both directions
 
+![The revolving door, both directions](figures/congress-05-revolving-door-both-directions.jpg)
+
 [`congress-05-revolving-door-both-directions.jpg`](figures/congress-05-revolving-door-both-directions.jpg) · [`.png`](figures/congress-05-revolving-door-both-directions.png) · [`.html`](figures/congress-05-revolving-door-both-directions.html)
 
 **What it shows.** 26 people moved from the network to Hill offices, committees, congressional commissions and agencies on a primary document: 26 are Horizon fellows (25 with a placement on the programme's own roster, lane C130, and one from another Horizon page, placed at the Government Accountability Office). Two members of Anthropic's advisory council who serve on the U.S.-China Economic and Security Review Commission were counted here until 2026-11-26 and are context: Anthropic's own announcement shows both were commissioners before the council existed, a concurrent role and not a move (audit X72, finding X72-4830; receipt `research/migrations/x72-rd-rebind-2026-11-26.json`). TechCongress placements of a further 129 fellows are held as context under the roster criteria (Kevin's E6 decision, 2026-10-11). Counting each office or committee once whatever its spelling (majority, minority and party staff and subcommittees folded in; audit X33), nine hosts have two each (the Senate Homeland Security, House Foreign Affairs, House Energy and Commerce and House Science committees, the Heinrich, Rounds, Young and Banks offices and the National Security Commission on Emerging Biotechnology) and 14 other hosts one each (one record per person once middle initials and spelling variants are folded). Three NSCAI commissioners are context: NSCAI is an executive-branch commission (PL 115-232 §1051), not a Hill office. 64 moved from the Hill to network organisations or to lobbying firms working for network clients, 13 of them to Anthropic and 9 to ARI, with Kountoupes Denham and Aquia Group (Anthropic's registrants) next.
@@ -43,6 +53,8 @@ Each entry below is the project's own verdict for the figure, word for word as i
 **What cuts against it.** Taking a job is not evidence about the work done in it. A fellowship placement is a stint in a host office arranged through the programme and the fellow: Horizon says it introduces fellows to prospective hosts and lets the fellows and hosts decide, and that it fully funds the fellows, TechCongress provides a stipend and benefits. An executive-branch post (the AI Safety Institute at NIST) is not a Hill role and is held as context. Rows with only one role established are held but not drawn. Staff directories that returned 403/404 leave gaps the reviewers recorded.
 
 ## 06. Federal money to the network
+
+![Federal money to the network](figures/congress-06-federal-money-to-the-network.jpg)
 
 [`congress-06-federal-money-to-the-network.jpg`](figures/congress-06-federal-money-to-the-network.jpg) · [`.png`](figures/congress-06-federal-money-to-the-network.png) · [`.html`](figures/congress-06-federal-money-to-the-network.html)
 
@@ -52,6 +64,8 @@ Each entry below is the project's own verdict for the figure, word for word as i
 
 ## 07. Election years spike with outside spending; 2025–26 shift to donations and AI-lab payments
 
+![Election years spike with outside spending; 2025–26 shift to donations and AI-lab payments](figures/congress-07-time-axis.jpg)
+
 [`congress-07-time-axis.jpg`](figures/congress-07-time-axis.jpg) · [`.png`](figures/congress-07-time-axis.png) · [`.html`](figures/congress-07-time-axis.html)
 
 **What it shows.** Election years spike with outside spending, and the mix shifts to contribution and vendor-payment records in 2025–26. Super PAC spending and receipt rows make up 56–84% of the 2018, 2020, 2022 and 2024 counts. Campaign-contribution rows account for 34–58% in 2017, 2019 and 2021. Contribution and vendor-payment rows make up 43–46% in 2025 and 2026. The 2026 bar covers 7,634 dated evidence records so far (the figure cites 36,471 rows; before the Nov. 26 corrections it cited 37,002: audits X70 and X71b set memo and conduit copies, refunds and timeline method notes to context, lane C189 one statement row, and audit X73 restored two conduit lines. The Nov. 27 gap sweep then added and reconciled records). The chart counts evidence rows with a month or day, with copied lobbyist gifts folded when the same item appears in the lobbyist-contribution table. The timeline lists 12 key moments.
@@ -59,6 +73,8 @@ Each entry below is the project's own verdict for the figure, word for word as i
 **What cuts against it.** Counts follow filing calendars and search depth, not activity; 2024–2026 were searched more thoroughly than 2016–2019. Records dated only by year are left out of the bars.
 
 ## 08. Which members the most kinds of connection touch
+
+![Which members the most kinds of connection touch](figures/congress-08-member-type-heatmap.jpg)
 
 [`congress-08-member-type-heatmap.jpg`](figures/congress-08-member-type-heatmap.jpg) · [`.png`](figures/congress-08-member-type-heatmap.png) · [`.html`](figures/congress-08-member-type-heatmap.html)
 
@@ -68,6 +84,8 @@ Each entry below is the project's own verdict for the figure, word for word as i
 
 ## 09. Who spends on members, and what the record shows those committees received
 
+![Who spends on members, and what the record shows those committees received](figures/congress-09-ie-committees-and-network-receipts.jpg)
+
 [`congress-09-ie-committees-and-network-receipts.jpg`](figures/congress-09-ie-committees-and-network-receipts.jpg) · [`.png`](figures/congress-09-ie-committees-and-network-receipts.png) · [`.html`](figures/congress-09-ie-committees-and-network-receipts.html)
 
 **What it shows.** For members serving on Nov. 26, 2026, the three committees with the largest combined support and opposition spending were HOUSE MAJORITY PAC ($12.7M for and $200M against, $5.3M in receipts); SMP ($27.1M for and $159M against, $26.0M in receipts); LCV Victory Fund ($32.7M for and $35.8M against, $7.2M in receipts). LCV Victory Fund named the most serving members (104). FF PAC had $106M in reported receipts and $11.2M in spending naming serving members. The DCCC had $651K in reported receipts and $2.6M in such spending. The pack found no itemised network receipt for WOMEN VOTE or PROTECT OUR FUTURE PAC.
@@ -75,6 +93,8 @@ Each entry below is the project's own verdict for the figure, word for word as i
 **What cuts against it.** The two sides use separate scales. A reported receipt does not allocate money to an expenditure. Spending without a support or opposition designation is shown separately, and the receipt data cover itemised or otherwise documented money.
 
 ## 10. Lobbyists' own money, by firm, cycle and recipient
+
+![Lobbyists' own money, by firm, cycle and recipient](figures/congress-10-lobbyists-own-contributions.jpg)
 
 [`congress-10-lobbyists-own-contributions.jpg`](figures/congress-10-lobbyists-own-contributions.jpg) · [`.png`](figures/congress-10-lobbyists-own-contributions.png) · [`.html`](figures/congress-10-lobbyists-own-contributions.html)
 
@@ -84,6 +104,8 @@ Each entry below is the project's own verdict for the figure, word for word as i
 
 ## 11. The network's PACs and where they give
 
+![The network's PACs and where they give](figures/congress-11-corporate-pacs.jpg)
+
 [`congress-11-corporate-pacs.jpg`](figures/congress-11-corporate-pacs.jpg) · [`.png`](figures/congress-11-corporate-pacs.png) · [`.html`](figures/congress-11-corporate-pacs.html)
 
 **What it shows.** Three PACs appear: ARI PAC (Americans for Responsible Innovation) ($434K), ANTHROPAC (Anthropic PBC PAC) ($321K), ARNOLD & PORTER PARTNERS PAC (lobbying firm's PAC) ($46K). 184 members serving on Nov. 26, 2026 received at least one contribution. John R. Curtis received the largest total, $14K. The contributions reach both parties.
@@ -91,6 +113,8 @@ Each entry below is the project's own verdict for the figure, word for word as i
 **What cuts against it.** Figures use one contribution across Schedule A and B and preserve separately identified same-schedule lines. The Arnold & Porter partners' PAC is a lobbying firm's PAC shown for the dates the firm lobbied for Open Philanthropy Action Fund, Feb. 22 to Aug. 1, 2021. A contribution is not a vote.
 
 ## 12. Where the principals' outside money went
+
+![Where the principals' outside money went](figures/congress-12-outside-money-flows.jpg)
 
 [`congress-12-outside-money-flows.jpg`](figures/congress-12-outside-money-flows.jpg) · [`.png`](figures/congress-12-outside-money-flows.png) · [`.html`](figures/congress-12-outside-money-flows.html)
 
@@ -100,6 +124,8 @@ Each entry below is the project's own verdict for the figure, word for word as i
 
 ## 13. Where network individuals' contributions land
 
+![Where network individuals' contributions land](figures/congress-13-hard-money-by-vehicle-and-recipient.jpg)
+
 [`congress-13-hard-money-by-vehicle-and-recipient.jpg`](figures/congress-13-hard-money-by-vehicle-and-recipient.jpg) · [`.png`](figures/congress-13-hard-money-by-vehicle-and-recipient.png) · [`.html`](figures/congress-13-hard-money-by-vehicle-and-recipient.html)
 
 **What it shows.** Across all recipients, individual hard money went to joint fundraising committees ($13.7M), hybrid PAC / super PACs ($7.2M), candidate committees ($6.3M), party committees ($4.7M), connected or registrant PACs ($857K), leadership PACs ($852K), nonconnected PACs ($155K), presidential committees ($124K). Among members serving on Nov. 26, 2026, 237 received hard money. The largest totals, including single-member joint fundraising committees and leadership PACs, were Hakeem S. Jeffries (D-NY) at $945K, Jon Ossoff (D-GA) at $270K, Raphael G. Warnock (D-GA) at $254K.
@@ -107,6 +133,8 @@ Each entry below is the project's own verdict for the figure, word for word as i
 **What cuts against it.** The upper panel includes all recipient committees over the displayed cycles. The lower panel uses the dated serving roster. Earmark copies are held as context. Contributions to super PACs also occur in the outside-money figures and are shown here for the vehicle breakdown.
 
 ## 14. Money by election cycle, one kind at a time
+
+![Money by election cycle, one kind at a time](figures/congress-14-dollars-by-cycle-and-type.jpg)
 
 [`congress-14-dollars-by-cycle-and-type.jpg`](figures/congress-14-dollars-by-cycle-and-type.jpg) · [`.png`](figures/congress-14-dollars-by-cycle-and-type.png) · [`.html`](figures/congress-14-dollars-by-cycle-and-type.html)
 
@@ -116,6 +144,8 @@ Each entry below is the project's own verdict for the figure, word for word as i
 
 ## 15. Travel and events: how the network appears
 
+![Travel and events: how the network appears](figures/congress-15-travel-and-events.jpg)
+
 [`congress-15-travel-and-events.jpg`](figures/congress-15-travel-and-events.jpg) · [`.png`](figures/congress-15-travel-and-events.png) · [`.html`](figures/congress-15-travel-and-events.html)
 
 **What it shows.** Of 53 travel and event records counted, 35 are Aspen Institute Congressional Program conferences at which network people appear in a network role on a network-funded line (Spain 2025 and Bellagio 2026; audit X44 and Kevin's decision of 2026-10-11); 15 carry a roster organisation on the sponsor line (the Federation of American Scientists' AI & Global Risk Capitol Hill Forum of 2026, and 2023 trips sponsored by the Institute for Progress, seven of them with Stanford University and Good Ventures); 3 are Hill events at which a network organisation was present (a House Oversight subcommittee roundtable, a House Science Committee meeting and a House Homeland Security Committee demonstration); none has another sponsor (four rows that described a programme or recorded a none-found search are context). The other Aspen rows are held as context by class and drawn in grey once per trip, never counted (a copy of a trip another row carries is left out, `research/travel_copies.csv`): 276 whose saved agenda lists no network participant, 67 with a roster person in another capacity or off a funded line, and 3 whose agenda was not found (`research/aspen_classes.json`). The class is decided by the sponsor string as filed, not by which participant the reviewer bound. The Senate is now covered: all 1,958 Senate gift-rule travel PDFs for 2022–2026 are image-only, and a vision read of every one found only a few dozen roster-sponsored or Aspen trips; the largest Senate sponsors (the Senate Working Group, Conservative Partnership Institute, Jobs for the Future, Hoover) are outside the network. Counted records fall in 2023 (10), 2025 (23) and 2026 (20) and split evenly between the parties (24 Republican and 24 Democratic travellers, 5 without a party key); For the members serving on November 26, 2026, 40 members or their staff have at least one counted trip or event. 6 members' offices have two and 34 have one. The X6d audit checked every row against the Clerk's index, the Senate filing or the issuer page: three programme pages and indexes are context, six Senate destinations are filled in, and one committee demonstration no longer names a member as attending. The 55 committee-testimony rows of lanes C156 and C162 are drawn in figure 26, not here (audits X33, X34).
@@ -123,6 +153,8 @@ Each entry below is the project's own verdict for the figure, word for word as i
 **What cuts against it.** Attending a conference the network spoke at is not a transaction. The Aspen programme states it accepts no corporate funding. Dollar values are not drawn. Senate sponsors and totals are a vision model's reading of scanned forms, re-read by the reviewer; 19 look-alike sponsor strings (57 rows) are held as bind=no and not drawn (three Institute for Progress trips first marked bind=no were rebound by the X2 audit and count).
 
 ## 16. What members say about the network, in public
+
+![What members say about the network, in public](figures/congress-16-member-statements.jpg)
 
 [`congress-16-member-statements.jpg`](figures/congress-16-member-statements.jpg) · [`.png`](figures/congress-16-member-statements.png) · [`.html`](figures/congress-16-member-statements.html)
 
@@ -132,6 +164,8 @@ Each entry below is the project's own verdict for the figure, word for word as i
 
 ## 17. Members' bills, the lobbying that named them, and the fellows in their offices
 
+![Members' bills, the lobbying that named them, and the fellows in their offices](figures/congress-17-ai-bills-fellows-and-lobbying-on-members-bills.jpg)
+
 [`congress-17-ai-bills-fellows-and-lobbying-on-members-bills.jpg`](figures/congress-17-ai-bills-fellows-and-lobbying-on-members-bills.jpg) · [`.png`](figures/congress-17-ai-bills-fellows-and-lobbying-on-members-bills.png) · [`.html`](figures/congress-17-ai-bills-fellows-and-lobbying-on-members-bills.html)
 
 **What it shows.** Members serving on Nov. 26, 2026 sponsored 46 AI bills coded restrict or regulate, 52 promote or fund, and 86 other. 299 members cosponsored at least one companion-study bill. 109 report–member links connect quarterly lobbying reports to bills sponsored by 38 serving members. Tom Cotton has 12 linked reports and Brian Mast has 10. 10 serving members hosted Horizon fellows.
@@ -139,6 +173,8 @@ Each entry below is the project's own verdict for the figure, word for word as i
 **What cuts against it.** Report counts use verified stand-alone sponsor keys and the network-funded issue line for multi-line clients. Lobbying reports record which measures were named. The programme pays fellows and each fellow and office choose each other.
 
 ## 18. What the network lobbies on
+
+![What the network lobbies on](figures/congress-18-lobbying-bills-and-issues.jpg)
 
 [`congress-18-lobbying-bills-and-issues.jpg`](figures/congress-18-lobbying-bills-and-issues.jpg) · [`.png`](figures/congress-18-lobbying-bills-and-issues.png) · [`.html`](figures/congress-18-lobbying-bills-and-issues.html)
 
@@ -148,6 +184,8 @@ Each entry below is the project's own verdict for the figure, word for word as i
 
 ## 19. Committees and offices buying from the AI labs
 
+![Committees and offices buying from the AI labs](figures/congress-19-ai-lab-vendors.jpg)
+
 [`congress-19-ai-lab-vendors.jpg`](figures/congress-19-ai-lab-vendors.jpg) · [`.png`](figures/congress-19-ai-lab-vendors.png) · [`.html`](figures/congress-19-ai-lab-vendors.html)
 
 **What it shows.** Political committees and House offices paid Anthropic about $97K and OpenAI about $221K across the lines collected (every held House line was matched to the Clerk's disbursement grids on the X4c audit: 19 lines held twice are context and 26 distinct lines are restored), almost all in 2025–2026; AB PAC ($19K) and the National Democratic Training Committee ($16K) pay Anthropic most; House offices' card lines are mostly ChatGPT. The committees or offices of 21 members serving on November 26, 2026, paid Anthropic, none more than $5K (Tom Cotton's campaign, $4.5K, and Rep. Judy Chu's office were keyed to the members by audit X33; eight NRSC subscription lines had been keyed to a senator and are now unkeyed).
@@ -155,6 +193,8 @@ Each entry below is the project's own verdict for the figure, word for word as i
 **What cuts against it.** A subscription runs from the committee to the lab and is not a contribution. OpenAI lines are a comparison, not network money. The vendor census covered a subset of committees.
 
 ## 20. State money
+
+![State money](figures/congress-20-state-money.jpg)
 
 [`congress-20-state-money.jpg`](figures/congress-20-state-money.jpg) · [`.png`](figures/congress-20-state-money.png) · [`.html`](figures/congress-20-state-money.html)
 
@@ -164,6 +204,8 @@ Each entry below is the project's own verdict for the figure, word for word as i
 
 ## 21. The grants layer
 
+![The grants layer](figures/congress-21-grants-to-intermediaries.jpg)
+
 [`congress-21-grants-to-intermediaries.jpg`](figures/congress-21-grants-to-intermediaries.jpg) · [`.png`](figures/congress-21-grants-to-intermediaries.png) · [`.html`](figures/congress-21-grants-to-intermediaries.html)
 
 **What it shows.** Grants are drawn by cause (Kevin, 2026-09-27). Network funders paid $931M for AI, technology, biosecurity and catastrophic-risk work in 2015–2026, rising to $141M in 2023, $150M in 2024 and $265M in 2025, led by Coefficient Giving, Jaan Tallinn's SFF and Good Ventures; the largest grantees for that work are CSET ($108M), Epoch ($93.3M), RAND ($84.5M), Redwood ($81.6M), FAR AI ($68.6M) and MATS ($66.6M). Across all funders in the record, grants for other causes totalled $466M, drawn in a separate panel: general support to multi-cause groups such as IFP ($105M), housing, labour, economic and criminal-justice policy ($78.5M), effective-altruism community and research ($73.8M), climate, energy and science ($72.0M), global health ($55.0M), animal welfare ($43.6M), global development ($20.4M), civic and foreign policy ($13.8M), and $4.3M not yet classified (the Center for Responsible Innovation's and the AI Futures Project's awards). The reviewer marked grants to the Center for AI Safety and its Action Fund, FLI, FAS, the Foundation for American Innovation, the Center for AI Policy, Encode and others as member-facing; no grant joins to a member (the one apparent type-6 edge was a fellowship placement, a personnel fact).
@@ -171,6 +213,8 @@ Each entry below is the project's own verdict for the figure, word for word as i
 **What cuts against it.** A grant to an organisation is not money to a member (none joins). Databases lag and 990s arrive a year late. Bars pool published award pages and 990-PF schedule lines, and a 990-PF line may sit in the paid or the approved-for-future schedule (Good Ventures lists RAND $10M in each), so lane C131 (grok-4.7) read every filed line's return: 107 are Form 990 Schedule I grants paid, 69 are 990-PF grants paid during the year, and 12 evidence lines ($27.3M, Good Ventures' second RAND $10M among them) were 990-PF 'approved for future payment' commitments, held out of the bars (10 lines, $14.8M, remain evidence after audit X53 set two RAND approvals to context). Most Coefficient grant pages returned 404 on the X4c audit, so the grant sample stands on the 990 XML and the pages that answered. Eight groups of grants share funder, grantee, date and amount (audits X33, X33b): four are separate schedule lines or purposes on the issuer's own record; four (Coefficient Giving's two $5.34M Institute for Law & AI entries, two pairs of identical Tallinn ledger lines and two Tallinn lines for Decode Research; $5.42M rides on them) could not be proven one grant or two, so both entries of each stay counted under the pack's identity rule. Where a funder's tax-return payment may restate a published award and no document settles it (audit X53), the award is drawn and the payment is shown apart and never added: X53 found three such payments ($5.1M); audit X56 proved the SeedAI and FAS payments to be payments of counted Coefficient awards, so one remains, the Center for Responsible Innovation's $3.0M.
 
 ## 22. Who the network is, and where each appears
+
+![Who the network is, and where each appears](figures/congress-22-network-roster.jpg)
 
 [`congress-22-network-roster.jpg`](figures/congress-22-network-roster.jpg) · [`.png`](figures/congress-22-network-roster.png) · [`.html`](figures/congress-22-network-roster.html)
 
@@ -180,6 +224,8 @@ Each entry below is the project's own verdict for the figure, word for word as i
 
 ## 23. What the record is made of
 
+![What the record is made of](figures/congress-23-record-composition.jpg)
+
 [`congress-23-record-composition.jpg`](figures/congress-23-record-composition.jpg) · [`.png`](figures/congress-23-record-composition.png) · [`.html`](figures/congress-23-record-composition.html)
 
 **What it shows.** Of 134,500 rows in the fourteen source tables (the pack's 135,578 adds the 1,078 derived join rows), 43,402 are evidence, 85,451 context (duplicate pulls, re-reported expenditures, restatements, unbound homonyms, look-alikes marked bind=no), 5,181 bounded none-found lines and 466 unbound; 3 rows record a fetch gap that no later re-pull has closed (an HTTP 403, 429 or 5xx, a rate limit, a timeout or a bot wall; notes that say a route was re-tried, recoded or closed are excluded after the X8b audit), down from 207 before lanes C120a, C120b and C121 re-pulled them and from 22 before lane C175 and audit X55 closed 19 against saved originals (2026-10-12).
@@ -187,6 +233,8 @@ Each entry below is the project's own verdict for the figure, word for word as i
 **What cuts against it.** Counts measure effort, not connection size. The C94 OCR lane's 1,147 gap rows are held outside the tables.
 
 ## 24. The fellowship pipeline into offices
+
+![The fellowship pipeline into offices](figures/congress-24-fellowship-pipeline.jpg)
 
 [`congress-24-fellowship-pipeline.jpg`](figures/congress-24-fellowship-pipeline.jpg) · [`.png`](figures/congress-24-fellowship-pipeline.png) · [`.html`](figures/congress-24-fellowship-pipeline.html)
 
@@ -196,6 +244,8 @@ Each entry below is the project's own verdict for the figure, word for word as i
 
 ## 25. Outside spending for and against members
 
+![Outside spending for and against members](figures/congress-25-ie-for-and-against-members.jpg)
+
 [`congress-25-ie-for-and-against-members.jpg`](figures/congress-25-ie-for-and-against-members.jpg) · [`.png`](figures/congress-25-ie-for-and-against-members.png) · [`.html`](figures/congress-25-ie-for-and-against-members.html)
 
 **What it shows.** Among members serving on Nov. 26, 2026, outside-spending committees reported, for spending dated on or after their first itemised network receipt, support for Democrats of $105M across 109 members and for Republicans of $2.1M across 4 members, and opposition to Democrats of $10.5M across 9 members and to Republicans of $337M across 67 members. Largest support totals: John Fetterman (D-PA) $21.1M, Mark Kelly (D-AZ) $16.6M, Catherine Cortez Masto (D-NV) $13.0M. Largest opposition totals: Joni Ernst (R-IA) $40.3M, Thom Tillis (R-NC) $39.6M, Susan M. Collins (R-ME) $34.1M.
@@ -203,6 +253,8 @@ Each entry below is the project's own verdict for the figure, word for word as i
 **What cuts against it.** This is the committees' money, most of it not the network's (see figure 09). An independent expenditure is not coordination; a member opposed received nothing.
 
 ## 26. Network witnesses before Congress: 73 appearances since 2015
+
+![Network witnesses before Congress: 73 appearances since 2015](figures/congress-26-committee-testimony.jpg)
 
 [`congress-26-committee-testimony.jpg`](figures/congress-26-committee-testimony.jpg) · [`.png`](figures/congress-26-committee-testimony.png) · [`.html`](figures/congress-26-committee-testimony.html)
 
@@ -212,6 +264,8 @@ Each entry below is the project's own verdict for the figure, word for word as i
 
 ## 27. 8 people sit across separate network organisations; funder staff sit on grantees' boards
 
+![8 people sit across separate network organisations; funder staff sit on grantees' boards](figures/congress-27-shared-officers.jpg)
+
 [`congress-27-shared-officers.jpg`](figures/congress-27-shared-officers.jpg) · [`.png`](figures/congress-27-shared-officers.png) · [`.html`](figures/congress-27-shared-officers.html)
 
 **What it shows.** 19 people hold officer, director or key-employee roles at two or more network organisations on the organisations' own tax returns (tax years 2017–2024). Eight span separate organisations: Holden Karnofsky (Coefficient Giving and its action fund, and the boards of grantees ARC and Redwood), Paul Christiano (ARC, Redwood), Adam Gleave (FAR AI, METR), Kyle Scott and Elizabeth Barnes (ARC, METR), Helen Toner (GovAI, Horizon Institute), Daniel Correa (FAS, IFP) and Tamara Winter (FAI, IFP); the rest share offices within one family's vehicles (Moskovitz and Tuna, the Schmidts, McClave and Berger). 16 officers have documented government careers, among them Paul Christiano (head of AI safety at the U.S. AI Safety Institute), Jason Matheny (IARPA director), Chuck Hagel (Secretary of Defense) and Brad Carson (acting Under Secretary of Defense). Lane C161, review R161, audit X27; research/interlocks.csv.
@@ -220,6 +274,8 @@ Each entry below is the project's own verdict for the figure, word for word as i
 
 ## 28. The network lobbied all three state AI-safety bills, as a handful of clients among many
 
+![The network lobbied all three state AI-safety bills, as a handful of clients among many](figures/congress-28-state-ai-bill-lobbying.jpg)
+
 [`congress-28-state-ai-bill-lobbying.jpg`](figures/congress-28-state-ai-bill-lobbying.jpg) · [`.png`](figures/congress-28-state-ai-bill-lobbying.png) · [`.html`](figures/congress-28-state-ai-bill-lobbying.html)
 
 **What it shows.** The network lobbied all three major state AI-safety bills as a handful of clients among many: on California's SB 1047 (2024) Anthropic, the Center for AI Safety and its Action Fund were 3 of 89 clients that reported lobbying on it; on SB 53 (2025–26) Anthropic and Encode AI were 2 of 58; on New York's RAISE Act (2025–26, including its 2026 successor numbers) Anthropic, Encode AI and the Future of Life Institute were 3 of 44. Their reported state lobbying payments in 2024–2026 total $939K (Anthropic $218K in California and $179K in New York, Encode $331K, the Future of Life Institute $192K, the Center for AI Safety Action Fund $20K). Lane C159, census audits X25, X32, X33 and X33b against the states' own bulk records (X33b joined IBM's, Amazon's and AH Capital's spellings on one California filer id each); research/state_ai_bill_clients.csv.
@@ -227,6 +283,8 @@ Each entry below is the project's own verdict for the figure, word for word as i
 **What cuts against it.** State filings list the bills a client lobbied on, not its position, so the chart shows who lobbied, not who supported or opposed. A client's payments cover all its state lobbying, not only these bills. Secure AI Project, which lobbied SB 53 and the RAISE Act, is drawn as another client: the network's $383K to it in 2025 is under the $1M roster floor, and whether it passes the 20%-of-revenue test cannot be told until its 2025 return is filed (audit X33b). Lobbying is not a vote.
 
 ## 29. The network reported 0.5% of 2025's AI-issue lobbying; the frontier labs 6%
+
+![The network reported 0.5% of 2025's AI-issue lobbying; the frontier labs 6%](figures/congress-29-federal-ai-lobbying-baseline.jpg)
 
 [`congress-29-federal-ai-lobbying-baseline.jpg`](figures/congress-29-federal-ai-lobbying-baseline.jpg) · [`.png`](figures/congress-29-federal-ai-lobbying-baseline.png) · [`.html`](figures/congress-29-federal-ai-lobbying-baseline.html)
 
