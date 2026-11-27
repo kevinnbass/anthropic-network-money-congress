@@ -4,7 +4,7 @@ This repository holds a record of documented connections between Anthropic's net
 
 **A connection is a documented record, not an allegation of influence.** A contribution is not a vote, and an independent expenditure is not coordination. No motive is asserted anywhere.
 
-**Read it as a story:** [450 of 533](https://kevinnbass.github.io/anthropic-network-money-congress/), the record told in 12 slides, laid out for a desk and for a phone. It is a draft. Every number on it is computed from the tables here, and each slide lists the rows behind it ([`docs/rows.json`](docs/rows.json)). On November 26, 2026 three independent audits re-derived every sentence, label and mark of its first three versions (5,260 of 5,365 items right, then 5,468 of 5,524, then 5,797 of 5,815; the rest are corrected or ruled on), six outside readers read them, and it was rebuilt each time on what they found. This fourth version has not been audited yet.
+**Read it as a story:** [450 of 533](https://kevinnbass.github.io/anthropic-network-money-congress/), the record told in 10 slides, laid out for a desk and for a phone. It is a draft. Every number on it is computed from the tables here, and each slide lists the rows behind it ([`docs/rows.json`](docs/rows.json)). On November 26, 2026 three independent audits re-derived every sentence, label and mark of its first three versions (5,260 of 5,365 items right, then 5,468 of 5,524, then 5,797 of 5,815; the rest are corrected or ruled on), six outside readers read them, and it was rebuilt each time on what they found. This fourth version has not been audited yet.
 
 ![450 of Congress's 533 members have a documented connection to Anthropic's network](figures/congress-01-connection-grid.jpg)
 
@@ -36,7 +36,8 @@ Independent audits (X64 to X69 in the project's numbering) checked the new rows,
 
 **Not finished. Until these are done this update is not called verified:**
 
-- The story page's fourth version (12 slides, November 27) works in the third audit and two more readers and carries the corrected counts; it has not itself been audited yet, and stays marked a draft until it is.
+- The story page's fifth version (10 slides, November 27) works in the fourth audit and two more readers; it has not itself been audited yet, and stays marked a draft until it is.
+- A sweep for gaps is running. Its first result is applied: 148 contribution lines that a payment platform (ActBlue or WinRed) filed for a gift the campaign also reported are now held as context, so each gift is counted once. No dollar total changes (the platform lines were never added to a member's sum); two figures count 148 records fewer. Still to come: lobbyists' gifts the record never collected, three committees that Public First Action also funded (one of them spent $2.2M against Seth Moulton), large gifts to joint fundraising committees, gifts the campaigns refunded, and gifts that may be counted twice.
 - Of the 2,725 held memo and conduit lines, the fourteen that needed a document were read and stay held; 76 of 77 sampled lines now agree with their raw filings, and one cannot be read because the FEC's own copy of that filing is cut off.
 - The testimony figure (26) now counts twelve more committee appearances (70, was 58), each read against its saved hearing record; three more with no witness row yet wait to be added through the review gates, and no independent audit has yet read the twelve.
 - Five pairs of counted rows that share a member, a day and a dollar amount are not settled as one transaction or two (the filed pages were read again and carry no shared reference) ($27,399 of outside spending, $5,400 of contributions, $3,500 of lobbyists' gifts). Both rows of each pair are counted.
@@ -53,7 +54,7 @@ Corrections that come out of those checks are pushed here as they are applied. [
 | [`research/`](research) | The record: 15 tables and the helper tables the figures read. [`research/README.md`](research/README.md) explains the files, the columns and what was changed for this public copy. |
 | [`case.json`](case.json) | Which rows count: each row's role (evidence, context or negative). The same roles are in `research/row_roles.csv`. |
 | [`scripts/`](scripts), [`lib/`](lib) | The scripts that build the member table and draw the figures, and the small drawing library they use. |
-| [`docs/`](docs) | The story series: one page of 12 slides (`index.html`, with its fonts), the words of each slide (`slides.json`) and the rows behind each slide (`rows.json`). GitHub Pages serves it at the address above. A draft until the audit of the rebuilt version is finished. |
+| [`docs/`](docs) | The story series: one page of 10 slides (`index.html`, with its fonts), the words of each slide (`slides.json`) and the rows behind each slide (`rows.json`). GitHub Pages serves it at the address above. A draft until the audit of the rebuilt version is finished. |
 | [`figures-alt/`](figures-alt) | Three alternate views, drawn by the same code from the same rows. See "Alternate views" below for their status. |
 | [`SCRUB-LOG.csv`](SCRUB-LOG.csv) | A count of the cells changed for this public copy: API keys and local file paths, nothing else. |
 | `network-money-per-member.*`, [`data/`](data) | The chart of direct money per member and the rows it draws. See "Direct money per member" below. |
@@ -135,18 +136,18 @@ The scripts are the project's own. Four things were changed so they run here: th
 
 Rows were collected from public sources (FEC, Senate and House lobbying and disclosure filings, IRS returns, USAspending, state registries, congressional records, organisations' own pages) by AI research agents, each row with its source's URL and an excerpt as fetched; the author keeps saved copies of the sources. Rows entered the tables through a row-by-row review of each batch by a separate agent. Independent audits then checked evidence rows against saved originals, in both directions: what was kept and what was removed. The measure below says how many. A correction never overwrites: the earlier row is archived and the change noted on the row.
 
-The project measures itself against a written standard with a script. On 2026-11-27 at 10:43 UTC it printed:
+The project measures itself against a written standard with a script. On 2026-11-27 at 11:34 UTC it printed:
 
 ```
-== congress  bound rows 133,470  evidence rows 43,068
-G1 FAIL  drawn evidence document-checked 43,021/43,068 (99.9%); all evidence 99.9%
-G2 FAIL  errors disposed 32,679/32,680; errors+qualifications disposed 61,074/61,077 (100.0%)
+== congress  bound rows 133,470  evidence rows 42,919
+G1 FAIL  drawn evidence document-checked 42,872/42,919 (99.9%); all evidence 99.9%
+G2 PASS  errors disposed 32,680/32,680; errors+qualifications disposed 61,084/61,084 (100.0%)
 G3 PASS  corrected rows archived 15,979/15,979 (ledger rows 16,023)
-G4 FAIL  audits 107: complete 48, well-formed closing line 106; incomplete and not carried to README/dispositions 0; malformed ['X77-story-series-round5-20261127']
+G4 PASS  audits 107: complete 48, well-formed closing line 107; incomplete and not carried to README/dispositions 0
 G5 PASS  clean figures 29/29
 ```
 
-G1 says how many of the evidence rows the 29 figures draw or count have a document check on file. Since figure 23 lists every row it counts, that is every evidence row in the record. The 47 rows without one are 23 rows of the network list, 19 contribution lines whose audit finding is a qualification still open, and the five witness rows added to figure 26 on November 27, which the final check reads. G2 says how many of the errors and qualifications any audit has raised have a written ruling; the open ones, and the audit G4 names, belong to the audit of the story series' fourth version, which is running. The final check of everything applied has not run yet, so this update is not called verified.
+G1 says how many of the evidence rows the 29 figures draw or count have a document check on file. Since figure 23 lists every row it counts, that is every evidence row in the record. The 47 rows without one are 23 rows of the network list, 19 contribution lines whose audit finding is a qualification still open, and the five witness rows added to figure 26 on November 27, which the final check reads. G2 says how many of the errors and qualifications any audit has raised have a written ruling: all of them, the fourth audit of the story series included. The final check of everything applied has not run yet, so this update is not called verified.
 
 ## Names
 
