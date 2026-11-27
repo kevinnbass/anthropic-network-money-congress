@@ -2,7 +2,7 @@
  {
   "id": "start",
   "act": "Anthropic&#8217;s network and Congress",
-  "head": "<em>455</em> of 533",
+  "head": "<em>454</em> of 533",
   "deck": "These sitting members appear in public records involving Anthropic’s network, from campaign gifts and outside spending for or against candidates to bill mentions and public statements.",
   "note": "The records leave the effect on votes open.",
   "bridge": "First, gifts from Anthropic’s employees and PAC.",
@@ -12,7 +12,7 @@
  {
   "id": "arrival",
   "act": "I &#183; The arrival",
-  "head": "Anthropic employee and PAC gifts reached <em>10</em> of today’s members by the end of 2024 and <em>200</em> by Sept. 2026.",
+  "head": "Anthropic employee and PAC gifts reached <em>10</em> of today’s members by the end of 2024 and <em>201</em> by Sept. 2026.",
   "deck": "Anthropic employees gave $6.0M of their own money, 92% of it in 2026. Anthropic’s political action committee (PAC) gave $232K.",
   "note": "Employer is as the giver reported it to the FEC, including misspellings and entries in the occupation box. The amounts are gross contributions before refunds. The record runs through Sept. 30, 2026.",
   "bridge": "Anthropic separately announced funding for a political nonprofit. How much?",
@@ -43,7 +43,7 @@
   "id": "limits",
   "act": "IV &#183; The sum",
   "head": "<em>Seven kinds</em>, one kind, one seat each",
-  "deck": "Ted Lieu and Thom Tillis both count once in the opening total of 455.",
+  "deck": "Ted Lieu and Thom Tillis both count once in the opening total of 454.",
   "note": "The effect of these activities on votes remains unknown.",
   "bridge": "",
   "how": "",

@@ -1,6 +1,6 @@
 member,party,chamber,state,district,bioguide_id,entity_group,total_usd
 Aaron Bean,R,House,FL,4,B001314,ARI PAC,2000.00
-Abraham J. Hamadeh,R,House,AZ,8,H001098,ARI PAC,2500.00
+Abraham J. Hamadeh,R,House,AZ,8,H001098,ARI PAC,5000.00
 Adam B. Schiff,D,Senate,CA,,S001150,ANTHROPAC (Anthropic's PAC),3500.00
 Adam B. Schiff,D,Senate,CA,,S001150,Anthropic employees,94500.00
 Adam B. Schiff,D,Senate,CA,,S001150,Coefficient Giving / Open Philanthropy staff,3500.00
@@ -26,6 +26,7 @@ Andy Harris,R,House,MD,1,H001052,Anthropic employees,17000.00
 Andy Kim,D,Senate,NJ,,K000394,ARI PAC,1000.00
 Andy Kim,D,Senate,NJ,,K000394,Anthropic employees,500.00
 Andy Kim,D,Senate,NJ,,K000394,Schmidt organisations / Hillspire staff,500.00
+Angela D. Alsobrooks,D,Senate,MD,,A000382,ARI PAC,5000.00
 Angela D. Alsobrooks,D,Senate,MD,,A000382,Eric Schmidt,3300.00
 Angela D. Alsobrooks,D,Senate,MD,,A000382,James McClave,3300.00
 Angela D. Alsobrooks,D,Senate,MD,,A000382,Wendy Schmidt,3300.00
@@ -56,15 +57,17 @@ Bill Cassidy,R,Senate,LA,,C001075,Anthropic employees,3500.00
 Bill Foster,D,House,IL,11,F000454,Anthropic employees,14000.00
 Bill Foster,D,House,IL,11,F000454,Eric Schmidt,6600.00
 Bill Hagerty,R,Senate,TN,,H000601,ANTHROPAC (Anthropic's PAC),2000.00
+Bill Hagerty,R,Senate,TN,,H000601,ARI PAC,1000.00
 Bill Hagerty,R,Senate,TN,,H000601,Anthropic employees,7000.00
 Bill Huizenga,R,House,MI,4,H001058,ANTHROPAC (Anthropic's PAC),3500.00
 Bill Huizenga,R,House,MI,4,H001058,ARI PAC,4000.00
 Bill Huizenga,R,House,MI,4,H001058,Anthropic employees,30000.00
 Blake D. Moore,R,House,UT,1,M001213,ANTHROPAC (Anthropic's PAC),2500.00
-Blake D. Moore,R,House,UT,1,M001213,ARI PAC,5000.00
+Blake D. Moore,R,House,UT,1,M001213,ARI PAC,6000.00
 Brad Knott,R,House,NC,13,K000405,ANTHROPAC (Anthropic's PAC),1000.00
 Brad Knott,R,House,NC,13,K000405,ARI PAC,2000.00
 Brad Knott,R,House,NC,13,K000405,Anthropic employees,25500.00
+Bradley Scott Schneider,D,House,IL,10,S001190,ARI PAC,5000.00
 Brett Guthrie,R,House,KY,2,G000558,ANTHROPAC (Anthropic's PAC),3500.00
 Brett Guthrie,R,House,KY,2,G000558,ARI PAC,3000.00
 Brett Guthrie,R,House,KY,2,G000558,Anthropic employees,147413.22
@@ -75,7 +78,7 @@ Brian J. Mast,R,House,FL,21,M001199,ARI PAC,2500.00
 Brian J. Mast,R,House,FL,21,M001199,Anthropic employees,57000.00
 Brian J. Mast,R,House,FL,21,M001199,other network people,7000.00
 Brian Jack,R,House,GA,3,J000311,other network people,1541.02
-Brian K. Fitzpatrick,R,House,PA,1,F000466,ARI PAC,6500.00
+Brian K. Fitzpatrick,R,House,PA,1,F000466,ARI PAC,9000.00
 Brian K. Fitzpatrick,R,House,PA,1,F000466,Anthropic employees,3500.00
 Brian Schatz,D,Senate,HI,,S001194,ANTHROPAC (Anthropic's PAC),3500.00
 Brian Schatz,D,Senate,HI,,S001194,ARI PAC,1000.00
@@ -126,7 +129,7 @@ Dave Min,D,House,CA,47,M001241,James McClave,3300.00
 Dave Min,D,House,CA,47,M001241,Reed Hastings,1500.00
 Dave Min,D,House,CA,47,M001241,Wendy Schmidt,6600.00
 David McCormick,R,Senate,PA,,M001243,ANTHROPAC (Anthropic's PAC),2000.00
-David McCormick,R,Senate,PA,,M001243,ARI PAC,4000.00
+David McCormick,R,Senate,PA,,M001243,ARI PAC,5000.00
 David McCormick,R,Senate,PA,,M001243,Anthropic employees,91000.00
 Deb Fischer,R,Senate,NE,,F000463,Anthropic employees,60000.00
 Debbie Dingell,D,House,MI,6,D000624,ARI PAC,7500.00
@@ -168,6 +171,7 @@ Emilia Strong Sykes,D,House,OH,13,S001223,other network people,3500.00
 "Eric A. ""Rick"" Crawford",R,House,AR,1,C001087,Anthropic employees,7000.00
 "Eric A. ""Rick"" Crawford",R,House,AR,1,C001087,other network people,1000.00
 Eric Schmitt,R,Senate,MO,,S001227,ANTHROPAC (Anthropic's PAC),1000.00
+Eric Schmitt,R,Senate,MO,,S001227,ARI PAC,1500.00
 Eric Schmitt,R,Senate,MO,,S001227,Anthropic employees,60123.00
 Erin Houchin,R,House,IN,9,H001093,ANTHROPAC (Anthropic's PAC),1000.00
 Erin Houchin,R,House,IN,9,H001093,ARI PAC,2000.00
@@ -244,6 +248,7 @@ James A. Himes,D,House,CT,4,H001047,ARI PAC,1000.00
 James A. Himes,D,House,CT,4,H001047,Anthropic employees,29000.00
 James E. Risch,R,Senate,ID,,R000584,ANTHROPAC (Anthropic's PAC),5000.00
 James E. Risch,R,Senate,ID,,R000584,Anthropic employees,54500.00
+James Lankford,R,Senate,OK,,L000575,ARI PAC,1500.00
 Janelle S. Bynum,D,House,OR,5,B001326,Eric Schmidt,3300.00
 Janelle S. Bynum,D,House,OR,5,B001326,James McClave,3300.00
 Janelle S. Bynum,D,House,OR,5,B001326,Wendy Schmidt,3300.00
@@ -270,13 +275,14 @@ Jim Jordan,R,House,OH,4,J000289,Anthropic employees,12000.00
 Jimmy Panetta,D,House,CA,19,P000613,ANTHROPAC (Anthropic's PAC),1500.00
 Jimmy Panetta,D,House,CA,19,P000613,ARI PAC,4000.00
 Jimmy Panetta,D,House,CA,19,P000613,Anthropic employees,3500.00
+John Barrasso,R,Senate,WY,,B001261,ARI PAC,1500.00
 John Barrasso,R,Senate,WY,,B001261,Anthropic employees,7000.00
 John Boozman,R,Senate,AR,,B001236,ARI PAC,1000.00
 John Cornyn,R,Senate,TX,,C001056,Anthropic employees,7000.00
 John James,R,House,MI,10,J000307,Schmidt organisations / Hillspire staff,500.00
 John Joyce,R,House,PA,13,J000302,ARI PAC,1000.00
 John R. Carter,R,House,TX,31,C001051,ARI PAC,2500.00
-John R. Curtis,R,Senate,UT,,C001114,ARI PAC,14000.00
+John R. Curtis,R,Senate,UT,,C001114,ARI PAC,15500.00
 John R. Moolenaar,R,House,MI,2,M001194,ARI PAC,2500.00
 John R. Moolenaar,R,House,MI,2,M001194,Anthropic employees,28000.00
 John R. Moolenaar,R,House,MI,2,M001194,other network people,7000.00
@@ -436,7 +442,8 @@ Pete Ricketts,R,Senate,NE,,R000618,ARI PAC,6500.00
 Pete Ricketts,R,Senate,NE,,R000618,Anthropic employees,100000.00
 Pete Sessions,R,House,TX,17,S000250,ARI PAC,2500.00
 Pete Stauber,R,House,MN,8,S001212,ARI PAC,4000.00
-Pramila Jayapal,D,House,WA,7,J000298,ARI PAC,2500.00
+Peter Welch,D,Senate,VT,,W000800,Anthropic employees,5000.00
+Pramila Jayapal,D,House,WA,7,J000298,ARI PAC,5000.00
 Pramila Jayapal,D,House,WA,7,J000298,Anthropic employees,21500.00
 Raja Krishnamoorthi,D,House,IL,8,K000391,ARI PAC,1000.00
 Raja Krishnamoorthi,D,House,IL,8,K000391,Anthropic employees,37000.00
@@ -465,6 +472,7 @@ Robert Menendez,D,House,NJ,8,M001226,ANTHROPAC (Anthropic's PAC),1500.00
 "Robert P. Bresnahan, Jr.",R,House,PA,8,B001327,ARI PAC,2000.00
 Roger F. Wicker,R,Senate,MS,,W000437,Anthropic employees,112000.00
 Ron Wyden,D,Senate,OR,,W000779,Anthropic employees,19000.00
+Ruben Gallego,D,Senate,AZ,,G000574,ARI PAC,1000.00
 Ruben Gallego,D,Senate,AZ,,G000574,Anthropic employees,300.00
 Ruben Gallego,D,Senate,AZ,,G000574,Eric Schmidt,6600.00
 Ruben Gallego,D,Senate,AZ,,G000574,James McClave,6600.00
@@ -519,7 +527,7 @@ Tammy Baldwin,D,Senate,WI,,B001230,James McClave,6600.00
 Tammy Baldwin,D,Senate,WI,,B001230,Wendy Schmidt,3300.00
 Tammy Duckworth,D,Senate,IL,,D000622,Anthropic employees,5000.00
 Ted Budd,R,Senate,NC,,B001305,ANTHROPAC (Anthropic's PAC),2500.00
-Ted Budd,R,Senate,NC,,B001305,ARI PAC,2000.00
+Ted Budd,R,Senate,NC,,B001305,ARI PAC,3000.00
 Ted Budd,R,Senate,NC,,B001305,Anthropic employees,86000.00
 Ted Cruz,R,Senate,TX,,C001098,Anthropic employees,12000.00
 Ted Cruz,R,Senate,TX,,C001098,Coefficient Giving / Open Philanthropy staff,5000.00
@@ -533,6 +541,7 @@ Thomas R. Suozzi,D,House,NY,3,S001201,Eric Schmidt,9900.00
 Thomas R. Suozzi,D,House,NY,3,S001201,James McClave,3300.00
 Tim Kaine,D,Senate,VA,,K000384,Eric Schmidt,6600.00
 Tim Kaine,D,Senate,VA,,K000384,Wendy Schmidt,6600.00
+Tim Scott,R,Senate,SC,,S001184,ARI PAC,5500.00
 Tim Scott,R,Senate,SC,,S001184,Anthropic employees,75000.00
 Tim Sheehy,R,Senate,MT,,S001232,ANTHROPAC (Anthropic's PAC),3500.00
 Tim Sheehy,R,Senate,MT,,S001232,Anthropic employees,52000.00
@@ -567,7 +576,7 @@ W. Gregory Steube,R,House,FL,17,S001214,Anthropic employees,3500.00
 William R. Keating,D,House,MA,9,K000375,ARI PAC,2500.00
 Young Kim,R,House,CA,40,K000397,ARI PAC,1000.00
 Young Kim,R,House,CA,40,K000397,Coefficient Giving / Open Philanthropy staff,3500.00
-Yvette D. Clarke,D,House,NY,9,C001067,ARI PAC,8000.00
+Yvette D. Clarke,D,House,NY,9,C001067,ARI PAC,13000.00
 Yvette D. Clarke,D,House,NY,9,C001067,Anthropic employees,14000.00
 Yvette D. Clarke,D,House,NY,9,C001067,other network people,2500.00
 Zachary Nunn,R,House,IA,3,N000193,ANTHROPAC (Anthropic's PAC),2500.00
