@@ -228,7 +228,7 @@ Each entry below is the project's own verdict for the figure, word for word as i
 
 [`congress-23-record-composition.jpg`](figures/congress-23-record-composition.jpg) · [`.png`](figures/congress-23-record-composition.png) · [`.html`](figures/congress-23-record-composition.html)
 
-**What it shows.** Of 134,640 rows in the fourteen source tables (the pack's 135,718 adds the 1,078 derived join rows), 43,218 are evidence, 85,775 context (duplicate pulls, re-reported expenditures, restatements, unbound homonyms, look-alikes marked bind=no), 5,181 bounded none-found lines and 466 unbound; 3 rows record a fetch gap that no later re-pull has closed (an HTTP 403, 429 or 5xx, a rate limit, a timeout or a bot wall; notes that say a route was re-tried, recoded or closed are excluded after the X8b audit), down from 207 before lanes C120a, C120b and C121 re-pulled them and from 22 before lane C175 and audit X55 closed 19 against saved originals (2026-10-12).
+**What it shows.** Of 134,640 rows in the fourteen source tables (the pack's 135,718 adds the 1,078 derived join rows), 43,204 are evidence, 85,789 context (duplicate pulls, re-reported expenditures, restatements, unbound homonyms, look-alikes marked bind=no), 5,181 bounded none-found lines and 466 unbound; 3 rows record a fetch gap that no later re-pull has closed (an HTTP 403, 429 or 5xx, a rate limit, a timeout or a bot wall; notes that say a route was re-tried, recoded or closed are excluded after the X8b audit), down from 207 before lanes C120a, C120b and C121 re-pulled them and from 22 before lane C175 and audit X55 closed 19 against saved originals (2026-10-12).
 
 **What cuts against it.** Counts measure effort, not connection size. The C94 OCR lane's 1,147 gap rows are held outside the tables.
 
