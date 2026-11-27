@@ -1,5 +1,15 @@
 [
  {
+  "id": "deep3-sponsors",
+  "act": "Deeper &#183; III &#183; How the lobbying works",
+  "head": "Campaign gifts were <em>more common</em> among sponsors of the stand-alone bills.",
+  "deck": "The bills came from reports filed for Anthropic. The gifts went to committees linked to serving members.",
+  "note": "The records give no link between a gift and a bill.",
+  "bridge": "How much of the wider federal lobbying on AI did the network report?",
+  "how": "",
+  "source": "Senate quarterly lobbying reports, Congress.gov bill records and FEC contribution filings"
+ },
+ {
   "id": "deep3-federal",
   "act": "Deeper &#183; III &#183; How the lobbying works",
   "head": "The network accounted for <em>0.5%</em> of 2025 lobbying reported on federal filings naming AI.",
@@ -33,7 +43,7 @@
   "id": "deep3-careers",
   "act": "Deeper &#183; III &#183; How the lobbying works",
   "head": "Most documented career moves ran <em>from the Hill to the network</em>.",
-  "deck": "The moves from Capitol Hill include positions with network organisations and firms lobbying for them. The moves into congressional offices, committees and agencies in this record are Horizon fellowships.",
+  "deck": "The moves from Capitol Hill include positions with network organisations and their lobbying firms. Everyone moving to a congressional host in this record had a Horizon role.",
   "note": "Each career record establishes roles. It leaves the work done in those roles open.",
   "bridge": "Where did Horizon’s fellows land?",
   "how": "Each dot is one person in that direction.",
@@ -42,7 +52,7 @@
  {
   "id": "deep3-fellows",
   "act": "Deeper &#183; III &#183; How the lobbying works",
-  "head": "Committees and a congressional commission hosted <em>14 of 29</em> Horizon placements.",
+  "head": "Committees and a congressional commission hosted <em>14&nbsp;of&nbsp;29</em> Horizon placements.",
   "deck": "Horizon’s roster lists 25 fellows, including placements in members’ offices from both parties.",
   "note": "Fellows and offices choose each other. Horizon pays the stipend, and the host directs the work.",
   "bridge": "Beyond fellowships, where did the network’s research grants go?",
@@ -54,9 +64,9 @@
   "act": "Deeper &#183; III &#183; How the lobbying works",
   "head": "<em>Georgetown’s CSET</em> led the grant ranking for AI and related work.",
   "deck": "The network’s funders supported AI, technology, biosecurity and catastrophic-risk work. The ranking draws on published awards and filed payments.",
-  "note": "The awards and payments shown name organisations as recipients. Nothing in this record ties a grant to an appearance.",
+  "note": "Each appearance counts a witness listed by the committee. Nothing in this record ties a grant to an appearance.",
   "bridge": "The network shows up in lobbying filings, personal gifts, career records and grants.",
   "how": "",
-  "source": "Published grant lists and IRS grant schedules · 2009–2026"
+  "source": "Published grant lists and IRS schedules, 2009–2026, and a House witness list"
  }
 ]
