@@ -15,7 +15,7 @@ hard_money,url,local path,26
 lobbying,url,local path,1
 member_disclosures,note,local path,4
 member_disclosures,url,local path,1
-member_statements,note,local path,347
+member_statements,note,local path,348
 member_statements,url,local path,27
 revolving_door,note,local path,7
 revolving_door,quote_300,local path,1
@@ -28,7 +28,7 @@ super_pac_c4,quote_300,api key value,1
 super_pac_c4,url,local path,27
 timeline,note,local path,131
 timeline,source_url,local path,1
-timeline_all,note_120,local path,474
+timeline_all,note_120,local path,475
 travel,note,local path,2
 travel,url,local path,1
 vendors,quote_300,api key value,1

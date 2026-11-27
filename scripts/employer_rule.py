@@ -8,7 +8,8 @@ giver may misspell it, and not as part of a longer word (PHILANTHROPIC is not An
 The join (scripts/build_join.py) does not use this test: its measure 1 counts every evidence gift by an individual, whatever the employer."""
 import re
 
-FIELD_EMP = re.compile(r"(?:employer as filed|contributor_employer)\s*=\s*([^;]*)", re.I)
+# X68-1501 (2026-11-27): notes also write the field as `employer=ANTHROPIC` or `employer='Anthropic'`; both are read
+FIELD_EMP = re.compile(r"(?:employer as filed|contributor_employer|(?<![A-Za-z_])employer)\s*=\s*([^;]*)", re.I)
 FIELD_OCC = re.compile(r"(?:occupation as filed|occupation|contributor_occupation)\s*=\s*([^;]*)", re.I)
 QUOTE_EMP = re.compile(r'"contributor_employer":\s*"([^"]*)"')
 ANTH = re.compile(r"(?<![A-Z])ANT(?:HR|RH|R)O?PH?IC")
@@ -20,7 +21,7 @@ def _val(m) -> str:
         return ""
     v = m.group(1)
     k = re.search(r"\s[A-Za-z_]+=", v)
-    return (v[:k.start()] if k else v).strip()
+    return (v[:k.start()] if k else v).strip().strip("'\"").strip()
 
 
 def employer(note: str) -> str:
