@@ -3,7 +3,7 @@
   "id": "deep4-mentions",
   "act": "Deeper &#183; IV &#183; Who is touched, and how",
   "head": "Even a public criticism <em>can put a member in the count</em>.",
-  "deck": "The bars count statements, including remarks by former members. Only sitting members can enter the chamber tally.",
+  "deck": "Casar’s release shows how a public statement can count. The chamber tally is for sitting members.",
   "note": "The collection searched for names and covered selected accounts on X. Coverage varies by year.",
   "bridge": "What puts a trip in the count?",
   "how": "",
@@ -12,21 +12,11 @@
  {
   "id": "deep4-events",
   "act": "Deeper &#183; IV &#183; Who is touched, and how",
-  "head": "A trip can count for <em>who was on the agenda</em> or who sponsored it.",
-  "deck": "A member’s travel filing and a conference program can document the same trip. Other filings name a network group as a sponsor.",
-  "note": "Staff trips count for their congressional office. An agenda lists planned participants.",
-  "bridge": "How did software payments get Ted Lieu into the tally?",
-  "how": "",
-  "source": "House and Senate gift-travel filings, event pages and agendas"
- },
- {
-  "id": "deep4-purchases",
-  "act": "Deeper &#183; IV &#183; Who is touched, and how",
-  "head": "Ted Lieu’s campaign reported <em>two software payments</em> to Anthropic.",
-  "deck": "Those campaign filings are enough to add a purchase record to his seat in the chamber.",
-  "note": "The filings name Anthropic and list the purpose as software. The specific product and its use are unspecified.",
+  "head": "A trip can count when <em>a network speaker is listed</em> or a network group sponsors it.",
+  "deck": "A conference program and a travel filing can document the same trip. Another filing puts the network on the sponsor line.",
+  "note": "An agenda lists who was scheduled. Staff trips count for their congressional office.",
   "bridge": "",
   "how": "",
-  "source": "Federal Election Commission · Ted Lieu for Congress disbursement reports"
+  "source": "House and Senate travel disclosures, event pages and agendas"
  }
 ]

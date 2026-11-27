@@ -1,20 +1,10 @@
 [
  {
-  "id": "deep1-network",
-  "act": "Deeper &#183; I &#183; Who gave",
-  "head": "A grant and a hearing put a Georgetown research center on <em>the wider roster</em>.",
-  "deck": "Arrival followed gifts from Anthropic’s employees and PAC. This chapter adds company backers, leaders and groups their backers support.",
-  "note": "The collected records show no link between the grant and the hearing.",
-  "bridge": "Who in the wider network gave the most to today’s members’ committees?",
-  "how": "",
-  "source": "Anthropic’s funding announcement · Good Ventures · Grant list · House witness list"
- },
- {
   "id": "deep1-principals",
   "act": "Deeper &#183; I &#183; Who gave",
   "head": "Eric Schmidt and Reed Hastings gave <em>73%</em> of the named donors’ total.",
-  "deck": "These are personal gifts to committees linked to sitting members. The group includes company leaders and backers.",
-  "note": "Each gift counts at its first receipt.",
+  "deck": "Arrival followed Anthropic’s employees and PAC. This chapter adds named backers and people with documented roles at Anthropic and its network’s groups.",
+  "note": "The chart follows personal gifts to committees linked to sitting members, counted once at first receipt.",
   "bridge": "Where did gifts land when we include more people and all recipients?",
   "how": "",
   "source": "FEC contribution records · Network roster"
@@ -23,7 +13,7 @@
   "id": "deep1-committees",
   "act": "Deeper &#183; I &#183; Who gave",
   "head": "More than twice as much went <em>first to joint fundraisers</em> as directly to candidates’ committees.",
-  "deck": "A joint fundraiser takes one gift and can split it among several committees. These are people’s own gifts.",
+  "deck": "This wider view adds personal gifts from employees of network groups and covers all recipients on file in the 2016–2026 cycles. A joint fundraiser can split one gift among several committees.",
   "note": "The bars show the first receipt. Later splits are outside this chart.",
   "bridge": "Which PACs gave the most in their own names?",
   "how": "",

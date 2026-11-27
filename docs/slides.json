@@ -3,11 +3,11 @@
   "id": "start",
   "act": "Anthropic&#8217;s network and Congress",
   "head": "<em>454</em> of 533",
-  "deck": "These sitting members appear in public records involving Anthropic’s network, from campaign gifts and outside spending for or against candidates to bill mentions and public statements.",
+  "deck": "These sitting members appear in public records involving Anthropic’s network, from campaign gifts and outside spending for or against candidates to bill mentions and public statements.<span class=\"cover-network\">The network includes Anthropic, its employees and directors, its funders and other AI-safety funders, the groups they back that work with Congress, and their officers, PACs and lobbyists.</span>",
   "note": "The records leave the effect on votes open.",
   "bridge": "First, gifts from Anthropic’s employees and PAC.",
   "how": "",
-  "source": "<span class=\"cover-spend\">Outside spending</span><span class=\"cover-scope\">By committees that took network money, from all their donors.</span><span class=\"cover-example\" style=\"--direction:#38B092\" data-m=\"58ae0d4523\" tabindex=\"0\">In 2022, Priorities USA Action reported spending $8.7M to support John Fetterman.</span><span class=\"cover-example\" style=\"--direction:#D08C3E\" data-m=\"51ee3517f1\" tabindex=\"0\">In 2020, Senate Majority PAC and other super PACs reported spending $39.6M against Thom Tillis.</span><span class=\"cover-donor\" data-m=\"8dc5af4ad4\" tabindex=\"0\">Before the 2020 election, Reed Hastings, Dustin Moskovitz, Eric Schmidt and Wendy Schmidt gave Senate Majority PAC $3.6M.</span>"
+  "source": ""
  },
  {
   "id": "arrival",
@@ -22,29 +22,29 @@
  {
   "id": "forty",
   "act": "II &#183; The bigger money",
-  "head": "Anthropic announced <em data-m=\"ac23f71a5a\" tabindex=\"0\">$40.0M</em> for Public First Action.",
-  "deck": "Commonwealth Together PAC reported spending against Seth Moulton’s Senate bid months before its receipt from the nonprofit.",
-  "note": "The filings show where money went and when. They give no reason for the spending or trace gifts to expenses. The receipt came too late to pay for the earlier spending.",
-  "bridge": "Whose bills did Anthropic’s lobbyists report, and whose committees got employee or PAC gifts?",
+  "head": "A PAC began paying to oppose Seth Moulton on <em data-m=\"47d13f9c13\">April 1, 2026</em>, before receiving <span data-m=\"c82efdef14\">$500K from Public First Action on Aug. 3</span>.",
+  "deck": "Anthropic announced <span data-m=\"ac23f71a5a\">$40.0M</span> for the nonprofit Public First Action on Feb. 12 and July 21, 2026.",
+  "note": "The receipt came too late to pay for the earlier spending. The filings give no reason for the spending and do not trace gifts to expenses.",
+  "bridge": "Which bill sponsors got gifts from Anthropic’s employees or PAC?",
   "how": "",
   "source": "Sources · Anthropic’s announcement pages and the PAC’s FEC filings"
  },
  {
   "id": "sponsors",
   "act": "III &#183; The lobbying",
-  "head": "Gifts from Anthropic employees or its PAC were <em>more common</em> among serving sponsors of stand-alone bills named in lobbying reports filed for Anthropic than among serving members overall.",
+  "head": "Campaign gifts were <em>more common</em> among sponsors of bills in Anthropic’s lobbying reports.",
   "deck": "",
-  "note": "A gift and a bill mention are separate records. The filings leave open any link between them and Anthropic’s position on the bill.",
-  "bridge": "How did Lieu and Tillis each count as one seat?",
+  "note": "The filings leave open whether the gifts and bill mentions were related.",
+  "bridge": "Why did Lieu and Tillis each count once?",
   "how": "",
   "source": "Federal lobbying and campaign contribution filings, and Congress.gov"
  },
  {
   "id": "limits",
   "act": "IV &#183; The sum",
-  "head": "<em>Seven kinds</em>, one kind, one seat each",
-  "deck": "Ted Lieu and Thom Tillis both count once in the opening total of 454.",
-  "note": "The effect of these activities on votes remains unknown.",
+  "head": "Public criticism <em>counts, too</em>.",
+  "deck": "A bill named in a lobbying report can put a member in the tally. So can a public statement.",
+  "note": "<a class=\"deeper limits-chapter\" href=\"deep4/index.html#deep4-mentions\">What else counts? A public criticism can <span aria-hidden=\"true\">&#8594;</span></a><span class=\"limits-final\">Each member counts once. The records leave any effect on votes open.</span>",
   "bridge": "",
   "how": "",
   "source": ""

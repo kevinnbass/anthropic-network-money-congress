@@ -7,7 +7,7 @@
   "note": "The records leave the effect on votes open.",
   "bridge": "How did the gifts spread?",
   "how": "",
-  "source": "<span class=\"cover-spend\">Outside spending</span><span class=\"cover-scope\">By committees that took network money, from all their donors.</span><span class=\"cover-example\" style=\"--direction:#38B092\" data-m=\"58ae0d4523\" tabindex=\"0\">In 2022, Priorities USA Action reported spending $8.7M to support John Fetterman.</span><span class=\"cover-example\" style=\"--direction:#D08C3E\" data-m=\"51ee3517f1\" tabindex=\"0\">In 2020, Senate Majority PAC and other super PACs reported spending $39.6M against Thom Tillis.</span><span class=\"cover-donor\" data-m=\"8dc5af4ad4\" tabindex=\"0\">Before the 2020 election, Reed Hastings, Dustin Moskovitz, Eric Schmidt and Wendy Schmidt gave Senate Majority PAC $3.6M.</span>"
+  "source": ""
  },
  {
   "id": "questions-gifts",
@@ -36,8 +36,8 @@
   "deck": "A comparison group of major tech and AI companies reported 6% of the dollars on 2025 filings naming any AI issue in this collection. The network share depends on which filings count.",
   "note": "When a client reported its own expenses for a quarter, its outside firms’ fees for that quarter were counted through those expenses.",
   "bridge": "Which bills came up most in Anthropic’s lobbying reports?",
-  "how": "Each 2025 filing gives one amount covering all of its issues.",
-  "source": "Federal lobbying disclosures · <a href=\"https://github.com/kevinnbass/anthropic-network-money-congress/blob/main/research/lda_baseline.csv\">Filing census</a> and <a href=\"https://github.com/kevinnbass/anthropic-network-money-congress/blob/main/research/lda_baseline_additions.csv\">supplement</a>"
+  "how": "Each 2025 federal filing reports one amount for all its issues. The percentages are shares of reported dollars.",
+  "source": "Federal lobbying disclosures · <a href=\"https://github.com/kevinnbass/anthropic-network-money-congress/blob/main/research/lda_baseline.csv\">Filing census</a> and <a href=\"https://github.com/kevinnbass/anthropic-network-money-congress/blob/main/research/lda_baseline_additions.csv\">supplement</a> · <a href=\"https://github.com/kevinnbass/anthropic-network-money-congress/blob/main/research/state_ai_bill_clients.csv\">State bill client census</a>"
  },
  {
   "id": "questions-bills",
@@ -54,7 +54,7 @@
   "act": "Questions from the record",
   "head": "How common were gifts to those bills’ sponsors?",
   "deck": "",
-  "note": "A gift and a bill mention are separate records. The filings leave open any link between them and Anthropic’s position on the bill.",
+  "note": "The filings leave open whether the gifts and bill mentions were related.",
   "bridge": "What does one seat count?",
   "how": "",
   "source": "Federal lobbying and campaign contribution filings, and Congress.gov"
