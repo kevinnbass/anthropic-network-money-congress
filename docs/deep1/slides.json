@@ -1,52 +1,52 @@
 [
  {
+  "id": "deep1-network",
+  "act": "Deeper &#183; I &#183; Who gave",
+  "head": "A research grant can bring a group into <em>the network</em>.",
+  "deck": "Who gave looks beyond the employees in Arrival. The wider roster includes Anthropic, its funders and leaders, and groups those funders support.",
+  "note": "A tax return can list a role held for only part of the year. Federal obligations are amounts agencies committed.",
+  "bridge": "Which people in that wider circle gave the most to today’s members’ committees?",
+  "how": "",
+  "source": "Grant lists · House witness list · IRS returns · USAspending"
+ },
+ {
   "id": "deep1-principals",
   "act": "Deeper &#183; I &#183; Who gave",
-  "head": "Two people gave <em>72%</em> of the money from named principals to committees linked to today’s members.",
-  "deck": "Federal filings show their personal gifts to campaigns, leadership PACs and joint fundraising committees.",
-  "note": "A gift to a joint fundraiser counts at receipt, before any distribution to members’ committees. A contribution is not a vote.",
-  "bridge": "Where did the wider network’s individual gifts land?",
+  "head": "Eric Schmidt and Reed Hastings gave <em>72%</em> of the named donors’ total.",
+  "deck": "This ranking uses named funders and their households, people from grantmaking groups, and people tied to Anthropic or its political groups. Arrival groups employees by their reported employer.",
+  "note": "The donor pools can overlap. Gifts count at first receipt and may predate the giver’s network role.",
+  "bridge": "Which types of committees took in the wider network’s gifts?",
   "how": "",
-  "source": "FEC contribution records · Principals’ hard money to sitting members"
+  "source": "FEC contribution records · Network roster"
  },
  {
   "id": "deep1-committees",
   "act": "Deeper &#183; I &#183; Who gave",
-  "head": "Network individuals gave <em>$13.7M</em> to joint fundraising committees, over twice what went to candidate committees.",
-  "deck": "A joint fundraising committee can collect one contribution and distribute it among multiple participants.",
-  "note": "These are gifts from the network’s principals and employees to all recipients in this collection. Totals count the initial receipt, with later allocations excluded.",
-  "bridge": "Some PACs also gave money themselves. How did they compare?",
+  "head": "Joint fundraisers took in <em>$13.7M</em>, over twice the $6.4M given directly to candidates’ committees.",
+  "deck": "These are personal gifts from named network donors and employees of network organisations. A joint fundraiser takes one gift and can split it among multiple committees.",
+  "note": "Each gift counts where it first landed. Later allocations are excluded.",
+  "bridge": "How much did those individuals give in earlier election cycles?",
   "how": "",
   "source": "FEC contribution records · Where network individuals’ contributions land"
  },
  {
-  "id": "deep1-pacs",
-  "act": "Deeper &#183; I &#183; Who gave",
-  "head": "ARI’s PAC gave <em>$434K</em>, more than Anthropic’s PAC.",
-  "deck": "ARI is Americans for Responsible Innovation, an advocacy group in the wider network.",
-  "note": "These are the PACs’ own contributions. The Arnold &amp; Porter partners’ PAC is shown during the firm’s work for Open Philanthropy Action Fund. A PAC gift is not a vote.",
-  "bridge": "How does the latest cycle of personal giving compare with earlier cycles?",
-  "how": "",
-  "source": "FEC filings and reports to Congress · The network’s PACs and where they give"
- },
- {
   "id": "deep1-cycles",
   "act": "Deeper &#183; I &#183; Who gave",
-  "head": "Network individuals gave <em>$14.2M</em> in the unfinished 2026 cycle, the highest in this record.",
+  "head": "Network individuals gave <em>$14.2M</em> in the partial 2026 cycle, the highest in this record.",
   "deck": "The previous high in this collection was $8.3M in the 2024 cycle.",
-  "note": "These are people’s own contributions to all recipients in the collection. The search was deepest in recent cycles, and the 2026 cycle is partial.",
-  "bridge": "What kinds of records filled the latest years?",
+  "note": "These are people’s own contributions to all recipients in the collection. Recent cycles were searched more deeply, and filings for the 2026 cycle are still arriving.",
+  "bridge": "Some PACs also gave money themselves. How did they compare?",
   "how": "",
-  "source": "FEC contribution records · Money by election cycle, one kind at a time"
+  "source": "FEC contribution records"
  },
  {
-  "id": "deep1-records",
+  "id": "deep1-pacs",
   "act": "Deeper &#183; I &#183; Who gave",
-  "head": "Campaign gifts and AI-lab payments made up <em style=\"white-space:nowrap\">42–45%</em> of dated records in 2025 and in 2026 to date.",
-  "deck": "In the preceding election years shown, most records came from super PAC receipts and spending.",
-  "note": "These are counts of records with a month or day. They reflect search depth and filing schedules. The 2026 count is partial.",
-  "bridge": "A few principals gave most of their group’s dollars, and the mix of filings shifted over time.",
+  "head": "Across all recipients here, an advocacy group’s PAC gave <em>$434K</em>, more than Anthropic’s PAC.",
+  "deck": "Americans for Responsible Innovation is an advocacy group in the wider network. The bars show giving by each PAC itself.",
+  "note": "Americans for Responsible Innovation’s PAC and ANTHROPAC draw on members’ or employees’ money. The Arnold &amp; Porter PAC draws on partners’ money and appears here because the firm lobbied for Open Philanthropy Action Fund. The latest year is partial.",
+  "bridge": "",
   "how": "",
-  "source": "Dated records across the pack · Election years and the shift in filing mix"
+  "source": "FEC filings and lobbying contribution reports"
  }
 ]

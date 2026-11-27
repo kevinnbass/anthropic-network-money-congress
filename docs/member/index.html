@@ -170,6 +170,59 @@ body[data-step="0"] #brand{opacity:0}
 @media (prefers-reduced-motion:reduce){
   *{transition-duration:.01s!important;transition-delay:0s!important;animation:none!important}
 }
+
+/* Supporting records occupy their own column on a desk and a sheet on a phone. */
+svg [data-m],[data-m]{cursor:pointer}
+svg [data-m]:focus-visible,[data-m]:focus-visible{outline:2px solid var(--gold,#C9A45C);outline-offset:3px}
+#records{
+  position:fixed;z-index:22;inset:auto 0 0;max-height:min(76dvh,44rem);
+  display:flex;flex-direction:column;background:var(--bg2);border:1px solid var(--line);
+  border-radius:18px 18px 0 0;color:var(--ink);font-size:14px;line-height:1.45;
+}
+#records [hidden],#records[hidden]{display:none}
+.records-header{position:relative;flex:none;padding:17px 20px 12px;border-bottom:1px solid var(--line)}
+#records-title{font:400 clamp(20px,2vw,25px)/1.16 var(--serif);padding-right:45px;overflow-wrap:anywhere}
+#records-title:focus{outline:none}
+.records-detail{margin:5px 36px 0 0;color:var(--ink2);font-size:13px;max-height:4.4em;overflow:auto}
+.records-close{position:absolute;top:12px;right:16px;width:42px;height:42px;border-radius:50%;border:1px solid var(--line);font-size:21px}
+.records-share{display:flex;align-items:center;gap:10px;margin-top:9px;min-height:34px}
+.records-copy,.records-pages button{min-height:36px;border-radius:999px;padding:5px 12px;border:1px solid var(--line);font-size:12px}
+.records-copied{font-size:12px;color:var(--ink2)}
+.records-link{width:100%;margin-top:7px;padding:5px 8px;border:1px solid var(--line);background:var(--bg);color:var(--ink);font:inherit}
+.records-body{min-height:0;overflow:auto;overscroll-behavior:contain;padding:0 20px 10px}
+.records-status{margin:14px 0 5px;color:var(--ink);font-weight:500}
+.records-totals,.records-list{list-style:none;margin:0;padding:0}
+.records-totals{color:var(--ink2);font-size:12.5px;margin:0 0 11px}
+.record{border-top:1px solid var(--line);padding:12px 0 13px;overflow-wrap:anywhere}
+.record p{margin:0 0 4px;color:var(--ink2)}
+.record .record-meta{font-size:12px}
+.record .record-parties,.record .record-amount{color:var(--ink)}
+.record-source{display:inline-block;margin-top:3px;text-underline-offset:3px}
+.record blockquote{border-left:1px solid var(--line);margin:7px 0 0;padding-left:10px;color:var(--ink2);white-space:pre-wrap}
+.records-pages{display:flex;align-items:center;justify-content:space-between;gap:8px;flex:none;padding:8px 20px calc(8px + env(safe-area-inset-bottom));border-top:1px solid var(--line);font-size:12px;color:var(--ink2)}
+.records-pages button:disabled{opacity:.4;cursor:default}
+#records :is(button,a):hover{color:var(--ink)}
+@media(max-width:899px){
+  #records{padding-bottom:env(safe-area-inset-bottom)}
+}
+@media(min-width:900px){
+  body.records-open{--record-width:clamp(292px,27vw,390px)}
+  body.records-open main{margin-right:var(--record-width)}
+  body.records-open #status{right:calc(var(--record-width) + 2vw)}
+  body.records-open #sheet{right:var(--record-width);padding-inline:4vw}
+  body.records-open #sheet .x{right:calc(var(--record-width) + 2vw)}
+  #records{inset:0 0 0 auto;width:var(--record-width);max-height:none;border-radius:0;border-width:0 0 0 1px}
+  .records-body{flex:1}
+  body.records-open .slide{padding-inline:4vw 3vw;column-gap:2vw}
+  body.records-open .slide:not(.stack){grid-template-columns:minmax(16rem,35fr) minmax(0,65fr)}
+}
+@media(min-width:900px) and (max-width:1099px){
+  body.records-open .slide{display:block;padding-block:64px 80px}
+  body.records-open .slide .copy{display:block}
+  body.records-open .slide.stack .deck,body.records-open .figure{margin-top:14px}
+  body.records-open .slide.stack .after{display:block}
+  body.records-open .slide.stack .bridge{white-space:normal}
+}
 </style></head>
 <body data-step="0">
 <div id="prog"><i></i></div>
@@ -531,14 +584,48 @@ memberStoryLink.setAttribute("href", new URL(location.pathname.endsWith("/F1-mem
 <nav id="nav" aria-label="Slides"><button class="prev" aria-label="Previous slide">&#8593;</button><button class="next" aria-label="Next slide">&#8595;</button><button class="toc">Contents</button><div class="where"></div></nav>
 <div id="toc" role="dialog" aria-label="Contents"><button class="x" aria-label="Close">&#215;</button><h3>Your member</h3><ol><li><a href="#member-lookup"><span>01</span>Look up your member</a></li><li><a href="#member-spread"><span>02</span>Just one or two kinds for most members on file.</a></li><li><a href="#member-outside"><span>03</span>Spending against a member can put them on the list.</a></li></ol><h3>The story</h3><p class="out"><a href="../index.html">Back to the main story <span>&#8594;</span></a></p><h3>Behind the story</h3><p class="out"><a href="https://github.com/kevinnbass/anthropic-network-money-congress/blob/main/FIGURES.md" target="_blank" rel="noopener">All 29 audited figures, with what cuts against each <span>&#8599;</span></a><a href="https://github.com/kevinnbass/anthropic-network-money-congress" target="_blank" rel="noopener">The record: tables, rows and the scripts that draw the figures <span>&#8599;</span></a></p></div>
 <div id="sheet" role="dialog" aria-label="Detail"><button class="x" aria-label="Close">&#215;</button><div class="body"></div></div>
+<aside id="records" aria-labelledby="records-title" hidden>
+<div class="records-header">
+  <button type="button" class="records-close" aria-label="Close records">&#215;</button>
+  <h2 id="records-title" tabindex="-1"></h2>
+  <p class="records-detail" hidden></p>
+  <div class="records-share">
+    <button type="button" class="records-copy">Copy link</button>
+    <span class="records-copied" role="status"></span>
+  </div>
+  <input class="records-link" type="url" readonly aria-label="Link to these records" hidden>
+</div>
+<div class="records-body">
+  <p class="records-status" role="status"></p>
+  <ul class="records-totals" hidden></ul>
+  <ol class="records-list" aria-label="Supporting records"></ol>
+</div>
+<div class="records-pages" aria-label="Record pages" hidden>
+  <button type="button" class="records-previous">Previous</button>
+  <span class="records-range"></span>
+  <button type="button" class="records-next">Next</button>
+</div>
+</aside>
 <div id="tip" role="status"></div>
-<!-- built 2026-11-27T16:29:40Z from the congress pack by scripts/story_build.py -->
+<!-- built 2026-11-27T17:03:12Z from the congress pack by scripts/story_build.py -->
 <script>(function () {
   'use strict';
   var d = document, slides = Array.prototype.slice.call(d.querySelectorAll('.slide')), n = slides.length, cur = -1;
   var wide = window.matchMedia('(min-width: 900px)');
   var prog = d.querySelector('#prog i'), where = d.querySelector('#nav .where'), prev = d.querySelector('#nav .prev'), next = d.querySelector('#nav .next');
   var toc = d.getElementById('toc'), tip = d.getElementById('tip'), sheet = d.getElementById('sheet');
+
+  var panel = d.getElementById('records');
+  var title = panel.querySelector('#records-title'), detail = panel.querySelector('.records-detail');
+  var status = panel.querySelector('.records-status'), totals = panel.querySelector('.records-totals');
+  var list = panel.querySelector('.records-list'), pages = panel.querySelector('.records-pages');
+  var earlier = panel.querySelector('.records-previous'), later = panel.querySelector('.records-next');
+  var copied = panel.querySelector('.records-copied'), copyField = panel.querySelector('.records-link');
+  var pageSize = 50, blockRows = 1000, pointerBase = 1024;
+  var money = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' });
+  var recordDate = new Intl.DateTimeFormat('en-US', { year: 'numeric', month: 'short', day: 'numeric', timeZone: 'UTC' });
+  var requests = new Map(), selected = null;
+  var markHash = /^#([a-zA-Z0-9_-]+)\/([0-9a-f]{10})$/;
 
   function pad(k) { return (k < 10 ? '0' : '') + k; }
   function set(i) {
@@ -550,10 +637,14 @@ memberStoryLink.setAttribute("href", new URL(location.pathname.endsWith("/F1-mem
     where.innerHTML = '<b>' + pad(i + 1) + '</b> / ' + pad(n) + (s.dataset.act ? '<span> · ' + s.dataset.act + '</span>' : '');
     prev.disabled = i === 0; next.disabled = i === n - 1;
     Array.prototype.forEach.call(toc.querySelectorAll('a'), function (a) { a.classList.toggle('cur', a.getAttribute('href') === '#' + s.id); });
-    if (history.replaceState) history.replaceState(null, '', i === 0 ? location.pathname + location.search : '#' + s.id);
+    var anchor = d.getElementById(location.hash.slice(1));
+    if (!selected && !markHash.test(location.hash) && anchor !== s) {
+      history.replaceState(null, '', i === 0 ? location.pathname + location.search : '#' + s.id);
+    }
   }
   function go(i) {
     if (i < 0 || i >= n) return;
+    if (selected) closeRecords(false);
     slides[i].scrollIntoView({ behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'start' });
   }
 
@@ -585,8 +676,16 @@ memberStoryLink.setAttribute("href", new URL(location.pathname.endsWith("/F1-mem
   });
   d.addEventListener('keydown', function (ev) {
     if (ev.altKey || ev.ctrlKey || ev.metaKey) return;
-    if (sheet.classList.contains('on')) { if (ev.key === 'Escape') shut(); return; }
     if (toc.classList.contains('on')) { if (ev.key === 'Escape') toc.classList.remove('on'); return; }
+    if (selected && ev.key === 'Escape') { closeRecords(); return; }
+    var mark = ev.target.closest('[data-m]');
+    if (mark && (ev.key === 'Enter' || ev.key === ' ')) {
+      ev.preventDefault();
+      openRecords(mark);
+      return;
+    }
+    if (sheet.classList.contains('on')) { if (ev.key === 'Escape') shut(); return; }
+    if (panel.contains(ev.target) || ev.target.closest('input, textarea, select, button, a, [contenteditable="true"]')) return;
     if (ev.key === 'ArrowRight' || ev.key === 'ArrowDown' || ev.key === 'PageDown' || ev.key === ' ') { ev.preventDefault(); go(cur + 1); }
     else if (ev.key === 'ArrowLeft' || ev.key === 'ArrowUp' || ev.key === 'PageUp') { ev.preventDefault(); go(cur - 1); }
     else if (ev.key === 'Home') { ev.preventDefault(); go(0); }
@@ -600,13 +699,28 @@ memberStoryLink.setAttribute("href", new URL(location.pathname.endsWith("/F1-mem
 
   // a slide's detail (a full list, a second chart) opens on a sheet over the page; the page keeps its place
   var opener = null;
-  function shut() { sheet.classList.remove('on'); d.documentElement.style.overflow = ''; if (opener) opener.focus(); opener = null; }
+  function openSheet(button, focus) {
+    var slide = button.closest('.slide');
+    var src = slide.querySelector('.sheet-src');
+    sheet.querySelector('.body').innerHTML = src ? src.innerHTML : '';
+    prepareMarks(sheet);
+    sheet.classList.add('on');
+    sheet.scrollTop = 0;
+    d.documentElement.style.overflow = 'hidden';
+    opener = button;
+    if (focus) sheet.querySelector('.x').focus();
+  }
+  function shut() {
+    if (selected && sheet.contains(selected.mark)) closeRecords(false);
+    sheet.classList.remove('on');
+    d.documentElement.style.overflow = '';
+    if (opener) opener.focus();
+    opener = null;
+  }
   d.addEventListener('click', function (ev) {
     var b = ev.target.closest && ev.target.closest('.more');
     if (b) {
-      var src = b.closest('.slide').querySelector('.sheet-src');
-      sheet.querySelector('.body').innerHTML = src ? src.innerHTML : '';
-      sheet.classList.add('on'); sheet.scrollTop = 0; d.documentElement.style.overflow = 'hidden'; opener = b; sheet.querySelector('.x').focus();
+      openSheet(b, true);
     } else if (ev.target.classList && (ev.target.classList.contains('x') && ev.target.parentNode === sheet || ev.target === sheet)) shut();
   });
 
@@ -629,7 +743,11 @@ memberStoryLink.setAttribute("href", new URL(location.pathname.endsWith("/F1-mem
   });
   d.addEventListener('click', function (ev) {
     var el = ev.target.closest && ev.target.closest('[data-tip]');
-    if (el) show(el, ev.clientX, ev.clientY); else hide();
+    var mark = ev.target.closest && ev.target.closest('[data-m]');
+    if (mark) {
+      ev.preventDefault();
+      openRecords(mark);
+    } else if (el) show(el, ev.clientX, ev.clientY); else hide();
   });
   d.addEventListener('focusin', function (ev) {
     var el = ev.target.closest && ev.target.closest('[data-tip]');
@@ -637,11 +755,198 @@ memberStoryLink.setAttribute("href", new URL(location.pathname.endsWith("/F1-mem
   });
   window.addEventListener('scroll', hide, { passive: true });
 
-  // open on the slide the address names
-  var h = location.hash.slice(1), at = 0;
-  if (h) slides.forEach(function (s, i) { if (s.id === h) at = i; });
-  if (at) slides[at].scrollIntoView({ block: 'start' });
-  set(at); slides[at].classList.add('on');
+  function label(mark) {
+    var text = mark.getAttribute('data-tip') || mark.textContent.trim() || 'Supporting records';
+    var split = text.indexOf('|');
+    return split < 0 ? [text, ''] : [text.slice(0, split), text.slice(split + 1)];
+  }
+
+  function prepareMarks(scope) {
+    scope.querySelectorAll('[data-m]').forEach(function (mark) {
+      mark.setAttribute('role', 'button');
+      mark.setAttribute('aria-controls', 'records');
+      mark.setAttribute('aria-label', label(mark).filter(Boolean).join('. '));
+      var svg = mark.closest('svg');
+      if (svg && svg.getAttribute('role') === 'img') svg.setAttribute('role', 'group');
+    });
+  }
+
+  function payload(name) {
+    if (requests.has(name)) return requests.get(name);
+    if (requests.size >= 24) requests.delete(requests.keys().next().value);
+    var request = fetch('records/' + name + '.json').then(function (response) {
+      if (!response.ok) throw new Error('Record request failed');
+      return response.json();
+    });
+    requests.set(name, request);
+    request.catch(function () { if (requests.get(name) === request) requests.delete(name); });
+    return request;
+  }
+
+  async function resolve(prefix, pointer) {
+    var shard = await payload(prefix + '-' + Math.floor(pointer / pointerBase));
+    var item = shard[pointer % pointerBase];
+    if (!item) throw new Error('Record missing from shard');
+    return item;
+  }
+
+  function add(parent, tag, text, cls) {
+    var el = d.createElement(tag);
+    if (text) el.textContent = text;
+    if (cls) el.className = cls;
+    parent.append(el);
+    return el;
+  }
+
+  function displayDate(date) {
+    if (!/^\d{4}-\d{2}-\d{2}$/.test(date)) return date;
+    var day = new Date(date + 'T00:00:00Z');
+    return Number.isNaN(+day) ? date : recordDate.format(day);
+  }
+
+  function renderRow(row) {
+    var li = add(list, 'li', '', 'record');
+    add(li, 'p', [row.kind, displayDate(row.date)].filter(Boolean).join(' · '), 'record-meta');
+    if (row.who || row.to) {
+      var parties = add(li, 'p', '', 'record-parties');
+      add(parties, 'strong', row.who || row.to);
+      if (row.who && row.to) parties.append(' → ' + row.to);
+    }
+    if (row.member) add(li, 'p', 'Member: ' + row.member);
+    if (row.cents !== null || row.stance) {
+      add(li, 'p', [row.cents !== null ? money.format(row.cents / 100) : '', row.stance].filter(Boolean).join(' · '), 'record-amount');
+    }
+    if (row.detail) add(li, 'p', row.detail);
+    if (row.url) {
+      var source = add(li, 'a', 'Open source ↗', 'record-source');
+      source.href = row.url;
+      source.target = '_blank';
+      source.rel = 'noopener';
+    }
+    if (row.quote) add(li, 'blockquote', row.quote);
+  }
+
+  async function showPage(mark, offset) {
+    mark.offset = offset;
+    list.replaceChildren();
+    list.start = offset + 1;
+    totals.hidden = pages.hidden = true;
+    status.textContent = 'Loading records…';
+    try {
+      var index = await payload('mark-' + mark.slide.id);
+      var entry = index[mark.key];
+      if (!entry) throw new Error('Mark missing from index');
+      var selection = await resolve('select', entry.blocks[Math.floor(offset / blockRows)]);
+      var start = offset % blockRows;
+      var pointers = selection.slice(start, start + pageSize);
+      if (pointers.length !== Math.min(pageSize, entry.count - offset)) throw new Error('Incomplete selection');
+      var rows = await Promise.all(pointers.map(function (pointer) { return resolve('row', pointer); }));
+      if (selected !== mark || mark.offset !== offset) return;
+      var end = offset + rows.length;
+      status.textContent = entry.count.toLocaleString('en-US') + (entry.count === 1 ? ' supporting record' : ' supporting records');
+      totals.replaceChildren();
+      Object.entries(entry.totals).forEach(function (pair) {
+        add(totals, 'li', pair[0] + ' total · ' + money.format(pair[1] / 100));
+      });
+      if (entry.dates.length) add(totals, 'li', Array.from(new Set(entry.dates)).map(displayDate).join(' – '));
+      totals.hidden = !totals.children.length;
+      rows.forEach(renderRow);
+      panel.querySelector('.records-range').textContent = (offset + 1) + '–' + end + ' of ' + entry.count;
+      earlier.disabled = offset === 0;
+      later.disabled = end >= entry.count;
+      pages.hidden = entry.count <= pageSize;
+    } catch (_) {
+      if (selected === mark && mark.offset === offset) status.textContent = 'The records for this mark could not be loaded.';
+    }
+  }
+
+  function openRecords(mark) {
+    var slide = mark.closest('.slide') || opener?.closest('.slide');
+    if (!slide) return;
+    selected = { mark: mark, slide: slide, key: mark.dataset.m, offset: 0 };
+    history.replaceState(null, '', '#' + slide.id + '/' + selected.key);
+    var words = label(mark);
+    title.textContent = words[0];
+    detail.textContent = words[1];
+    detail.hidden = !words[1];
+    copied.textContent = '';
+    copyField.hidden = true;
+    panel.hidden = false;
+    d.body.classList.add('records-open');
+    hide();
+    title.focus({ preventScroll: true });
+    panel.querySelector('.records-body').scrollTop = 0;
+    showPage(selected, 0);
+  }
+
+  function closeRecords(focus, updateHash) {
+    var previous = selected;
+    selected = null;
+    panel.hidden = true;
+    d.body.classList.remove('records-open');
+    if (updateHash !== false) history.replaceState(null, '', '#' + previous.slide.id);
+    if (focus !== false && previous.mark.isConnected) previous.mark.focus({ preventScroll: true });
+    hide();
+  }
+
+  panel.querySelector('.records-close').addEventListener('click', function () { closeRecords(); });
+  panel.querySelector('.records-copy').addEventListener('click', async function () {
+    var url = location.href, current = selected;
+    try {
+      await navigator.clipboard.writeText(url);
+      if (selected === current) copied.textContent = 'Link copied';
+    } catch (_) {
+      if (selected !== current) return;
+      copyField.value = url;
+      copyField.hidden = false;
+      copyField.focus({ preventScroll: true });
+      copyField.select();
+      copied.textContent = 'Select and copy this link';
+    }
+  });
+  function turnPage(delta) {
+    var body = panel.querySelector('.records-body');
+    body.scrollTop = 0;
+    title.focus({ preventScroll: true });
+    showPage(selected, selected.offset + delta);
+  }
+  earlier.addEventListener('click', function () { turnPage(-pageSize); });
+  later.addEventListener('click', function () { turnPage(pageSize); });
+
+  function visibleMark(scope, key) {
+    return Array.from(scope.querySelectorAll('[data-m="' + key + '"]')).find(function (mark) {
+      return mark.getClientRects().length && !mark.closest('.sheet-src');
+    });
+  }
+
+  function route(first) {
+    var binding = markHash.exec(location.hash);
+    if (selected) closeRecords(false, false);
+    var id = binding ? binding[1] : location.hash.slice(1);
+    var at = slides.findIndex(function (slide) { return slide.id === id; });
+    if (at < 0) {
+      if (!first) return;
+      at = 0;
+    }
+    var slide = slides[at];
+    set(at);
+    slide.classList.add('on');
+    if (id && slide.id === id) slide.scrollIntoView({ block: 'start' });
+    if (!binding || slide.id !== id) return;
+    var mark = visibleMark(slide, binding[2]);
+    if (!mark && slide.querySelector('.sheet-src [data-m="' + binding[2] + '"]')) {
+      openSheet(slide.querySelector('.more'), false);
+      mark = visibleMark(sheet, binding[2]);
+    }
+    if (mark) {
+      openRecords(mark);
+      if (!sheet.contains(mark)) slide.scrollIntoView({ block: 'start' });
+    }
+  }
+
+  prepareMarks(d);
+  route(true);
+  window.addEventListener('hashchange', function () { route(false); });
   if (location.search.indexOf('all') >= 0) { d.documentElement.classList.add('still'); slides.forEach(function (s) { s.classList.add('on'); }); }  // ?all draws every slide at once (for looks and print)
 })();
 </script>

@@ -1,62 +1,32 @@
 [
  {
-  "id": "deep4-breadth",
-  "act": "Deeper &#183; IV &#183; Who is touched, and how",
-  "head": "Two members have <em>7 kinds each</em> and share 5.",
-  "deck": "Ted Lieu and Martin Heinrich rank highest by number of direct kinds.",
-  "note": "Each kind counts once. The direct ranking leaves out lobbyists’ own gifts and super PAC spending from all donors. A dash means this collection has no counted record in that cell.",
-  "bridge": "A public statement is one kind. What can it say?",
-  "how": "Pale dots show kinds both members have. Gold dots show kinds only one has.",
-  "source": "Member join · serving roster · Figure 08"
- },
- {
   "id": "deep4-mentions",
   "act": "Deeper &#183; IV &#183; Who is touched, and how",
-  "head": "The public mentions include <em>28 warnings</em>.",
-  "deck": "Current and former members named a network person or organisation in 161 collected statements. The coding describes what each statement does.",
-  "note": "A mention counts on its own, including criticism. The collection searched for names, covered selected accounts on X and varied in coverage by year.",
+  "head": "A public warning about the network <em>can count</em>.",
+  "deck": "Current and former members named network people or groups in 161 collected statements. This chapter shows what else can put a member in the tally.",
+  "note": "The collection searched for names, covered selected accounts on X and varied in coverage by year.",
   "bridge": "At an event, the record can name either a participant or a sponsor.",
   "how": "",
-  "source": "Hearing transcripts, congressional records, member releases and posts · Figure 16"
+  "source": "Hearing transcripts, congressional records, member releases and posts · 2021–2026"
  },
  {
   "id": "deep4-events",
   "act": "Deeper &#183; IV &#183; Who is touched, and how",
-  "head": "Aspen conferences make up <em>35&nbsp;of&nbsp;53</em> counted travel and event records.",
-  "deck": "The Aspen count uses named network participants appearing in a network role on funded work. The sponsor category uses the filed sponsor name.",
-  "note": "On the counted Aspen records, Anthropic, RAND and Coefficient Giving appear through participants. Staff travel belongs to the office. The collection counts attendance or sponsorship.",
-  "bridge": "Purchases leave a different paper trail.",
+  "head": "Aspen accounts for <em>35&nbsp;of&nbsp;53</em> counted travel and event records.",
+  "deck": "At Aspen, a participant’s role can put an event in the count. In the sponsor category, a network group is listed as a sponsor.",
+  "note": "The records show attendance or sponsorship. Travel by staff is counted for the office.",
+  "bridge": "What can a payment for software tell us?",
   "how": "",
-  "source": "House and Senate gift-travel filings, event pages and agendas · Figure 15"
+  "source": "House and Senate gift-travel filings, event pages and agendas"
  },
  {
   "id": "deep4-purchases",
   "act": "Deeper &#183; IV &#183; Who is touched, and how",
-  "head": "These spending records show <em>2.3 times</em> as much paid to OpenAI as to Anthropic.",
-  "deck": "The payers are political committees and House offices. Payments listed as Claude or ChatGPT count toward the corresponding lab.",
-  "note": "OpenAI is the comparison. These lines record purchases. Committee coverage is partial, and card descriptions may bundle charges.",
-  "bridge": "Beyond Anthropic, who held roles in more than one network organisation?",
+  "head": "A software purchase <em>can put a member in the tally</em>.",
+  "deck": "Greg Casar’s criticism counts as a public statement. Ted Lieu’s campaign payments count as purchases.",
+  "note": "OpenAI is the comparison. The collection covers selected payers, and card descriptions may bundle charges.",
+  "bridge": "",
   "how": "",
-  "source": "FEC committee spending reports and House disbursements · Figure 19"
- },
- {
-  "id": "deep4-roles",
-  "act": "Deeper &#183; IV &#183; Who is touched, and how",
-  "head": "<em>8 people</em> held roles across separate network organisations.",
-  "deck": "The tax returns list Holden Karnofsky at Coefficient Giving, its action fund and the boards of grantees Alignment Research Center and Redwood Research.",
-  "note": "A return can list a role held for only part of the year. Shared roles alone establish neither control nor coordination. Some organisations have no officer returns in the collection.",
-  "bridge": "Which organisations account for the federal award dollars?",
-  "how": "",
-  "source": "Tax returns and network roster · Figures 27 and 22"
- },
- {
-  "id": "deep4-awards",
-  "act": "Deeper &#183; IV &#183; Who is touched, and how",
-  "head": "RAND accounts for <em>96.9%</em> of the federal award dollars in this record.",
-  "deck": "Federal agencies reported obligations to organisations. Georgetown’s award is for a CSET conference.",
-  "note": "Obligations are amounts committed. For RAND, CNAS, Carnegie and FAS, the collection covers awards in network-funded lines of work from the date each line first received network funding.",
-  "bridge": "The records count mentions, attendance, purchases, shared roles and federal awards on their own terms.",
-  "how": "",
-  "source": "USAspending award records · Figure 06"
+  "source": "FEC committee spending reports and House disbursements · 2023–2026"
  }
 ]
