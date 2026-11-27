@@ -3,19 +3,19 @@
   "id": "start",
   "act": "Anthropic&#8217;s network and Congress",
   "head": "<em>452</em> of 533",
-  "deck": "Serving members with a public record involving Anthropic’s network\n<span class=\"cover-key\">\n<span class=\"cover-key-item\"><span class=\"cover-key-dot\" aria-hidden=\"true\" style=\"background:#DCE3F0\"></span><span class=\"cover-key-number\">333</span> <span class=\"cover-key-copy\"><strong>Network or member activity, or lobbying reported for a network client on the member’s bill</strong> <span>Committees linked to Ted Lieu received $80,500 from Anthropic’s employees and its PAC.</span></span></span> <span class=\"cover-key-item\"><span class=\"cover-key-dot\" aria-hidden=\"true\" style=\"border:2px solid #DCE3F0\"></span><span class=\"cover-key-number\">119</span> <span class=\"cover-key-copy\"><strong>Only records of what third parties did</strong> <span>Super PACs reported spending $39.6M against Thom Tillis.</span> <span>99 of 119 have a personal gift on file from a lobbyist whose firm was registered for a network client at the time.</span></span></span> <span class=\"cover-key-item\"><span class=\"cover-key-dot\" aria-hidden=\"true\" style=\"background:#2B354C\"></span><span class=\"cover-key-number\">81</span> <span class=\"cover-key-copy\"><strong>No record on file</strong> </span></span> </span>",
-  "note": "<span style=\"color:#A7B0C0\">The network includes Anthropic, its funders, funded groups, and their PACs and lobbyists. The count includes criticism and spending against a member.</span>",
+  "deck": "Serving members in records involving Anthropic’s network. <strong>119</strong> count only for third-party activity, including spending against them.",
+  "note": "The network includes Anthropic, its funders, funded groups, and their PACs and lobbyists. Network funder Coefficient Giving listed a 2019 award to Georgetown’s Center for Security and Emerging Technology (CSET).",
   "bridge": "Start with the company: its employees&#8217; own gifts, and its PAC&#8217;s.",
-  "how": "Each dot is one member serving on Nov. 26, 2026.",
-  "source": "Thom Tillis leads among serving members whose only record type is super PAC spending and whose filings show none in support. All-donor spending reported by committees that received network money, counted from each committee’s first network receipt on file (2016–2026)."
+  "how": "<span class=\"cover-date\">One dot per member serving on Nov. 26, 2026.</span><span class=\"cover-key\"><span class=\"cover-key-item\"><span class=\"cover-key-dot\" aria-hidden=\"true\" style=\"background:#DCE3F0\"></span><span class=\"cover-key-number\">333</span> <span class=\"cover-key-copy\"><strong>Network, member or client lobbying records</strong> <span>Committees linked to Ted Lieu received $80,500 from Anthropic’s employees and its PAC.</span></span></span><span class=\"cover-key-item\"><span class=\"cover-key-dot\" aria-hidden=\"true\" style=\"border:2px solid #DCE3F0\"></span><span class=\"cover-key-number\">119</span> <span class=\"cover-key-copy\"><strong>Third-party activity only</strong> <span>Super PACs that received network money reported $39.6M against Thom Tillis, counting spending from all donors.</span> <span>Largest opposition total in 2016–2026 among serving members with only super PAC spending on file and none in support.</span> <span>99 of 119 have a personal gift on file from a lobbyist whose firm was registered for a network client at the time.</span></span></span><span class=\"cover-key-item\"><span class=\"cover-key-dot\" aria-hidden=\"true\" style=\"background:#3F4B68\"></span><span class=\"cover-key-number\">81</span> <span class=\"cover-key-copy\"><strong>No counted record in this collection</strong> </span></span></span>",
+  "source": ""
  },
  {
   "id": "arrival",
   "act": "I &#183; The arrival",
-  "head": "Gifts reached <em>10</em> sitting members by the end of 2024 and <em>199</em> by Sept. 2026.",
-  "deck": "Anthropic employees gave $6.1M of their own money, 92% of it in 2026. Its PAC gave $226K, reaching 18 members with no employee gift on file.",
-  "note": "Employer is as the giver reported it to the FEC. The amounts are gross contributions before refunds. Both counts use the Nov. 26, 2026 roster. The record runs through Sept. 30, 2026.",
-  "bridge": "$6.3M in employee and PAC gifts to these serving members. Anthropic separately announced funding for a political nonprofit.",
+  "head": "Gifts from Anthropic employees and its PAC reached <em>10</em> of today’s members by the end of 2024 and <em>199</em> by Sept. 2026.",
+  "deck": "Anthropic employees gave $6.1M of their own money, 92% of it in 2026. The PAC gave $226K.",
+  "note": "Employer is as the giver reported it to the FEC, including misspellings and entries in the occupation box. The amounts are gross contributions before refunds. Both counts use the Nov. 26, 2026 roster. The record runs through Sept. 30, 2026.",
+  "bridge": "Anthropic separately announced funding for a political nonprofit. How much?",
   "how": "",
   "source": "FEC contributions to campaigns, leadership PACs and single-member joint fundraising committees linked to serving members."
  },
@@ -23,35 +23,25 @@
   "id": "forty",
   "act": "II &#183; The bigger money",
   "head": "Anthropic announced <em>$40.0M</em> for Public First Action.",
-  "deck": "Separate FEC filings show 6 committees received money from that nonprofit. From all donors, the largest amount a recipient committee spent backing one candidate was $15.0M for Alexander Bores.",
-  "note": "The filings collected here do not list Public First Action’s donors. This record traces no contribution to a specific expenditure.",
-  "bridge": "Which bills did Anthropic’s lobbying reports name?",
+  "deck": "",
+  "note": "",
+  "bridge": "From campaign and outside-spending filings, we turn to lobbying reports filed for Anthropic. Which bills did they name?",
   "how": "",
-  "source": "Sources include Anthropic’s announcements and FEC receipt and outside-spending filings."
+  "source": ""
  },
  {
   "id": "whatbills",
   "act": "III &#183; The lobbying",
-  "head": "<em>Chip proposals</em> led the bill mentions in reports filed for Anthropic.",
+  "head": "<em>Chip proposals</em> led the stand-alone bills named in reports filed for Anthropic.",
   "deck": "Anthropic reported $5.6M in lobbying expenses in the first nine months of 2026, compared with $3.1M in all of 2025.",
   "note": "",
-  "bridge": "Who was Congress hearing from before the surge in giving and lobbying?",
+  "bridge": "Why did Lieu and Tillis count equally?",
   "how": "",
-  "source": "Quarterly lobbying reports through July–Sept. 2026, saved official bill status and FEC contribution filings."
- },
- {
-  "id": "before",
-  "act": "IV · Before the surge",
-  "head": "Congress was hearing from network-funded groups by <em>2018</em>.",
-  "deck": "The highlighted witness was from Georgetown’s Center for Security and Emerging Technology (CSET), a grantee of network funder Coefficient Giving.",
-  "note": "",
-  "bridge": "What is on file for each member?",
-  "how": "",
-  "source": "Sources · Congressional witness lists and transcripts, Horizon’s roster and host guidance, and grant records."
+  "source": "Federal lobbying reports, Congress.gov bill and witness lists, FEC contributions and grant records."
  },
  {
   "id": "limits",
-  "act": "V &#183; The sum",
+  "act": "IV &#183; The sum",
   "head": "The same count holds very different records.",
   "deck": "",
   "note": "",
