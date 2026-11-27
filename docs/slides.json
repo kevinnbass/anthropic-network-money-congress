@@ -6,7 +6,7 @@
   "deck": "members of Congress have a tie on the public record to Anthropic&#8217;s network: 332 through something the network or the member did, 118 only through what third parties did. The network is the company, the funders behind it, the groups they fund, and their PACs and lobbyists.",
   "note": "Third parties are lobbyists at the network&#8217;s lobbying firms, who gave their own money, and super PACs that received network money and made their own expenditures. A tie can cut either way: a statement may be criticism, and a super PAC may have spent against the member. It is not an allegation, and a contribution is not a vote.",
   "bridge": "Start with the company: its employees&#8217; own gifts, and its PAC&#8217;s.",
-  "how": "Each dot is one of the 533 members serving on Nov. 26, 2026. A tie is a public record that links the member and the network: a contribution, a lobbying report on the member&#8217;s bill, a fellow in the office, a statement. The network, by one chain: Dustin Moskovitz and Cari Tuna are the main funders of Coefficient Giving (formerly Open Philanthropy); it awarded Georgetown&#8217;s Center for Security and Emerging Technology $55.0M in 2019; that center&#8217;s witnesses have appeared before Congress 13 times.",
+  "how": "Each dot is one of the 533 members serving on Nov. 26, 2026. A tie is a public record that links the member and the network: a contribution, a lobbying report on the member&#8217;s bill, a fellow in the office, a statement. The network, by one chain: Dustin Moskovitz and Cari Tuna are the main funders of Coefficient Giving (formerly Open Philanthropy); it awarded Georgetown&#8217;s Center for Security and Emerging Technology $55.0M in 2019; that center&#8217;s witnesses have appeared before Congress 17 times.",
   "source": ""
  },
  {
@@ -92,7 +92,7 @@
  {
   "id": "grants",
   "act": "IV &#183; The decade before",
-  "head": "By the end of 2024, seven of the network&#8217;s funders had awarded <em>$528M</em> in grants, and Congress had heard from six of their grantees.",
+  "head": "By the end of 2024, seven of the network&#8217;s funders had awarded <em>$528M</em> in grants, and Congress had heard from seven of their grantees.",
   "deck": "By then, ten of the members now serving had received money from Anthropic&#8217;s employees or its PAC. The grants supported work on AI, technology, biosecurity and catastrophic risk; none of the grants shown names a member of Congress as its recipient.",
   "note": "A grant to an organisation is not money to a member, and an award is not a payment on its date. Testifying is not lobbying.",
   "bridge": "Witnesses visit. Who works inside?",

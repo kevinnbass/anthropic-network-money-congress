@@ -38,7 +38,7 @@ Independent audits (X64 to X69 in the project's numbering) checked the new rows,
 
 - The story page's fourth version (12 slides, November 27) works in the third audit and two more readers and carries the corrected counts; it has not itself been audited yet, and stays marked a draft until it is.
 - Of the 2,725 held memo and conduit lines, the fourteen that needed a document were read and stay held; 76 of 77 sampled lines now agree with their raw filings, and one cannot be read because the FEC's own copy of that filing is cut off.
-- The testimony figure (26) is short: fifteen committee appearances by witnesses in a network organisation's role are on record and not yet counted. They are added in the next update.
+- The testimony figure (26) now counts twelve more committee appearances (70, was 58), each read against its saved hearing record; three more with no witness row yet wait to be added through the review gates, and no independent audit has yet read the twelve.
 - Five pairs of counted rows that share a member, a day and a dollar amount are not settled as one transaction or two (the filed pages were read again and carry no shared reference) ($27,399 of outside spending, $5,400 of contributions, $3,500 of lobbyists' gifts). Both rows of each pair are counted.
 - A final check of everything applied follows the audits.
 
@@ -89,7 +89,7 @@ Titles are as printed on each figure. [`FIGURES.md`](FIGURES.md) gives the full 
 | 23 | What the record is made of | [jpg](figures/congress-23-record-composition.jpg) · [png](figures/congress-23-record-composition.png) · [html](figures/congress-23-record-composition.html) |
 | 24 | The fellowship pipeline into offices | [jpg](figures/congress-24-fellowship-pipeline.jpg) · [png](figures/congress-24-fellowship-pipeline.png) · [html](figures/congress-24-fellowship-pipeline.html) |
 | 25 | Outside spending for and against members | [jpg](figures/congress-25-ie-for-and-against-members.jpg) · [png](figures/congress-25-ie-for-and-against-members.png) · [html](figures/congress-25-ie-for-and-against-members.html) |
-| 26 | Network witnesses before Congress: 58 appearances since 2015 | [jpg](figures/congress-26-committee-testimony.jpg) · [png](figures/congress-26-committee-testimony.png) · [html](figures/congress-26-committee-testimony.html) |
+| 26 | Network witnesses before Congress: 70 appearances since 2015 | [jpg](figures/congress-26-committee-testimony.jpg) · [png](figures/congress-26-committee-testimony.png) · [html](figures/congress-26-committee-testimony.html) |
 | 27 | 8 people sit across separate network organisations; funder staff sit on grantees' boards | [jpg](figures/congress-27-shared-officers.jpg) · [png](figures/congress-27-shared-officers.png) · [html](figures/congress-27-shared-officers.html) |
 | 28 | The network lobbied all three state AI-safety bills, as a handful of clients among many | [jpg](figures/congress-28-state-ai-bill-lobbying.jpg) · [png](figures/congress-28-state-ai-bill-lobbying.png) · [html](figures/congress-28-state-ai-bill-lobbying.html) |
 | 29 | The network reported 0.5% of 2025's AI-issue lobbying; the frontier labs 6% | [jpg](figures/congress-29-federal-ai-lobbying-baseline.jpg) · [png](figures/congress-29-federal-ai-lobbying-baseline.png) · [html](figures/congress-29-federal-ai-lobbying-baseline.html) |
@@ -135,18 +135,18 @@ The scripts are the project's own. Four things were changed so they run here: th
 
 Rows were collected from public sources (FEC, Senate and House lobbying and disclosure filings, IRS returns, USAspending, state registries, congressional records, organisations' own pages) by AI research agents, each row with its source's URL and an excerpt as fetched; the author keeps saved copies of the sources. Rows entered the tables through a row-by-row review of each batch by a separate agent. Independent audits then checked evidence rows against saved originals, in both directions: what was kept and what was removed. The measure below says how many. A correction never overwrites: the earlier row is archived and the change noted on the row.
 
-The project measures itself against a written standard with a script. On 2026-11-27 at 10:22 UTC it printed:
+The project measures itself against a written standard with a script. On 2026-11-27 at 10:43 UTC it printed:
 
 ```
-== congress  bound rows 133,466  evidence rows 43,063
-G1 FAIL  drawn evidence document-checked 43,021/43,063 (99.9%); all evidence 99.9%
-G2 PASS  errors disposed 32,679/32,679; errors+qualifications disposed 61,074/61,074 (100.0%)
-G3 PASS  corrected rows archived 15,975/15,975 (ledger rows 16,019)
-G4 PASS  audits 106: complete 48, well-formed closing line 106; incomplete and not carried to README/dispositions 0
+== congress  bound rows 133,470  evidence rows 43,068
+G1 FAIL  drawn evidence document-checked 43,021/43,068 (99.9%); all evidence 99.9%
+G2 FAIL  errors disposed 32,679/32,680; errors+qualifications disposed 61,074/61,077 (100.0%)
+G3 PASS  corrected rows archived 15,979/15,979 (ledger rows 16,023)
+G4 FAIL  audits 107: complete 48, well-formed closing line 106; incomplete and not carried to README/dispositions 0; malformed ['X77-story-series-round5-20261127']
 G5 PASS  clean figures 29/29
 ```
 
-G1 says how many of the evidence rows the 29 figures draw or count have a document check on file. Since figure 23 lists every row it counts, that is every evidence row in the record. The 42 rows without one are 23 rows of the network list and 19 contribution lines whose audit finding is a qualification still open. G2 says how many of the errors and qualifications any audit has raised have a written ruling. The final check of everything applied has not run yet, so this update is not called verified.
+G1 says how many of the evidence rows the 29 figures draw or count have a document check on file. Since figure 23 lists every row it counts, that is every evidence row in the record. The 47 rows without one are 23 rows of the network list, 19 contribution lines whose audit finding is a qualification still open, and the five witness rows added to figure 26 on November 27, which the final check reads. G2 says how many of the errors and qualifications any audit has raised have a written ruling; the open ones, and the audit G4 names, belong to the audit of the story series' fourth version, which is running. The final check of everything applied has not run yet, so this update is not called verified.
 
 ## Names
 

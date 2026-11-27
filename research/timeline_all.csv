@@ -1,4 +1,4 @@
-# congress derived timeline_all.csv written by scripts/build_join.py 2026-11-27T10:20:01Z (PLAN.md §4): every dated row from every table, 2016-2026, one line per row; not a promoted table (TL holds the curated events); rebuilt in place
+# congress derived timeline_all.csv written by scripts/build_join.py 2026-11-27T10:42:28Z (PLAN.md §4): every dated row from every table, 2016-2026, one line per row; not a promoted table (TL holds the curated events); rebuilt in place
 row_id,table,conn_type,date,actor,counterparty,member_bioguide,money_type,hop,amount_usd,role,note_120
 HM19564,hard_money,1/2,2016,Luke Muehlhauser,,,,,,negative,query=https://api.open.fec.gov/v1/schedules/schedule_a/?contributor_name=Muehlhauser%2C+Luke&two_year_transaction_period
 HM19570,hard_money,1/2,2016,Luke Muehlhauser,,,,,,context,person=Luke Muehlhauser; en=EN209; source=api.open.fec.gov/v1/schedules/schedule_a/; exact_query=https://api.open.fec.go
@@ -34203,7 +34203,7 @@ MS4719,member_statements,11,2021-03-17,Elise M. Stefanik,,S001196,,,,context,spe
 MS4720,member_statements,11,2021-03-17,Jim Jordan,,J000289,,,,context,speaker=Mr. JORDAN; member_bioguide=J000289|Jim Jordan|House-OH; entity=Amodei; entity_as_printed=Amodei; venue=congress
 MS4721,member_statements,11,2021-03-17,,,,,,,context,speaker=not_named_in_granule; entity=Amodei; entity_as_printed=Amodei; venue=congressional_record; stance=names; package
 MS8229,member_statements,11,2021-03-17,,,,,,,context,speaker=not_named_in_granule; entity=RAND; entity_as_printed=RAND; venue=hearing; stance=names; packageId=CHRG-117shrg44
-MS8230,member_statements,11,2021-03-17,Mr. Khan,CSET,,,,,evidence,speaker=Mr. Khan; member_bioguide=not_in_roster; entity=CSET; entity_as_printed=CSET; venue=hearing; stance=names; packa
+MS8230,member_statements,11,2021-03-17,Saif Khan,CSET,,,,,evidence,speaker=Mr. Khan; member_bioguide=not_in_roster; entity=CSET; entity_as_printed=CSET; venue=hearing; stance=names; packa
 MS8265,member_statements,11,2021-03-17,Mr. Rafael Santana,,,,,,context,speaker=Mr. Rafael Santana; member_bioguide=not_in_roster; entity=RAND; entity_as_printed=RAND; venue=hearing; stance=na
 FG1408,federal_money,7,2021-03-18,Department of Defense,THE RAND CORPORATION,,federal_award,1,1131423.00,context,n_transactions=1; last_action_date=2021-03-18; award_type=DELIVERY ORDER; lake=lake.usaspending_contracts_2021; lake_key
 HM14236,hard_money,1/2,2021-03-18,"RAO, AMY",WARNOCK VICTORY FUND,W000790,hard_money,1,1000.00,evidence,"sub_id=4080620211324845149; amount=1000.0; date=2021-03-18; contributor_name=RAO, AMY; contributor_employer=HILLSPIRE; c"
@@ -48844,7 +48844,7 @@ MS213,member_statements,11,2023-04-18,JAMES COMER,S09,,,,,,source_row_id=C-30f32
 MS214,member_statements,11,2023-04-18,MICHAEL T. McCAUL,S09,,,,,,source_row_id=C-8704c474fe; seed; re-verify; source=[local copy: citations.csv]; source_sha256=8df1e4de62d401a6b6c118ea5
 MS215,member_statements,11,2023-04-18,MICHAEL T. McCAUL,S09,,,,,,source_row_id=C-cf7e0e07ab; seed; re-verify; source=[local copy: citations.csv]; source_sha256=8df1e4de62d401a6b6c118ea5
 MS305,member_statements,11,2023-04-18,Darshana Baruah,S06,,,,,,source_row_id=W-493178f4e7; seed; re-verify; source=[local copy: citations.csv]; source_sha256=8df1e4de62d401a6b6c118ea5
-MS317,member_statements,11,2023-04-18,David Feith,S09,,,,,,source_row_id=W-ad4080f0af; seed; re-verify; source=[local copy: citations.csv]; source_sha256=8df1e4de62d401a6b6c118ea5
+MS317,member_statements,11,2023-04-18,David Feith,S09,,,,,evidence,source_row_id=W-ad4080f0af; seed; re-verify; source=[local copy: citations.csv]; source_sha256=8df1e4de62d401a6b6c118ea5
 MS3570,member_statements,11,2023-04-18,,,,,,,context,speaker=not_named_in_granule; entity=Amodei; entity_as_printed=Amodei; venue=congressional_record; stance=names; package
 MS3571,member_statements,11,2023-04-18,Teresa Leger Fernandez,,L000273,,,,context,speaker=Ms. LEGER FERNANDEZ; member_bioguide=L000273|Teresa Leger Fernandez|House-NM; entity=Amodei; entity_as_printed=A
 MS3572,member_statements,11,2023-04-18,Claudia Tenney,,T000478,,,,context,speaker=Mr. Tenney; member_bioguide=T000478|Claudia Tenney|House-NY; entity=Amodei; entity_as_printed=Amodei; venue=cong
@@ -48859,7 +48859,7 @@ MS1858,member_statements,11,2023-04-19,,CSET;RAND,,,,,context,Task B held_row ci
 MS3567,member_statements,11,2023-04-19,,,,,,,context,speaker=not_named_in_granule; entity=Amodei; entity_as_printed=Amodei; venue=congressional_record; stance=names; package
 MS3568,member_statements,11,2023-04-19,Brian J. Mast,,M001199,,,,context,speaker=Mr. Mast; member_bioguide=M001199|Brian J. Mast|House-FL; entity=Amodei; entity_as_printed=Amodei; venue=congres
 MS3569,member_statements,11,2023-04-19,,,,,,,context,speaker=not_named_in_granule; entity=Amodei; entity_as_printed=Amodei; venue=congressional_record; stance=names; package
-MS668,member_statements,11,2023-04-19,Jason Matheny,RAND Corporation,,,,,evidence,speaker=Jason Matheny; role_on_witness_list_or_transcript=President and CEO of RAND; venue=hearing; committee=Senate Arm
+MS668,member_statements,11,2023-04-19,Jason G. Matheny,RAND Corporation,,,,,evidence,speaker=Jason Matheny; role_on_witness_list_or_transcript=President and CEO of RAND; venue=hearing; committee=Senate Arm
 MS669,member_statements,11,2023-04-19,Jason Matheny,RAND Corporation,,,,,context,verbatim window naming Jason Matheny / RAND before SASC Cyber; BIND Jason Matheny RAND from issuer testimony; primary_fi
 MS670,member_statements,11,2023-04-19,Jason Matheny,RAND Corporation,,,,,context,stance=DoD_can_best_ensure_AI_progress_benefits_US_national_security_instead_of_degrading_it; grounded only in quoted te
 MS7604,member_statements,11,2023-04-19,,RAND Corporation,,,,,context,speaker=not_named_in_granule; entity=RAND; entity_as_printed=RAND; venue=congressional_record; stance=names; packageId=C
@@ -51778,7 +51778,7 @@ MS1866,member_statements,11,2023-10-19,Darrell Issa,CSET,,,,,context,Task B spea
 MS219,member_statements,11,2023-10-19,MIKE GALLAGHER,S09,,,,,,source_row_id=C-64f6eb611a; seed; re-verify; source=[local copy: citations.csv]; source_sha256=8df1e4de62d401a6b6c118ea5
 MS281,member_statements,11,2023-10-19,Mr. Max Eden,S02,,,,,,source_row_id=W-4ba30ccdef; seed; re-verify; source=[local copy: citations.csv]; source_sha256=8df1e4de62d401a6b6c118ea5
 MS282,member_statements,11,2023-10-19,William C. Greenwalt,S02,,,,,,source_row_id=W-6c511fe4f2; seed; re-verify; source=[local copy: citations.csv]; source_sha256=8df1e4de62d401a6b6c118ea5
-MS319,member_statements,11,2023-10-19,Paul Scharre,S09,,,,,,source_row_id=W-2367f2e47e; seed; re-verify; source=[local copy: citations.csv]; source_sha256=8df1e4de62d401a6b6c118ea5
+MS319,member_statements,11,2023-10-19,Paul Scharre,S09,,,,,evidence,source_row_id=W-2367f2e47e; seed; re-verify; source=[local copy: citations.csv]; source_sha256=8df1e4de62d401a6b6c118ea5
 MS8330,member_statements,11,2023-10-19,Darrell Issa,CSET,I000056,,,,evidence,speaker=Mr. ISSA; member_bioguide=I000056|Darrell Issa|House-CA; entity=CSET; entity_as_printed=CSET; venue=hearing; sta
 SP13430,super_pac_c4,3a/3b,2023-10-19,LCV VICTORY FUND,"TRANEL, MONICA",,independent_expenditure,2,129.17,evidence,sub_id=4112720231811756003; amount_usd=129.17; expenditure_date=2023-10-19; dissemination_date=2023-10-19; support_oppos
 SP13431,super_pac_c4,3a/3b,2023-10-19,,,,,,,context,sub_id=4112720231811756002; amount_usd=129.17; expenditure_date=2023-10-19; dissemination_date=2023-10-19; support_oppos
@@ -52381,7 +52381,7 @@ MS3089,member_statements,11,2023-12-06,Marcus Molinaro,,M001221,,,,context,"spea
 MS3090,member_statements,11,2023-12-06,Andrew Ogles,,O000175,,,,context,speaker=Mr. Ogles; member_bioguide=O000175|Andrew Ogles|House-TN; entity=Amodei; entity_as_printed=Amodei; venue=congres
 MS3091,member_statements,11,2023-12-06,Mr. Scott,,,,,,context,speaker=Mr. Scott; member_bioguide=unbound; two_or_more_roster_candidates=S001189|Austin Scott;S001157|David Scott;S0001
 MS3092,member_statements,11,2023-12-06,Mr. SCOTT of Virginia,,,,,,context,"speaker=Mr. SCOTT of Virginia; member_bioguide=S000185|Robert C. ""Bobby"" Scott|House-VA; entity=Amodei; entity_as_printe"
-MS320,member_statements,11,2023-12-06,Andrew F. Krepinevich,S09,,,,,,source_row_id=W-23a24ce8cc; seed; re-verify; source=[local copy: citations.csv]; source_sha256=8df1e4de62d401a6b6c118ea5
+MS320,member_statements,11,2023-12-06,"Andrew F. Krepinevich, Jr.",S09,,,,,evidence,source_row_id=W-23a24ce8cc; seed; re-verify; source=[local copy: citations.csv]; source_sha256=8df1e4de62d401a6b6c118ea5
 MS326,member_statements,11,2023-12-06,Samuel Hammond,S12,,,,,,source_row_id=W-f73db10037; seed; re-verify; source=[local copy: citations.csv]; source_sha256=8df1e4de62d401a6b6c118ea5
 MS8034,member_statements,11,2023-12-06,Elizabeth Warren,RAND Corporation,W000817,,,,context,speaker=Senator WARREN; member_bioguide=W000817|Elizabeth Warren|Senate-MA; entity=RAND; entity_as_printed=RAND; venue=h
 MS8119,member_statements,11,2023-12-06,,,,,,,context,speaker=not_named_in_granule; entity=RAND; entity_as_printed=RAND; venue=hearing; stance=names; packageId=CHRG-118shrg49
@@ -54757,7 +54757,7 @@ MS2973,member_statements,11,2024-03-12,,,,,,,context,speaker=not_named_in_granul
 MS2974,member_statements,11,2024-03-12,Mr. BEYER,,,,,,context,speaker=Mr. BEYER; member_bioguide=not_in_roster; entity=Amodei; entity_as_printed=Amodei; venue=congressional_record; s
 MS2975,member_statements,11,2024-03-12,Jake Ellzey,,E000071,,,,context,speaker=Mr. Ellzey; member_bioguide=E000071|Jake Ellzey|House-TX; entity=Amodei; entity_as_printed=Amodei; venue=congres
 MS2976,member_statements,11,2024-03-12,,,,,,,context,speaker=not_named_in_granule; entity=Amodei; entity_as_printed=Amodei; venue=congressional_record; stance=names; package
-MS323,member_statements,11,2024-03-12,Paul Scharre,S09,,,,,,source_row_id=W-44d2412fe0; seed; re-verify; source=[local copy: citations.csv]; source_sha256=8df1e4de62d401a6b6c118ea5
+MS323,member_statements,11,2024-03-12,Paul Scharre,S09,,,,,evidence,source_row_id=W-44d2412fe0; seed; re-verify; source=[local copy: citations.csv]; source_sha256=8df1e4de62d401a6b6c118ea5
 MS9143,member_statements,11,2024-03-12,Dr. Scharre,,,,,,context,speaker=Dr. Scharre; member_bioguide=not_in_roster; entity=RAND; entity_as_printed=rand; venue=hearing; stance=names; pa
 MS9144,member_statements,11,2024-03-12,Dr. Scharre,CSET,,,,,context,speaker=Dr. Scharre; member_bioguide=not_in_roster; entity=CSET; entity_as_printed=cset; venue=hearing; stance=names; pa
 GR1699,grants,6,2024-03-13,Jaan Tallinn,Mathematical Metaphysics Institute,,award,2,260000,evidence,"Task A award; funder=Jaan Tallinn; via=SFF-spec; recipient_org=Mathematical Metaphysics Institute; amount=260,000; value"
@@ -61664,7 +61664,7 @@ MS260,member_statements,11,2024-09-25,Vermont,S21,,,,,,source_row_id=C-a60ba9e07
 MS2600,member_statements,11,2024-09-25,Tom Cole,,C001053,,,,context,speaker=Mr. Cole; member_bioguide=C001053|Tom Cole|House-OK; entity=Amodei; entity_as_printed=Amodei; venue=congressiona
 MS2601,member_statements,11,2024-09-25,Bryan Steil,,S001213,,,,context,speaker=Mr. Steil; member_bioguide=S001213|Bryan Steil|House-WI; entity=Amodei; entity_as_printed=Amodei; venue=congress
 MS329,member_statements,11,2024-09-25,Denzel Wilson,S21,,,,,,source_row_id=W-1523bd1bb4; seed; re-verify; source=[local copy: citations.csv]; source_sha256=8df1e4de62d401a6b6c118ea5
-MS7653,member_statements,11,2024-09-25,Mr. Wilson,Anthropic,,,,,evidence,speaker=Mr. Wilson; member_bioguide=unbound; two_or_more_roster_candidates=W000808|Frederica S. Wilson;W000795|Joe Wilso
+MS7653,member_statements,11,2024-09-25,Denzel Wilson,Anthropic,,,,,evidence,speaker=Mr. Wilson; member_bioguide=unbound; two_or_more_roster_candidates=W000808|Frederica S. Wilson;W000795|Joe Wilso
 MS7654,member_statements,11,2024-09-25,,,,,,,context,speaker=not_named_in_granule; entity=RAND; entity_as_printed=RAND; venue=hearing; stance=names; packageId=CHRG-118shrg57
 MS8553,member_statements,11,2024-09-25,,,,,,,context,task=C; entity=Amodei; entity_as_printed=Amodei; packageId=BILLS-118hres1516ih; granuleId=BILLS-118hres1516ih; title=Com
 MS9131,member_statements,11,2024-09-25,Mr. Wilson,CSET,,,,,context,speaker=Mr. Wilson; member_bioguide=unbound; two_or_more_roster_candidates=W000808|Frederica S. Wilson;W000795|Joe Wilso
@@ -87883,7 +87883,7 @@ MS374,member_statements,11,2026-04-22,Rep. George Whitesides,Anthropic,W000830,,
 MS375,member_statements,11,2026-04-22,Rep. George Whitesides,Anthropic,W000830,,,,context,Task C stance=calls_for_action grounded only in quoted text (no motive asserted); entity_named=Anthropic; identity=offic
 MS686,member_statements,11,2026-04-22,Center for Security and Emerging Technology,CSET,,,,,evidence,speaker=Helen Toner; role_on_witness_list_or_transcript=Interim Executive Director at Georgetown University's Center for
 MS687,member_statements,11,2026-04-22,Helen Toner,CSET,,,,,context,verbatim window naming Helen Toner / CSET Senate Judiciary testimony; BIND Helen Toner CSET from issuer article; primary
-MS688,member_statements,11,2026-04-22,Helen Toner,CSET,,,,,context,stance=Chinese_AI_companies_employ_distillation_on_American_AI_models_and_countermeasures_should_focus_on_broader_measur
+MS688,member_statements,11,2026-04-22,Helen Toner,CSET,,,,,evidence,stance=Chinese_AI_companies_employ_distillation_on_American_AI_models_and_countermeasures_should_focus_on_broader_measur
 SP023,super_pac_c4,3a/3b,2026-04-22,"ADLER, STEVEN",JOBS AND DEMOCRACY PAC,,outside_receipt,1,10000,evidence,Schedule A to C00928374 (JOBS AND DEMOCRACY PAC); entity_type=IND; amount=10000.0; line=11AI Contributions From Individu
 SP12342,super_pac_c4,3a/3b,2026-04-22,,,,,,,context,sub_id=4062520261522796207; amount_usd=104615.2; expenditure_date=2026-04-22; dissemination_date=2026-04-30; support_opp
 SP12343,super_pac_c4,3a/3b,2026-04-22,,,,,,,context,sub_id=4062520261522796206; amount_usd=115458.64; expenditure_date=2026-04-22; dissemination_date=2026-04-28; support_op
