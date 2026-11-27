@@ -2,31 +2,31 @@
  {
   "id": "deep4-mentions",
   "act": "Deeper &#183; IV &#183; Who is touched, and how",
-  "head": "A public warning about the network <em>can count</em>.",
-  "deck": "Current and former members named network people or groups in 193 collected statements. This chapter shows what else can put a member in the tally.",
-  "note": "The collection searched for names, covered selected accounts on X and varied in coverage by year.",
-  "bridge": "At an event, the record can name either a participant or a sponsor.",
+  "head": "Even a public criticism <em>can put a member in the count</em>.",
+  "deck": "The bars count statements, including remarks by former members. Only sitting members can enter the chamber tally.",
+  "note": "The collection searched for names and covered selected accounts on X. Coverage varies by year.",
+  "bridge": "What puts a trip in the count?",
   "how": "",
   "source": "Hearing transcripts, congressional records, member releases and posts · 2021–2026"
  },
  {
   "id": "deep4-events",
   "act": "Deeper &#183; IV &#183; Who is touched, and how",
-  "head": "Aspen accounts for <em>35&nbsp;of&nbsp;53</em> counted travel and event records.",
-  "deck": "At Aspen, a participant’s role can put an event in the count. In the sponsor category, a network group is listed as a sponsor.",
-  "note": "The records show attendance or sponsorship. Travel by staff is counted for the office.",
-  "bridge": "What can a payment for software tell us?",
+  "head": "A trip can count for <em>who was on the agenda</em> or who sponsored it.",
+  "deck": "A member’s travel filing and a conference program can document the same trip. Other filings name a network group as a sponsor.",
+  "note": "Staff trips count for their congressional office. An agenda lists planned participants.",
+  "bridge": "How did software payments get Ted Lieu into the tally?",
   "how": "",
   "source": "House and Senate gift-travel filings, event pages and agendas"
  },
  {
   "id": "deep4-purchases",
   "act": "Deeper &#183; IV &#183; Who is touched, and how",
-  "head": "A software purchase <em>can put a member in the tally</em>.",
-  "deck": "Greg Casar’s criticism counts as a public statement. Ted Lieu’s campaign payments count as purchases.",
-  "note": "OpenAI is the comparison. The collection covers selected payers, and card descriptions may bundle charges.",
+  "head": "Ted Lieu’s campaign reported <em>two software payments</em> to Anthropic.",
+  "deck": "Those campaign filings are enough to add a purchase record to his seat in the chamber.",
+  "note": "The filings name Anthropic and list the purpose as software. The specific product and its use are unspecified.",
   "bridge": "",
   "how": "",
-  "source": "FEC committee spending reports and House disbursements · 2023–2026"
+  "source": "Federal Election Commission · Ted Lieu for Congress disbursement reports"
  }
 ]

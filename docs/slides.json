@@ -2,18 +2,18 @@
  {
   "id": "start",
   "act": "Anthropic&#8217;s network and Congress",
-  "head": "<em>454</em> of 533",
-  "deck": "Sitting members appear in public records tied to Anthropic’s wider network, for and against them. <span class=\"cover-unit\">One dot per sitting member on Nov 26, 2026.</span>",
+  "head": "<em>455</em> of 533",
+  "deck": "These sitting members appear in public records involving Anthropic’s network, from campaign gifts and outside spending for or against candidates to bill mentions and public statements.",
   "note": "The records leave the effect on votes open.",
   "bridge": "First, gifts from Anthropic’s employees and PAC.",
-  "how": "<span class=\"cover-network\">The roster covers Anthropic, its employees, PAC, directors and funders, other AI-safety funders and the groups they back that work with Congress, and lobbyists for network clients.</span><span class=\"cover-overlap\">A member can appear in several groups. Outside spending counts for committees that took network money.</span><span class=\"cover-groups\"><span class=\"cover-group\"><span class=\"cover-group-head\" style=\"--group:#DCE3F0\"><span class=\"cover-count\" data-m=\"a51a865ef0\" tabindex=\"0\">416</span> received campaign gifts</span><span class=\"cover-definition\">From Anthropic employees and its PAC, other network donors, and lobbyists giving their own money.</span><span class=\"cover-example\" data-m=\"3fa6cb14c6\" tabindex=\"0\">In 2025–2026, Anthropic employees gave $77,000 to committees linked to Ted Lieu.</span></span><span class=\"cover-group\"><span class=\"cover-group-head\" style=\"--group:#38B092\"><span class=\"cover-count\" data-m=\"75530f51bc\" tabindex=\"0\">113</span> had outside spending for them</span><span class=\"cover-example\" data-m=\"58ae0d4523\" tabindex=\"0\">In 2022, Priorities USA Action reported spending $8.7M from all donors for John Fetterman.</span></span><span class=\"cover-group\"><span class=\"cover-group-head\" style=\"--group:#D08C3E\"><span class=\"cover-count\" data-m=\"40ece4636e\" tabindex=\"0\">76</span> had outside spending against them</span><span class=\"cover-example\" data-m=\"51ee3517f1\" tabindex=\"0\">In 2020, super PACs reported spending $39.6M from all donors against Thom Tillis.</span><span class=\"cover-donor\" data-m=\"8dc5af4ad4\" tabindex=\"0\">Earlier in 2020, before the election, Reed Hastings, Dustin Moskovitz, Eric Schmidt and Wendy Schmidt gave Senate Majority PAC $3.6M.</span></span><span class=\"cover-group\"><span class=\"cover-group-head\" style=\"--group:#DCE3F0\"><span class=\"cover-count\" data-m=\"4401f1e385\" tabindex=\"0\">167</span> had other records</span><span class=\"cover-definition\">Bills named in lobbying reports, public statements, staff, fellows, travel, software purchases and disclosures.</span><span class=\"cover-example\" data-m=\"33ce0e515d\" tabindex=\"0\">In 2026, Greg Casar said Anthropic left most of lawmakers’ questions unanswered.</span></span></span>",
-  "source": ""
+  "how": "",
+  "source": "<span class=\"cover-spend\">Outside spending</span><span class=\"cover-scope\">By committees that took network money, from all their donors.</span><span class=\"cover-example\" style=\"--direction:#38B092\" data-m=\"58ae0d4523\" tabindex=\"0\">In 2022, Priorities USA Action reported spending $8.7M to support John Fetterman.</span><span class=\"cover-example\" style=\"--direction:#D08C3E\" data-m=\"51ee3517f1\" tabindex=\"0\">In 2020, Senate Majority PAC and other super PACs reported spending $39.6M against Thom Tillis.</span><span class=\"cover-donor\" data-m=\"8dc5af4ad4\" tabindex=\"0\">Before the 2020 election, Reed Hastings, Dustin Moskovitz, Eric Schmidt and Wendy Schmidt gave Senate Majority PAC $3.6M.</span>"
  },
  {
   "id": "arrival",
   "act": "I &#183; The arrival",
-  "head": "Anthropic employee and PAC gifts reached <em>10</em> of today’s members by the end of 2024 and <em>199</em> by Sept. 2026.",
-  "deck": "Anthropic employees gave $6.1M of their own money, 92% of it in 2026. Anthropic’s political action committee (PAC) gave $226K.",
+  "head": "Anthropic employee and PAC gifts reached <em>10</em> of today’s members by the end of 2024 and <em>200</em> by Sept. 2026.",
+  "deck": "Anthropic employees gave $6.0M of their own money, 92% of it in 2026. Anthropic’s political action committee (PAC) gave $232K.",
   "note": "Employer is as the giver reported it to the FEC, including misspellings and entries in the occupation box. The amounts are gross contributions before refunds. The record runs through Sept. 30, 2026.",
   "bridge": "Anthropic separately announced funding for a political nonprofit. How much?",
   "how": "",
@@ -22,19 +22,19 @@
  {
   "id": "forty",
   "act": "II &#183; The bigger money",
-  "head": "Anthropic announced <em data-m=\"ac23f71a5a\" tabindex=\"0\">$40.0M</em> for Public First Action in 2026.",
-  "deck": "Public First Action is a political nonprofit. The filings collected here don’t list its donors or trace any contribution to a specific expenditure.",
-  "note": "",
-  "bridge": "The spending filings name candidates. The lobbying filings name bills. Where do the two sets of records overlap?",
+  "head": "Anthropic announced <em data-m=\"ac23f71a5a\" tabindex=\"0\">$40.0M</em> for Public First Action.",
+  "deck": "Commonwealth Together PAC reported spending against Seth Moulton’s Senate bid months before its receipt from the nonprofit.",
+  "note": "The filings show where money went and when. They give no reason for the spending or trace gifts to expenses. The receipt came too late to pay for the earlier spending.",
+  "bridge": "Whose bills did Anthropic’s lobbyists report, and whose committees got employee or PAC gifts?",
   "how": "",
-  "source": ""
+  "source": "Sources · Anthropic’s announcement pages and the PAC’s FEC filings"
  },
  {
   "id": "sponsors",
   "act": "III &#183; The lobbying",
-  "head": "Gifts from Anthropic’s employees and PAC showed up <em>more often</em> for sponsors of bills named in its lobbying reports.",
-  "deck": "The gifts went to committees linked to serving members. The records establish a gift and a bill mention. The company’s position on the bill and any connection between the two remain open in these filings.",
-  "note": "",
+  "head": "Gifts from Anthropic employees or its PAC were <em>more common</em> among serving sponsors of stand-alone bills named in lobbying reports filed for Anthropic than among serving members overall.",
+  "deck": "",
+  "note": "A gift and a bill mention are separate records. The filings leave open any link between them and Anthropic’s position on the bill.",
   "bridge": "How did Lieu and Tillis each count as one seat?",
   "how": "",
   "source": "Federal lobbying and campaign contribution filings, and Congress.gov"
@@ -43,7 +43,7 @@
   "id": "limits",
   "act": "IV &#183; The sum",
   "head": "<em>Seven kinds</em>, one kind, one seat each",
-  "deck": "Ted Lieu and Thom Tillis both count once in the opening total of 454.",
+  "deck": "Ted Lieu and Thom Tillis both count once in the opening total of 455.",
   "note": "The effect of these activities on votes remains unknown.",
   "bridge": "",
   "how": "",

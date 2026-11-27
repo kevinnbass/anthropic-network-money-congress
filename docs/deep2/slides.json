@@ -2,41 +2,31 @@
  {
   "id": "deep2-donor",
   "act": "Deeper &#183; II &#183; The outside money",
-  "head": "Dustin Moskovitz gave <em>$100M</em> to Future Forward’s super PAC.",
-  "deck": "Beyond Anthropic’s announcement, the filings show outside gifts from other donors in the network. Moskovitz, a funder behind Good Ventures, gave $130M across the outside groups on file in 2016–2024.",
-  "note": "The amounts are gross of refunds and include gifts filed under his trust. A contribution does not direct a committee’s spending.",
-  "bridge": "How did Future Forward’s receipts and spending compare with other committees’?",
+  "head": "Dustin Moskovitz gave <em data-m=\"0cc3438d69\">$100M</em> to Future Forward’s super PAC.",
+  "deck": "This chapter goes back to earlier elections and widens to other donors in the network. <span data-m=\"f2cf9832ad\">Moskovitz co-founded Good Ventures, a foundation that funds AI safety work.</span>",
+  "note": "The bars show reported contributions before refunds, including gifts filed under his trust. Committees also spend money from their other donors.",
+  "bridge": "How did committees that took network money spend by party, for and against?",
   "how": "",
   "source": "Source · Federal Election Commission contribution records"
  },
  {
-  "id": "deep2-committees",
-  "act": "Deeper &#183; II &#183; The outside money",
-  "head": "House Majority PAC led spending for or against sitting members at <em>$213M</em>. Among the 22 spending leaders, Future Forward led receipts on file.",
-  "deck": "Receipts are compared among the 22 committees that spent the most for or against sitting members.",
-  "note": "The spending uses money from all donors. The receipts cover the money documented here. The filings cannot trace a receipt to a specific expenditure.",
-  "bridge": "Who did the committees spend for or against from their first network receipts onward?",
-  "how": "",
-  "source": "Sources · FEC spending and receipts, with documented issuer receipts"
- },
- {
   "id": "deep2-spending",
   "act": "Deeper &#183; II &#183; The outside money",
-  "head": "<em>74%</em> of these committees’ all-donor spending went against Republicans.",
-  "deck": "The filings name members serving on Nov. 26, 2026. A member can appear on both sides if committees reported spending for and against them.",
-  "note": "The filings identify the committee that spent the money. They cannot trace an expenditure to a donor or establish coordination with a candidate.",
-  "bridge": "What do the filings show about the people these committees opposed?",
+  "head": "<em data-m=\"74c12918d0\">74%</em> of the spending went against Republicans now in Congress.",
+  "deck": "<span data-m=\"592902d95c\">24 committees took network money and spent for or against members serving on Nov. 26, 2026.</span> The chart counts spending from all donors, starting at each committee’s first itemized network receipt on file.",
+  "note": "The filings identify the committee that spent the money. They cannot trace an expenditure to a donor.",
+  "bridge": "Which candidates faced opposition, and what did the committees report receiving?",
   "how": "",
   "source": "Source · Federal Election Commission outside-spending filings"
  },
  {
   "id": "deep2-against",
   "act": "Deeper &#183; II &#183; The outside money",
-  "head": "Outside committees spent against <em>Seth Moulton</em> and <em>Thom Tillis</em> in different elections.",
-  "deck": "One set of committees received money from Public First Action. The earlier cases involve committees funded by people on today’s network roster.",
-  "note": "The filings show where money went. They give no reason for the spending or link a gift to an expenditure.",
+  "head": "Outside committees spent against <em>Thom Tillis</em> years before Anthropic’s announcement.",
+  "deck": "These two races show two routes for money into committees that spend against candidates.",
+  "note": "The filings show where money went and when. They give no reason for the spending or link a gift to an expenditure.",
   "bridge": "",
   "how": "",
-  "source": "Sources · FEC receipts and outside spending, lobbying filings and public statements"
+  "source": "Source · FEC receipts and outside-spending filings"
  }
 ]

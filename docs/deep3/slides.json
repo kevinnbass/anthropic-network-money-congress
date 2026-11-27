@@ -3,8 +3,8 @@
   "id": "deep3-bills",
   "act": "Deeper &#183; III &#183; How the lobbying works",
   "head": "<em>Chip proposals</em> led the stand-alone bills named in reports filed for Anthropic.",
-  "deck": "This chapter follows what lobbyists reported about bills and spending, then traces personal gifts and career moves that appear in separate records.",
-  "note": "The bars count reports naming a bill. The company’s position remains open in those reports.",
+  "deck": "Start with the AI OVERWATCH Act from the Mast example. The chapter then widens from reports filed for Anthropic to lobbying, personal gifts and career records involving its wider network.",
+  "note": "The reports name bills and leave Anthropic’s position on them open.",
   "bridge": "How much of the money reported on federal filings naming AI came from network clients?",
   "how": "",
   "source": "Federal lobbying reports and saved Congress.gov bill records"
@@ -12,39 +12,29 @@
  {
   "id": "deep3-federal",
   "act": "Deeper &#183; III &#183; How the lobbying works",
-  "head": "The network accounted for <em>0.5%</em> of the 2025 lobbying dollars on the AI-related federal filings included here.",
-  "deck": "The share rises when the comparison uses filings listing only AI issues.",
-  "note": "The broader total sets a ceiling on AI lobbying dollars. A client’s in-house expenses already include its payments to outside lobbying firms, which are counted once here.",
-  "bridge": "Federal filings report dollars. How many clients show up on state AI bills?",
-  "how": "",
+  "head": "The network’s share was higher on <em>AI-only federal lobbying filings</em>.",
+  "deck": "",
+  "note": "When a client reported its own expenses for a quarter, its outside firms’ fees for that quarter were counted through those expenses.",
+  "bridge": "How far did lobbyists’ own campaign gifts reach?",
+  "how": "Each 2025 filing gives one amount covering all of its issues.",
   "source": "Federal lobbying disclosures · <a href=\"https://github.com/kevinnbass/anthropic-network-money-congress/blob/main/research/lda_baseline.csv\">Filing census</a> and <a href=\"https://github.com/kevinnbass/anthropic-network-money-congress/blob/main/research/lda_baseline_additions.csv\">supplement</a>"
- },
- {
-  "id": "deep3-states",
-  "act": "Deeper &#183; III &#183; How the lobbying works",
-  "head": "Network clients were <em>under 7%</em> of listed clients on each state AI-safety bill examined.",
-  "deck": "California and New York disclosures count clients here. Each dot represents one client on that bill.",
-  "note": "The disclosures identify who reported lobbying on the bills. Their positions and the effect on votes remain open.",
-  "bridge": "Back in Congress, how far did lobbyists’ personal gifts reach?",
-  "how": "",
-  "source": "California and New York disclosures · <a href=\"https://github.com/kevinnbass/anthropic-network-money-congress/blob/main/research/state_ai_bill_clients.csv\">Full client census</a>"
  },
  {
   "id": "deep3-gifts",
   "act": "Deeper &#183; III &#183; How the lobbying works",
-  "head": "Lobbyists named for network clients gave personally to committees linked to <em>304 serving members</em>.",
-  "deck": "The first bar counts lobbyists whose firm was registered for a network client when they gave. The second also requires the client’s filings to name the lobbyist.",
-  "note": "The givers used their own money. These third-party gifts can count toward a seat in the opening chamber. The filings leave any effect on a vote open.",
-  "bridge": "Career records connect congressional offices and the network in another way. Where did people go?",
+  "head": "Lobbyists named for network clients gave their own money to committees tied to <em>303 serving members</em>.",
+  "deck": "The first bar requires the giver’s firm to have been registered for a network client when they gave. The second also requires a filing for that client to name the giver.",
+  "note": "These personal gifts can count as third-party records in the opening chamber. The filings leave any effect on a vote open.",
+  "bridge": "What do career records show about moves between Congress and the network?",
   "how": "",
-  "source": "Lobbyist contribution reports and federal registrations · Gift dates Feb. 22, 2021–June 30, 2026"
+  "source": "Lobbyist contribution reports and federal registrations · Gift dates Feb. 18, 2021–June 30, 2026"
  },
  {
   "id": "deep3-careers",
   "act": "Deeper &#183; III &#183; How the lobbying works",
-  "head": "More people moved <em>from Capitol Hill</em> to the network and its firms than the other way in these records.",
-  "deck": "Horizon Institute runs a fellowship whose hosts include members’ offices and committees. Its placements account for the moves into Congress shown here.",
-  "note": "Horizon pays the stipend and the host directs the work. The records establish the roles people held. Back in the main story, why do Lieu and Tillis get one seat each?",
+  "head": "Career records trace moves <em>from Capitol Hill</em> into the network and Horizon fellowships into Congress.",
+  "deck": "The Hill tally follows people who went to network organizations or their lobbying firms. The placements come from the Horizon Institute for Public Service roster.",
+  "note": "Horizon pays the stipend and the host directs the work. The records establish the roles people held.",
   "bridge": "",
   "how": "",
   "source": "Congressional payroll, lobbying disclosures, staffing records and Horizon’s placement roster"

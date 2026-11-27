@@ -976,7 +976,8 @@ def fig20():
     svg.append(txt(40, 800, f"Recipients receiving the most (the {min(16, len(bp))} largest of {len(bp)}; committees and candidates as named on the state filing)", 22, weight="bold"))  # X40-1932
     svg.append(bar_chart([(k, v, None) for k, v in bp.most_common(16)], 40, 820, 2000, 600, label_w=760, colour=lambda r: PAL[6]))
     subtitle = ('Sources: California Secretary of State, New York State Board of Elections and other state records. Reed Hastings is shown as an Anthropic board member; employees are grouped into one line.')
-    footnote = ('<b>What the record does not show.</b> State giving goes to state officials and ballot campaigns, not to Congress; it links to a member only where the state official later won a House or Senate seat (three sitting members). ActBlue California passes money through; it is not a recipient. A contribution is not a vote. Coverage is mostly California; other states were sampled.')
+    # X84-117 (2026-11-27): the count of sitting members state money reaches is computed from the join (it was typed as three)
+    footnote = ('<b>What the record does not show.</b> State giving goes to state officials and ballot campaigns, not to Congress; it links to a member only where the state official later won a House or Senate seat (' + f'{sum(1 for m in SITTING if float(m.get("t12_n") or 0) > 0)} sitting members' + '). ActBlue California passes money through; it is not a recipient. A contribution is not a vote. Coverage is mostly California; other states were sampled.')
     figure(stem, "State money", subtitle, "\n".join(svg), footnote, ids, height=1900, legend_html=legend([(PAL[i], o) for i, o in enumerate(offices)]))
 
 
