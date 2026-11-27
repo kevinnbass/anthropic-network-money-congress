@@ -34,7 +34,7 @@
   "act": "Questions from the record",
   "head": "What share did network clients report on federal AI filings?",
   "deck": "A comparison group of major tech and AI companies reported 6% of the dollars on 2025 filings naming any AI issue in this collection. The network share depends on which filings count.",
-  "note": "When a client reported its own expenses for a quarter, its outside firms’ fees for that quarter were counted through those expenses.",
+  "note": "When a client reported its own expenses for a quarter, the total uses that amount and leaves out its outside firms’ fees for that quarter.",
   "bridge": "Which bills came up most in Anthropic’s lobbying reports?",
   "how": "Each 2025 federal filing reports one amount for all its issues. The percentages are shares of reported dollars.",
   "source": "Federal lobbying disclosures · <a href=\"https://github.com/kevinnbass/anthropic-network-money-congress/blob/main/research/lda_baseline.csv\">Filing census</a> and <a href=\"https://github.com/kevinnbass/anthropic-network-money-congress/blob/main/research/lda_baseline_additions.csv\">supplement</a> · <a href=\"https://github.com/kevinnbass/anthropic-network-money-congress/blob/main/research/state_ai_bill_clients.csv\">State bill client census</a>"

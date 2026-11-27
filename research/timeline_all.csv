@@ -1,4 +1,4 @@
-# congress derived timeline_all.csv written by scripts/build_join.py 2026-11-27T20:53:44Z (PLAN.md §4): every dated row from every table, 2016-2026, one line per row; not a promoted table (TL holds the curated events); rebuilt in place
+# congress derived timeline_all.csv written by scripts/build_join.py 2026-11-27T21:13:08Z (PLAN.md §4): every dated row from every table, 2016-2026, one line per row; not a promoted table (TL holds the curated events); rebuilt in place
 row_id,table,conn_type,date,actor,counterparty,member_bioguide,money_type,hop,amount_usd,role,note_120
 HM19564,hard_money,1/2,2016,Luke Muehlhauser,,,,,,negative,query=https://api.open.fec.gov/v1/schedules/schedule_a/?contributor_name=Muehlhauser%2C+Luke&two_year_transaction_period
 HM19570,hard_money,1/2,2016,Luke Muehlhauser,,,,,,context,person=Luke Muehlhauser; en=EN209; source=api.open.fec.gov/v1/schedules/schedule_a/; exact_query=https://api.open.fec.go

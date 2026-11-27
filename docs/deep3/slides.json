@@ -1,32 +1,22 @@
 [
  {
+  "id": "deep3-sponsors",
+  "act": "Deeper &#183; III &#183; How the lobbying works",
+  "head": "Gifts from Anthropic employees or its PAC were <em>more common</em> among sponsors of bills named in filings for Anthropic.",
+  "deck": "",
+  "note": "The filings leave open whether the gifts and bill mentions were related.",
+  "bridge": "Which bills showed up most often in filings for Anthropic?",
+  "how": "",
+  "source": "Federal lobbying and campaign contribution filings, and Congress.gov"
+ },
+ {
   "id": "deep3-bills",
   "act": "Deeper &#183; III &#183; How the lobbying works",
   "head": "<em>Chip proposals</em> led the stand-alone bills named in reports filed for Anthropic.",
-  "deck": "Mast’s AI OVERWATCH Act leads. The chapter starts with reports filed for Anthropic and widens to its network.",
+  "deck": "Mast’s AI OVERWATCH Act appeared most often. The sheet also compares network clients’ dollars with the federal AI filing census.",
   "note": "The reports name bills and leave Anthropic’s position on them open.",
-  "bridge": "How far did lobbyists’ own campaign gifts reach?",
-  "how": "",
-  "source": "Federal lobbying reports and saved Congress.gov bill records"
- },
- {
-  "id": "deep3-gifts",
-  "act": "Deeper &#183; III &#183; How the lobbying works",
-  "head": "Lobbyists named in filings gave their own money to committees tied to <em>304 of 533 serving members</em>.",
-  "deck": "Both bars require the lobbyist’s firm to have been registered for a network client when the lobbyist gave.",
-  "note": "A lobbyist’s personal gift alone can give a member a hollow seat in the opening chamber. The filings leave any effect on votes open.",
-  "bridge": "What jobs and placements connect Capitol Hill and the network?",
-  "how": "",
-  "source": "Lobbyist contribution reports and federal registrations · Gift dates Feb. 18, 2021–June 30, 2026"
- },
- {
-  "id": "deep3-careers",
-  "act": "Deeper &#183; III &#183; How the lobbying works",
-  "head": "Career records trace moves <em>from Capitol Hill</em> into the network and Horizon fellowships into Congress.",
-  "deck": "",
-  "note": "A fellowship placement in a member’s office can contribute to that member’s seat in the opening chamber. The records establish the roles people held.",
   "bridge": "",
   "how": "",
-  "source": "Congressional payroll, lobbying disclosures, staffing records and Horizon’s placement roster"
+  "source": "Federal lobbying reports and saved Congress.gov bill records"
  }
 ]

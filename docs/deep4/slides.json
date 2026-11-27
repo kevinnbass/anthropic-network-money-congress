@@ -1,22 +1,22 @@
 [
  {
-  "id": "deep4-mentions",
-  "act": "Deeper &#183; IV &#183; Who is touched, and how",
-  "head": "Even a public criticism <em>can put a member in the count</em>.",
-  "deck": "Casar’s release shows how a public statement can count. The chamber tally is for sitting members.",
-  "note": "The collection searched for names and covered selected accounts on X. Coverage varies by year.",
-  "bridge": "What puts a trip in the count?",
-  "how": "",
-  "source": "Hearing transcripts, congressional records, member releases and posts · 2021–2026"
- },
- {
   "id": "deep4-events",
   "act": "Deeper &#183; IV &#183; Who is touched, and how",
-  "head": "A trip can count when <em>a network speaker is listed</em> or a network group sponsors it.",
-  "deck": "A conference program and a travel filing can document the same trip. Another filing puts the network on the sponsor line.",
-  "note": "An agenda lists who was scheduled. Staff trips count for their congressional office.",
-  "bridge": "",
+  "head": "A trip can count through <em>a sponsor or a scheduled speaker</em>.",
+  "deck": "A travel filing can name a network group as a sponsor. A conference program can list a speaker in a network role.",
+  "note": "A travel disclosure records the trip. A program records who was scheduled. A meeting would need its own evidence.",
+  "bridge": "What counts when a fellow or staffer changes roles?",
   "how": "",
   "source": "House and Senate travel disclosures, event pages and agendas"
+ },
+ {
+  "id": "deep4-careers",
+  "act": "Deeper &#183; IV &#183; Who is touched, and how",
+  "head": "A fellowship placement <em>can put a member in the count</em>.",
+  "deck": "Horizon is a fellowship program backed by a network grant. Other records follow former congressional staff into network groups.",
+  "note": "A placement in a sitting member’s office can count toward that member’s seat. These records identify the roles people held.",
+  "bridge": "",
+  "how": "",
+  "source": "Congressional staffing records, lobbying disclosures and Horizon’s placement roster"
  }
 ]
