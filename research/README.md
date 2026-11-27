@@ -5,7 +5,7 @@ Fifteen tables hold the record; each row has a `row_id` whose letters name its t
 | File | Ids | Rows | What a row is |
 |---|---|---|---|
 | `entities.csv` | EN | 3,407 | the roster: people, organisations, committees and vehicles, with tier and identifiers |
-| `hard_money.csv` | HM | 20,811 | itemised contributions (connection types 1 and 2), with the memo, conduit and repeated lines held as context |
+| `hard_money.csv` | HM | 20,883 | itemised contributions (connection types 1 and 2), with the memo, conduit and repeated lines held as context |
 | `super_pac_c4.csv.gz` | SP | 56,153 | money into super PACs and political nonprofits (3a) and their independent expenditures (3b) |
 | `lobbying.csv` | LB | 2,878 | federal lobbying registrations and reports (4a) |
 | `lobbyist_contributions.csv` | LC | 18,323 | lobbyists' own contributions as reported on LD-203 (4b) |
@@ -19,7 +19,7 @@ Fifteen tables hold the record; each row has a `row_id` whose letters name its t
 | `state_government.csv` | SG | 3,074 | state-level contributions and lobbying (12) |
 | `timeline.csv` | TL | 1,066 | dated events |
 | `members_network.csv` | MB | 1,078 | the join: one row per member, and per connection type a count, a sum and the row ids behind them; written by scripts/build_join.py |
-| `timeline_all.csv` |  | 109,487 | every dated row of every table on one line each; written by scripts/build_join.py |
+| `timeline_all.csv` |  | 109,559 | every dated row of every table on one line each; written by scripts/build_join.py |
 | `lb_4b_measures.csv` |  | 13,127 | for each LD-203 item, which of figure 10's two counts it falls in |
 | `lb_network_windows.csv` |  | 38 | the dates each lobbying firm was registered for a network client |
 | `lda_baseline.csv` |  | 9,651 | federal lobbying reports naming an AI issue, for figure 29 |
@@ -38,7 +38,7 @@ Also here: `bill_sponsor_keys.csv`, `grant_payment_unproven.csv`, `lb_4b_measure
 
 ## Which rows count
 
-`../case.json` binds each row to a question with a role, and `row_roles.csv` lists the same roles one row per line: **evidence** (43,346 rows; the only rows the money and connection figures draw or count), **context** (85,435; kept, never counted) and **negative** (5,181; a search of the named source that found nothing, as of its date). A row in no binding is unbound and is not counted.
+`../case.json` binds each row to a question with a role, and `row_roles.csv` lists the same roles one row per line: **evidence** (43,402 rows; the only rows the money and connection figures draw or count), **context** (85,451; kept, never counted) and **negative** (5,181; a search of the named source that found nothing, as of its date). A row in no binding is unbound and is not counted.
 
 ## Columns
 
