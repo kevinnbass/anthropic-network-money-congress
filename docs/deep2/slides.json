@@ -1,0 +1,42 @@
+[
+ {
+  "id": "deep2-donor",
+  "act": "Deeper &#183; II &#183; The outside money",
+  "head": "Dustin Moskovitz gave <em>$100M</em> to Future Forward’s super PAC.",
+  "deck": "Moskovitz’s outside giving in the collected filings totaled $130M over 2016–2024.",
+  "note": "The amounts are gross of refunds and include gifts filed under his trust. A contribution does not direct a committee’s spending.",
+  "bridge": "How did Future Forward’s receipts and spending compare with other committees’?",
+  "how": "",
+  "source": "Source · Federal Election Commission contribution records"
+ },
+ {
+  "id": "deep2-committees",
+  "act": "Deeper &#183; II &#183; The outside money",
+  "head": "House Majority PAC led in spending at <em>$213M</em>, while Future Forward led in receipts on file.",
+  "deck": "Receipts are compared among the 22 committees that spent the most for or against sitting members.",
+  "note": "The spending uses money from all donors. The receipts cover the money documented here. The filings cannot trace a receipt to a specific expenditure.",
+  "bridge": "Who did the committees spend for or against from their first network receipts onward?",
+  "how": "All years on file · separate scales for spending and receipts",
+  "source": "Sources · FEC spending and receipts, with documented issuer receipts"
+ },
+ {
+  "id": "deep2-spending",
+  "act": "Deeper &#183; II &#183; The outside money",
+  "head": "<em>74%</em> of this outside spending went against Republicans.",
+  "deck": "The spending on sitting members draws on money from all donors. Each committee’s count begins on the date of its first itemised network receipt on file.",
+  "note": "The filings identify the committee that spent the money. They cannot trace an expenditure to a donor or establish coordination with a candidate.",
+  "bridge": "State filings show where leading donors gave beyond federal races.",
+  "how": "2016–2026 spending · members serving on Nov. 26, 2026",
+  "source": "Source · Federal Election Commission outside-spending filings"
+ },
+ {
+  "id": "deep2-states",
+  "act": "Deeper &#183; II &#183; The outside money",
+  "head": "Reed Hastings gave <em>$37.5M</em> in the state filings collected here.",
+  "deck": "His largest year on file was 2018. It included $7.0M to a committee backing Antonio Villaraigosa for California governor.",
+  "note": "This collection is mostly California and samples other states. A contribution does not tell us how anyone voted.",
+  "bridge": "The filings show who gave and who spent, from federal committees to state campaigns.",
+  "how": "State contribution filings · 2018–2026",
+  "source": "Sources · California Secretary of State and other election records"
+ }
+]

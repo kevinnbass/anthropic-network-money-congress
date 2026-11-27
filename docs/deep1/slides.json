@@ -1,0 +1,52 @@
+[
+ {
+  "id": "deep1-principals",
+  "act": "Deeper &#183; I &#183; Who gave",
+  "head": "Two people gave <em>72%</em> of the money from named principals to committees linked to today’s members.",
+  "deck": "Federal filings show their personal gifts to campaigns, leadership PACs and joint fundraising committees.",
+  "note": "A gift to a joint fundraiser counts at receipt, before any distribution to members’ committees. A contribution is not a vote.",
+  "bridge": "Where did the wider network’s individual gifts land?",
+  "how": "",
+  "source": "FEC contribution records · Principals’ hard money to sitting members"
+ },
+ {
+  "id": "deep1-committees",
+  "act": "Deeper &#183; I &#183; Who gave",
+  "head": "Network individuals gave <em>$13.7M</em> to joint fundraising committees, over twice what went to candidate committees.",
+  "deck": "A joint fundraising committee can collect one contribution and distribute it among multiple participants.",
+  "note": "These are gifts from the network’s principals and employees to all recipients in this collection. Totals count the initial receipt, with later allocations excluded.",
+  "bridge": "Some PACs also gave money themselves. How did they compare?",
+  "how": "",
+  "source": "FEC contribution records · Where network individuals’ contributions land"
+ },
+ {
+  "id": "deep1-pacs",
+  "act": "Deeper &#183; I &#183; Who gave",
+  "head": "ARI’s PAC gave <em>$434K</em>, more than Anthropic’s PAC.",
+  "deck": "ARI is Americans for Responsible Innovation, an advocacy group in the wider network.",
+  "note": "These are the PACs’ own contributions. The Arnold &amp; Porter partners’ PAC is shown during the firm’s work for Open Philanthropy Action Fund. A PAC gift is not a vote.",
+  "bridge": "How does the latest cycle of personal giving compare with earlier cycles?",
+  "how": "",
+  "source": "FEC filings and reports to Congress · The network’s PACs and where they give"
+ },
+ {
+  "id": "deep1-cycles",
+  "act": "Deeper &#183; I &#183; Who gave",
+  "head": "Network individuals gave <em>$14.2M</em> in the unfinished 2026 cycle, the highest in this record.",
+  "deck": "The previous high in this collection was $8.3M in the 2024 cycle.",
+  "note": "These are people’s own contributions to all recipients in the collection. The search was deepest in recent cycles, and the 2026 cycle is partial.",
+  "bridge": "What kinds of records filled the latest years?",
+  "how": "",
+  "source": "FEC contribution records · Money by election cycle, one kind at a time"
+ },
+ {
+  "id": "deep1-records",
+  "act": "Deeper &#183; I &#183; Who gave",
+  "head": "Campaign gifts and AI-lab payments made up <em style=\"white-space:nowrap\">44–46%</em> of dated records in 2025 and in 2026 to date.",
+  "deck": "In the preceding election years shown, most records came from super PAC receipts and spending.",
+  "note": "These are counts of records with a month or day. They reflect search depth and filing schedules. The 2026 count is partial.",
+  "bridge": "A few principals gave most of their group’s dollars, and the mix of filings shifted over time.",
+  "how": "",
+  "source": "Dated records across the pack · Election years and the shift in filing mix"
+ }
+]

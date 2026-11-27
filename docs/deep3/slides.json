@@ -1,0 +1,62 @@
+[
+ {
+  "id": "deep3-federal",
+  "act": "Deeper &#183; III &#183; How the lobbying works",
+  "head": "The network accounted for <em>0.5%</em> of 2025 lobbying reported on federal filings naming AI.",
+  "deck": "The frontier labs accounted for 6%. Each filing gives a single amount for all its issues.",
+  "note": "The amounts are upper bounds on AI lobbying. A client’s in-house expenses include its fees to outside firms, which are counted once here.",
+  "bridge": "How crowded was the field around state AI bills?",
+  "how": "",
+  "source": "Senate quarterly lobbying disclosures"
+ },
+ {
+  "id": "deep3-states",
+  "act": "Deeper &#183; III &#183; How the lobbying works",
+  "head": "Network clients made up <em>under 7%</em> of the lobbying field on each state AI-safety bill examined.",
+  "deck": "California and New York disclosures list network clients on all 3 bills examined. Each dot is one client per bill.",
+  "note": "The disclosures identify the bills. A client’s position and the effect on a vote are outside this count.",
+  "bridge": "Back in Congress, how far did lobbyists’ personal gifts reach?",
+  "how": "",
+  "source": "California and New York lobbying disclosures"
+ },
+ {
+  "id": "deep3-gifts",
+  "act": "Deeper &#183; III &#183; How the lobbying works",
+  "head": "Lobbyists named for network clients reported personal gifts to <em>303</em> serving members.",
+  "deck": "The broader count covers gifts made while the lobbyist’s firm was registered for a network client. The narrower count also requires the client’s filings to name the giver.",
+  "note": "These are lobbyists’ own gifts to committees linked to individual members. The filing windows bound the count, and the gifts tell us nothing about a vote.",
+  "bridge": "How often did people move between the Hill and these organisations?",
+  "how": "",
+  "source": "Lobbyists’ semiannual contribution reports and federal lobbying registrations"
+ },
+ {
+  "id": "deep3-careers",
+  "act": "Deeper &#183; III &#183; How the lobbying works",
+  "head": "Most documented career moves ran <em>from the Hill to the network</em>.",
+  "deck": "The moves from Capitol Hill include positions with network organisations and firms lobbying for them. The moves into congressional offices, committees and agencies in this record are Horizon fellowships.",
+  "note": "Each career record establishes roles. It leaves the work done in those roles open.",
+  "bridge": "Where did Horizon’s fellows land?",
+  "how": "Each dot is one person in that direction.",
+  "source": "Congressional payroll, former posts disclosed in lobbying filings, and organisation staffing and placement records"
+ },
+ {
+  "id": "deep3-fellows",
+  "act": "Deeper &#183; III &#183; How the lobbying works",
+  "head": "Committees and a congressional commission hosted <em>14 of 29</em> Horizon placements.",
+  "deck": "Horizon’s roster lists 25 fellows, including placements in members’ offices from both parties.",
+  "note": "Fellows and offices choose each other. Horizon pays the stipend, and the host directs the work.",
+  "bridge": "Beyond fellowships, where did the network’s research grants go?",
+  "how": "Each dot is one placement.",
+  "source": "Horizon Institute’s placement roster"
+ },
+ {
+  "id": "deep3-grants",
+  "act": "Deeper &#183; III &#183; How the lobbying works",
+  "head": "<em>Georgetown’s CSET</em> led the grant ranking for AI and related work.",
+  "deck": "The network’s funders supported AI, technology, biosecurity and catastrophic-risk work. The ranking draws on published awards and filed payments.",
+  "note": "The awards and payments shown name organisations as recipients. Nothing in this record ties a grant to an appearance.",
+  "bridge": "The network shows up in lobbying filings, personal gifts, career records and grants.",
+  "how": "",
+  "source": "Published grant lists and IRS grant schedules · 2009–2026"
+ }
+]
