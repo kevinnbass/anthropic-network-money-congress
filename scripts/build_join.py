@@ -256,18 +256,28 @@ def main() -> int:
             cid = (r.get(f"{side}_id") or "").strip().upper(); nm = re.sub(r"[^A-Z0-9]", "", (r.get(side) or "").upper())
             if cid.startswith("C") and nm:
                 NAME2ID.setdefault(nm, cid)
-    linked = set()
+    # 2026-11-27 (K13; gap sweep G13, lane GS9; PLAN bullet of that day): a committee's spending counts from the day of its earliest
+    # itemised network receipt on record, that day included; spending dated before it is context (money cannot flow backwards; the
+    # same rule as 4b's registration window). GS9 searched the FEC's Schedule A from 2015 for an earlier network receipt at each of the
+    # 34 committees: 31 none found, two found (promoted as C197 and C198), one not public (Public First Action's Form 9).
+    linked = {}
+    def link(r):
+        k = ckey(r, "payee"); d = (r.get("date") or "").strip() or "0000-00-00"     # an undated receipt sets no bound (none on 2026-11-27)
+        linked[k] = min(linked.get(k, d), d)
     for r in tables["super_pac_c4"]:
         if role.get(r["row_id"]) == "evidence" and (r.get("money_type") or "") in ("outside_receipt", "transfer"):
-            linked.add(ckey(r, "payee"))
+            link(r)
     for r in tables["hard_money"]:
         if role.get(r["row_id"]) == "evidence" and (r.get("money_type") or "") in ("hard_money", "transfer") and (r.get("hop") or "") == "1":
-            linked.add(ckey(r, "payee"))
+            link(r)
+    def before_link(r):
+        d = (r.get("date") or "").strip()
+        return bool(d and d < linked.get(ckey(r, "payer"), ""))
     for r in tables["super_pac_c4"]:
         mt = (r.get("money_type") or "").strip()
         is_ie = mt in ("independent_expenditure", "electioneering_communication")
         t = "3b" if is_ie or (r.get("hop") or "") == "2" else "3a"
-        for k in keys_for(r): add(k, t, r, force_ctx=(t == "3b" and (not is_ie or ckey(r, "payer") not in linked)))
+        for k in keys_for(r): add(k, t, r, force_ctx=(t == "3b" and (not is_ie or ckey(r, "payer") not in linked or before_link(r))))
     # 2026-09-23 (Codex X1b #1): type 4b is the lobbyist's own FECA money; an LD-203 item whose contributor is a PAC is context
     # 2026-09-29 (audit X33a, PLAN §1.3 "while registered for a network client"): an item counts only if dated inside a window in
     # which the filing's registrant was registered for a network client (research/lb_network_windows.csv); other items are context

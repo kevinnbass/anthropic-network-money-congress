@@ -2,9 +2,9 @@
  {
   "id": "start",
   "act": "Anthropic&#8217;s network and Congress",
-  "head": "<em>450</em> of 533",
-  "deck": "members of Congress have a tie on the public record to Anthropic&#8217;s network: 332 through something the network or the member did, 118 only through what third parties did. The network is the company, the funders behind it, the groups they fund, and their PACs and lobbyists.",
-  "note": "The network, by one chain: Coefficient Giving (then Open Philanthropy) named Dustin Moskovitz and Cari Tuna as its main funders; it awarded Georgetown&#8217;s CSET $55.0M in 2019; 17 committee appearances by CSET&#8217;s witnesses are on record here. Third parties are lobbyists at the network&#8217;s lobbying firms, who gave their own money, and super PACs that received network money and made their own expenditures. A tie can cut either way: a statement may be criticism, and a super PAC may have spent against the member. It is not an allegation, and a contribution is not a vote.",
+  "head": "<em>452</em> of 533",
+  "deck": "members of Congress have a tie on the public record to Anthropic&#8217;s network: 333 through something the network or the member did, 119 only through what third parties did. The network is the company, the funders behind it, the groups they fund, and their PACs and lobbyists.",
+  "note": "The network, by one chain: Coefficient Giving (then Open Philanthropy) named Dustin Moskovitz and Cari Tuna as its main funders; it awarded Georgetown&#8217;s CSET $55.0M in 2019; 19 committee appearances by CSET&#8217;s witnesses are on record here. Third parties are lobbyists at the network&#8217;s lobbying firms, who gave their own money, and super PACs that received network money and made their own expenditures. A tie can cut either way: a statement may be criticism, and a super PAC may have spent against the member. It is not an allegation, and a contribution is not a vote.",
   "bridge": "Start with the company: its employees&#8217; own gifts, and its PAC&#8217;s.",
   "how": "Each dot is one of the 533 members serving on Nov. 26, 2026. A tie is a public record that links the member and the network: a contribution, a lobbying report on the member&#8217;s bill, a fellow in the office, a statement.",
   "source": ""
@@ -22,18 +22,18 @@
  {
   "id": "forty",
   "act": "II &#183; The bigger money",
-  "head": "Anthropic announced <em>$40.0M</em> for Public First Action. There the trail stops: no filing in this record lists the group&#8217;s donors.",
-  "deck": "What the filings do show: two super PACs the group funds, and $15.0M of independent spending for one House candidate who does not serve in Congress. This record traces no contribution to a specific expenditure.",
-  "note": "The two gifts are as Anthropic announced them; the super PACs reported the spending as independent expenditures. A contribution does not direct spending.",
+  "head": "Anthropic announced <em>$40.0M</em> for Public First Action. There the trail stops: no filing in this record lists the group’s donors.",
+  "deck": "FEC receipts show Public First Action gave to 6 committees. The largest candidate total was $15.0M for Alexander Bores, outside Congress, while the committees reported $2.2M against sitting member Seth Moulton.",
+  "note": "This record traces no contribution to a specific expenditure. A contribution does not direct spending.",
   "bridge": "The network’s funders gave more, and for longer.",
   "how": "",
-  "source": "Source: Anthropic&#8217;s announcements; FEC contribution and outside-spending reports of the Public First committees. Not drawn: $1.0M Public First Action passed to a third committee, and one $105K ad naming a member without saying for or against."
+  "source": "Sources include Anthropic’s announcements and FEC receipt and outside-spending filings."
  },
  {
   "id": "committees",
   "act": "II &#183; The bigger money",
-  "head": "The network&#8217;s funders gave more: <em>$170M</em> to outside political groups since 2016, <em>$100M</em> of it from Dustin Moskovitz to one committee.",
-  "deck": "The gift records name the donors. The spending filings name the spenders.",
+  "head": "The network&#8217;s funders gave more: <em>$170M</em> to outside political groups since 2016, <em>$100M</em> of it from Dustin Moskovitz to Future Forward.",
+  "deck": "The spending panel covers committees with a network receipt on file and spending that names a serving member.",
   "note": "This record traces no gift to a specific expenditure.",
   "bridge": "One kind of money reaches more members than any of this, and the network did not give it.",
   "how": "",
@@ -42,11 +42,11 @@
  {
   "id": "lobbyists",
   "act": "II &#183; The bigger money",
-  "head": "No tie reaches more members than lobbyists&#8217; own gifts: <em>326</em> received <em>$1.5M</em> from lobbyists at firms with a network client.",
-  "deck": "Of the 118 members with only third-party records, 83 received one of these personal gifts.",
-  "note": "The money is the lobbyist&#8217;s own, not the client&#8217;s, and the record does not say why a gift was made. Named lobbyists only: $1.2M in 1,003 gifts.",
+  "head": "Lobbyists’ own gifts reach the most members: <em>$1.8M</em> went to campaigns or committees linked to <em>356</em> serving members.",
+  "deck": "",
+  "note": "The gift is the lobbyist’s own money. The record does not say why it was made. Named lobbyists only: $1.3M in 1,022 gifts.",
   "bridge": "That is the lobbyists&#8217; own money. Anthropic&#8217;s lobbying is on another record.",
-  "how": "Counted: a gift whose giver was a registered lobbyist at a firm that had a network client in that period. Each lit seat received at least one.",
+  "how": "Counted: a gift whose giver was a registered lobbyist at a firm that had a network client in that period. Each lit seat has a campaign or committee linked to a gift.",
   "source": "Lobbyists’ semi-annual contribution reports to Congress, Feb. 19, 2021 to June 30, 2026. Filed recipient names, and committee records where the filing gives them, identify the member for each counted gift."
  },
  {
@@ -93,7 +93,7 @@
   "id": "limits",
   "act": "V &#183; The sum",
   "head": "A record of ties, not a record of influence.",
-  "deck": "237 of the 450 members with a tie have one or two kinds of record. The opening slide&#8217;s two members again, with what is on file for each: seven kinds of record for Ted Lieu, one for Thom Tillis.",
+  "deck": "240 of the 452 members with a tie have one or two kinds of record. The opening slide&#8217;s two members again, with what is on file for each: seven kinds of record for Ted Lieu, one for Thom Tillis.",
   "note": "",
   "bridge": "",
   "how": "Each dot is one of the 533 members serving on Nov. 26, 2026, by party; records through Sept. 30, 2026.",

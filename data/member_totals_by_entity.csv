@@ -18,6 +18,7 @@ Alex Padilla,D,Senate,CA,,P000145,ANTHROPAC (Anthropic's PAC),3500.00
 Alex Padilla,D,Senate,CA,,P000145,Anthropic employees,65000.00
 Ami Bera,D,House,CA,6,B001287,ANTHROPAC (Anthropic's PAC),1500.00
 Andrea Salinas,D,House,OR,6,S001226,Anthropic employees,10500.00
+Andrea Salinas,D,House,OR,6,S001226,other network people,15000.00
 Andrew R. Garbarino,R,House,NY,2,G000597,ARI PAC,1000.00
 Andrew R. Garbarino,R,House,NY,2,G000597,Anthropic employees,47000.00
 Andrew S. Clyde,R,House,GA,9,C001116,ARI PAC,2500.00
@@ -48,6 +49,7 @@ Ben Cline,R,House,VA,6,C001118,ARI PAC,2000.00
 Ben Cline,R,House,VA,6,C001118,Anthropic employees,37500.00
 Ben Ray Luján,D,Senate,NM,,L000570,ANTHROPAC (Anthropic's PAC),3500.00
 Ben Ray Luján,D,Senate,NM,,L000570,Anthropic employees,44500.00
+Ben Ray Luján,D,Senate,NM,,L000570,other network people,14000.00
 Bernie Moreno,R,Senate,OH,,M001242,ANTHROPAC (Anthropic's PAC),3500.00
 Bill Cassidy,R,Senate,LA,,C001075,Anthropic employees,3500.00
 Bill Foster,D,House,IL,11,F000454,Anthropic employees,14000.00
@@ -112,7 +114,9 @@ Dan Sullivan,R,Senate,AK,,S001198,Anthropic employees,72000.00
 Daniel Webster,R,House,FL,11,W000806,ARI PAC,1000.00
 Darin LaHood,R,House,IL,16,L000585,ANTHROPAC (Anthropic's PAC),1500.00
 Darin LaHood,R,House,IL,16,L000585,Anthropic employees,30500.00
+Darline Graham,R,Senate,SC,,G000608,other network people,47800.00
 Darren Soto,D,House,FL,9,S001200,Anthropic employees,20000.00
+Darren Soto,D,House,FL,9,S001200,other network people,15000.00
 Dave Min,D,House,CA,47,M001241,Eric Schmidt,3300.00
 Dave Min,D,House,CA,47,M001241,James McClave,3300.00
 Dave Min,D,House,CA,47,M001241,Reed Hastings,1500.00
@@ -140,7 +144,6 @@ Donald G. Davis,D,House,NC,1,D000230,James McClave,6800.00
 Donald G. Davis,D,House,NC,1,D000230,Wendy Schmidt,7000.00
 "Donald S. Beyer, Jr.",D,House,VA,8,B001292,ARI PAC,1000.00
 "Donald S. Beyer, Jr.",D,House,VA,8,B001292,Anthropic employees,40000.00
-"Donald S. Beyer, Jr.",D,House,VA,8,B001292,other network people,500.00
 Doris O. Matsui,D,House,CA,7,M001163,ARI PAC,2500.00
 Doris O. Matsui,D,House,CA,7,M001163,Anthropic employees,44500.00
 Edward J. Markey,D,Senate,MA,,M000133,Anthropic employees,24000.00
@@ -168,6 +171,7 @@ Eugene Simon Vindman,D,House,VA,7,V000138,Eric Schmidt,1505.00
 "Frank Pallone, Jr.",D,House,NJ,6,P000034,Anthropic employees,58000.00
 Gabe Amo,D,House,RI,1,A000380,ARI PAC,2500.00
 Gabe Amo,D,House,RI,1,A000380,Anthropic employees,11000.00
+Gabe Amo,D,House,RI,1,A000380,other network people,18500.00
 Gabe Vasquez,D,House,NM,2,V000136,ANTHROPAC (Anthropic's PAC),1250.00
 Gabe Vasquez,D,House,NM,2,V000136,ARI PAC,1000.00
 Gabe Vasquez,D,House,NM,2,V000136,Anthropic employees,20000.00
@@ -244,11 +248,13 @@ Jennifer L. McClellan,D,House,VA,4,M001227,Anthropic employees,51000.00
 Jerry Moran,R,Senate,KS,,M000934,ARI PAC,7000.00
 Jerry Moran,R,Senate,KS,,M000934,Anthropic employees,30000.00
 Jill N. Tokuda,D,House,HI,2,T000487,Anthropic employees,39500.00
+Jill N. Tokuda,D,House,HI,2,T000487,other network people,5000.00
 Jim Banks,R,Senate,IN,,B001299,ANTHROPAC (Anthropic's PAC),2500.00
 Jim Banks,R,Senate,IN,,B001299,Anthropic employees,38500.00
 Jim Banks,R,Senate,IN,,B001299,other network people,7000.00
 Jim Costa,D,House,CA,21,C001059,ARI PAC,2500.00
 Jim Jordan,R,House,OH,4,J000289,Anthropic employees,8500.00
+Jim Jordan,R,House,OH,4,J000289,other network people,3500.00
 Jimmy Panetta,D,House,CA,19,P000613,ANTHROPAC (Anthropic's PAC),1500.00
 Jimmy Panetta,D,House,CA,19,P000613,ARI PAC,4000.00
 Jimmy Panetta,D,House,CA,19,P000613,Anthropic employees,3500.00
@@ -293,6 +299,7 @@ Katherine M. Clark,D,House,MA,5,C001101,Schmidt organisations / Hillspire staff,
 Katherine M. Clark,D,House,MA,5,C001101,Wendy Schmidt,25000.00
 Kathy Castor,D,House,FL,14,C001066,ARI PAC,1500.00
 Kathy Castor,D,House,FL,14,C001066,Anthropic employees,8500.00
+Kathy Castor,D,House,FL,14,C001066,other network people,3500.00
 Katie Boyd Britt,R,Senate,AL,,B001319,ARI PAC,6000.00
 Katie Boyd Britt,R,Senate,AL,,B001319,Anthropic employees,69500.00
 Katie Boyd Britt,R,Senate,AL,,B001319,other network people,10000.00
@@ -314,6 +321,7 @@ Kristen McDonald Rivet,D,House,MI,8,M001237,James McClave,3300.00
 LaMonica McIver,D,House,NJ,10,M001229,Schmidt organisations / Hillspire staff,6000.00
 LaMonica McIver,D,House,NJ,10,M001229,Wendy Schmidt,3500.00
 Lance Gooden,R,House,TX,5,G000589,ANTHROPAC (Anthropic's PAC),1000.00
+Lance Gooden,R,House,TX,5,G000589,other network people,17000.00
 Lateefah Simon,D,House,CA,12,S001231,Anthropic employees,8500.00
 Lateefah Simon,D,House,CA,12,S001231,Coefficient Giving / Open Philanthropy staff,500.00
 Lateefah Simon,D,House,CA,12,S001231,Schmidt organisations / Hillspire staff,1000.00
@@ -323,6 +331,7 @@ Laura Gillen,D,House,NY,4,G000602,Anthropic employees,2500.00
 Laura Gillen,D,House,NY,4,G000602,Eric Schmidt,3300.00
 Laura Gillen,D,House,NY,4,G000602,James McClave,3300.00
 Laurel M. Lee,R,House,FL,15,L000597,Anthropic employees,12000.00
+Laurel M. Lee,R,House,FL,15,L000597,other network people,35000.00
 Lauren Underwood,D,House,IL,14,U000040,Eric Schmidt,6600.00
 Lauren Underwood,D,House,IL,14,U000040,Wendy Schmidt,3300.00
 Lisa Blunt Rochester,D,Senate,DE,,B001303,ANTHROPAC (Anthropic's PAC),3500.00
@@ -337,6 +346,7 @@ Lori Trahan,D,House,MA,3,T000482,Anthropic employees,35000.00
 Lucy McBath,D,House,GA,6,M001208,Wendy Schmidt,3300.00
 Luz M. Rivas,D,House,CA,29,R000620,ARI PAC,3000.00
 Madeleine Dean,D,House,PA,4,D000631,Anthropic employees,7000.00
+Madeleine Dean,D,House,PA,4,D000631,other network people,10000.00
 Maggie Goodlander,D,House,NH,2,G000604,Anthropic employees,47350.00
 Maggie Goodlander,D,House,NH,2,G000604,other network people,6500.00
 Marcy Kaptur,D,House,OH,9,K000009,ANTHROPAC (Anthropic's PAC),1500.00
@@ -349,6 +359,7 @@ Maria Cantwell,D,Senate,WA,,C000127,Wendy Schmidt,6600.00
 Maria Elvira Salazar,R,House,FL,27,S000168,ARI PAC,2000.00
 Mariannette Miller-Meeks,R,House,IA,1,M001215,ARI PAC,2000.00
 Mariannette Miller-Meeks,R,House,IA,1,M001215,Anthropic employees,6000.00
+Mariannette Miller-Meeks,R,House,IA,1,M001215,other network people,5000.00
 Marie Gluesenkamp Perez,D,House,WA,3,G000600,Anthropic employees,9500.00
 Marie Gluesenkamp Perez,D,House,WA,3,G000600,Eric Schmidt,3300.00
 Marie Gluesenkamp Perez,D,House,WA,3,G000600,James McClave,3300.00
@@ -377,6 +388,7 @@ Mike Kennedy,R,House,UT,3,K000403,Anthropic employees,2500.00
 Mike Levin,D,House,CA,49,L000593,Eric Schmidt,3300.00
 Mike Rogers,R,House,AL,3,R000575,ANTHROPAC (Anthropic's PAC),6500.00
 Mike Rogers,R,House,AL,3,R000575,Anthropic employees,41500.00
+Mike Rogers,R,House,AL,3,R000575,other network people,3500.00
 Mike Rounds,R,Senate,SD,,R000605,ANTHROPAC (Anthropic's PAC),1500.00
 Mike Rounds,R,Senate,SD,,R000605,ARI PAC,3000.00
 Mike Rounds,R,Senate,SD,,R000605,Anthropic employees,103100.00
@@ -396,6 +408,7 @@ Patrick Ryan,D,House,NY,18,R000579,Eric Schmidt,11600.00
 Patrick Ryan,D,House,NY,18,R000579,James McClave,6600.00
 Patty Murray,D,Senate,WA,,M001111,ANTHROPAC (Anthropic's PAC),3500.00
 Patty Murray,D,Senate,WA,,M001111,Anthropic employees,42500.00
+Patty Murray,D,Senate,WA,,M001111,other network people,7000.00
 Paul Tonko,D,House,NY,20,T000469,Anthropic employees,5000.00
 Pete Aguilar,D,House,CA,33,A000371,ANTHROPAC (Anthropic's PAC),3500.00
 Pete Aguilar,D,House,CA,33,A000371,Anthropic employees,30000.00
@@ -432,6 +445,7 @@ Robert J. Wittman,R,House,VA,1,W000804,Anthropic employees,32000.00
 Robert Menendez,D,House,NJ,8,M001226,ANTHROPAC (Anthropic's PAC),1500.00
 "Robert P. Bresnahan, Jr.",R,House,PA,8,B001327,ARI PAC,2000.00
 Roger F. Wicker,R,Senate,MS,,W000437,Anthropic employees,37000.00
+Roger F. Wicker,R,Senate,MS,,W000437,other network people,75000.00
 Ron Wyden,D,Senate,OR,,W000779,Anthropic employees,19000.00
 Ruben Gallego,D,Senate,AZ,,G000574,Anthropic employees,300.00
 Ruben Gallego,D,Senate,AZ,,G000574,Eric Schmidt,6600.00
@@ -459,6 +473,7 @@ Scott Perry,R,House,PA,10,P000605,ARI PAC,2500.00
 Scott Perry,R,House,PA,10,P000605,Anthropic employees,3500.00
 Seth Magaziner,D,House,RI,2,M001223,ARI PAC,500.00
 Seth Magaziner,D,House,RI,2,M001223,Anthropic employees,17000.00
+Seth Magaziner,D,House,RI,2,M001223,other network people,10500.00
 Seth Moulton,D,House,MA,6,M001196,Anthropic employees,250.00
 Sharice Davids,D,House,KS,3,D000629,ARI PAC,1000.00
 Sharice Davids,D,House,KS,3,D000629,Eric Schmidt,3300.00
@@ -473,7 +488,9 @@ Susan M. Collins,R,Senate,ME,,C001035,other network people,3500.00
 Susie Lee,D,House,NV,3,L000590,ARI PAC,1000.00
 Susie Lee,D,House,NV,3,L000590,Anthropic employees,22000.00
 Susie Lee,D,House,NV,3,L000590,Eric Schmidt,6210.00
+Susie Lee,D,House,NV,3,L000590,other network people,7000.00
 Suzan K. DelBene,D,House,WA,1,D000617,Anthropic employees,9000.00
+Suzan K. DelBene,D,House,WA,1,D000617,other network people,17500.00
 Suzanne Bonamici,D,House,OR,1,B001278,ARI PAC,2000.00
 Sydney Kamlager-Dove,D,House,CA,37,K000400,ARI PAC,3500.00
 Tammy Baldwin,D,Senate,WI,,B001230,ARI PAC,1000.00
