@@ -1,5 +1,5 @@
 table,column,change,cells
-entities,note,local path,12
+entities,note,local path,15
 entities,url,api key value,7
 entities,url,local path,2
 federal_money,note,local path,8
@@ -23,6 +23,7 @@ revolving_door,url,api key value,1
 revolving_door,url,local path,8
 state_government,note,local path,1
 state_government,url,local path,2
+super_pac_c4,note,local path,92
 super_pac_c4,quote_300,api key value,1
 super_pac_c4,url,local path,27
 timeline,note,local path,131

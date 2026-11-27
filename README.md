@@ -36,8 +36,8 @@ Independent audits (X64 to X69 in the project's numbering) checked the new rows,
 
 **Not finished. Until these are done this update is not called verified:**
 
-- The story page's fifth version (10 slides, November 27) works in the fourth audit and two more readers; it has not itself been audited yet, and stays marked a draft until it is.
-- A sweep for gaps is running. Its first result is applied: 148 contribution lines that a payment platform (ActBlue or WinRed) filed for a gift the campaign also reported are now held as context, so each gift is counted once. No dollar total changes (the platform lines were never added to a member's sum); two figures count 148 records fewer. Still to come: lobbyists' gifts the record never collected, three committees that Public First Action also funded (one of them spent $2.2M against Seth Moulton), large gifts to joint fundraising committees, gifts the campaigns refunded, and gifts that may be counted twice.
+- The story page's fifth version (10 slides, November 27) works in the fourth audit and two more readers; it has not itself been audited yet, and stays marked a draft until it is. It was built before the gap sweep's 403 rows entered, so its counts (450 members with a tie, 326 reached by lobbyists' gifts, 26 committees) are those of the record before them; its next build takes them in.
+- A sweep for gaps is running. Applied so far: 168 rows that restated another row are held as context, so each gift is counted once (148 lines a payment platform such as ActBlue filed for a gift the campaign also reported; 18 lobbyists' gifts repeated in an amended report; two PAC disbursements held twice). No dollar total changed. 403 rows the record lacked entered through the review gates: 306 lobbyists' own gifts at the four firms registered for Anthropic, Public First Action's gifts to three more committees and their spending (one of them spent $2.2M against Seth Moulton), and two employee gifts to super PACs. Twenty held gifts gained the member their committee's FEC record names. Lobbyists' gifts now reach 356 members (was 326), and 461 members have a tie (was 450). None of these rows has had its independent audit yet. Still to come: gifts the members' own filings show and refunds of counted gifts (in review), three witness rows, and whether super PAC spending should count only after a committee's first network gift.
 - Of the 2,725 held memo and conduit lines, the fourteen that needed a document were read and stay held; 76 of 77 sampled lines now agree with their raw filings, and one cannot be read because the FEC's own copy of that filing is cut off.
 - The testimony figure (26) now counts twelve more committee appearances (70, was 58), each read against its saved hearing record; three more with no witness row yet wait to be added through the review gates, and no independent audit has yet read the twelve.
 - Five pairs of counted rows that share a member, a day and a dollar amount are not settled as one transaction or two (the filed pages were read again and carry no shared reference) ($27,399 of outside spending, $5,400 of contributions, $3,500 of lobbyists' gifts). Both rows of each pair are counted.
@@ -136,18 +136,18 @@ The scripts are the project's own. Four things were changed so they run here: th
 
 Rows were collected from public sources (FEC, Senate and House lobbying and disclosure filings, IRS returns, USAspending, state registries, congressional records, organisations' own pages) by AI research agents, each row with its source's URL and an excerpt as fetched; the author keeps saved copies of the sources. Rows entered the tables through a row-by-row review of each batch by a separate agent. Independent audits then checked evidence rows against saved originals, in both directions: what was kept and what was removed. The measure below says how many. A correction never overwrites: the earlier row is archived and the change noted on the row.
 
-The project measures itself against a written standard with a script. On 2026-11-27 at 11:34 UTC it printed:
+The project measures itself against a written standard with a script. On 2026-11-27 at 12:12 UTC it printed:
 
 ```
-== congress  bound rows 133,470  evidence rows 42,919
-G1 FAIL  drawn evidence document-checked 42,872/42,919 (99.9%); all evidence 99.9%
-G2 PASS  errors disposed 32,680/32,680; errors+qualifications disposed 61,084/61,084 (100.0%)
-G3 PASS  corrected rows archived 15,979/15,979 (ledger rows 16,023)
-G4 PASS  audits 107: complete 48, well-formed closing line 107; incomplete and not carried to README/dispositions 0
+== congress  bound rows 133,873  evidence rows 43,301
+G1 FAIL  drawn evidence document-checked 42,852/43,301 (99.0%); all evidence 99.0%
+G2 FAIL  errors disposed 32,680/32,680; errors+qualifications disposed 61,084/61,088 (100.0%)
+G3 PASS  corrected rows archived 16,002/16,002 (ledger rows 16,046)
+G4 FAIL  audits 108: complete 48, well-formed closing line 108; incomplete and not carried to README/dispositions 1 ['X78-story-series-round6-20261127']
 G5 PASS  clean figures 29/29
 ```
 
-G1 says how many of the evidence rows the 29 figures draw or count have a document check on file. Since figure 23 lists every row it counts, that is every evidence row in the record. The 47 rows without one are 23 rows of the network list, 19 contribution lines whose audit finding is a qualification still open, and the five witness rows added to figure 26 on November 27, which the final check reads. G2 says how many of the errors and qualifications any audit has raised have a written ruling: all of them, the fourth audit of the story series included. The final check of everything applied has not run yet, so this update is not called verified.
+G1 says how many of the evidence rows the 29 figures draw or count have a document check on file. Since figure 23 lists every row it counts, that is every evidence row in the record. The 47 rows without one are 23 rows of the network list, 19 contribution lines whose audit finding is a qualification still open, and the five witness rows added to figure 26 on November 27, which the final check reads. G1's 449 evidence rows without a document check are mostly the 403 rows the gap sweep added on November 27: their review lanes re-read every one against its filing, and the final check audits them. G2 and G4 count the audit of the story's fifth version, which is running. The final check of everything applied has not run yet, so this update is not called verified.
 
 ## Names
 
