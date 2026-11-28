@@ -5,6 +5,23 @@ These entries keep the account published with each release. Present-tense wordin
 <a id="latest"></a>
 ## 2026-11-28 · this release
 
+Rests on: an independent review of the forms for the three evidence rows without a document check (30 of 32 lines confirmed) and the apply receipts; the publish sequence of this release (every check exit 0); X95 (audit: complete), not yet disposed; no audit of the three rows as they now stand yet.
+
+The Center for AI Policy's entry is bound to its own evidence: a November 2023 grant of $250,000 recorded by a network funder, 37% of the revenue on its 2023 return, and its own lobbying report for the last quarter of 2025. Its binding as a funded group's political arm, which no filing showed, is set to context. It keeps its place in figure 22; applied alone, the second change would have dropped it.
+
+A former official's entry has its corrected note (the hearing of March 26, 2019 and the start of his acting service). Two copies of one $4,000 receipt, held as context, are classed as the recipient's own receipt; no count changes.
+
+The review found two lines wrong, and neither is applied: an adviser's quotation cell holds the saved page's markup and not the page's words, and the former official's second element lacks the end date of his government service. Forms for both are being written for a second review.
+
+The first apply run stopped after the two role changes: the tool that corrects cells refused to start because a folder held an empty file left by forms that were never applied. The file was moved aside, the run resumed, and a check now runs before the first write of an apply.
+
+No count for serving members changed: none of the 1,078 rows of the member table differs.
+
+The audit of the story's round 17 (X95) closed as this release was prepared: 9,067 of 9,075 findings right, five errors and three points of wording, none corrected yet. The errors: "$40M" printed twice where the story's money format gives "$40.0M"; two bars on the bill-sponsor slide whose records open the members counted and not the group they are counted against; "Sept. 2026" where a month without a day is spelled out. The wording: the head on the bigger money can be read as tracing the announced money through to the spending against Seth Moulton, which the filings leave open; the bill-sponsor head should say stand-alone bills; the head on trips and events should say the records count for 40 members' offices.
+
+<a id="e743e44"></a>
+## 2026-11-28 03:32 UTC · [e743e44](https://github.com/kevinnbass/anthropic-network-money-congress/commit/e743e44)
+
 Rests on: readers R15a (desk) and R15b (phone) of the version before; the publish sequence of this release (every check exit 0; the screenshot check on all nine pages); no audit yet (X92 read the version before it).
 
 Story round 17. The cover states the three ways a seat counts directly under the number, each with its count: 416 members with gifts to linked committees, outside spending for 114 members and against 76, and 167 members with other public records. Each example seat is labelled with its mark, and the example of spending against a member has one of spending for a member beside it.
