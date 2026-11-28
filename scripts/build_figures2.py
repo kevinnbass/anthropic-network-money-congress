@@ -977,7 +977,8 @@ def fig20():
     svg.append(bar_chart([(k, v, None) for k, v in bp.most_common(16)], 40, 820, 2000, 600, label_w=760, colour=lambda r: PAL[6]))
     subtitle = ('Sources: California Secretary of State, New York State Board of Elections and other state records. Reed Hastings is shown as an Anthropic board member; employees are grouped into one line.')
     # X84-117 (2026-11-27): the count of sitting members state money reaches is computed from the join (it was typed as three)
-    footnote = ('<b>What the record does not show.</b> State giving goes to state officials and ballot campaigns, not to Congress; it links to a member only where the state official later won a House or Senate seat (' + f'{sum(1 for m in SITTING if float(m.get("t12_n") or 0) > 0)} sitting members' + '). ActBlue California passes money through; it is not a recipient. A contribution is not a vote. Coverage is mostly California; other states were sampled.')
+    # X93-26 (2026-11-28): 'later won a seat' left out sitting members who ran for state office; X93-28: figure 23's vendor label; X93-30: figure 25's heading
+    footnote = ('<b>What the record does not show.</b> State giving goes to state officials and ballot campaigns, not to Congress; it links to a member only where the person in the state record serves in Congress on the roster date, whether a state official who later won a seat or a sitting member running for state office (' + f'{sum(1 for m in SITTING if float(m.get("t12_n") or 0) > 0)} sitting members' + '). ActBlue California passes money through; it is not a recipient. A contribution is not a vote. Coverage is mostly California; other states were sampled.')
     figure(stem, "State money", subtitle, "\n".join(svg), footnote, ids, height=1900, legend_html=legend([(PAL[i], o) for i, o in enumerate(offices)]))
 
 
@@ -1148,7 +1149,7 @@ def fig22():
 def fig23():
     stem = "congress-23-record-composition"
     tabs = [("hard_money", HM), ("super_pac_c4", SP), ("lobbyist_contributions", LC), ("vendors", VN), ("member_statements", MS), ("entities", EN), ("lobbying", LB), ("grants", GR), ("state_government", SG), ("travel", TV), ("revolving_door", RD), ("timeline", TL), ("member_disclosures", PD), ("federal_money", FG)]
-    PLAIN = {"hard_money": "Campaign contributions", "super_pac_c4": "Outside-money records", "lobbyist_contributions": "Lobbyists' own gifts", "vendors": "Payments to AI labs", "member_statements": "Members' statements",
+    PLAIN = {"hard_money": "Campaign contributions", "super_pac_c4": "Outside-money records", "lobbyist_contributions": "Lobbyists' own gifts", "vendors": "Vendor payments (including AI labs)", "member_statements": "Members' statements",
              "entities": "Network list", "lobbying": "Lobbying reports", "grants": "Grants", "state_government": "State money", "travel": "Travel and events", "revolving_door": "Job moves", "timeline": "Timeline events",
              "member_disclosures": "Financial disclosures", "federal_money": "Federal money"}
     cells = {}; tot = collections.Counter(); ids = []
@@ -1268,7 +1269,7 @@ def fig25():
         tot[("support", p)] += float(m["t3b_support_usd"] or 0); tot[("oppose", p)] += float(m["t3b_oppose_usd"] or 0)
         if float(m["t3b_support_usd"] or 0) > 0: n[("support", p)] += 1
         if float(m["t3b_oppose_usd"] or 0) > 0: n[("oppose", p)] += 1
-    svg = [txt(40, 40, "Outside spending for and against sitting members, by groups that received network money (each group's total spending on that member)", 24, weight="bold")]
+    svg = [txt(40, 40, "Outside spending for and against sitting members, by groups that received network money (each group's counted spending on that member, from its first network receipt on record)", 24, weight="bold")]
     svg.append(txt(40, 80, "  ".join(f"{'for' if s == 'support' else 'against'} {'Democrats' if p == 'D' else 'Republicans' if p == 'R' else 'independents'}: {money(tot[(s, p)])} across {n[(s, p)]} members" for s in ("support", "oppose") for p in ("D", "R", "I") if tot[(s, p)]), 16, fill=MUTED))
     svg.append(txt(40, 130, f"Most spent in support (the {len(sup)} largest of {sum(1 for m in SITTING if float(m['t3b_support_usd'] or 0) > 0)} members)", 22, weight="bold"))  # X40-2619
     svg.append(bar_chart([(member_label(m["member_bioguide"]), float(m["t3b_support_usd"]), m) for m in sup], 40, 150, 1000, 700, label_w=440, colour=lambda m: party_colour(m["party"])))

@@ -2,8 +2,8 @@
  {
   "id": "thread-reach",
   "act": "The thread",
-  "head": "<span data-m=\"1888fcd9d6\" tabindex=\"0\"><em>454</em> of 533</span>",
-  "deck": "<span data-m=\"a879bc702c\" tabindex=\"0\">Sitting members of Congress named in public records tied to Anthropic’s network, for and against. 116 appear only through outside spending or lobbyists’ own gifts.<br><br>One dot per member on Nov. 26, 2026.<br><br>The network includes Anthropic, its staff, PAC, directors and funders, other AI-safety funders, groups they back, and their lobbyists.</span>",
+  "head": "<span data-m=\"e45cdb7f12\" tabindex=\"0\"><em>454</em> of 533</span>",
+  "deck": "<span data-m=\"c23df20c0b\" tabindex=\"0\">Sitting members of Congress named in public records tied to Anthropic’s network, for and against. 116 appear only through outside spending or lobbyists’ own gifts.<br><br>One dot per member on Nov. 26, 2026.<br><br>The network includes Anthropic, its staff, PAC, directors and funders, other AI-safety funders, groups they back, and their lobbyists.</span>",
   "note": "The effect on votes remains an open question.",
   "bridge": "Start with campaign gifts from Anthropic employees and the company PAC.",
   "how": "",
@@ -12,7 +12,7 @@
  {
   "id": "thread-gifts",
   "act": "The thread",
-  "head": "<span data-m=\"2656c43333\" tabindex=\"0\"><em>10 → 201</em></span>",
+  "head": "<span data-m=\"4ffcb2890c\" tabindex=\"0\"><em>10 → 201</em></span>",
   "deck": "Sitting members whose campaigns or linked committees got gifts from Anthropic employees or its PAC. Both chambers use the Nov. 26, 2026 roster.",
   "note": "The money came from employees personally or from the PAC. Employers are as reported on the filings.",
   "bridge": "Anthropic itself announced money for a political nonprofit.",
@@ -43,7 +43,7 @@
   "id": "thread-count",
   "act": "The thread",
   "head": "<span data-m=\"e2870c7336\" tabindex=\"0\">Each counted as <em>one member</em>.</span>",
-  "deck": "<span data-m=\"67001dd3d7\" tabindex=\"0\">Records tied to Anthropic’s network name 454 of 533 sitting members of Congress, including these two.</span>",
+  "deck": "<span data-m=\"f1b1621055\" tabindex=\"0\">Records tied to Anthropic’s network name 454 of 533 sitting members of Congress, including these two.</span>",
   "note": "The effect on votes remains an open question.",
   "bridge": "",
   "how": "",
