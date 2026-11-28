@@ -18,7 +18,7 @@ Fifteen tables hold the record; each row has a `row_id` whose letters name its t
 | `member_statements.csv` | MS | 9,439 | statements and record mentions naming the network (11) |
 | `state_government.csv` | SG | 3,100 | state-level contributions and lobbying (12) |
 | `timeline.csv` | TL | 1,066 | dated events |
-| `members_network.csv` | MB | 1,078 | the join: one row per member, and per connection type a count, a sum and the row ids behind them; written by scripts/build_join.py |
+| `members_network.csv` | MB | 1,079 | the join: one row per member, and per connection type a count, a sum and the row ids behind them; written by scripts/build_join.py |
 | `timeline_all.csv` |  | 109,700 | every dated row of every table on one line each; written by scripts/build_join.py |
 | `lb_4b_measures.csv` |  | 13,128 | for each LD-203 item, which of figure 10's two counts it falls in |
 | `lb_network_windows.csv` |  | 38 | the dates each lobbying firm was registered for a network client |
@@ -38,7 +38,7 @@ Also here: `bill_sponsor_keys.csv`, `grant_payment_unproven.csv`, `lb_4b_measure
 
 ## Which rows count
 
-`../case.json` binds each row to a question with a role, and `row_roles.csv` lists the same roles one row per line: **evidence** (43,205 rows; the only rows the money and connection figures draw or count), **context** (85,789; kept, never counted) and **negative** (5,181; a search of the named source that found nothing, as of its date). A row in no binding is unbound and is not counted.
+`../case.json` binds each row to a question with a role, and `row_roles.csv` lists the same roles one row per line: **evidence** (43,024 rows; the only rows the money and connection figures draw or count), **context** (85,970; kept, never counted) and **negative** (5,181; a search of the named source that found nothing, as of its date). A row in no binding is unbound and is not counted.
 
 ## Columns
 
