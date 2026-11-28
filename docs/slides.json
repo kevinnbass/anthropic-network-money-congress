@@ -3,7 +3,7 @@
   "id": "start",
   "act": "Anthropic&#8217;s network and Congress",
   "head": "<em>454</em> of 533 <span class=\"cover-sub\">sitting members with a record tied to Anthropic’s network</span>",
-  "deck": "<span class=\"cover-route\"><span data-m=\"f469a08c8f\">416 members</span> with gifts to linked committees</span><span class=\"cover-route\">Outside spending for <span data-m=\"8831cdb0e3\">114</span> members, against <span data-m=\"04d4175a7b\">76</span></span><span class=\"cover-scope\">By committees that took network money, from all their donors.</span><span class=\"cover-route\"><span data-m=\"4401f1e385\">167 members</span> with other public records</span><span class=\"cover-scope\">Groups overlap. <span data-m=\"33ce0e515d\">A member’s criticism of Anthropic counts as a record too.</span></span><span class=\"cover-scope cover-network\">The network: Anthropic, its staff, PAC, directors and funders, other AI-safety funders, groups they back, and their lobbyists.</span>",
+  "deck": "<span class=\"cover-scope cover-groups\">Record groups, which overlap</span><span class=\"cover-route\"><span data-m=\"f469a08c8f\">416 members</span> with gifts to linked committees from network people, PACs or lobbyists</span><span class=\"cover-route\">Outside spending for <span data-m=\"8831cdb0e3\">114</span> members, against <span data-m=\"04d4175a7b\">76</span></span><span class=\"cover-scope\">By committees that took network money, from all their donors.</span><span class=\"cover-route\"><span data-m=\"4401f1e385\">167 members</span> with other public records</span><span class=\"cover-scope\"><span data-m=\"33ce0e515d\">A member’s criticism of Anthropic counts as a record too.</span></span><span class=\"cover-scope cover-network\">The network: Anthropic, its staff, PAC, directors and funders, other AI-safety funders, groups they back, and their lobbyists.</span>",
   "note": "The records leave the effect on votes open.",
   "bridge": "First, gifts from Anthropic’s employees and PAC.",
   "how": "",
@@ -22,22 +22,22 @@
  {
   "id": "forty",
   "act": "II &#183; The bigger money",
-  "head": "Anthropic announced $40.0M for a nonprofit. It gave <em data-m=\"c82efdef14\">$500K</em> to a PAC that had already made most of its payments against Seth Moulton.",
-  "deck": "<span data-m=\"c82efdef14\">Commonwealth Together PAC reported the receipt from Public First Action on Aug. 3, 2026, after $1.6M of its $2.2M in payments against Moulton.</span>",
+  "head": "Anthropic announced $40.0M for a nonprofit. The nonprofit gave <em data-m=\"c82efdef14\">$500K</em> to a PAC that had already made most of its payments against Seth Moulton.",
+  "deck": "",
   "note": "The filings leave donor gifts unlinked to specific expenditures.",
-  "bridge": "Lobbyists’ own gifts are another way a hollow seat counts. How far did those gifts reach?",
+  "bridge": "Anthropic’s lobbying reports name bills. How many of their sponsors had gifts from its employees or PAC on file?",
   "how": "",
   "source": "Sources · Anthropic’s announcement pages and the PAC’s FEC filings"
  },
  {
-  "id": "gifts",
+  "id": "sponsors",
   "act": "III &#183; The lobbying",
-  "head": "Lobbyists named in filings for network clients gave their own money to committees tied to <em>304 sitting members</em>.",
-  "deck": "Counting every lobbyist at a firm registered for a network client, 356.",
-  "note": "The filings show who gave and whom the firm represented. They leave any effect on votes open.",
+  "head": "Anthropic employee or PAC gifts reached <em>19 of the 23</em> sitting sponsors of stand-alone bills named in its lobbying reports.",
+  "deck": "These are federal lobbying reports filed for Anthropic by the company and its outside firms.",
+  "note": "The filings leave open Anthropic’s position on the bills and any link between bill mentions and gifts.",
   "bridge": "How do different records count toward the same seat tally?",
-  "how": "",
-  "source": "Lobbyist contribution disclosures and federal lobbying filings · Gift dates Feb. 18, 2021–June 30, 2026"
+  "how": "Stand-alone bills are individual proposals. The count leaves out broad packages such as spending bills.",
+  "source": "Federal lobbying and campaign contribution filings, and Congress.gov"
  },
  {
   "id": "limits",

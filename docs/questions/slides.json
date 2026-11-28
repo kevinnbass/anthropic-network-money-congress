@@ -54,9 +54,9 @@
   "act": "Questions from the record",
   "head": "How common were gifts to those bills’ serving sponsors?",
   "deck": "Among serving sponsors whose stand-alone bills appeared in Anthropic’s filings, 19 of 23 had employee or PAC gifts on file. Across all 533 serving members, including those sponsors, 201 did.",
-  "note": "The filings leave open whether the gifts and bill mentions were related.",
+  "note": "The filings leave open Anthropic’s position on the bills and any link between bill mentions and gifts.",
   "bridge": "What does one seat count?",
-  "how": "",
+  "how": "Stand-alone bills are individual proposals. The count leaves out broad packages such as spending bills.",
   "source": "Federal lobbying and campaign contribution filings, and Congress.gov"
  },
  {
