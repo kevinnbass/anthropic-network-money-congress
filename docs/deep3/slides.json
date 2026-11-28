@@ -2,19 +2,19 @@
  {
   "id": "deep3-sponsors",
   "act": "Deeper &#183; III &#183; How the lobbying works",
-  "head": "<em>19 of 23</em> serving sponsors of stand-alone bills in reports filed for Anthropic had gifts from its employees or PAC, against 201 of 533 members.",
-  "deck": "Deepens “The lobbying”: here the gifts are from Anthropic’s employees and its PAC, not its lobbyists, and the bills are those its lobbying reports named.",
-  "note": "The filings leave open whether gifts and bill mentions were related.",
-  "bridge": "Which bills showed up most often in filings for Anthropic?",
+  "head": "Anthropic employee or PAC gifts reached <em>19 of the 23</em> sitting sponsors of bills its lobbying reports named.",
+  "deck": "Deepens “The lobbying.” Across all 533 sitting members, those gifts reached 201.",
+  "note": "The 533 include the 23. The filings leave open Anthropic’s position on the bills and any link between bill mentions and gifts.",
+  "bridge": "How often did reports filed for Anthropic name a bill?",
   "how": "",
   "source": "Federal lobbying and campaign contribution filings, and Congress.gov"
  },
  {
   "id": "deep3-bills",
   "act": "Deeper &#183; III &#183; How the lobbying works",
-  "head": "<em>Chip proposals</em> led the stand-alone bills named in reports filed for Anthropic.",
-  "deck": "Deepens “The lobbying”: what did the reports filed for Anthropic name? Most named no bill; among the stand-alone bills they did name, the AI OVERWATCH Act led.",
-  "note": "The reports name bills and leave Anthropic’s position on them open.",
+  "head": "Only <em>18 of 68</em> lobbying reports for Anthropic named a bill.",
+  "deck": "Deepens “The lobbying” by showing what those reports named. Chip proposals led among individual bills.",
+  "note": "A bill mention leaves Anthropic’s position open. A sitting sponsor’s seat counts when a network filing names their stand-alone bill.",
   "bridge": "",
   "how": "",
   "source": "Federal lobbying reports and saved Congress.gov bill records"
