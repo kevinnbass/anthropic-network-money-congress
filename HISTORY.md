@@ -5,6 +5,17 @@ These entries keep the account published with each release. Present-tense wordin
 <a id="latest"></a>
 ## 2026-11-28 · this release
 
+Rests on: a check of every pair of counted state gifts that share donor, recipient, date and amount, each pair decided on the saved registry record; an independent review that opened both records of every row set aside and searched the whole table again with its own script; the member table compared by member before and after (no cell differs); every figure's text compared with the published copy; the publish sequence of this release (every check exit 0). The lane and the review ran on Claude Opus because the engine that usually does this work was at its usage limit.
+
+**State gifts that were counted twice.** California's campaign registry can be read from two sides: what a donor's own filings report, and what the registry lists as received from that donor. The project had collected both and compared each side only with itself. Eleven rows held, from the donor's own filing, a gift that the recipient-side listing also holds. An independent review read both records of each and confirmed that each pair is one transaction. The eleven are no longer counted; they stay in the record with the reason.
+
+**What changed on the figures.** Figure 20: Cari Tuna's state giving reads $15.4M (it read $29.9M) and Dustin Moskovitz's $750K (it read $1.5M); the largest recipient, an Open Philanthropy Action Fund ballot committee, reads $10.2M (it read $20.5M). Figure 14's bars for state-level money read $16.8M for 2018 (it read $21.6M), $7.1M for 2020 (it read $7.4M) and $17.8M for 2022 (it read $28.0M). Counted state gifts fell from $71.8M to $56.4M. No member's count changed, and the story's numbers do not use state dollar totals.
+
+**More of the same kind, found by the review and not yet corrected.** Twelve further rows repeat a gift ($912,900), the largest being Anthropic PBC's $850,000 gift to the California Democratic Party of Aug. 5, 2026, which is counted as $1.7M: once from the donor's filing and once from the party's two receipts. In the other direction, fourteen second gifts ($134,700) have no row. These corrections are being written and will be reviewed before they are applied; until then figure 20's Anthropic PBC total ($2.2M) is too high by $850,000.
+
+<a id="68b1b3d"></a>
+## 2026-11-28 10:35 UTC · [68b1b3d](https://github.com/kevinnbass/anthropic-network-money-congress/commit/68b1b3d)
+
 Rests on: two independent reviews, each reading every submitted line against the saved record (the donor's published ledger; committee registrations and receipts as filed); only confirmed lines applied, and none on a row where the review found any line wrong; a read-back of every applied value; the member table compared by member before and after (no counted cell differs); every figure's text compared with the published copy; the publish sequence of this release (every check exit 0). The reviews ran on Claude Opus because the engine that usually reviews was at its usage limit.
 
 **Seventeen lines of a donor's ledger are no longer counted as grants.** Every grant row was classed by what its source entry is, and a review then read each of these 17 against the donor's own published ledger. Eleven are returns of grant funding by the recipient, entered as negative amounts; six are payments that are not grants (the giving vehicles' own costs, a consulting contract, a contractor payment). They stay in the record, uncounted, each with its reason.
