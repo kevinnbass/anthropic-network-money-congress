@@ -12,18 +12,18 @@
  {
   "id": "arrival",
   "act": "I &#183; The arrival",
-  "head": "Anthropic employee and PAC gifts reached <em>10</em> of today’s members by the end of 2024 and <em>201</em> by Sept. 2026.",
+  "head": "Anthropic employee and PAC gifts reached <em>10</em> of today’s members by the end of 2024 and <em>201</em> by September 2026.",
   "deck": "Anthropic employees gave $6.0M of their own money, 92% of it in 2026. Anthropic’s political action committee (PAC) gave $232K.",
   "note": "Employer is as the giver reported it to the FEC, including misspellings and entries in the occupation box. The amounts are gross contributions before refunds. The record runs through Sept. 30, 2026.",
-  "bridge": "Anthropic announced $40M for Public First Action, a political nonprofit.",
+  "bridge": "Anthropic announced $40.0M for Public First Action, a political nonprofit.",
   "how": "",
   "source": "FEC contributions to campaigns, leadership PACs and single-member joint fundraising committees linked to serving members."
  },
  {
   "id": "forty",
   "act": "II &#183; The bigger money",
-  "head": "Anthropic announced $40M for a nonprofit that gave <em data-m=\"c82efdef14\">$500K</em> to a PAC spending against Seth Moulton.",
-  "deck": "<span data-m=\"c82efdef14\">Commonwealth Together PAC reported the receipt from Public First Action on Aug. 3, 2026, after most of its reported spending against Moulton.</span>",
+  "head": "Anthropic announced $40.0M for a nonprofit. It gave <em data-m=\"c82efdef14\">$500K</em> to a PAC that had already made most of its payments against Seth Moulton.",
+  "deck": "<span data-m=\"c82efdef14\">Commonwealth Together PAC reported the receipt from Public First Action on Aug. 3, 2026, after $1.6M of its $2.2M in payments against Moulton.</span>",
   "note": "The filings leave donor gifts unlinked to specific expenditures.",
   "bridge": "Lobbyists’ own gifts are another way a hollow seat counts. How far did those gifts reach?",
   "how": "",

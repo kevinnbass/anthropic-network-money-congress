@@ -5,6 +5,15 @@ These entries keep the account published with each release. Present-tense wordin
 <a id="latest"></a>
 ## 2026-11-28 · this release
 
+Rests on: X95 (audit: complete; 9,067 of 9,075 findings right), each of its eight findings with a written ruling; the story's date check, extended, failing on the pages before this rebuild (203 hits) and passing after it; the publish sequence of this release (every check exit 0). The corrected slides have not been audited again.
+
+The eight things the audit of story round 17 found are corrected. The announced total prints as $40.0M wherever it appears. The head on the bigger money is now two sentences: "Anthropic announced $40.0M for a nonprofit. It gave $500K to a PAC that had already made most of its payments against Seth Moulton." The slide's code checks that more of those payments are dated before the receipt than on or after it, and the text under the head gives the figures ($1.6M of $2.2M). The bill-sponsor head says stand-alone bills, and its two bars open the whole group each counts against (the 23 sponsors; all 533 members). The head on trips and events says the records are the members' own or their staff's.
+
+One of the eight was general. The audit found "Sept. 2026" in one head, where the story's rule spells out a month that has no day number after it. Measured across the nine pages: 206 abbreviated months with no day number, in 41 forms, most of them reporting periods ("July–Sept. 2026"). The date check added earlier the same day had been written from the five off-style forms then seen, not from the rule, and passed all 206. Four slide modules still kept month tables of their own. Every date form is now made in one place, the check tests the rule as stated, and it refuses a slide module that keeps a month table.
+
+<a id="3a22a8c"></a>
+## 2026-11-28 03:50 UTC · [3a22a8c](https://github.com/kevinnbass/anthropic-network-money-congress/commit/3a22a8c)
+
 Rests on: an independent review of the forms for the three evidence rows without a document check (30 of 32 lines confirmed) and the apply receipts; the publish sequence of this release (every check exit 0); X95 (audit: complete), not yet disposed; no audit of the three rows as they now stand yet.
 
 The Center for AI Policy's entry is bound to its own evidence: a November 2023 grant of $250,000 recorded by a network funder, 37% of the revenue on its 2023 return, and its own lobbying report for the last quarter of 2025. Its binding as a funded group's political arm, which no filing showed, is set to context. It keeps its place in figure 22; applied alone, the second change would have dropped it.
