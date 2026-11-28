@@ -1146,6 +1146,24 @@ def fig22():
 
 
 # ---------------------------------------------------------------- 23 record composition
+def gap_source_retrieved(row, note):
+    """A successful retrieval closed the failed route for this filing."""
+    source_type = (row.get("source_type") or "").strip().lower()
+    source_url = (row.get("url") or "").strip().rstrip("/")
+    if source_type in ("", "none_found", "fetch_gap") or not source_url or not (row.get("quote_300") or "").strip():
+        return False
+    successes = re.findall(r"(?:^|;)\s*retrieved_from=(https?://[^\s;]+)\s+HTTP\s+2\d\d\b", note, re.I)
+    if source_url not in {url.rstrip("/") for url in successes}:
+        return False
+    attempts = re.findall(r"(https?://[^\s;]+)\s+(?:returned\s+)?(?:HTTP|status)[ =:]+(?:403|429|5\d\d)\b", note, re.I)
+    uuid_pattern = r"\b[0-9a-f]{8}(?:-[0-9a-f]{4}){3}-[0-9a-f]{12}\b"
+    filing = re.search(uuid_pattern, source_url, re.I)
+    return bool(attempts) and all(
+        url.rstrip("/") == source_url or (filing and filing.group(0).lower() in url.lower())
+        for url in attempts
+    )
+
+
 def fig23():
     stem = "congress-23-record-composition"
     tabs = [("hard_money", HM), ("super_pac_c4", SP), ("lobbyist_contributions", LC), ("vendors", VN), ("member_statements", MS), ("entities", EN), ("lobbying", LB), ("grants", GR), ("state_government", SG), ("travel", TV), ("revolving_door", RD), ("timeline", TL), ("member_disclosures", PD), ("federal_money", FG)]
@@ -1186,8 +1204,8 @@ def fig23():
             n = re.sub(r"lane=research/grok-out/\S+", "", r.get("note") or "")
             if r["row_id"] in closed:
                 continue  # a later re-pull row carries closes=<table>#<row_id>
-            if (r.get("source_type") or "").lower() not in ("", "none_found", "fetch_gap") and (r.get("quote_300") or "").strip():
-                continue  # 2026-11-27 (lane V02-14): a row quoting its own filing was retrieved; a failed second route in its note is not a gap
+            if gap_source_retrieved(r, n):
+                continue  # V02-14 and X93-29: require retrieval of the filing sought on the failed route
             if (r.get("source_type") or "").lower() == "fetch_gap" or (pos_re.search(n) and not neg_re.search(n)):
                 gaps[name] += 1
                 ids.append(r["row_id"])  # the lower panel draws these gap rows; the upper panel counts every row

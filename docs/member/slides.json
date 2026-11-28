@@ -13,9 +13,9 @@
   "id": "member-spread",
   "act": "Your member",
   "head": "Most members with a record have one or two kinds",
-  "deck": "231 of the 454 members with a counted record have one or two kinds. Martin Heinrich and Ted Lieu share the most kinds on file, with 7.",
+  "deck": "231 of the 454 members with a counted record have one or two kinds. Among all serving members, Martin Heinrich and Ted Lieu share the most counted kinds on file, with 7.",
   "note": "Each kind counts once, regardless of the number of records or dollars. A critical statement or spending against a member can count.",
-  "bridge": "What if the only record is spending against them?",
+  "bridge": "What if the only counted record is spending against them?",
   "how": "All 533 serving members, including those with no counted record.<span class=\"member-bin-summary\" aria-live=\"polite\"></span>",
   "source": ""
  },
@@ -23,8 +23,8 @@
   "id": "member-outside",
   "act": "Your member",
   "head": "Spending against a member can put them on the list.",
-  "deck": "For Thom Tillis, opposition spending is the only kind of record in this collection.",
-  "note": "<button type=\"button\" class=\"member-donor\" data-m=\"8dc5af4ad4\" data-tip=\"Network receipts|Gifts before the election\">Network donors Wendy Schmidt, Reed Hastings, Eric Schmidt and Dustin Moskovitz gave $3.6M to Senate Majority PAC before the 2020 election.</button> The filings here trace no donor’s gift to an expenditure.",
+  "deck": "For Thom Tillis, opposition spending is the only counted kind of record in this collection.",
+  "note": "<button type=\"button\" class=\"member-donor\" data-m=\"8dc5af4ad4\" data-tip=\"Network receipts|Gifts before the election\">Network donors Wendy Schmidt, Reed Hastings, Eric Schmidt and Dustin Moskovitz gave Senate Majority PAC $3.6M from Jan. 1 through Nov. 2, 2020.</button> The filings here trace no donor’s gift to an expenditure.",
   "bridge": "",
   "how": "",
   "source": "FEC receipts and independent expenditures · Figures 09 and 25"

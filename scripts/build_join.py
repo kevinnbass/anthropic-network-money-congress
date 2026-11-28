@@ -69,6 +69,18 @@ def date_of(row: dict[str, str]) -> str:
     return ""
 
 
+def receipt_day(row: dict[str, str]) -> str:
+    """Return a usable filed day for the K13 receipt and expenditure comparison."""
+    day = (row.get("date") or "").strip()
+    if not re.fullmatch(r"[0-9]{4}-[0-9]{2}-[0-9]{2}", day):
+        return ""
+    try:
+        datetime.date.fromisoformat(day)
+    except ValueError:
+        return ""
+    return day
+
+
 def main() -> int:
     # roles from case.json bindings
     case = json.load(open(ROOT / "case.json", encoding="utf-8"))
@@ -261,23 +273,35 @@ def main() -> int:
     # same rule as 4b's registration window). GS9 searched the FEC's Schedule A from 2015 for an earlier network receipt at each of the
     # 34 committees: 31 none found, two found (promoted as C197 and C198), one not public (Public First Action's Form 9).
     linked = {}
+    unresolved_dates = {"receipts": [], "expenditures": []}
+
     def link(r):
-        k = ckey(r, "payee"); d = (r.get("date") or "").strip() or "0000-00-00"     # an undated receipt sets no bound (none on 2026-11-27)
+        d = receipt_day(r)
+        if not d:
+            unresolved_dates["receipts"].append(r["row_id"])
+            return
+        k = ckey(r, "payee")
         linked[k] = min(linked.get(k, d), d)
+
     for r in tables["super_pac_c4"]:
         if role.get(r["row_id"]) == "evidence" and (r.get("money_type") or "") in ("outside_receipt", "transfer"):
             link(r)
     for r in tables["hard_money"]:
         if role.get(r["row_id"]) == "evidence" and (r.get("money_type") or "") in ("hard_money", "transfer") and (r.get("hop") or "") == "1":
             link(r)
-    def before_link(r):
-        d = (r.get("date") or "").strip()
-        return bool(d and d < linked.get(ckey(r, "payer"), ""))
     for r in tables["super_pac_c4"]:
         mt = (r.get("money_type") or "").strip()
         is_ie = mt in ("independent_expenditure", "electioneering_communication")
         t = "3b" if is_ie or (r.get("hop") or "") == "2" else "3a"
-        for k in keys_for(r): add(k, t, r, force_ctx=(t == "3b" and (not is_ie or ckey(r, "payer") not in linked or before_link(r))))
+        day = receipt_day(r) if is_ie else ""
+        if is_ie and not day and role.get(r["row_id"]) == "evidence":
+            unresolved_dates["expenditures"].append(r["row_id"])
+        first = linked.get(ckey(r, "payer")) if t == "3b" else None
+        force_ctx = t == "3b" and (not day or first is None or day < first)
+        for k in keys_for(r):
+            add(k, t, r, force_ctx=force_ctx)
+    if any(unresolved_dates.values()):
+        print("  3b unresolved-date:", " ".join(f"{kind}={len(ids)}" for kind, ids in unresolved_dates.items()))
     # 2026-09-23 (Codex X1b #1): type 4b is the lobbyist's own FECA money; an LD-203 item whose contributor is a PAC is context
     # 2026-09-29 (audit X33a, PLAN §1.3 "while registered for a network client"): an item counts only if dated inside a window in
     # which the filing's registrant was registered for a network client (research/lb_network_windows.csv); other items are context

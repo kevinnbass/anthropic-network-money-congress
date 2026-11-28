@@ -2,7 +2,7 @@
  {
   "id": "decade-offyear",
   "act": "The decade",
-  "head": "Campaign gifts led the <em>2017</em> record after a year led by outside-money records.",
+  "head": "Campaign gifts were the largest share of this collection’s dated <em>2017</em> records.",
   "deck": "Outside-money records were 58% of dated records in 2016. Campaign gifts were 58% in 2017.",
   "note": "Outside spending pools dollars from all donors. The search went deeper in recent years, and one filing can contain many lines. Counts describe the collection.",
   "bridge": "How much of the next election year’s record covered outside money?",
@@ -12,7 +12,7 @@
  {
   "id": "decade-outside",
   "act": "The decade",
-  "head": "Outside-money records made up <em>84%</em> of the 2018 record.",
+  "head": "Outside-money records made up <em>84%</em> of this collection’s dated 2018 records.",
   "deck": "The band includes reported receipts, spending and related filings. The dollar lane shows their spending from all donors.",
   "note": "Outside spending does not establish coordination with a candidate. The search went deeper in recent years, and one filing can contain many lines. Counts describe the collection.",
   "bridge": "What did committees report spending in the next frame?",
@@ -45,17 +45,17 @@
   "head": "By the end of 2024, Anthropic employees had given to committees tied to <em>10</em> of today’s members.",
   "deck": "These are personal gifts, counted against the Nov. 26, 2026 roster.",
   "note": "A campaign contribution does not tell us how a member voted. The search went deeper in recent years, and one filing can contain many lines. Counts describe the collection.",
-  "bridge": "Which kind of record took up more of the next year’s filings?",
+  "bridge": "What share of the next year’s records were payments to AI labs?",
   "how": "",
   "source": "FEC and Senate filings, House disbursements and dated pack records"
  },
  {
   "id": "decade-purchases",
   "act": "The decade",
-  "head": "Payments to two AI labs made up <em>23%</em> of the 2025 record.",
+  "head": "Payments to two AI labs made up <em>23%</em> of this collection’s dated 2025 records.",
   "deck": "In the purchase filings collected here, political committees and House offices paid more to OpenAI than to Anthropic.",
   "note": "Purchases are payments to a lab. The vendor search covered a subset of committees. The search went deeper in recent years, and one filing can contain many lines. Counts describe the collection.",
-  "bridge": "What did Anthropic employees give once the company’s PAC began giving?",
+  "bridge": "What did Anthropic employees give in 2026, the first year its PAC gave to committees linked to the serving roster?",
   "how": "",
   "source": "FEC and Senate filings, House disbursements and dated pack records"
  },

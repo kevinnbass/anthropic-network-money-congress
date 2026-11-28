@@ -3,7 +3,7 @@
   "id": "questions-reach",
   "act": "Questions from the record",
   "head": "How many sitting members show up?",
-  "deck": "<span class=\"faq-answer\"><b data-m=\"e45cdb7f12\" data-tip=\"Sitting members on the roster|Members with at least one counted record\" tabindex=\"0\">454 of 533</b></span> appear in public records tied to Anthropic’s network, for and against. For <b data-m=\"32c44f9884\" data-tip=\"Outside activity only|Outside spending or lobbyists’ own gifts\" tabindex=\"0\">116</b>, the record is outside spending or lobbyists’ own gifts alone. <span class=\"cover-unit\">One dot per sitting member on Nov. 26, 2026.</span> <span class=\"faq-jumps\" role=\"navigation\" aria-label=\"Jump to a question\"><a href=\"#questions-gifts\">Employee and PAC gifts</a> <a href=\"#questions-spending\">Outside spending</a> <a href=\"#questions-scale\">Lobbying benchmark</a> <a href=\"#questions-bills\">Most-mentioned bills</a> <a href=\"#questions-sponsors\">Gifts to bill sponsors</a> <a href=\"#questions-limits\">Counting the seats</a></span>",
+  "deck": "<span class=\"faq-answer\"><b data-m=\"e45cdb7f12\" data-tip=\"Sitting members on the roster|Members with at least one counted record\" tabindex=\"0\">454 of 533</b></span> appear in public records tied to Anthropic’s network, for and against. For <b data-m=\"32c44f9884\" data-tip=\"Outside activity only|Only counted activity is outside spending or lobbyists’ own gifts\" tabindex=\"0\">116</b>, the only counted activity is outside spending or lobbyists’ own gifts. <span class=\"cover-unit\">One dot per sitting member on Nov. 26, 2026.</span> <span class=\"faq-jumps\" role=\"navigation\" aria-label=\"Jump to a question\"><a href=\"#questions-gifts\">Employee and PAC gifts</a> <a href=\"#questions-spending\">Outside spending</a> <a href=\"#questions-scale\">Lobbying benchmark</a> <a href=\"#questions-bills\">Most-mentioned bills</a> <a href=\"#questions-sponsors\">Gifts to bill sponsors</a> <a href=\"#questions-limits\">Counting the seats</a></span>",
   "note": "The records leave the effect on votes open.",
   "bridge": "How did the gifts spread?",
   "how": "",
@@ -23,8 +23,8 @@
   "id": "questions-spending",
   "act": "Questions from the record",
   "head": "Who did outside groups spend for and against?",
-  "deck": "Committees that received network money reported <b>$372M against Republicans</b> out of $490M in spending from all donors on members serving on Nov. 26, 2026.",
-  "note": "The filings identify the committee that spent the money. They cannot trace an expenditure to a donor.",
+  "deck": "Committees that received network money reported <b>$372M against Republicans</b> out of $490M in spending from all donors reported for or against members serving on Nov. 26, 2026.",
+  "note": "The filings identify the committee that spent the money. They cannot trace an expenditure to a donor. The total excludes 2 eligible entries with no direction reported ($104,964.75 and $800, $105,764.75 in all).",
   "bridge": "What if we switch from election spending to lobbying filings?",
   "how": "",
   "source": "Source · Federal Election Commission outside-spending filings"
@@ -37,7 +37,7 @@
   "note": "When a client reported its own expenses for a quarter, the total uses that amount and leaves out its outside firms’ fees for that quarter.",
   "bridge": "Which bills came up most in Anthropic’s lobbying reports?",
   "how": "Each 2025 federal filing reports one amount for all its issues. The percentages are shares of reported dollars.",
-  "source": "Federal lobbying disclosures · <a href=\"https://github.com/kevinnbass/anthropic-network-money-congress/blob/main/research/lda_baseline.csv\">Filing census</a> and <a href=\"https://github.com/kevinnbass/anthropic-network-money-congress/blob/main/research/lda_baseline_additions.csv\">supplement</a> · <a href=\"https://github.com/kevinnbass/anthropic-network-money-congress/blob/main/research/state_ai_bill_clients.csv\">State bill client census</a>"
+  "source": "Federal lobbying disclosures · <a href=\"https://github.com/kevinnbass/anthropic-network-money-congress/blob/main/research/lda_baseline.csv\">Filing census</a> and <a href=\"https://github.com/kevinnbass/anthropic-network-money-congress/blob/main/research/lda_baseline_additions.csv\">supplement</a>"
  },
  {
   "id": "questions-bills",
@@ -45,15 +45,15 @@
   "head": "Which bills came up most in Anthropic’s lobbying reports?",
   "deck": "<b>AI OVERWATCH Act</b> led the stand-alone proposals, with 8 reports naming it.",
   "note": "The reports name bills and leave Anthropic’s position on them open.",
-  "bridge": "How common were gifts to those bills’ sponsors?",
+  "bridge": "How common were gifts to those bills’ serving sponsors?",
   "how": "A report can name several proposals. House and Senate versions count together when a filing names them as a pair.",
   "source": "Federal lobbying reports and saved Congress.gov bill records"
  },
  {
   "id": "questions-sponsors",
   "act": "Questions from the record",
-  "head": "How common were gifts to those bills’ sponsors?",
-  "deck": "",
+  "head": "How common were gifts to those bills’ serving sponsors?",
+  "deck": "Among serving sponsors whose stand-alone bills appeared in Anthropic’s filings, 19 of 23 had employee or PAC gifts on file. Across all 533 serving members, including those sponsors, 201 did.",
   "note": "The filings leave open whether the gifts and bill mentions were related.",
   "bridge": "What does one seat count?",
   "how": "",
