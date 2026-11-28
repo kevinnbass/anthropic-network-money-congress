@@ -2,9 +2,9 @@
  {
   "id": "deep3-sponsors",
   "act": "Deeper &#183; III &#183; How the lobbying works",
-  "head": "Gifts from Anthropic employees or its PAC were <em>more common</em> among serving sponsors of stand-alone bills named in lobbying reports filed for Anthropic.",
-  "deck": "",
-  "note": "The filings leave open whether the gifts and bill mentions were related.",
+  "head": "<em>19 of 23</em> serving sponsors of stand-alone bills in reports filed for Anthropic had gifts from its employees or PAC, against 201 of 533 members.",
+  "deck": "Deepens “The lobbying”: here the gifts are from Anthropic’s employees and its PAC, not its lobbyists, and the bills are those its lobbying reports named.",
+  "note": "The filings leave open whether gifts and bill mentions were related.",
   "bridge": "Which bills showed up most often in filings for Anthropic?",
   "how": "",
   "source": "Federal lobbying and campaign contribution filings, and Congress.gov"
@@ -13,7 +13,7 @@
   "id": "deep3-bills",
   "act": "Deeper &#183; III &#183; How the lobbying works",
   "head": "<em>Chip proposals</em> led the stand-alone bills named in reports filed for Anthropic.",
-  "deck": "The AI OVERWATCH Act appeared most often.",
+  "deck": "Deepens “The lobbying”: what did the reports filed for Anthropic name? Most named no bill; among the stand-alone bills they did name, the AI OVERWATCH Act led.",
   "note": "The reports name bills and leave Anthropic’s position on them open.",
   "bridge": "",
   "how": "",

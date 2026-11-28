@@ -535,7 +535,8 @@ def fig05():
     stem = "congress-05-revolving-door-both-directions"
     rows = [r for r in RD if ev(r) and r["direction"] in ("hill->network", "network->hill")]
     ids = [r["row_id"] for r in rows]
-    ACR = {"Nscai": "NSCAI", "Rand": "RAND", "Llc": "LLC", "Llp": "LLP", "Dla": "DLA", "Dc": "DC", "U.s.": "U.S.", "Ai": "AI", "Csis": "CSIS", "Cset": "CSET", "Cnas": "CNAS", "Fas": "FAS", "Ari": "ARI", "Fli": "FLI", "Metr": "METR", "Govai": "GovAI", "Iii": "III", "Jr.": "Jr.", "Ii": "II", "Rep.": "Rep.", "Sen.": "Sen.", "Nist": "NIST", "Aisi": "AISI", "Us": "US", "(us)": "(US)", "(Us)": "(US)", "A": "a", "Inc.": "Inc."}
+    ACR = {"Nscai": "NSCAI", "Rand": "RAND", "Llc": "LLC", "Llp": "LLP", "Dla": "DLA", "Dc": "DC", "U.s.": "U.S.", "Ai": "AI", "Csis": "CSIS", "Cset": "CSET", "Cnas": "CNAS", "Fas": "FAS", "Ari": "ARI", "Fli": "FLI", "Metr": "METR", "Govai": "GovAI", "Iii": "III", "Jr.": "Jr.", "Ii": "II", "Rep.": "Rep.", "Sen.": "Sen.", "Nist": "NIST", "Aisi": "AISI", "Us": "US", "(us)": "(US)", "(Us)": "(US)", "A": "a", "Inc.": "Inc.",
+           "Bg": "BG"}   # 2026-11-28: BG ADVOCACY, LLC was labelled "Bg Advocacy, LLC" (one hire; below the chart's floor of 2, so only the story's sheet printed it)
     def org(v: str) -> str:
         v = re.sub(r"\s+", " ", (v or "").strip())
         v = re.sub(r",\s+and\b", " and", v)  # 2026-09-23 (Codex X1b #7): an Oxford-comma variant of a committee name is the same host

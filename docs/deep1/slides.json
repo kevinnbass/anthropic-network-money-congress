@@ -3,30 +3,10 @@
   "id": "deep1-principals",
   "act": "Deeper &#183; I &#183; Who gave",
   "head": "Eric Schmidt and Reed Hastings gave <em>73%</em> of the personal gifts from 22 named donors to committees linked to sitting members.",
-  "deck": "The wider roster includes Anthropic’s backers and people with documented roles at network groups. A group can qualify through network funding and documented work with Congress.",
-  "note": "Each gift is counted once at first receipt.",
-  "bridge": "Across more donors and all recipients on file, where did personal gifts go first?",
-  "how": "",
-  "source": "FEC contribution records · Network roster"
- },
- {
-  "id": "deep1-committees",
-  "act": "Deeper &#183; I &#183; Who gave",
-  "head": "Joint fundraisers were the first stop for <em>more than twice as much</em> as candidates’ committees.",
-  "deck": "These personal gifts include named donors and employees of network groups, across all recipients on file. A joint fundraiser can split one gift among several committees.",
-  "note": "The amounts are as reported at first receipt, before refunds.",
-  "bridge": "Now compare what two PACs themselves gave.",
-  "how": "",
-  "source": "FEC contribution records · Where network individuals’ contributions land"
- },
- {
-  "id": "deep1-pacs",
-  "act": "Deeper &#183; I &#183; Who gave",
-  "head": "Americans for Responsible Innovation’s PAC <em>gave more</em> than Anthropic’s PAC.",
-  "deck": "In the filings collected here, it gave more across all recipients and to committees linked to sitting members.",
-  "note": "The bars measure each named PAC’s own giving. The latest year is partial.",
+  "deck": "Deepens “The arrival,” which counted Anthropic’s employees and its PAC: the two largest personal givers on the wider roster are an investor and a director. Their receipts here start years before Anthropic announced those roles.",
+  "note": "Each gift is counted once at first receipt, before refunds. A gift is not a vote.",
   "bridge": "",
   "how": "",
-  "source": "FEC filings and lobbying contribution reports"
+  "source": "FEC contribution records · Network roster"
  }
 ]

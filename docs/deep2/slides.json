@@ -1,19 +1,9 @@
 [
  {
-  "id": "deep2-against",
-  "act": "Deeper &#183; II &#183; The outside money",
-  "head": "<span data-m=\"61ba3ab2ef\">A nonprofit paid a committee that opposed Bird</span>, and <em data-m=\"cbcfadfa44\">personal donors</em> gave to one that opposed Tillis.",
-  "deck": "The cases span the 2026 and 2020 elections. The personal donors are on today’s network roster.",
-  "note": "The filings give no reason for the spending.",
-  "bridge": "How did committees that took network money spend from all their donors?",
-  "how": "",
-  "source": "Source · FEC receipts and outside-spending filings"
- },
- {
   "id": "deep2-spending",
   "act": "Deeper &#183; II &#183; The outside money",
-  "head": "Across <span data-m=\"5508b1c3f4\">24 committees</span>, <em data-m=\"0a68352a69\">76%</em> of spending from all donors on sitting members went against Republicans.",
-  "deck": "<span data-m=\"5508b1c3f4\">These committees took network money and spent for or against members serving on Nov. 26, 2026.</span>",
+  "head": "<em data-m=\"0a68352a69\">76%</em> of what <span data-m=\"5508b1c3f4\">24 committees that took network money</span> spent on sitting members, from all their donors, went against Republicans.",
+  "deck": "Widens “The bigger money” from one race to all these committees’ spending on members serving on Nov. 26, 2026: money from all their donors, not the network’s alone.",
   "note": "The filings identify the committee that spent the money. They cannot trace an expenditure to a donor.",
   "bridge": "",
   "how": "",
