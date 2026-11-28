@@ -42,7 +42,7 @@ For serving members, against the version published here before:
 - The eight things the audit of the story's November 28 revision (X95) found are corrected, and each has a written ruling. The corrected slides have not been audited again. Two readers of that revision asked for changes to the lobbying slide and others; those are the next round, which will be audited in full.
 - Audit X93's remaining work covers numbers in the verdict table that lack a sentence-level source and older claims for which it could not recover the dated record. Those claims are in the [release history](HISTORY.md), each marked where it was not re-derived.
 - Conduit gifts (gifts passed through a processor such as ActBlue): two reviews read the corrected forms line by line and confirmed 1,687 of 1,715 cells and 263 of 282 role changes. The confirmed lines on rows whose destination is complete are applied (1,418 cells on 676 rows; 222 conduit copies set to context, 41 restored to evidence). No member's count changed. Figure 14's count of direct contribution records fell from 4,375 to 4,209: 166 small gifts ($9,024.79 in all) are the processor's record of an earmarked gift with no receipt of the recipient's on file, are now labelled as conduit records, and wait on the author's decision on how such receipts count. On the roster (figure 22) the Schmidts' line fell from 1,722 rows to 1,560. Held for a rebuild that treats each row's destination as a whole: 134 cells, 19 role changes and 131 corrections the forms had left out, on 108 rows.
-- A sweep read all 135,731 quotation cells and found 1,802 counted rows whose quotation holds a saved page's markup, its header or a cut-off tag instead of the page's words; 1,462 of them are grant rows. Corrected quotations for 401 are applied, each confirmed by a review. 1,401 are not yet corrected: 1,062 more are confirmed and are applied next, 327 are being written, and 12 are held because the page contradicts another cell of the row. A check now refuses any other counted row with markup in its quotation.
+- A sweep read all 135,731 quotation cells and found 1,802 counted rows whose quotation holds a saved page's markup, its header or a cut-off tag instead of the page's words; 1,462 of them are grant rows. Corrected quotations for 1,463 are applied, each confirmed by a review. 339 are not yet corrected: 327 are being written, and 12 are held because the page contradicts another cell of the row (11 of them are the grant rows named two items below). A check refuses any other counted row with markup in its quotation.
 - The review of those corrections read 60 counted rows the sweep had not flagged: 12 hold a quotation rebuilt from a filing's data fields, with field names changed or added, instead of the filing's own text, and one ends in a cut-off address. A sweep of every counted row is measuring this.
 - Reading grant rows against a donor's public ledger, the reviews found 11 counted rows classed as awards whose ledger entry is a return of grant funding (10) or a contractor payment (1), and 193 rows from a grant-recommendation table classed as awards. Every grant row is being classed by what its source entry is, and the effect on the published grant totals computed. Those totals may fall; nothing is changed until the corrections are reviewed.
 - The author has yet to decide how to count conduit receipts and whether a documented advisory council appointment qualifies when payment is undisclosed.
@@ -140,13 +140,13 @@ The scripts are the project's own. Four things were changed so they run here: th
 
 Rows were collected from public sources (FEC, Senate and House lobbying and disclosure filings, IRS returns, USAspending, state registries, congressional records, organisations' own pages) by AI research agents, each row with its source's URL and an excerpt as fetched; the author keeps saved copies of the sources. Rows entered the tables through a row-by-row review of each batch by a separate agent. Independent audits then checked evidence rows against saved originals, in both directions: what was kept and what was removed. The measure below says how many. A correction never overwrites: the earlier row is archived and the change noted on the row.
 
-The project measures itself against a written standard with a script. On 2026-11-28 at 04:37 UTC it printed:
+The project measures itself against a written standard with a script. On 2026-11-28 at 04:49 UTC it printed:
 
 ```
 == congress  bound rows 134,175  evidence rows 43,024
 G1 PASS  drawn evidence document-checked 43,024/43,024 (100.0%); all evidence 100.0%
 G2 PASS  errors disposed 33,023/33,023; errors+qualifications disposed 61,807/61,807 (100.0%)
-G3 PASS  corrected rows archived 17,421/17,421 (ledger rows 17,465)
+G3 PASS  corrected rows archived 18,100/18,100 (ledger rows 18,144)
 G4 PASS  audits 127: complete 61, well-formed closing line 127; incomplete and not carried to README/dispositions 0
 G5 PASS  clean figures 29/29
 ```

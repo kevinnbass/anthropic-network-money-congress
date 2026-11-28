@@ -5,6 +5,13 @@ These entries keep the account published with each release. Present-tense wordin
 <a id="latest"></a>
 ## 2026-11-28 · this release
 
+Rests on: three independent reviews of the corrected quotations (1,062 of 1,073 lines confirmed); a read-back of every applied value; the member table compared by member before and after (no counted cell differs); the publish sequence of this release (every check exit 0).
+
+1,062 more quotation cells of grant rows now hold the saved page's own words instead of its markup, which makes 1,463 of the 1,802 corrected. In ten of these the old cell had quoted a neighbouring line of a donor's public ledger; the row's other cells matched its own line. 339 remain: 327 are being written, and 12 are held because the page contradicts another cell of the row. Eleven of the 12 are grant rows classed as awards whose ledger entry is a return of grant funding or a contractor payment; one names an organisation its saved page does not. The quotation check lists each of the 339 with its reason. No figure's count changed.
+
+<a id="8b162e5"></a>
+## 2026-11-28 04:39 UTC · [8b162e5](https://github.com/kevinnbass/anthropic-network-money-congress/commit/8b162e5)
+
 Rests on: two independent reviews of the rebuilt conduit forms (1,687 of 1,715 cells and 263 of 282 role changes confirmed), a review of the two cells of the unchecked rows (4 of 4), and a review of 400 corrected quotations (400 of 400); the apply receipts and a read-back of every applied value; the member table compared before and after (no counted cell differs); X96 (audit: complete), the three rows read as they now stand, its one qualification ruled; the publish sequence of this release (every check exit 0). Not yet audited as they now stand: the applied conduit cells.
 
 **Conduit gifts, reviewed.** Gifts passed through a processor such as ActBlue are on file twice: the processor's record and the recipient's. 1,418 cells on 676 rows now say what the filings say about where each gift went (the recipient committee, its name on the gift's date, its type, the member it belongs to), and 263 rows changed role: 222 processor copies set to context where the recipient's own receipt is the counted row, and 41 restored to evidence. Held for a rebuild that treats each row's destination as a whole: 134 cells, 19 role changes and 131 corrections the forms had left out, on 108 rows.
