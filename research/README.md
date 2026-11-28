@@ -38,7 +38,7 @@ Also here: `bill_sponsor_keys.csv`, `grant_payment_unproven.csv`, `lb_4b_measure
 
 ## Which rows count
 
-`../case.json` binds each row to a question with a role, and `row_roles.csv` lists the same roles one row per line: **evidence** (43,024 rows; the only rows the money and connection figures draw or count), **context** (85,970; kept, never counted) and **negative** (5,181; a search of the named source that found nothing, as of its date). A row in no binding is unbound and is not counted.
+`../case.json` binds each row to a question with a role, and `row_roles.csv` lists the same roles one row per line: **evidence** (42,999 rows; the only rows the money and connection figures draw or count), **context** (85,995; kept, never counted) and **negative** (5,181; a search of the named source that found nothing, as of its date). A row in no binding is unbound and is not counted.
 
 ## Columns
 
